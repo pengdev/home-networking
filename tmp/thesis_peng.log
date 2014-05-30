@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  31 MAY 2014 01:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  31 MAY 2014 01:46
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -796,20 +796,20 @@ File: amsgen.sty 1999/11/30 v2.0
 (./thesis_peng.aux)
 \openout1 = `thesis_peng.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -841,7 +841,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box38
-Package hyperref Info: Link coloring ON on input line 85.
+Package hyperref Info: Link coloring ON on input line 88.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -851,53 +851,53 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 
 (./thesis_peng.out) (./thesis_peng.out)
 \@outlinefile=\write4
 \openout4 = `thesis_peng.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 157.
+LaTeX Font Info:    Try loading font information for U+msa on input line 160.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 157.
+LaTeX Font Info:    Try loading font information for U+msb on input line 160.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+phv on input line 157.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 160.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 157.
+(Font)              scaled to size 11.39996pt on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 14.24995pt on input line 157.
+(Font)              scaled to size 14.24995pt on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 157.
+(Font)              scaled to size 10.40245pt on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 157.
+(Font)              scaled to size 8.54997pt on input line 160.
  [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.0pt too wide) in paragraph at lines 168--168
+Overfull \hbox (2.0pt too wide) in paragraph at lines 171--171
 [] 
  []
 
-
-Overfull \hbox (2.00002pt too wide) in paragraph at lines 168--176
+(./chapters/abstract.tex)
+Overfull \hbox (2.00002pt too wide) in paragraph at lines 171--175
 [] 
  []
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 192--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--195
 
  []
 
@@ -907,10 +907,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--198
 \tf@toc=\write5
 \openout5 = `thesis_peng.toc'.
 
- [4] [5] (./chapters/chapter1.tex) [1
+ [4] (./chapters/abbreviations.tex) [5]
+(./chapters/chapter1.tex) [1
 
-]
-(./chapters/chapter2.tex [2
+] (./chapters/chapter2.tex [2
 
 ] [3] [4] [5]
 Package epstopdf Info: Source file: <charts/chart1.eps>
@@ -921,99 +921,103 @@ Package epstopdf Info: Source file: <charts/chart1.eps>
 (epstopdf)                    size: 9463 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/chart1-eps-converte
 d-to.pdf charts/chart1.eps>
-(epstopdf)             \includegraphics on input line 110.
+(epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/chart1-eps-converted-to.pdf, id=150, 1145.27875pt x 703.62875pt>
+<charts/chart1-eps-converted-to.pdf, id=145, 1145.27875pt x 703.62875pt>
 File: charts/chart1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/chart1-eps-converted-to.pdf>
 Package pdftex.def Info: charts/chart1-eps-converted-to.pdf used on input line 
-110.
+113.
 (pdftex.def)             Requested size: 416.79124pt x 256.0748pt.
  [6 <./charts/chart1-eps-converted-to.pdf>] [7] [8] [9] [10]
 
-LaTeX Warning: Reference `taulukko1' on page 11 undefined on input line 222.
+LaTeX Warning: Reference `taulukko1' on page 11 undefined on input line 225.
 
 
-LaTeX Warning: Reference `kuva1' on page 11 undefined on input line 222.
+LaTeX Warning: Reference `kuva1' on page 11 undefined on input line 225.
 
 
-LaTeX Warning: Reference `LiiteA' on page 11 undefined on input line 222.
+LaTeX Warning: Reference `LiiteA' on page 11 undefined on input line 225.
 
 
-LaTeX Warning: Reference `LiiteB' on page 11 undefined on input line 222.
+LaTeX Warning: Reference `LiiteB' on page 11 undefined on input line 225.
 
-[11]) [12] [13
+[11]) [12] (./chapters/chapter3.tex) [13
 
-] [14
-
-] [15
+] (./chapters/chapter4.tex) [14
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 419.
+(./chapters/chapter5.tex) [15
 
+] (./chapters/references.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 70.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [16
-
-] [17
+)) [16
 
 ]
+(./chapters/appendix1.tex) [17
+
+] (./chapters/appendix2.tex
 Package epstopdf Info: Source file: <charts/kuva2.eps>
 (epstopdf)                    date: 2014-05-31 00:23:19
 (epstopdf)                    size: 1481368 bytes
 (epstopdf)             Output file: <charts/kuva2-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-05-31 01:02:55
+(epstopdf)                    size: 84451 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/kuva2-eps-converted
 -to.pdf charts/kuva2.eps>
-(epstopdf)             \includegraphics on input line 503.
-runsystem(repstopdf --outfile=charts/kuva2-eps-converted-to.pdf charts/kuva2.ep
-s)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 16.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <charts/kuva2-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-31 01:02:55
-(epstopdf)                    size: 84451 bytes.
-
-<charts/kuva2-eps-converted-to.pdf, id=270, 405.515pt x 241.90375pt>
+<charts/kuva2-eps-converted-to.pdf, id=266, 405.515pt x 241.90375pt>
 File: charts/kuva2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/kuva2-eps-converted-to.pdf>
-Package pdftex.def Info: charts/kuva2-eps-converted-to.pdf used on input line 5
-03.
+Package pdftex.def Info: charts/kuva2-eps-converted-to.pdf used on input line 1
+6.
 (pdftex.def)             Requested size: 381.59251pt x 227.62204pt.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.505 ...on liitteen numerointi \label{liitekuva}}
+l.18 ... on liitteen numerointi \label{liitekuva}}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{table.1}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.510 ...ulukon kuvateksti. \label{liitetaulukko}}
-                                                   [18
+l.23 ...aulukon kuvateksti. \label{liitetaulukko}}
+                                                  ) [18
 
  <./charts/kuva2-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
  (./thesis_peng.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 524.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
-Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
-(rerunfilecheck)             Checksum: 9D106D27D5BAA9C49964BD20EDD2B69E;648.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
 
+
+Package rerunfilecheck Warning: File `thesis_peng.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_peng.out':
+(rerunfilecheck)             Before: B626022F3EEEE9ED5A304FF2F7E93AC4;600
+(rerunfilecheck)             After:  34ECB62F01A92A9592B84B970CE5A158;600.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 524.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 17489 strings out of 493308
- 325608 string characters out of 6137816
+ 17511 strings out of 493308
+ 326030 string characters out of 6137816
  802084 words of memory out of 5000000
- 20497 multiletter control sequences out of 15000+600000
+ 20496 multiletter control sequences out of 15000+600000
  33385 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,11n,58p,816b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1039,10 +1043,10 @@ pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
 public/cm-super/sftt1200.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (23 pages, 409483 bytes).
+Output written on thesis_peng.pdf (23 pages, 409497 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
+ 364 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  97 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

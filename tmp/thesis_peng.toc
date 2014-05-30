@@ -8,6 +8,5 @@
 \contentsline {section}{\numberline {4}Results}{14}{section.4}
 \contentsline {section}{\numberline {5}Discussion}{15}{section.5}
 \contentsline {section}{References}{16}{section*.16}
-\contentsline {section}{Appendices}{17}{section*.17}
 \contentsline {section}{\numberline {A}Appendicy }{17}{appendix.A}
 \contentsline {section}{\numberline {B}Appendicy }{18}{appendix.B}
