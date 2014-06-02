@@ -180,20 +180,11 @@ linkcolor=blue,citecolor=black,pdfstartview=FitH]{hyperref}
 %% Preface
 %\mysection{Esipuhe}
 \mysection{Preface}
-In the Preface (of one page) you clarify when and where the thesis has been created, 
-whether it has been undertaken in cooperation with a particular industry or enterprise, 
-etc. Furthermore, you clarify how the literature has been examined and where the cited 
-publications have been found. The names of the supervisors are also mentioned here. 
-The Preface ends with acknowledgements.
 
-This paper is a study result when participating in "Streambels" project in Tuxera Inc.
-Thanks to everyone participated in this project, Oscar our project manager, Karthik our 
-lead developer, Nadir our QA, Sakari who also parcitipated in implementing new features 
-to Streambels. And special thanks to Mikko, Szacka the founder of Tuxera, give me the 
-opportunity to participated in this great project. Without your help, I wouldn't have 
-finish this thesis. \\
+\input{chapters/preface}
 
-\vspace{5cm}
+\vspace{3.5cm}
+%\vspace{5cm}
 Otaniemi, 25.5.2014
 
 \vspace{5mm}
@@ -279,11 +270,22 @@ Otaniemi, 25.5.2014
 %\addcontentsline{toc}{section}{Viitteet}
 \addcontentsline{toc}{section}{References}
 
-\begin{thebibliography}{99}
+\cite{stateofHN}
+\cite{airplay-spec}
+\cite{next_generation}
+\cite{DLNA_proxy2}
+\cite{upnp}
+\cite{standards-perspective}
+\cite{DLNA_proxy}
+\cite{end_user}
 
-\input{chapters/references}
 
-\end{thebibliography}
+\bibliographystyle{unsrt}
+\bibliography{reference} 
+
+%\begin{thebibliography}{99}
+%\input{chapters/references}
+%\end{thebibliography}
 
 %% Liitteet
 %% Appendices

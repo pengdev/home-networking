@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{DLNA_proxy}
+Eui-Hyun Paik Kwang-Rog~Park Yeon-Joo~Oh, Jung-Tae~Kim.
+\newblock The dlna proxy system architecture for sharing in-home media contents
+  via internet.
+\newblock {\em ICACT2006}, pages 1855--1858, 2006.
+
+\bibitem{upnp}
+Charlie Tai-Mark D.~Wood Brent A.~Miler, Toby~Nixon.
+\newblock Home networking with universal plug and play.
+\newblock {\em IEEE Communications Magzine}, pages 104--109, December 2001.
+
+\bibitem{stateofHN}
+Ratul Mahajan David~Wetherall W.~Keith~Edwards, Rebecca E.~Grinter.
+\newblock Advancing the state of home networking.
+\newblock {\em Communications of the ACM}, 54(6):63--71, June 2011.
+
+\bibitem{airplay-spec}
+Airplay specification.
+
+\bibitem{next_generation}
+Takayoshi Okodo Yohei Tsuchida Tomoyuki Yamaguchi-Takahiro~Murooka
+  Kimio~Oguchi, Kunio~Tojo.
+\newblock Next generation home networking and relevant technologies.
+\newblock {\em Proc. of SPIE}, 5626, 2005.
+
+\bibitem{DLNA_proxy2}
+Hoon-Ki Lee Eui-Hyun Paik Kwang-Roh~Park Jung-Tae~Kim, Yeon-Joo~Oh.
+\newblock Implementation of the dlna proxy system for sharing home media
+  contents.
+\newblock {\em IEEE Transactions on Consumer Electronics}, 53(1):139--144,
+  February 2007.
+
+\bibitem{standards-perspective}
+Bill Rose.
+\newblock Home networks: A standards perspective.
+\newblock {\em IEEE Communications Magzine}, pages 78--85, December 2001.
+
+\bibitem{end_user}
+Sandy Teger and System Dynamics~Inc. David J.~Wakes.
+\newblock End-user perspectives on home networking.
+\newblock {\em IEEE Communications Magzine}, pages 114--119, April 2002.
+
+\end{thebibliography}

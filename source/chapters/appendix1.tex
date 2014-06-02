@@ -1,5 +1,3 @@
-%% Liitteiden kaavat, taulukot ja kuvat numeroidaan omana kokonaisuutenaan
-%%
 %% Equations, tables and figures have their own numbering in Appendices
 \renewcommand{\theequation}{A\arabic{equation}}
 \setcounter{equation}{0}  
@@ -9,9 +7,7 @@
 \setcounter{table}{0}
 
 
-%% Verbatim-ymp�rist� ei muotoile tai tavuta teksti�. Fontti on monospace.
-%% Verbatim-ymp�rist�n sis�ll� annettuja komentoja ei LaTeX k�sittele. 
-%% Vasta \end{verbatim}-komennon j�lkeen jatketaan k�sittely�.
+%% use verbatim to keep original text 
 \begin{verbatim}
 	this is not interpreted
 	\clearpage
@@ -26,7 +22,6 @@
 	\clearpage
 \end{verbatim}
 
-Kaavojen numerointi muodostaa  oman kokonaisuutensa:
 \begin{eqnarray}
 d \wedge A  &=& F, \label{liitekaava1}\\
 d \wedge F  &=& 0. \label{liitekaava2}

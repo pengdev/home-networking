@@ -1,12 +1,12 @@
 \contentsline {section}{Abstract{}}{ii}{section*.1}
 \contentsline {section}{Preface}{iii}{section*.2}
-\contentsline {section}{Contents}{iv}{section*.3}
-\contentsline {section}{Symbols and abbreviations}{v}{section*.5}
+\contentsline {section}{Contents}{iv}{section*.4}
+\contentsline {section}{Symbols and abbreviations}{v}{section*.6}
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {section}{\numberline {2}Background}{2}{section.2}
 \contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{13}{section.3}
-\contentsline {section}{\numberline {4}Results}{14}{section.4}
-\contentsline {section}{\numberline {5}Discussion}{15}{section.5}
-\contentsline {section}{References}{16}{section*.16}
-\contentsline {section}{\numberline {A}Appendicy }{17}{appendix.A}
-\contentsline {section}{\numberline {B}Appendicy }{18}{appendix.B}
+\contentsline {section}{\numberline {4}Results}{15}{section.4}
+\contentsline {section}{\numberline {5}Discussion}{16}{section.5}
+\contentsline {section}{References}{17}{section*.18}
+\contentsline {section}{\numberline {A}Appendicy }{18}{appendix.A}
+\contentsline {section}{\numberline {B}Appendicy }{19}{appendix.B}
