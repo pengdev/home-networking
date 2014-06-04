@@ -6,16 +6,22 @@ of electronics and computer science, home networking devices are getting more af
 and more powerful that people would have at least several multimedia devices that can be 
 connected to network.
 
-Early research in home networking area has been made mainly on how to implement home networking 
-infrastructures, like the cable connection, wireless connection, optical connection etc. So far, 
-it turns out that IEEE 802.11 protocol stack is most successful and most widely deployed home 
-networking infrastructure.
+In this chapter, we give a overview of current solutions to home networking,
+compare each solution and describe the problem to solve.
 
-Nowadays, a typical scenario is that a wireless route connected to Ethernet cable or optical 
-cable from network operator, while other devices connect to the same local network created by 
-the wireless router. A wireless AP is using 802.11 b/g/n/ac protocol, utilize 2.4 GHz or 5 GHz 
-frequency channels and provide a 100+ Mbps network connection. This bandwidth is sufficient 
-enough for transmitting High Definition (1080p) videos.
+\subsection{Overview}
+Early research \cite{link_layer_old} \cite{end_user} \cite{link_layer}
+ in home networking area  has been made mainly on how to implement home
+ networking infrastructures, like the cable connection, wireless connection,
+ optical connection etc. So far, it turns out that IEEE 802.11 protocol stack
+ is most successful and most widely deployed home networking infrastructure.
+
+Nowadays, a typical scenario is that a wireless route connected to Ethernet
+cable or optical cable from network operator, while other devices connect to
+the same local network created by the wireless router. A wireless AP is using
+802.11 b/g/n/ac protocol, utilize 2.4 GHz or 5 GHz frequency channels and
+provide a 100+ Mbps network connection. This bandwidth is sufficient enough for
+transmitting High Definition (1080p) videos.
 
 Different device manufactures choose its preferred multimedia-sharing protocols. The development 
 of multimedia-sharing protocols has also experienced a long research period. Since late 1990s, 
@@ -46,9 +52,9 @@ operating system, and provide screen-mirroring feature to other Miracast receive
 The competition is far from the end, in 2013, Google released a 35-dollar dongle, using its 
 Chromecast protocol, Chromecast makes it possible to watch YouTube and Netflix video directly 
 on TV with such a device. Laptop and mobile devices with official YouTube App or Chrome browser 
-can control the dongle through the local network in home. The home networking has been pushed to 
-cloud, since YouTube and Netflix content are directly downloaded from Internet, mobile devices 
-just act as a controller of picking interested contents. 
+can control the dongle through the local network in home. The home networking
+has been pushed to cloud, since YouTube and Netflix content are directly
+downloaded from Internet, mobile devices just act as a controller of picking interested contents. 
 
 Almost at the same time, September 2013, Spotify, a new startup music service company has also 
 taken part in making its own home networking solution, called Spotify Connect, it provides an 
@@ -63,128 +69,8 @@ creating some thing that can connect those devices in home and make them work to
 Streambels project is just created for this need, fill the gap between different protocols and 
 connect devices in home networking environment.
 
-
-%% \section{osan otsikko} 
-%% \subsection{alaotsikko}
-%% \subsubsection{ala-alaotsikko}
-%%
-%% Three levels of hierarchy in sectioning should be enough
-
-\subsection*{Available solutions in the market(COMPARISON OF MIRACAST, CHROMECAST, DLNA $\&$ AIRPLAY)}
-
-\subsubsection*{Market comparison}
-
-\begin{enumerate}
-\item History
-\begin{itemize}
-\item[--]DLNA is proposed by several leading consumer electronic manufactures based on UPnP 
-technology, from early 2000s on, over 2.2 billion devices has shipped with DLNA solutions, 
-making it possible to sharing audio and video seamlessly different smart devices. DLNA alliance 
-had two annually meetings a year to discuss the marketing and developing related issues, making 
-it a more and more accomplished standard.
-\item[--]Airplay, on the other hand, is proposed by Apple Inc. in 2010, before that actually 
-Apple is a part of DLNA alliance, by proposing Airplay, it enables more advanced features than 
-DLNA, such as whole screen mirroring, RTP audio streaming, authentication etc.
-\item[--]Miracast is a quite new technology, it is formerly known as Wi-Fi Display, and proposed 
-in 2012 by Wi-Fi alliance. Different from Airplay and DLNA, it is not based on home AP, but using 
-Wi-Fi direct instead. It provides a screen-mirroring feature just like Apple Airplay Mirroring, 
-and now it becomes quite popular among manufactures and software ventures. Google has launched 
-its Android 4.2 with native support of Miracast, the latest Kitkat Android 4.4 has been certified 
-to the Wi-Fi Alliance Wi-Fi Display Specification as Miracast compatible. There is a strong trend 
-that this standard with soon be very popular in multi-screen sharing market.
-\item[--]Chromecast or Google cast is another new trend in market, Released in 2013, a piece of 
-2.83-inch (72 mm) dongle hardware is becoming a hot topic recently, with 35\$ price, it has been 
-ranked as the most popular device in its category. The standard is proposed by joint effort form 
-Google and Netflix, and as they are Internet companies, the standard is actually based on Cloud, 
-the content is directly streamed from YouTube and Netflix to the Chromecast dongle. And applications 
-running on mobile platforms are just acting as a control point. It also provides features like 
-browser mirroring, with a Chromecast plugin, a Chrome browser can stream its tab to the big screen 
-TV. In a foreseeing future, the standard could become more and more popular.
-\end{itemize}
-\item Share on the market, popularity
-\begin{itemize}
-\item[--]DLNA is one of the first proposed solutions for multimedia home networking, so it is so 
-far the most accepted solution, chart below shows the growth of DLNA-certified device sales. In 
-2018, the sales will reach 7.32 billion, nearly the totally population of earth.
-\item[--]Airplay is bundled with Apple products, with great sales of Apple TV, Airport Express, 
-Mac, iPhone, iPad, iPod, many family has just use Apple's product for everything. Thus Airplay 
-becomes the easiest way to build home networking solution, and maybe the only solution for those 
-Apple users, since a lot of speaker manufactures implement their own Airplay receiver on their 
-Airplay compatible speakers. And indeed it provides enough easy to use features to fulfill daily usage.
-\item[--]Since bundled with Android operating system, Miracast has experienced a fast growth in 
-the past two years, many TVs built in the Miracast support to accept peer-to-peer Wi-Fi direct connection.
-\item[--]Chromecast dongle is really cheap device that everyone wants to try, it can easily upgrade 
-old TV to "Smart TV", and since Google has provided good content support for it, it is soon accepted 
-by huge amount of users. Except for Google play online sales, it also ranked top 3 best selling devices 
-recently.
-\end{itemize}
-\end{enumerate}
-
-
-\subsubsection*{Technology feature comparison}
- \begin{enumerate}
-\item Meida format support 
-Airplay and Chromecast has very limited media format support since they are only limited device 
-types, so far Chromecast has only 1 device released. Apple TV now has 3rd generation box, but the 
-media format support has not changed so much, the main improvement is the 1080p high resolution 
-video support. On the other hand, DLNA has specified mandatory media formats in its specification, 
-the "must have" formats only include MP3 and LPCM for music, JPEG for images and MP4 for video. 
-Since Miracast is a screen mirroring technology, all formats can be played on device can be streamed.
-
-\item Networking technologies used
-
-A short technology specification comparison is made to help better understanding
-the existing solutions, table \ref{Table1} below shows the main technology used
-for different popular solutions.
-%% table 1, compare technology
-\begin{table}[htb]
-\caption{Technology used \label{Table1}}
-\begin{center}
-\fbox{
-\begin{tabular}{c|l|l|l}  
-\textbf{ } & Device discovery & Control Protocol & Streaming protocol \\ \hline
-\textbf{DLNA} & SSDP & UPnP & HTTP \\ \hline
-\textbf{AirPlay} & Multicast DNS & HTTP & HTTP/RTSP \\ \hline
-\textbf{Chromecast} & DIAL & Chromecast & HTTP \\ \hline
-\textbf{Miracast} & Wi-Fi direct &  & Wi-Fi direct
-\end{tabular}
-}
-\end{center}
-\end{table}
-
-Apart from those basic technological details, some standards also offer advanced
-features compared to other solutions. For example, screen mirroring is an
-interesting feature that many standards offers. Table \ref{Table2} below shows
-what advanced features each standard provides.
-%% table 2, compare advance feature
-\begin{table}[htb]
-\caption{Advanced feature comparison \label{Table2}}
-\begin{center}
-\fbox{
-\begin{tabular}{c|l|l|l|l}  
-\textbf{ } & DLNA & AirPlay & Chromecast & Miracast \\ \hline
-\textbf{Screen mirroring} & No & Yes & No & Yes \\ \hline
-\textbf{Multiple connection} & Yes & No & No & No \\ \hline
-\textbf{Authentication} & No & Yes & No & Yes
-\end{tabular}
-}
-\end{center}
-\end{table}
-
-
-\end{enumerate} 
-
-According to the comparison, each standard have its own features and uses different protocols 
-to communicate. But there are common features supported by most standards, such as HTTP media 
-server is used quite much to handle video and photo streaming. UPnP device discovery protocol 
-SSDP is used quite a lot for device discovery. 
-
-Since there is some similarity that is used by most standards, there is possibility to make 
-some application that include all these standard architecture and work with those protocols. 
-Making an Android application to connect those devices becomes a doable work.
-
-\subsection*{Technology specification}
-\subsubsection*{UPnP device architecture}
+\subsection{Available solutions}
+\subsubsection[UPnP]{UPnP \footnote{Universal Plug and Play}}
 The UPnP device architecture \cite{upnp} \label{upnp} includes seven parts
 below:
 
@@ -282,7 +168,7 @@ UPnP architecture does not define the details of presentation page, but it shoul
 and have some basic functionality.
 
 \end{enumerate}
-\subsubsection*{DLNA architecture}
+\subsubsection[DLNA]{DLNA\footnote{Digital Living Network Alliance}}
 DLNA is a pretty old standard in industry compared to other home networking solutions, so it 
 is widely used by many manufactures, the newer home networking solution is also influenced by 
 DLNA and followed similar technologies. In this paper we focus on the DLNA standard architecture 
@@ -317,7 +203,7 @@ Media Renderer, and the transfer begin afterwards. The media streaming happens d
 between Media Server and Media Renderer using HTTP.
 
 
-An overall DLNA architecture can be described below:
+An overall DLNA architecture \cite{dlna_guideline} can be described below:
 \begin{enumerate}
 \item Architectures and Protocols
 
@@ -342,7 +228,7 @@ An overall DLNA architecture can be described below:
 \end{table}
 
 The DLNA architecture is built on UPnP protocol, which is discussed in
-already\ref{upnp}.
+ in \ref{upnp}.
 In networking layer it uses IPv4 suite, on top on that, UPnP device architecture
 and UPnP AV architecture is used to control and manage media devices. DLNA
 guideline also addresses the media format compatibility and media transport
@@ -407,10 +293,11 @@ CVPs defined.
 
 \end{enumerate}
 
-\subsubsection*{Other protocols}
+\subsubsection{AirPlay}
 Airplay has its own specification, and it is not open to public, but on Internet there are hackers 
-make unofficial specification. The Service discovery is based on multicast DNS, the discovered 
-device include receiver's IP address and port number
+make unofficial specification \cite{airplay-spec}. The Service discovery is
+based on multicast DNS \cite{multicastdns}, the discovered device include receiver's IP address and
+port number
 \begin{enumerate}
 \item Video streaming \\
 The video streaming uses typical HTTP streaming technology, the controller set the streaming URL 
@@ -420,20 +307,136 @@ the server using the URL and starts playing while buffered enough data.
 The image streaming uses HTTP put message to send image raw data to Apple TV or other devices, when 
 the whole image is received, the image is then rendered on screen.
 \item Music streaming \\
-Airplay music streaming is a bit different from video and image streaming, the technology used is 
-RTSP streaming, it is more "push like" protocol, the RTSP streaming server push UDP packets to 
-receiver. However the RTSP protocol Apple used is not standard RTSP, it uses its own implementation.
+Airplay music streaming is a bit different from video and image streaming, the
+technology used is RTSP streaming, it is more "push like" protocol, the RTSP
+streaming server push UDP packets to receiver. However the RTSP protocol Apple
+used is not standard RTSP, it uses its own implementation.
 \end{enumerate}
+\subsubsection{Chromecast}
 Chromecast and Fire TV on the other hand uses DIAL protocol for device discovery, the protocol is 
 proposed by Google and Netflix so the YouTube and Netflix application has already build in with DIAL 
 device discovery. The streaming part uses HTTP streaming, which means controller can directly set the 
 streaming URL and the receiver will start downloading automatically.
+\subsubsection{Miracast}
 
 Miracast is quit different on technology perspective, instead of connecting on the same local network, 
 a Wi-Fi peer to peer connection is created, so Miracast is not limited to pre configured network 
 infrastructure.
+\subsubsection{Other protocols}
 
 
-Test footnote
-\footnote{test footnote \underline{ei} more text.}
+\subsection{Comparison of existing solutions}
+\subsubsection{History}
+\begin{itemize}
+\item[--]DLNA is proposed by several leading consumer electronic manufactures based on UPnP 
+technology, from early 2000s on, over 2.2 billion devices has shipped with DLNA solutions, 
+making it possible to sharing audio and video seamlessly different smart devices. DLNA alliance 
+had two annually meetings a year to discuss the marketing and developing related issues, making 
+it a more and more accomplished standard.
+
+\item[--]Airplay, on the other hand, is proposed by Apple Inc. in 2010, before that actually 
+Apple is a part of DLNA alliance, by proposing Airplay, it enables more advanced features than 
+DLNA, such as whole screen mirroring, RTP audio streaming, authentication etc.
+\item[--]Miracast is a quite new technology, it is formerly known as Wi-Fi Display, and proposed 
+in 2012 by Wi-Fi alliance. Different from Airplay and DLNA, it is not based on home AP, but using 
+Wi-Fi direct instead. It provides a screen-mirroring feature just like Apple Airplay Mirroring, 
+and now it becomes quite popular among manufactures and software ventures. Google has launched 
+its Android 4.2 with native support of Miracast, the latest Kitkat Android 4.4 has been certified 
+to the Wi-Fi Alliance Wi-Fi Display Specification as Miracast compatible. There is a strong trend 
+that this standard with soon be very popular in multi-screen sharing market.
+\item[--]Chromecast or Google cast is another new trend in market, Released in 2013, a piece of 
+2.83-inch (72 mm) dongle hardware is becoming a hot topic recently, with 35\$ price, it has been 
+ranked as the most popular device in its category. The standard is proposed by joint effort form 
+Google and Netflix, and as they are Internet companies, the standard is actually based on Cloud, 
+the content is directly streamed from YouTube and Netflix to the Chromecast dongle. And applications 
+running on mobile platforms are just acting as a control point. It also provides features like 
+browser mirroring, with a Chromecast plugin, a Chrome browser can stream its tab to the big screen 
+TV. In a foreseeing future, the standard could become more and more popular.
+\end{itemize}
+\subsubsection{Market}
+\begin{itemize}
+\item[--]DLNA is one of the first proposed solutions for multimedia home networking, so it is so 
+far the most accepted solution, figure \ref{dlna_market} shows the growth of
+DLNA-certified device sales. In 2018, the sales will reach 7.32 billion, nearly
+the totally population of earth.
+
+\begin{figure}[htb]
+\centering \includegraphics[height=9cm]{charts/dlna_market}
+\caption{Cumulative Global DLNA-Certified Device sales \label{dlna_market}}
+\end{figure}
+
+\item[--]Airplay is bundled with Apple products, with great sales of Apple TV, Airport Express, 
+Mac, iPhone, iPad, iPod, many family has just use Apple's product for everything. Thus Airplay 
+becomes the easiest way to build home networking solution, and maybe the only solution for those 
+Apple users, since a lot of speaker manufactures implement their own Airplay receiver on their 
+Airplay compatible speakers. And indeed it provides enough easy to use features to fulfill daily usage.
+\item[--]Since bundled with Android operating system, Miracast has experienced a fast growth in 
+the past two years, many TVs built in the Miracast support to accept peer-to-peer Wi-Fi direct connection.
+\item[--]Chromecast dongle is really cheap device that everyone wants to try, it can easily upgrade 
+old TV to "Smart TV", and since Google has provided good content support for it, it is soon accepted 
+by huge amount of users. Except for Google play online sales, it also ranked top 3 best selling devices 
+recently.
+\end{itemize}
+
+\subsubsection{Technology feature}
+\begin{enumerate}
+\item Meida format support \\
+Airplay and Chromecast has very limited media format support since they are only limited device 
+types, so far Chromecast has only 1 device released. Apple TV now has 3rd generation box, but the 
+media format support has not changed so much, the main improvement is the 1080p high resolution 
+video support. On the other hand, DLNA has specified mandatory media formats in its specification, 
+the "must have" formats only include MP3 and LPCM for music, JPEG for images and MP4 for video. 
+Since Miracast is a screen mirroring technology, all formats can be played on device can be streamed.
+
+\item Networking technologies used \\
+
+A short technology specification comparison is made to help better understanding
+the existing solutions, table \ref{Table1} below shows the main technology used
+for different popular solutions.
+%% table 1, compare technology
+\begin{table}[htb]
+\caption{Technology used \label{Table1}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l|l|l}  
+\textbf{ } & Device discovery & Control Protocol & Streaming protocol \\ \hline
+\textbf{DLNA} & SSDP & UPnP & HTTP \\ \hline
+\textbf{AirPlay} & Multicast DNS & HTTP & HTTP/RTSP \\ \hline
+\textbf{Chromecast} & DIAL & Chromecast & HTTP \\ \hline
+\textbf{Miracast} & Wi-Fi direct &  & Wi-Fi direct
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+Apart from those basic technological details, some standards also offer advanced
+features compared to other solutions. For example, screen mirroring is an
+interesting feature that many standards offers. Table \ref{Table2} below shows
+what advanced features each standard provides.
+%% table 2, compare advance feature
+\begin{table}[htb]
+\caption{Advanced feature comparison \label{Table2}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l|l|l|l}  
+\textbf{ } & DLNA & AirPlay & Chromecast & Miracast \\ \hline
+\textbf{Screen mirroring} & No & Yes & No & Yes \\ \hline
+\textbf{Multiple connection} & Yes & No & No & No \\ \hline
+\textbf{Authentication} & No & Yes & No & Yes
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+
+\end{enumerate} 
+
+According to the comparison, each standard have its own features and uses different protocols 
+to communicate. But there are common features supported by most standards, such as HTTP media 
+server is used quite much to handle video and photo streaming. UPnP device discovery protocol 
+SSDP is used quite a lot for device discovery. 
+
+Since there is some similarity that is used by most standards, there is possibility to make 
+some application that include all these standard architecture and work with those protocols. 
+Making an Android application to connect those devices becomes a doable work.
 
