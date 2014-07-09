@@ -23,12 +23,15 @@ the same local network created by the wireless router. A wireless AP is using
 provide a 100+ Mbps network connection. This bandwidth is sufficient enough for
 transmitting High Definition (1080p) videos.
 
-Different device manufactures choose its preferred multimedia-sharing protocols. The development 
-of multimedia-sharing protocols has also experienced a long research period. Since late 1990s, 
-UPnP protocol has been developed for home networking usage. At that time, XML is popular and 
-widely used by different network applications. UPnP is also designed to make full use of XML. 
-UPnP is independent of media and device, and it is running on TCP/IP stack, so it can be easily 
-applied to modern network devices. 
+In terms of network and application layer technology, different device
+manufactures choose their preferred multimedia-sharing protocols. The
+development of multimedia-sharing protocols has also experienced a long research period.
+
+Since late 1990s, UPnP protocol has been developed for home networking usage.
+At that time, XML is popular and widely used by different network applications.
+UPnP is also designed to make full use of XML. UPnP is independent of media and
+device, and it is running on TCP/IP stack, so it can be easily applied to
+modern network devices.
 
 In June 2003, Sony established the Digital Living Network Alliance (DLNA), a nonprofit collaborative 
 trade organization. The DLNA standard is based on widely used UPnP protocol but it added some 
@@ -71,6 +74,9 @@ connect devices in home networking environment.
 
 \subsection{Available solutions}
 \subsubsection[UPnP]{UPnP \footnote{Universal Plug and Play}}
+\paragraph{UPnP device architecture\label{upnpdevice}}
+:
+
 The UPnP device architecture \cite{upnp} \label{upnp} includes seven parts
 below:
 
@@ -168,40 +174,182 @@ UPnP architecture does not define the details of presentation page, but it shoul
 and have some basic functionality.
 
 \end{enumerate}
-\subsubsection[DLNA]{DLNA\footnote{Digital Living Network Alliance}}
-DLNA is a pretty old standard in industry compared to other home networking solutions, so it 
-is widely used by many manufactures, the newer home networking solution is also influenced by 
-DLNA and followed similar technologies. In this paper we focus on the DLNA standard architecture 
-so we can have an overview of how a home networking solution will look like.
 
-Three basic functional entities are defined in the UPnP AV architecture: Media Server, Media 
-Renderer and Control Point. A physical device can consist of a combination of any of these 
-functional entities. A typical example is DLNA Media player is
-a combination of a Control Point and a Media renderer.
+\paragraph{UPnP AV architecture\label{upnpav}}
+:
 
-A simplified DLNA application use scenario\cite{DLNA_proxy} can be seen as
-below:
+In most UPnP scenarios, a control point controls the operation of one or more
+UPnP devices. The interaction usually occurs in isolation between control point
+and each device. It is control point's responsibility to coordinate the
+operation of each devices, while the individual devices do not interact directly
+with each other. 
+
+
+In particular audio and video use cases, the AV control point interacts with two
+or more UPnP devices acting as source and sink, respectively. While coordinated
+by the AV control point, the devices themselves interact with each other using a
+non-UPnP communication protocol. The control point configures the devices as
+needed, triggers the flow of content, then gets out of the way.
+
+\begin{figure}[htb]
+\centering \includegraphics[height=9cm]{charts/upnp_playback}
+\caption{UPnP playback architecture \label{upnp_playback}}
+\end{figure}
+
+\begin{enumerate}
+\item Media Server \\
+The media server is used to locate content available in the home network. It's
+primary purpose is to allow control points to enumerate (browse or search)
+content items that are available for the user to render. The media server
+contains a ContentDirectory Service(CDS), a ConnectionManager Service(CM)
+, and an optional AVTransport Service(AVT) which depends on the supported
+transfer protocols. Some media servers are capable of transferring multiple
+content items at the same time.
+
+The ContentDirectory service is used by control point to enumerate the content
+on the server. The primary action is ContentDirectroy::Browse(). After
+invoking this action, the control point can obtain detailed information of each
+item that the server can provide. This detailed information includes name,
+artist, date created, size and also the transfer protocols and data formats that
+supported by the for particular item. By parsing this detailed information,
+control point is able to distinguish is the item can be rendered by the given
+media renderer.
+
+The ConnectionManager service is used to manage the connections between a
+control point and device. The primary action is
+ConnectionManager:: PrepareForConnection(), which is invoked by the control
+point to the server and make it prepare itself for an upcoming transfer. This
+action will return the instanceID of an AVTransport service that will be used
+later to control the flow of content, for example, Stop, pause, seek, etc. The
+instanceID is used to distinguish multiple instances of the AVTransport
+service, each is associated with a particular connection to renderer, thus it
+enables multiple renderer support at the same time. When the control point need
+to disconnect the connection, it will invoke the media server's
+ConnectionManager::ConnectionComplete() action to release the connection. When
+the ConnectionManager::PrepareForConnection() action is not implemented, the
+control point is only able to support single renderer at a time. In this case 0
+will be used as InstanceID.
+
+The AVTransport service is used by control point to control the playback of the
+content. Operations like Stop, Pause, Seek are supported by this service. This
+service is not mandatory, media server can choose to implement this feature
+depending on the supported transfer protocols and data formats. If this service
+is supported, the InstanceID included in each AVTransport action is used to
+distinguish multiple instances of the service. New instances of the AVTransport
+service can be created by ConnectionManager's
+ConnectionManager::PrepareForConnection() action, and new InstanceID is
+allocated to each new service instance.
+
+\item Media Renderer \\
+The media renderer is used to render the content obtained from the home
+networking. Its main feature is that it can be discovered by control point and
+allow it to control how the content is rendered, for example, brightness,
+contrast, volume, mute, etc. The control of flow of the content like stop,
+pause, seek can also be supported depending on the transfer protocol used. Media
+renderer includes three services: RenderingControl service, ConnectionManager
+service and an optional AVTransport service. Sometimes the rendering control and
+AVTransport services contain multiple independent instances so that the devices
+are capable of handling multiple content items at the same time. Those multiple
+instances are distinguished by a unique InstanceID.
+
+RenderingControl service is used by control point to control how the renderer
+renders the incoming content. Characteristics like brightness, contrast,
+volume, mute etc, can be controlled by this service. RenderingControl service
+supports multiple, dynamic instances, which allows a renderer to mix one or
+more items together, such as Picture-in-Picture window on a TV or audio mixer
+device. Multiple connections can be distinguished by unique InstanceID. New
+connections can be created by ConnectionManager::PrepareForConnection()
+action.
+
+ConnectionManager service is used to manage connections associated with a
+device, the primary action is ConnectionManager::GetProtocolInfo() action.
+Control point can invoke this action to enumerate the transfer protocols and
+data formats supported by media renderer. By comparing this information with
+protocol information got from media server, the control point is able to
+predetermine if a media server is capable of rendering a specific item from
+media server. Optionally, media renderer may also implement
+ConnectionManager::PrepareForConnection() action to prepare itself for an
+upcoming transfer, it can also assign a unique ConnectionID that can be used by
+3rd party control point to obtain information about he connections that media
+renderer is using. In addition, depending the transfer protocol and data format
+used, this action may also return a unique AVTransport InstanceID that control
+point can use to control the flow of content, such as stop, pause, seek, etc.
+
+AVTransport service is used to control the flow of streamed content. Actions
+like play, stop, pause and seek can be controlled depends on the transfer
+protocol and supported data formats. AVTransport service can also support
+multiple logical instances to handle multiple simultaneous content items. The
+AVTransport InstanceID which is used to distinguish service instances can be
+allocated by ConnectionManager::PrepareForConnection().
+
+\item Control Point \\
+Control Point is used to communicate between media server and media renderer. It
+also provide user interface to users. A control point does not implement UPnP
+services so it is not visible as a device on the network. Usually control point
+invokes media server or media renderer's services in order to complete the
+desired behavior coordinately.
+
+The user control point can be used in different scenarios, usually it can
+perform the following functions:
+
+\begin{itemize}
+\item Discover AV devices
+\item Locate desired media content
+\item Get renderer's supported protocol and formats
+\item Compare and match protocols and formats between media server and media
+renderer
+\item Configure media server and media renderer
+\item Select desired content
+\item Start content transfer between media server and media renderer
+\item Adjust rendering characteristics
+\item Select next content in the list
+\item Cleanup media server and media renderer
+\end{itemize}
+
+\end{enumerate}
+
+As described above, three basic functional entities are defined in the UPnP AV
+architecture\cite{upnp-av}: Media Server, Media Renderer and Control Point. A
+physical device can consist of a combination of any of these functional
+entities. A typical example is DLNA Media player is a combination of a Control
+Point and a Media renderer.
+
+A simplified UPnP Audio Video 3-box model \cite{DLNA_proxy} can be
+seen as below:
 
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/chart1}
-\caption{DLNA use scenario \label{chart1}}
+\caption{Typical UPnP AV use scenario \label{chart1}}
 \end{figure}
 
-The first thing in UPnP network communication is Simple Service Discovery Protocol(SSDP)-based 
-device discovery. A SSDP multicast message is send when a new device is added in the network. 
-A control point will listen to these multicast messages. When the control point receives the SSDP 
-message, the control point sends request for the device's description and services using the location 
-provided in the SSDP discovery message. Later the control point can invoke the services action 
-command using SOAP.
+The first thing in UPnP network communication is Simple Service Discovery
+Protocol(SSDP)-based device discovery. A SSDP multicast message is send when a
+new device is added in the network. A control point will listen to these
+multicast messages. When the control point receives the SSDP message, the
+control point sends request for the device's description and services using the
+location provided in the SSDP discovery message. Later the control point can
+invoke the services action command using SOAP.
 
-In media sharing scenario, the control point will browse the information about the Content 
-Directory Service (CDS) provided by the Media Server. A browse/Search action can be invoked 
-to navigate through the content stored in the Media Server device. When selected the media 
-content from Media Server, a Media Renderer AVTransport::SetAVTransportURI will be sent by 
-control point to Media Renderer. Finally, the Play command is invoked by control point to 
-Media Renderer, and the transfer begin afterwards. The media streaming happens directly 
-between Media Server and Media Renderer using HTTP.
+In media sharing scenario, the control point will browse the information about
+the Content Directory Service (CDS) provided by the Media Server. A
+browse/Search action can be invoked to navigate through the content stored in
+the Media Server device. When selected the media content from Media Server, a
+Media Renderer AVTransport::SetAVTransportURI will be sent by control point to
+Media Renderer. Finally, the Play command is invoked by control point to Media
+Renderer, and the transfer begin afterwards. The media streaming happens
+directly between Media Server and Media Renderer using HTTP.
 
+The media playback control action can also be invoked by control point. Methods
+supported include volume control, seek, pause etc.
+
+\subsubsection[DLNA]{DLNA\footnote{Digital Living Network Alliance}}
+DLNA is a pretty old standard in industry compared to other home networking
+solutions, it is mainly based on UPnP device architecture and UPnP AV
+architecture, which is discussed in \ref{upnp}, so it is widely used by many
+manufactures, the newer home networking solution is also influenced by DLNA and
+followed similar technologies. In this paper we focus on the DLNA and
+UPnP standard architecture so we can have an overview of how a home networking
+solution looks like.
 
 An overall DLNA architecture \cite{dlna_guideline} can be described below:
 \begin{enumerate}
@@ -217,9 +365,11 @@ An overall DLNA architecture \cite{dlna_guideline} can be described below:
 \textbf Connectivity & Ethernet, 802.11 (including Wi-Fi Direct) \\ 
 \textbf  & MoCA, HPNA and Bluetooth \\ \hline
 \textbf Networking & IPv4 Suite \\ \hline
-\textbf Device Discovery and Control & UPnP* Device Architecture v1.0 \\ \hline
-\textbf Media Management and Control & UPnP AV and UPnP Printer:1 \\ \hline
-\textbf Media Formats & Required and Optional Format Profiles \\ \hline
+\textbf Device Discovery and Control & UPnP* Device Architecture v1.0
+\ref{upnpdevice} \\ \hline 
+\textbf Media Management and Control & UPnP AV and UPnP Printer:1
+\ref{upnpav}\\ \hline 
+\textbf Media Formats & Required and Optional Format Profiles \\ \hline 
 \textbf Media Transport & Media Transport \\ \hline
 \textbf Remote User Interfaces & CEA-2014-A 
 \end{tabular}
@@ -235,8 +385,8 @@ guideline also addresses the media format compatibility and media transport
 interoperability issues to make devices interoperable with each other.
 
 \item Media Format Profiles \\
-DLNA organization defines the media formats used by DLNA home networking standard. There are 
-three types of media in DLNA standard.
+DLNA organization defines the media formats used by DLNA home networking
+standard. There are three types of media in DLNA standard.
 \begin{enumerate}
 \item Music \\
 Minimal requirement is LPCM format, which is PCM raw data, this format is not compressed so 
@@ -294,36 +444,383 @@ CVPs defined.
 \end{enumerate}
 
 \subsubsection{AirPlay}
-Airplay has its own specification, and it is not open to public, but on Internet there are hackers 
-make unofficial specification \cite{airplay-spec}. The Service discovery is
-based on multicast DNS \cite{multicastdns}, the discovered device include receiver's IP address and
-port number
+Airplay is Apple Inc. 's home networking solution. It is a family of protocols
+to display different types of media content on Apple TV from other iOS devices.
+The AirPlay support displaying photos and slideshows from iOS device, streaming
+audio from iOS device or iTunes, displaying videos from iOS device and
+show the whole screen on Apple TV, called AirPlay Mirroring.
+
+AirPlay's specification is not open to public, but on Internet there are
+hackers reverse engineered the protocol stack and made unofficial specification
+\cite{airplay-spec}. The specification include 6 parts, which are described
+below:
+
 \begin{enumerate}
+\item Service Discovery \\
+The service discovery of AirPlay roots from the IETF Zeroconf Working Group,
+which aims at improving ease-of-use (Zero Configuration) of network.
+That means making it possible to take two laptop computers, and connect them with a
+crossover Ethernet cable, and have them communicate usefully using IP, without
+needing a man in a white lab coat to set it all up for you. Zeroconf is not
+limited to networks with just two hosts, but as we scale up our technologies to
+larger networks, we always have to be sure we haven't forgotten the two-devices
+(and no DHCP server) case. 
+
+AirPlay's service discovery is based on multicast DNS \cite{multicastdns}, which
+fulfills Zeroconf requirement. Multicast DNS is a way of using familiar DNS
+programming interfaces, packet formats and operating semantics, in a small
+network where no conventional DNS server has been installed. The requirements
+for Zeroconf name resolution could be met by designing an entirely new
+protocol, it is better to provide this functionality by making minimal changes
+to the current standard DNS protocol. By using multicast DNS, most current
+applications need no changes at all to work correctly using mDNS in a Zeroconf network,
+engineers do not have to learn an entirely new protocol, and current network
+packet capture tools can already decode and display DNS packets, so they do not
+have to be updated to understand new packet formats.
+
+An AirPlay device such as the Apple TV publishes two services. The first one is
+RAOP (Remote Audio Output Protocol), used for audio streaming, and the other
+one is the AirPlay service, for photo and video content.
+
+The AirPlay server is a HTTP server (RFC 2616). Two connections are made to this
+server, the second one being used as a reverse HTTP connection. This allows a
+client to receive asynchronous events, such as playback status changes, from a
+server.
 \item Video streaming \\
-The video streaming uses typical HTTP streaming technology, the controller set the streaming URL 
-to Apple TV or other airplay receiver. While the URL is set, Apple TV start to download video from 
-the server using the URL and starts playing while buffered enough data.
+The video streaming uses typical HTTP streaming technology, the controller set
+the streaming URL to Apple TV or other airplay receiver. While the URL is set,
+Apple TV start to download video from the server using the URL and starts
+playing while buffered enough data. The control messages can be seen in
+table \ref{video_stream}.
+
+Note that the Apple TV does not support Video Volume Control.
+%% table , Video Streaming
+\begin{table}[htb]
+\caption{AirPlay Video Control HTTP requests \label{video_stream}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l|l}  
+\textbf { Method } & { Request } & { Description }\\ \hline
+\textbf GET & /server-info & Fetch general informations about the AirPlay server \\ \hline
+\textbf POST & /play & Start video playback \\ \hline
+\textbf POST & /scrub & Seek at an arbitrary location in the video \\ \hline
+\textbf POST & /rate & Change the playback rate,0 is paused, 1 is normal \\
+\hline 
+\textbf POST & /stop & Stop playback \\ \hline 
+\textbf GET & /scrub & Retrieve the current playback position \\ \hline
+\textbf GET & /playback-info & Retrieve playback informations like position,
+duration\ldots \\ \hline 
+\textbf PUT & /setProperty & Set playback property \\ \hline 
+\textbf GET & /getProperty & Get playback property 
+\end{tabular}
+}
+\end{center}
+\end{table}
 \item Photo streaming \\
-The image streaming uses HTTP put message to send image raw data to Apple TV or other devices, when 
-the whole image is received, the image is then rendered on screen.
+The image streaming uses HTTP put message to send image raw data to Apple TV or
+other devices, when the whole image is received, the image is then rendered on
+screen. The AirPlay also supports slide show, the control message can be seen in
+table \ref{photo_stream}.
+\begin{table}[htb]
+\caption{AirPlay Photo Control HTTP requests \label{photo_stream}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l|l}  
+\textbf { Method } & { Request } & { Description }\\ \hline
+\textbf GET & /slideshow-features & Fetch the list of available transitions for slideshows \\ \hline
+\textbf PUT & /photo & Send a JPEG picture to the server \\ \hline
+\textbf PUT & /slideshows/1 & Start or stop a slideshow session \\
+\hline 
+\textbf POST & /stop & Stop a photo or slideshow session 
+\end{tabular}
+}
+\end{center}
+\end{table}
 \item Music streaming \\
 Airplay music streaming is a bit different from video and image streaming, the
 technology used is RTSP streaming, it is more "push like" protocol, the RTSP
 streaming server push UDP packets to receiver. However the RTSP protocol Apple
-used is not standard RTSP, it uses its own implementation.
+used is not standard RTSP, it uses its own implementation, called  RAOP (Remote
+Audio Output Protocol). The control message can be seen in table
+\ref{music_stream}.
+\begin{table}[htb]
+\caption{AirPlay Audio Control RTSP requests \label{music_stream}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l}  
+\textbf { RTSP request } & { Description }\\ \hline
+\textbf OPTIONS & Ask the RTSP server for its supported methods \\ \hline 
+\textbf ANNOUNCE & Tell the RTSP server about stream properties using SDP \\
+\hline 
+\textbf SETUP & Initialize a record session \\ \hline 
+\textbf RECORD & Start the audio streaming \\ \hline 
+\textbf FLUSH & Stop the streaming \\ \hline 
+\textbf TEARDOWN & End the RTSP session 
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+\item Screen mirroring \\
+AirPlay screen mirroring is achieved by transmitting H.264 encoded video stream
+over a TCP connection. The stream is packetized with a 128-byte header. The
+audio is sent using AirTunes protocol and AAC-ELD formatted. 
+NTP(Network time protocol) is used for synchronization. The synchronization
+takes place on UDP port 7010(client) and 7011(server), using NTP protocol. The
+AirPlay server runs a NTP client. Request are sent to AirPlay client at 3
+second intervals. The reference date for time stamp is the beginning of the
+mirroring session.  The control message can be seen in table
+\ref{mirroring_stream}.
+\begin{table}[htb]
+\caption{AirPlay Mirroring Control HTTP requests \label{mirroring_stream}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|l|l}  
+\textbf { Method } & { Request } & { Description }\\ \hline
+\textbf GET & /stream.xml & Retrieve information about the server capabilities
+\\ \hline 
+\textbf POST & /stream & Start the live video transmission 
+\end{tabular}
+}
+\end{center}
+\end{table}
+\item Authentication \\
+An AirPlay server can require a password for displaying any content from the
+network. It is implemented using standard HTTP Digest Authentication (RFC 2617),
+over RTSP for AirTunes, and HTTP for everything else. Te digest realms and
+usernames accepted by Apple TV are described in table \ref{hda}.
+%% table , Airplay Authentication
+\begin{table}[htb]
+\caption{AirPlay HTTP Digest Authentication \label{hda}}
+\begin{center}
+\fbox{
+\begin{tabular}{c|c|c}  
+\textbf { Service } & { Realm } & { Username }\\ \hline
+\textbf AirTunes & roap & iTunes \\ \hline
+\textbf AirPlay & AirPlay & AirPlay 
+\end{tabular}
+}
+\end{center}
+\end{table}
 \end{enumerate}
-\subsubsection{Chromecast}
-Chromecast and Fire TV on the other hand uses DIAL protocol for device discovery, the protocol is 
-proposed by Google and Netflix so the YouTube and Netflix application has already build in with DIAL 
-device discovery. The streaming part uses HTTP streaming, which means controller can directly set the 
+
+\subsubsection{Chromecast/DIAL}
+Chromecast and FireTV use the DIAL \cite{dial} (DIscovery And Launch) protocol,
+co-developed by Netflix and YouTube, to search for available devices on a Wi-Fi network.
+Once a device is discovered, the protocol synchronizes information on how to
+connect to the device. The protocol is proposed by Google and Netflix so the
+YouTube and Netflix application has already build in with DIAL device discovery. The
+streaming part uses HTTP streaming, which means controller can directly set the
 streaming URL and the receiver will start downloading automatically.
+
+The DIAL protocol has two components: DIAL Service Discovery and the DIAL REST
+Service. DIAL Service Discovery enables a DIAL client device to discover DIAL
+servers on its local network segment and obtain access to the DIAL REST Service
+on those devices. The DIAL REST Service enables a DIAL client to query, launch,
+and optionally stop applications on a DIAL server device.
+\begin{enumerate}
+\item DIAL Service Discovery \\
+The DIAL Service Discovery protocol is based on SSDP (Simple Service Discovery
+Protocol), which is defined as part of UPnP device architecture discussed in
+\ref{upnp}.
+
+A DIAL client will firstly send an M-Search request over UDP to the IPv4
+multicast address 239.255.255.250 and UDP port 1900 including the Search Target
+header. After that the SSDP/UPnP server responds including a LOCATION header
+containing an absolute HTTP URL for the UPnP description of the root device.
+When receives the M-SEARCH response, the DIAL client will send an HTTP GET
+request to the URL received in the LOCATION header of the M-SEARCH response to
+get HTTP response containing the UPnP device description as a XML content. The
+overall flow of DIAL discovery is shown in figure \ref{dial_discovery}.
+
+\begin{figure}[htb] \centering
+\includegraphics[height=9cm]{charts/dial_discovery}
+\caption{DIAL Discovery \label{dial_discovery}}
+\end{figure}
+
+\item DIAL REST Service \\
+The DIAL REST service allocates URLs for different resource applications such as
+YouTube and Netflix. Then the application can be controlled by issuing HTTP
+requests against the URL for that application. The Application resource URL is
+constructed by concatenating the DIAL REST service URL, a single slash charater
+('/') and the application name. The application name must be registered in DIAL
+Registry to be used.
+
+A DIAL client firstly send a HTTP GET request to the application resource URL,
+then the server will extract the application name and search for the
+application is installed or not, if the application is not recognized, the
+server will return 404 Not Found or trigger the installation of the specific
+application that is not currently installed, otherwise, the DIAL server return
+an HTTP response with 200 OK and a body contains MIME type in XML.
+
+The client then sends a HTTP POST request to the application resource URL to
+launch the desired application. On receipt of a valid POST request, the DIAL
+server will extract the application name and run the application, and then send
+a HTTP response with LOCATION header to inform the absolute HTTP URL which
+identifies the running instance of the application.
+
+The first-screen application can also send small amount of data to the DIAL
+server, and then DIAL server can communicate the information to DIAL clients.
+After the application is launched and communication is established, the DIAL
+client can communicate directly with the application. DIAL REST service overall
+flow chart can be shown as figure \ref{dial_rest}.
+
+\begin{figure}[htb] \centering \includegraphics[height=9cm]{charts/dial_rest}
+\caption{DIAL REST service: application launch \label{dial_rest}}
+\end{figure}
+\end{enumerate}
+
 \subsubsection{Miracast}
 
-Miracast is quit different on technology perspective, instead of connecting on the same local network, 
-a Wi-Fi peer to peer connection is created, so Miracast is not limited to pre configured network 
-infrastructure.
-\subsubsection{Other protocols}
+Miracast \cite{miracast_industry} is quit different on technology perspective,
+instead of connecting on the same local network, a Wi-Fi peer to peer connection is created, so Miracast
+is not limited to pre-configured network infrastructure.
 
+Miracast allows users to establish a direct Wi-Fi connection between two
+devices, eliminating the need for an existing network.
+
+Miracast uses many of the building blocks that, over the years, have enriched
+the user experience and increased their trust in Wi-Fi, including Wi-Fi
+CERTIFIED n (improved throughput and coverage), Wi-Fi Direct (device-to-
+device connectivity), Wi-Fi Protected Access 2 (WPA2) (security), Wi-Fi
+Multimedia (WMM) (traffic management) and Wi-Fi Protected Setup. Some
+Miracast devices will also support Tunneled Direct Link Setup (TDLS), which
+allows them to connect via an infrastructure network. TDLS enables more
+efficient data transfer and the use of more advanced Wi-Fi capabilities than
+those supported by the legacy infrastructure network through which the devices
+are connected.
+
+Miracast does not require a typical Wi-Fi infrastructure network, though many
+devices will take advantage of network connectivity to access content. Miracast
+connections are expected to be predominantly established between Wi-Fi devices
+connected with each other directly, without an AP acting as an intermediary.
+The direct link between devices is established either through Wi-Fi direct, a
+feature that all Miracast devices are required to support, or through TDLS, an
+option feature. When two devices connect with each other directly, one fulfills
+its role as the source(the transmitting device) and the other functions as a
+display(the device receiving and rendering the content to the user). Topologies
+supported by Miracast are shown in Figure \ref{miracast_model}. 
+
+\begin{figure}[htb] \centering
+\includegraphics[height=14cm]{charts/miracast_model}
+\caption{Miracast topologies \label{miracast_model}}
+\end{figure}
+
+On technology perspective, Miracast is built upon many diffenet Wi-Fi
+technologies, which is shown in figure \ref{miracast_architect}.
+
+\begin{figure}[htb] \centering
+\includegraphics[height=5cm]{charts/miracast_technology_architecture}
+\caption{Miracast technology architecture \label{miracast_architect}}
+\end{figure}
+
+The technology component includes the following:
+\begin{enumerate}
+\item Connectivity\\
+Wi-Fi CERTIFIED n provides a transmission channel designed to support
+multimedia content.
+\item Device-to-device connectivity\\
+Wi-Fi Direct allows devices to connect directly to each other, without the
+need for a Wi-Fi AP, and often requiring just the push of a button. TDLS allows
+devices that are associated to the same Wi-Fi network to establish a direct
+link with each other.
+\item Security\\ 
+WPA2 makes the transport of multimedia content safe,
+protecting both the source and the display.
+\item Quality of service (QoS)\\
+Wi-Fi Multimedia (WMM) gives real-time content, such as voice and audio,
+priority where appropriate over best-effort traffic, to support a good user
+experience.
+\item Battery life \\
+WMM Power Save extends the battery life of mobile devices
+like smartphones or tablets by minimizing the time the device is actively
+connected to the AP during idle time. Power save mechanisms in Wi-Fi Direct
+provide similar benefits when connecting devices without an AP.
+\item Ease of installation\\
+Wi-Fi Protected Setup helps users to automatically configure Wi-Fi networks,
+enable WPA2 security, and add new devices.
+\end{enumerate}
+
+Miracast Session management
+
+\begin{center}
+    \begin{tabular}{ | p{3.5cm} | p{10cm} |}
+     \hline
+    \multicolumn{2}{c}{Miracast Session Management}\\
+    \hline
+    Device Discovery  & Source and display devices discover each other prior to
+    connection setup. The Device discovery mechanism is defined in the Wi-Fi
+    Peer-to-Peer (P2P) Specification. \\ \hline 
+    
+    Service Discovery  & Source and display devices discover each other’s
+    Miracast capabilities prior to connection setup. The Service discovery
+    mechanism is defined in the Wi-Fi P2P specification. \\ \hline
+    
+    Device selection &A remote device is selected for connection setup. User
+    input and local policies may be used to decide which device is a display
+    and which is a source. \\ \hline 
+    
+    Connection setup & Connection setup selects a method (Wi-Fi Direct or TDLS)
+    to manage the connection. Wi-Fi Direct sets up a group owner and client to
+    initiate a device-to-device link. A WPA2 single-hop link with selected
+    devices is established. Upon the establishment of connectivity between the
+    source and display devices, the display initiates a Transmission Control
+    Protocol (TCP) connection, with a control port using Real-Time Streaming
+    Protocol (RTSP) to create and manage the sessions between source and
+    display devices. \\
+    \hline
+    
+    Capability negotiation & Source and display devices determine the parameters
+    for the Miracast session. \\ \hline
+    
+    Content protection setup (optional) & If the devices support content
+    protection and are streaming content requiring protection, session keys for
+    link content protection are derived using High-bandwidth Digital Content
+    Protection (HDCP) 2.0/2.1. HDCP session keys are established before the RTP
+    session is initiated. This feature is designed to protect the digital
+    rights of content owners and to encourage their efforts to make their
+    content available. \\ \hline
+    
+    Session establishment and streaming & Upon completion of capability
+    negotiation, the source and display devices setup the Miracast session
+    prior to streaming content.
+    The audio and video content available on the source device is packetized
+    using Moving Picture Experts Group 2 Transport Stream (MPEG2-TS) coding and
+    encapsulated by Real-Time Protocol (RTP) User Datagram Protocol (UDP) and
+    Internet Protocol (IP). Finally, IEEE 802.11 packetization enables the
+    source device to send content to the display device. \\ \hline
+    
+    User input back channel setup (optional) & A User Interface Back Channel
+    (UIBC) for transmitting control and data information related to user
+    interaction with the user interface is set up. User inputs at a display are
+    packetized using a UIBC packet header and transported using Transmission
+    Control Protocol/Internet Protocol (TCP/IP).\\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | p{3.5cm} | p{10cm} |}
+     \hline
+    \multicolumn{2}{c}{Miracast Session Management}\\
+    \hline
+    Payload control & When the payload transfer starts, devices may adapt
+    transmission parameters on the basis of channel conditions and power
+    consumption. Adaptation can be achieved by: Compression ratio change and
+    macroblock skipping (using the H.264 standard); Frame skipping (if the
+    display device supports this functionality, the source device may skip some
+    of the frames to be transmitted according to the current resolution);
+    Format change. \\ \hline
+    
+    Display session teardown  & Either the source or the display terminates the
+    Miracast session. \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Other protocols}
+Apart from all mentioned standards above, many other companies or associations
+also proposed their own protocols, for example SonosNet \cite{sonosnet} which is
+based on peer to peer network, and Spotify Connect \cite{spotifyconnect}. The
+standard war on home networking has never end.
 
 \subsection{Comparison of existing solutions}
 \subsubsection{History}
@@ -395,7 +892,7 @@ the existing solutions, table \ref{Table1} below shows the main technology used
 for different popular solutions.
 %% table 1, compare technology
 \begin{table}[htb]
-\caption{Technology used \label{Table1}}
+\caption{Technology used comparison\label{Table1}}
 \begin{center}
 \fbox{
 \begin{tabular}{c|l|l|l}  
@@ -431,12 +928,14 @@ what advanced features each standard provides.
 
 \end{enumerate} 
 
-According to the comparison, each standard have its own features and uses different protocols 
-to communicate. But there are common features supported by most standards, such as HTTP media 
-server is used quite much to handle video and photo streaming. UPnP device discovery protocol 
-SSDP is used quite a lot for device discovery. 
+According to the comparison, each standard have its own features and uses
+different protocols to communicate. But there are common features supported by
+most standards, such as HTTP media server is used quite much to handle video
+and photo streaming. UPnP device discovery protocol SSDP is used quite a lot
+for device discovery.
 
-Since there is some similarity that is used by most standards, there is possibility to make 
-some application that include all these standard architecture and work with those protocols. 
+Since there is some similarity that is used by most standards, there is
+possibility to make some application that include all these standard
+architecture and work with those protocols.
 Making an Android application to connect those devices becomes a doable work.
 
