@@ -23,14 +23,14 @@
 \contentsline {subsubsection}{\numberline {2.3.3}Technology feature}{24}{subsubsection.2.3.3}
 \contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{26}{section.3}
 \contentsline {subsection}{\numberline {3.1}Architecture overview}{26}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Features}{27}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Extensibility}{28}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Evaluation methodology}{29}{subsection.3.4}
-\contentsline {section}{\numberline {4}Results}{30}{section.4}
-\contentsline {subsection}{\numberline {4.1}Performance}{30}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Statistics}{30}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}User study}{30}{subsection.4.3}
-\contentsline {section}{\numberline {5}Discussion}{31}{section.5}
-\contentsline {subsection}{\numberline {5.1}Further development}{31}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{31}{subsection.5.2}
-\contentsline {section}{References}{32}{section*.12}
+\contentsline {subsection}{\numberline {3.2}Features}{28}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Extensibility}{29}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Evaluation methodology}{30}{subsection.3.4}
+\contentsline {section}{\numberline {4}Results}{31}{section.4}
+\contentsline {subsection}{\numberline {4.1}Performance}{31}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Statistics}{31}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}User study}{31}{subsection.4.3}
+\contentsline {section}{\numberline {5}Discussion}{33}{section.5}
+\contentsline {subsection}{\numberline {5.1}Further development}{33}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{33}{subsection.5.2}
+\contentsline {section}{References}{34}{section*.12}
