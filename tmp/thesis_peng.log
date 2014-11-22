@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  7 OCT 2014 23:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  22 NOV 2014 14:17
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1174,7 +1174,7 @@ df>
 (epstopdf)                    size: 76091 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/android_versions-ep
 s-converted-to.pdf charts/android_versions.eps>
-(epstopdf)             \includegraphics on input line 37.
+(epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/android_versions-eps-converted-to.pdf, id=517, 788.9475pt x 428.60126pt
@@ -1182,7 +1182,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: charts/android_versions-eps-converted-to.pdf Graphic file (type pdf)
  <use charts/android_versions-eps-converted-to.pdf>
 Package pdftex.def Info: charts/android_versions-eps-converted-to.pdf used on i
-nput line 37.
+nput line 48.
 (pdftex.def)             Requested size: 261.8703pt x 142.26378pt.
 Package epstopdf Info: Source file: <charts/user_world_map.eps>
 (epstopdf)                    date: 2014-10-07 23:50:48
@@ -1193,7 +1193,7 @@ Package epstopdf Info: Source file: <charts/user_world_map.eps>
 (epstopdf)                    size: 185550 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/user_world_map-eps-
 converted-to.pdf charts/user_world_map.eps>
-(epstopdf)             \includegraphics on input line 42.
+(epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/user_world_map-eps-converted-to.pdf, id=518, 1048.91875pt x 637.38126pt
@@ -1201,29 +1201,37 @@ Package epstopdf Info: Output file is already uptodate.
 File: charts/user_world_map-eps-converted-to.pdf Graphic file (type pdf)
  <use charts/user_world_map-eps-converted-to.pdf>
 Package pdftex.def Info: charts/user_world_map-eps-converted-to.pdf used on inp
-ut line 42.
+ut line 53.
 (pdftex.def)             Requested size: 421.41667pt x 256.0748pt.
-) [31
+ [31
 
-] [32 <./charts/android_versions-eps-converted-to.pdf> <./charts/user_world_map
--eps-converted-to.pdf>]
-(./chapters/chapter5.tex) [33
+]) [32 <./charts/android_versions-eps-converted-to.pdf> <./charts/user_world_ma
+p-eps-converted-to.pdf>]
+[33] (./chapters/chapter5.tex) [34
 
-] (./thesis_peng.bbl [34
+] (./thesis_peng.bbl [35
 
-]) [35]
+]) [36]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
- (./thesis_peng.aux)
+
+(./thesis_peng.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
-Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
-(rerunfilecheck)             Checksum: B0BA959D9D46E30470D28768EF9C926E;2140.
+
+
+Package rerunfilecheck Warning: File `thesis_peng.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_peng.out':
+(rerunfilecheck)             Before: B0BA959D9D46E30470D28768EF9C926E;2140
+(rerunfilecheck)             After:  FFECF1C804DC7018BCD1135D4F24B7C7;2190.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 17630 strings out of 493308
- 328743 string characters out of 6137816
+ 17632 strings out of 493308
+ 328764 string characters out of 6137816
  804918 words of memory out of 5000000
  20555 multiletter control sequences out of 15000+600000
  29365 words of font info for 60 fonts, out of 8000000 for 9000
@@ -1245,10 +1253,10 @@ t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (40 pages, 669179 bytes).
+Output written on thesis_peng.pdf (41 pages, 670027 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 564 compressed objects within 6 object streams
+ 159 named destinations out of 1000 (max. 500000)
  345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

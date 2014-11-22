@@ -4,13 +4,13 @@ The top-level auxiliary file: thesis_peng.aux
 The style file: unsrt.bst
 Database file #1: reference.bib
 Warning--entry type for "spotifyconnect" isn't style-file defined
---line 12 of file reference.bib
-Warning--entry type for "sonosnet" isn't style-file defined
 --line 19 of file reference.bib
+Warning--entry type for "sonosnet" isn't style-file defined
+--line 26 of file reference.bib
 Warning--entry type for "multicastdns" isn't style-file defined
---line 75 of file reference.bib
+--line 82 of file reference.bib
 Warning--entry type for "airplay-spec" isn't style-file defined
---line 114 of file reference.bib
+--line 121 of file reference.bib
 Too many commas in name 1 of "W. Keith Edwards, Rebecca E. Grinter, Ratul Mahajan, David Wetherall" for entry stateofHN
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Brent A. Miler, Toby Nixon, Charlie Tai, Mark D. Wood" for entry upnp
