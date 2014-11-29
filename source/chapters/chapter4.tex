@@ -8,14 +8,14 @@ lot and also brought many new features to it. As discussed in previous chapter,
 we used Google Analytics SDK to help us get insights to our application and our
 users. In this chapter we will present and analyze those results.
 
-\subsection{}
 \subsection{Performance}
 In terms of streaming, our solution include two major streaming components. It
-would be interesting to study how the media streaming protocol have the better 
+would be helpful to study how the media streaming protocol have the better 
 performance while streaming multimedia contents. And also, by comparing
 different streaming types of media, we could investigate which protocol is best
 suitable for certain type of media. Two major streaming technology we
 used in our solution are HTTP streaming and RTSP streaming.
+
 Hypertext Transfer Protocol (HTTP) refers to the protocol used to deliver web
 pages and images across the Internet worldwide. HTTP is an adopted, open
 standard-the most ubiquitous mode of delivery on-line. HTTP is a "stateless"
@@ -24,18 +24,33 @@ by a variety of web servers, both commercial and open source.
 
 Real Time Streaming Protocol (RTSP) is a network control protocol used in
 entertainment and communications systems to control streaming media servers.
-
 RTSP is used to establish and control media sessions between two points,
 usually server and player client. Clients of media servers issue VCR-like
 commands, such as PLAY and PAUSE, to facilitate real-time control of playback
 of media files from the server. Microsoft's Smooth Streaming is a hybrid
 delivery method that acts like traditional RTSP streaming but is based on HTTP
-PDL. Apple ®'s HTTP Live Streaming (HLS) is another example of using HTTP to
+PDL. Apple's HTTP Live Streaming (HLS) is another example of using HTTP to
 deliver video with new techniques.
 
-AirPlay uses RTSP streaming for the iTunes music.
+AirPlay uses RTSP streaming for the iTunes music. Thus we chose a mp3 music and
+try to stream it to an AirPlay Speaker and an DLNA Speaker, and we used
+Wireshark running on rooted Android phone to capture the packets in the network.
+The result is presented below, the initial packet count is relatively high,
+this is because there is a lot multicast messages in the network for device
+discovery, after that, streaming graph shows that after an initial increase in
+the traffic, network traffic is relatively stable, this is because the TCP
+protocol reaches the best optimized transmission speed.
+
+Next step, we added packet loss in the network, and see the influence to the two
+streaming process, result is shown below:
 
 \subsection{Statistics}
+Through one year's on-line marketing, we reached 637000 downloads from 223
+countries all around the world, with around 8000 daily active users. So far, the
+average rating of our app is 3.9 out of 7527 ratings. The application turns out
+to be popular in countries like France, United States, Germany, United Kingdom
+and Brazil.
+
 \begin{itemize}
 \item[--]Totally more than 290000 downloads
 \item[--]Used by people from 201 countries
@@ -69,7 +84,6 @@ AirPlay uses RTSP streaming for the iTunes music.
 }
 \end{center}
 \end{table}
-
 
 \subsection{User study}
 \begin{itemize}
