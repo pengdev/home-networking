@@ -9,7 +9,7 @@ Warning--entry type for "sonosnet" isn't style-file defined
 --line 26 of file reference.bib
 Warning--entry type for "multicastdns" isn't style-file defined
 --line 82 of file reference.bib
-Warning--entry type for "airplay-spec" isn't style-file defined
+Warning--entry type for "AirPlay-spec" isn't style-file defined
 --line 121 of file reference.bib
 Too many commas in name 1 of "W. Keith Edwards, Rebecca E. Grinter, Ratul Mahajan, David Wetherall" for entry stateofHN
 while executing---line 944 of file unsrt.bst
@@ -31,7 +31,7 @@ Too many commas in name 1 of "Jung-Tae Kim, Yeon-Joo Oh, Hoon-Ki Lee, Eui-Hyun P
 while executing---line 944 of file unsrt.bst
 You've used 18 entries,
             1791 wiz_defined-function locations,
-            528 strings with 5363 characters,
+            529 strings with 5375 characters,
 and the built_in function-call counts, 3051 in all, are:
 = -- 283
 > -- 67

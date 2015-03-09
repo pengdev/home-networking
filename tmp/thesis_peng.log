@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  6 MAR 2015 14:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  9 MAR 2015 22:55
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -795,6 +795,9 @@ File: amsgen.sty 1999/11/30 v2.0
 )
 (./thesis_peng.aux
 
+LaTeX Warning: Label `chart5' multiply defined.
+
+
 LaTeX Warning: Label `multiavp' multiply defined.
 
 
@@ -951,25 +954,25 @@ Package epstopdf Info: Source file: <charts/upnp_playback.eps>
 (epstopdf)                    size: 9341 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/upnp_playback-eps-c
 onverted-to.pdf charts/upnp_playback.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/upnp_playback-eps-converted-to.pdf, id=267, 813.0375pt x 518.93875pt>
+<charts/upnp_playback-eps-converted-to.pdf, id=265, 813.0375pt x 518.93875pt>
 File: charts/upnp_playback-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/upnp_playback-eps-converted-to.pdf>
 Package pdftex.def Info: charts/upnp_playback-eps-converted-to.pdf used on inpu
-t line 195.
+t line 208.
 (pdftex.def)             Requested size: 401.22041pt x 256.0748pt.
  [7 <./charts/upnp_playback-eps-converted-to.pdf>] [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 296.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 307.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 307.
  [9]
 Package epstopdf Info: Source file: <charts/chart1.eps>
 (epstopdf)                    date: 2014-05-31 00:23:19
@@ -979,29 +982,29 @@ Package epstopdf Info: Source file: <charts/chart1.eps>
 (epstopdf)                    size: 9463 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/chart1-eps-converte
 d-to.pdf charts/chart1.eps>
-(epstopdf)             \includegraphics on input line 321.
+(epstopdf)             \includegraphics on input line 332.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/chart1-eps-converted-to.pdf, id=297, 1145.27875pt x 703.62875pt>
+<charts/chart1-eps-converted-to.pdf, id=295, 1145.27875pt x 703.62875pt>
 File: charts/chart1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/chart1-eps-converted-to.pdf>
 Package pdftex.def Info: charts/chart1-eps-converted-to.pdf used on input line 
-321.
+332.
 (pdftex.def)             Requested size: 416.79124pt x 256.0748pt.
  [10 <./charts/chart1-eps-converted-to.pdf>] [11] [12]
-Overfull \hbox (0.121pt too wide) in paragraph at lines 459--468
+Overfull \hbox (0.121pt too wide) in paragraph at lines 470--476
 \T1/cmr/m/n/12 The ser-vice dis-cov-ery of Air-Play roots from the IETF Ze-ro-c
 onf Work-ing Group,
  []
 
 [13]
-Overfull \hbox (45.90332pt too wide) in paragraph at lines 516--517
+Overfull \hbox (45.90332pt too wide) in paragraph at lines 524--525
  [][] 
  []
 
 
-Overfull \hbox (39.50775pt too wide) in paragraph at lines 536--537
+Overfull \hbox (39.50775pt too wide) in paragraph at lines 544--545
  [][] 
  []
 
@@ -1015,14 +1018,14 @@ Package epstopdf Info: Source file: <charts/dial_discovery.eps>
 (epstopdf)                    size: 6409 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/dial_discovery-eps-
 converted-to.pdf charts/dial_discovery.eps>
-(epstopdf)             \includegraphics on input line 637.
+(epstopdf)             \includegraphics on input line 646.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/dial_discovery-eps-converted-to.pdf, id=373, 904.37875pt x 563.10374pt>
+<charts/dial_discovery-eps-converted-to.pdf, id=371, 904.37875pt x 563.10374pt>
 File: charts/dial_discovery-eps-converted-to.pdf Graphic file (type pdf)
 <use charts/dial_discovery-eps-converted-to.pdf>
 Package pdftex.def Info: charts/dial_discovery-eps-converted-to.pdf used on inp
-ut line 637.
+ut line 646.
 (pdftex.def)             Requested size: 411.27219pt x 256.0748pt.
  [16]
 Package epstopdf Info: Source file: <charts/dial_rest.eps>
@@ -1033,15 +1036,15 @@ Package epstopdf Info: Source file: <charts/dial_rest.eps>
 (epstopdf)                    size: 7993 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/dial_rest-eps-conve
 rted-to.pdf charts/dial_rest.eps>
-(epstopdf)             \includegraphics on input line 668.
+(epstopdf)             \includegraphics on input line 677.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/dial_rest-eps-converted-to.pdf, id=385, 1292.83pt x 819.06pt>
+<charts/dial_rest-eps-converted-to.pdf, id=383, 1292.83pt x 819.06pt>
 File: charts/dial_rest-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/dial_rest-eps-converted-to.pdf>
 Package pdftex.def Info: charts/dial_rest-eps-converted-to.pdf used on input li
-ne 668.
+ne 677.
 (pdftex.def)             Requested size: 404.20566pt x 256.0748pt.
  [17 <./charts/dial_discovery-eps-converted-to.pdf>] [18 <./charts/dial_rest-ep
 s-converted-to.pdf>]
@@ -1054,15 +1057,15 @@ Package epstopdf Info: Source file: <charts/miracast_model.eps>
 (epstopdf)                    size: 10334 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_model-eps-
 converted-to.pdf charts/miracast_model.eps>
-(epstopdf)             \includegraphics on input line 705.
+(epstopdf)             \includegraphics on input line 714.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/miracast_model-eps-converted-to.pdf, id=408, 721.69624pt x 935.495pt>
+<charts/miracast_model-eps-converted-to.pdf, id=406, 721.69624pt x 935.495pt>
 File: charts/miracast_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/miracast_model-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_model-eps-converted-to.pdf used on inp
-ut line 705.
+ut line 714.
 (pdftex.def)             Requested size: 307.306pt x 398.33858pt.
 Package epstopdf Info: Source file: <charts/miracast_technology_architecture.ep
 s>
@@ -1075,60 +1078,60 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_technology
 _architecture-eps-converted-to.pdf charts/miracast_technology_architecture.eps>
 
-(epstopdf)             \includegraphics on input line 713.
+(epstopdf)             \includegraphics on input line 722.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/miracast_technology_architecture-eps-converted-to.pdf, id=410, 657.4562
+<charts/miracast_technology_architecture-eps-converted-to.pdf, id=408, 657.4562
 5pt x 317.185pt>
 File: charts/miracast_technology_architecture-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use charts/miracast_technology_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_technology_architecture-eps-converted-
-to.pdf used on input line 713.
+to.pdf used on input line 722.
 (pdftex.def)             Requested size: 294.88951pt x 142.26378pt.
  [19 <./charts/miracast_model-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 784--784
+Underfull \hbox (badness 10000) in paragraph at lines 793--793
 [][]\T1/cmr/m/n/12 Session es-tab-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--784
+Underfull \hbox (badness 10000) in paragraph at lines 793--793
 \T1/cmr/m/n/12 lish-ment and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 802--802
 [][]\T1/cmr/m/n/12 User in-put back
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 802--802
 \T1/cmr/m/n/12 chan-nel setup
  []
 
 [20 <./charts/miracast_technology_architecture-eps-converted-to.pdf>]
-Overfull \vbox (25.63387pt too high) has occurred while \output is active []
+Overfull \vbox (25.08643pt too high) has occurred while \output is active []
 
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 814--814
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
 [][]\T1/cmr/m/n/12 Display ses-sion
  []
 
-[22] <charts/dlna_market.png, id=455, 433.62pt x 256.7994pt>
+[22] <charts/dlna_market.png, id=453, 433.62pt x 256.7994pt>
 File: charts/dlna_market.png Graphic file (type png)
 
 <use charts/dlna_market.png>
-Package pdftex.def Info: charts/dlna_market.png used on input line 861.
+Package pdftex.def Info: charts/dlna_market.png used on input line 872.
 (pdftex.def)             Requested size: 432.42134pt x 256.0748pt.
 
-Overfull \hbox (5.63pt too wide) in paragraph at lines 861--862
+Overfull \hbox (5.63pt too wide) in paragraph at lines 872--873
  [][][] 
  []
 
 [23 <./charts/dlna_market.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 900--901
 
  []
 
@@ -1136,17 +1139,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 888--889
 
 ]
 Package epstopdf Info: Source file: <charts/chart3.eps>
-(epstopdf)                    date: 2014-06-04 22:31:45
+(epstopdf)                    date: 2015-03-09 22:51:18
 (epstopdf)                    size: 16485 bytes
 (epstopdf)             Output file: <charts/chart3-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-04 22:31:56
-(epstopdf)                    size: 7100 bytes
+(epstopdf)                    date: 2015-03-09 22:51:25
+(epstopdf)                    size: 7052 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/chart3-eps-converte
 d-to.pdf charts/chart3.eps>
 (epstopdf)             \includegraphics on input line 65.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/chart3-eps-converted-to.pdf, id=484, 1198.4775pt x 754.82pt>
+<charts/chart3-eps-converted-to.pdf, id=482, 1198.4775pt x 754.82pt>
 File: charts/chart3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/chart3-eps-converted-to.pdf>
@@ -1154,17 +1157,17 @@ Package pdftex.def Info: charts/chart3-eps-converted-to.pdf used on input line
 65.
 (pdftex.def)             Requested size: 406.58089pt x 256.0748pt.
 Package epstopdf Info: Source file: <charts/data_flow.eps>
-(epstopdf)                    date: 2014-06-04 22:01:56
+(epstopdf)                    date: 2015-03-09 22:51:18
 (epstopdf)                    size: 15645 bytes
 (epstopdf)             Output file: <charts/data_flow-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-04 22:02:03
-(epstopdf)                    size: 6839 bytes
+(epstopdf)                    date: 2015-03-09 22:51:26
+(epstopdf)                    size: 6807 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/data_flow-eps-conve
 rted-to.pdf charts/data_flow.eps>
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/data_flow-eps-converted-to.pdf, id=486, 948.54375pt x 599.23875pt>
+<charts/data_flow-eps-converted-to.pdf, id=484, 948.54375pt x 599.23875pt>
 File: charts/data_flow-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/data_flow-eps-converted-to.pdf>
@@ -1183,7 +1186,7 @@ onverted-to.pdf charts/streambels_ui.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/streambels_ui-eps-converted-to.pdf, id=488, 963.6pt x 562.1pt>
+<charts/streambels_ui-eps-converted-to.pdf, id=486, 963.6pt x 562.1pt>
 File: charts/streambels_ui-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/streambels_ui-eps-converted-to.pdf>
@@ -1196,7 +1199,7 @@ Overfull \hbox (12.19138pt too wide) in paragraph at lines 97--98
  []
 
 [27 <./charts/chart3-eps-converted-to.pdf>]
-<charts/allconnect-app.png, id=501, 787.0203pt x 406.1574pt>
+<charts/allconnect-app.png, id=498, 787.0203pt x 406.1574pt>
 File: charts/allconnect-app.png Graphic file (type png)
 
 <use charts/allconnect-app.png>
@@ -1215,35 +1218,35 @@ Overfull \hbox (3.97954pt too wide) in paragraph at lines 19--24
 dopted, open standard-
  []
 
-<charts/airplay_traffic_data.pdf, id=529, 794.97pt x 614.295pt>
-File: charts/airplay_traffic_data.pdf Graphic file (type pdf)
+<charts/AirPlay_traffic_data.pdf, id=527, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_data.pdf used on input line 49.
+<use charts/AirPlay_traffic_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 49.
 
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/airplay_traffic_5loss_data.pdf, id=530, 794.97pt x 614.295pt>
-File: charts/airplay_traffic_5loss_data.pdf Graphic file (type pdf)
+<charts/AirPlay_traffic_5loss_data.pdf, id=528, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_5loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_5loss_data.pdf used on input li
+<use charts/AirPlay_traffic_5loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_5loss_data.pdf used on input li
 ne 54.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/airplay_traffic_10loss_data.pdf, id=531, 794.97pt x 614.295pt>
-File: charts/airplay_traffic_10loss_data.pdf Graphic file (type pdf)
+<charts/AirPlay_traffic_10loss_data.pdf, id=529, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_10loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_10loss_data.pdf used on input l
+<use charts/AirPlay_traffic_10loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
 ine 58.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/airplay_traffic_15loss_data.pdf, id=532, 794.97pt x 614.295pt>
-File: charts/airplay_traffic_15loss_data.pdf Graphic file (type pdf)
+<charts/AirPlay_traffic_15loss_data.pdf, id=530, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_15loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_15loss_data.pdf used on input l
+<use charts/AirPlay_traffic_15loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_15loss_data.pdf used on input l
 ine 63.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
@@ -1251,14 +1254,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--65
 [][][] []
  []
 
-<charts/dlna_traffic_data.pdf, id=533, 794.97pt x 614.295pt>
+<charts/dlna_traffic_data.pdf, id=531, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 73.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/dlna_traffic_5loss_data.pdf, id=534, 794.97pt x 614.295pt>
+<charts/dlna_traffic_5loss_data.pdf, id=532, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_5loss_data.pdf>
@@ -1266,7 +1269,7 @@ Package pdftex.def Info: charts/dlna_traffic_5loss_data.pdf used on input line
 78.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/dlna_traffic_10loss_data.pdf, id=535, 794.97pt x 614.295pt>
+<charts/dlna_traffic_10loss_data.pdf, id=533, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_10loss_data.pdf>
@@ -1274,7 +1277,7 @@ Package pdftex.def Info: charts/dlna_traffic_10loss_data.pdf used on input line
  82.
 (pdftex.def)             Requested size: 192.0548pt x 148.40863pt.
 
-<charts/dlna_traffic_15loss_data.pdf, id=536, 794.97pt x 614.295pt>
+<charts/dlna_traffic_15loss_data.pdf, id=534, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_15loss_data.pdf>
@@ -1286,9 +1289,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--89
 [][][] []
  []
 
-File: charts/airplay_traffic_data.pdf Graphic file (type pdf)
-<use charts/airplay_traffic_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_data.pdf used on input line 93.
+File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
+<use charts/AirPlay_traffic_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 93.
 
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
@@ -1296,25 +1299,25 @@ File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
 Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 97.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 
-<charts/badnetwork_airplay_traffic_data.pdf, id=537, 794.97pt x 614.295pt>
-File: charts/badnetwork_airplay_traffic_data.pdf Graphic file (type pdf)
+<charts/badnetwork_AirPlay_traffic_data.pdf, id=535, 794.97pt x 614.295pt>
+File: charts/badnetwork_AirPlay_traffic_data.pdf Graphic file (type pdf)
 
-<use charts/badnetwork_airplay_traffic_data.pdf>
-Package pdftex.def Info: charts/badnetwork_airplay_traffic_data.pdf used on inp
+<use charts/badnetwork_AirPlay_traffic_data.pdf>
+Package pdftex.def Info: charts/badnetwork_AirPlay_traffic_data.pdf used on inp
 ut line 102.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 
-<charts/badnetwork_dlna_traffic_data.pdf, id=538, 794.97pt x 614.295pt>
+<charts/badnetwork_dlna_traffic_data.pdf, id=536, 794.97pt x 614.295pt>
 File: charts/badnetwork_dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/badnetwork_dlna_traffic_data.pdf>
 Package pdftex.def Info: charts/badnetwork_dlna_traffic_data.pdf used on input 
 line 106.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
-File: charts/airplay_traffic_5loss_data.pdf Graphic file (type pdf)
+File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_5loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_5loss_data.pdf used on input li
+<use charts/AirPlay_traffic_5loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_5loss_data.pdf used on input li
 ne 112.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
@@ -1323,10 +1326,10 @@ File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
 Package pdftex.def Info: charts/dlna_traffic_5loss_data.pdf used on input line 
 116.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
-File: charts/airplay_traffic_10loss_data.pdf Graphic file (type pdf)
+File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_10loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_10loss_data.pdf used on input l
+<use charts/AirPlay_traffic_10loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
 ine 122.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
@@ -1335,10 +1338,10 @@ File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
 Package pdftex.def Info: charts/dlna_traffic_10loss_data.pdf used on input line
  126.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
-File: charts/airplay_traffic_15loss_data.pdf Graphic file (type pdf)
+File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
 
-<use charts/airplay_traffic_15loss_data.pdf>
-Package pdftex.def Info: charts/airplay_traffic_15loss_data.pdf used on input l
+<use charts/AirPlay_traffic_15loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_15loss_data.pdf used on input l
 ine 132.
 (pdftex.def)             Requested size: 368.21373pt x 284.52756pt.
 File: charts/dlna_traffic_15loss_data.pdf Graphic file (type pdf)
@@ -1362,7 +1365,7 @@ s-converted-to.pdf charts/android_versions.eps>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/android_versions-eps-converted-to.pdf, id=544, 788.9475pt x 428.60126pt
+<charts/android_versions-eps-converted-to.pdf, id=542, 788.9475pt x 428.60126pt
 >
 File: charts/android_versions-eps-converted-to.pdf Graphic file (type pdf)
  <use charts/android_versions-eps-converted-to.pdf>
@@ -1381,21 +1384,21 @@ converted-to.pdf charts/user_world_map.eps>
 (epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/user_world_map-eps-converted-to.pdf, id=545, 1048.91875pt x 637.38126pt
+<charts/user_world_map-eps-converted-to.pdf, id=543, 1048.91875pt x 637.38126pt
 >
 File: charts/user_world_map-eps-converted-to.pdf Graphic file (type pdf)
  <use charts/user_world_map-eps-converted-to.pdf>
 Package pdftex.def Info: charts/user_world_map-eps-converted-to.pdf used on inp
 ut line 161.
 (pdftex.def)             Requested size: 421.41667pt x 256.0748pt.
-) [33] [34 <./charts/airplay_traffic_data.pdf, page is rotated 90 degrees> <./c
-harts/airplay_traffic_5loss_data.pdf, page is rotated 90 degrees> <./charts/air
-play_traffic_10loss_data.pdf, page is rotated 90 degrees> <./charts/airplay_tra
+) [33] [34 <./charts/AirPlay_traffic_data.pdf, page is rotated 90 degrees> <./c
+harts/AirPlay_traffic_5loss_data.pdf, page is rotated 90 degrees> <./charts/Air
+Play_traffic_10loss_data.pdf, page is rotated 90 degrees> <./charts/AirPlay_tra
 ffic_15loss_data.pdf, page is rotated 90 degrees>] [35 <./charts/dlna_traffic_d
 ata.pdf, page is rotated 90 degrees> <./charts/dlna_traffic_5loss_data.pdf, pag
 e is rotated 90 degrees> <./charts/dlna_traffic_10loss_data.pdf, page is rotate
 d 90 degrees> <./charts/dlna_traffic_15loss_data.pdf, page is rotated 90 degree
-s>] [36 <./charts/badnetwork_airplay_traffic_data.pdf, page is rotated 90 degre
+s>] [36 <./charts/badnetwork_AirPlay_traffic_data.pdf, page is rotated 90 degre
 es>] [37 <./charts/badnetwork_dlna_traffic_data.pdf, page is rotated 90 degrees
 >] [38] [39] [40 <./charts/android_versions-eps-converted-to.pdf>] [41 <./chart
 s/user_world_map-eps-converted-to.pdf>] (./chapters/chapter5.tex) [42
@@ -1410,7 +1413,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
-(rerunfilecheck)             Checksum: 10C454ADA1D3C75504251C921E0A5CAD;2206.
+(rerunfilecheck)             Checksum: BA9637D28489BD7BC9479F3A4735E286;2195.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1418,10 +1421,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 17710 strings out of 493308
- 331005 string characters out of 6137816
- 805032 words of memory out of 5000000
- 20601 multiletter control sequences out of 15000+600000
+ 17709 strings out of 493308
+ 330998 string characters out of 6137816
+ 806027 words of memory out of 5000000
+ 20602 multiletter control sequences out of 15000+600000
  29365 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,10n,58p,484b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1441,10 +1444,10 @@ t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (49 pages, 1081808 bytes).
+Output written on thesis_peng.pdf (49 pages, 1081563 bytes).
 PDF statistics:
- 751 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
- 180 named destinations out of 1000 (max. 500000)
+ 749 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 178 named destinations out of 1000 (max. 500000)
  408 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,20 +2,20 @@
 %% author Liu Peng
 
 To fulfill the need of interoperability between devices in home networking,
-Tuxera Inc. started a project called Streambels. Which aims to solve the
-interoperability issue in multimedia home networking. The solution is to make a
-combination of most popular solutions into one and connect all the resources
-and displays in home. 
+Tuxera Inc. started a project called Streambels(now called AllConnect). Which
+aims to solve the interoperability issue in multimedia home networking. The
+solution is to make a combination of most popular solutions into one and
+connect all the resources and displays in home. 
 
 Since the hardware and networking settings are not easily changeable. And
-nowadays smart phone has great CPU power and networking capability. It is well
-adopted in people's home and even people's life. It is essential to develop a
-mobile application that can be used to control all the multimedia data flow in
+nowadays smart phone has great CPU power and networking capability. Thus, they
+are well adopted in people's home and even people's life. It is essential to
+develop a mobile application that can be used to control all the multimedia data flow in
 home networking. Through one year's development, our team developed an Android
 application that can be used to control and connect every multimedia device in
 the home. The application is integrated with a simple HTTP streaming server,
-Airplay/ DLNA/ Chromecast/ FireTV device discovery, and
-Airplay/ DLNA/ Chromecast/ FireTV streaming control point.
+AirPlay/ DLNA/ Chromecast/ FireTV device discovery, and
+AirPlay/ DLNA/ Chromecast/ FireTV streaming control point.
 
 \subsection{Architecture overview}
 The architecture of the solution is basically a combination of the most popular
@@ -44,8 +44,8 @@ Streaming component is responsible for streaming multimedia content to selected
 multimedia receivers, such as TVs, wireless speakers, set top boxes etc. In our
 solution, since DLNA, AirPlay video/ photo and Chromecast all use HTTP streaming
 while AirPlay music uses RTSP. Two types of media servers are built inside our
-application. A RTSP server handles the AirPlay music streaming, a HTTP server handles all the
-streaming else.
+application. A RAOP server handles the AirPlay music streaming, a HTTP server
+handles all the streaming else.
 
 In order to serve media for all the receivers, two types of serve method need to
 be implemented in a HTTP server. Since the DLNA guideline gave detailed
@@ -104,7 +104,7 @@ available for users to select, which makes the application more fun to user.
 \end{figure}
 
 \subsection{Features}
-As described previously that Airplay, DLNA and other standards work
+As described previously that AirPlay, DLNA and other standards work
 differently and have different features, but according to the previous study,
 we could combine some common use cases of both protocols.
 
@@ -131,7 +131,7 @@ receivers that are connected to home network.
 \begin{itemize}
 \item[--]Firstly the app is a multimedia player, it can play music, photos and videos 
 on SD card locally on Android phone
-\item[--]It can stream local content to Apple TV, Airport express and Airplay-enabled 
+\item[--]It can stream local content to Apple TV, Airport express and AirPlay-enabled 
 speakers.
 \item[--]It can stream local content to DLNA media renderers, which has a huge device 
 base.
@@ -140,9 +140,9 @@ base.
 Network Attached Storage (NAS). And play the media locally on the Android device.
 \item[--]It can browse content from the DLNA media servers and stream it to DLNA media 
 renderers.
-\item[--]It can browse content from DLNA media servers and stream it to Airplay enabled 
+\item[--]It can browse content from DLNA media servers and stream it to AirPlay enabled 
 devices using a different protocol.
-\item[--]It can proxy online channels' content to DLNA and Airplay enabled devices. 
+\item[--]It can proxy online channels' content to DLNA and AirPlay enabled devices. 
 (Currently YouTube and Facebook videos are supported, but integration to Spotify is still 
 in progress).
 \end{itemize}

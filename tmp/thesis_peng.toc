@@ -8,13 +8,11 @@
 \contentsline {subsection}{\numberline {1.3}Document overview}{2}{subsection.1.3}
 \contentsline {section}{\numberline {2}Background}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Available solutions}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Available protocols}{4}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}UPnP}{4}{subsubsection.2.2.1}
-\contentsline {paragraph}{UPnP device architecture}{4}{section*.10}
-\contentsline {paragraph}{UPnP AV architecture}{7}{section*.11}
 \contentsline {subsubsection}{\numberline {2.2.2}DLNA}{11}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{13}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Chromecast/DIAL}{16}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.4}DIAL}{16}{subsubsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.5}Miracast}{18}{subsubsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.6}Other protocols}{22}{subsubsection.2.2.6}
 \contentsline {subsection}{\numberline {2.3}Comparison of existing solutions}{22}{subsection.2.3}
@@ -24,7 +22,7 @@
 \contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{26}{section.3}
 \contentsline {subsection}{\numberline {3.1}Architecture overview}{26}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Features}{28}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Extensibility}{29}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Extensibility}{30}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Test methodology}{30}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Evaluation methodology}{31}{subsection.3.5}
 \contentsline {section}{\numberline {4}Results}{32}{section.4}
@@ -34,4 +32,4 @@
 \contentsline {section}{\numberline {5}Discussion}{42}{section.5}
 \contentsline {subsection}{\numberline {5.1}Further development}{42}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{42}{subsection.5.2}
-\contentsline {section}{References}{43}{section*.12}
+\contentsline {section}{References}{43}{section*.10}
