@@ -21,10 +21,11 @@
 \contentsline {subsubsection}{\numberline {2.3.3}Technology feature}{24}{subsubsection.2.3.3}
 \contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{26}{section.3}
 \contentsline {subsection}{\numberline {3.1}Architecture overview}{26}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Features}{28}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Extensibility}{30}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Test methodology}{30}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Evaluation methodology}{31}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.2}UX design}{28}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Features}{28}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Extensibility}{30}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Test methodology}{31}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Evaluation methodology}{31}{subsection.3.6}
 \contentsline {section}{\numberline {4}Results}{32}{section.4}
 \contentsline {subsection}{\numberline {4.1}Performance}{32}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Statistics}{32}{subsection.4.2}

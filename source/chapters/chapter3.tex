@@ -2,25 +2,33 @@
 %% author Liu Peng
 
 To fulfill the need of interoperability between devices in home networking,
-Tuxera Inc. started a project called Streambels(now called AllConnect). Which
-aims to solve the interoperability issue in multimedia home networking. The
-solution is to make a combination of most popular solutions into one and
-connect all the resources and displays in home. 
+Tuxera Inc. started a project called Streambels(now called AllConnect). The
+project aims to solve the interoperability issue in multimedia home networking
+by making a universal solution that can connect all available devices at home
+and make them work together regardless of what protocol they use.
 
-Since the hardware and networking settings are not easily changeable. And
-nowadays smart phone has great CPU power and networking capability. Thus, they
-are well adopted in people's home and even people's life. It is essential to
-develop a mobile application that can be used to control all the multimedia data flow in
-home networking. Through one year's development, our team developed an Android
-application that can be used to control and connect every multimedia device in
-the home. The application is integrated with a simple HTTP streaming server,
-AirPlay/ DLNA/ Chromecast/ FireTV device discovery, and
-AirPlay/ DLNA/ Chromecast/ FireTV streaming control point.
+Most devices at home are embedded solutions and have their own firmwares, it is
+hard to update or even impossible to upgrade the software running on these
+devices. On the other hand, home network settings are usually simple and users
+don't have enough knowledge or interest to set up manually to obtain advanced
+network features. Most of  these network infrastructures are not designed to be
+easily changed. The most flexible and programmable portal for home networking
+is mobile device. 
+
+Nowadays smart phone has great CPU power, networking capability and they
+are well adopted in people's everyday life. It is obvious that mobile device
+could be a good entry point of home networking. A mobile application that can be
+developed to control all the multimedia data flow and act as a personal access
+portal of home networking.
+
+Through one year's development, our team developed an Android application that
+can be used to control and connect every multimedia device in the home. So far
+we have accumulated nearly 1 million users which gave us proven evidence of easy
+to use.
 
 \subsection{Architecture overview}
-The architecture of the solution is basically a combination of the most popular
-solutions' solutions into one. The whole architecture contains three parts:
-discovery, content management and streaming. 
+The system architecture is consist of three major parts: discovery, content
+management and streaming.
 
 Discovery component is responsible for device discovery which takes advantage of
 both Multicast DNS and Simple Service Discovery Protocol. As discussed in
@@ -87,6 +95,7 @@ used as a control point and do not participate in the media transmission.
 \caption{Simplified data flow \label{chart4}}
 \end{figure}
 
+\subsection{UX design}
 In terms of UI and UX, our designer Hien did a great job of defining a simple
 and intuitive user interface \ref{chart5}, which benefits a lot for the user
 experience.
