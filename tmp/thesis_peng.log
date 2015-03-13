@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  13 MAR 2015 14:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  13 MAR 2015 17:02
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1184,7 +1184,7 @@ Package epstopdf Info: Source file: <charts/streambels_ui.eps>
 (epstopdf)                    size: 60091 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/streambels_ui-eps-c
 onverted-to.pdf charts/streambels_ui.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/streambels_ui-eps-converted-to.pdf, id=502, 963.6pt x 562.1pt>
@@ -1192,10 +1192,10 @@ File: charts/streambels_ui-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/streambels_ui-eps-converted-to.pdf>
 Package pdftex.def Info: charts/streambels_ui-eps-converted-to.pdf used on inpu
-t line 106.
+t line 111.
 (pdftex.def)             Requested size: 438.98271pt x 256.0748pt.
 
-Overfull \hbox (12.19138pt too wide) in paragraph at lines 106--107
+Overfull \hbox (12.19138pt too wide) in paragraph at lines 111--112
  [][][] 
  []
 
@@ -1203,10 +1203,10 @@ Overfull \hbox (12.19138pt too wide) in paragraph at lines 106--107
 File: charts/allconnect-app.png Graphic file (type png)
 
 <use charts/allconnect-app.png>
-Package pdftex.def Info: charts/allconnect-app.png used on input line 111.
+Package pdftex.def Info: charts/allconnect-app.png used on input line 116.
 (pdftex.def)             Requested size: 496.1977pt x 256.0748pt.
 
-Overfull \hbox (69.40636pt too wide) in paragraph at lines 111--112
+Overfull \hbox (69.40636pt too wide) in paragraph at lines 116--117
  [][][] 
  []
 
@@ -1423,7 +1423,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
 Here is how much of TeX's memory you used:
  17711 strings out of 493308
  331028 string characters out of 6137816
- 806027 words of memory out of 5000000
+ 805027 words of memory out of 5000000
  20603 multiletter control sequences out of 15000+600000
  29365 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1444,7 +1444,7 @@ t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (49 pages, 1082718 bytes).
+Output written on thesis_peng.pdf (49 pages, 1083230 bytes).
 PDF statistics:
  754 PDF objects out of 1000 (max. 8388607)
  643 compressed objects within 7 object streams
