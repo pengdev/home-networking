@@ -3,14 +3,16 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis_peng.aux
 The style file: unsrt.bst
 Database file #1: reference.bib
+Warning--entry type for "cling" isn't style-file defined
+--line 12 of file reference.bib
 Warning--entry type for "spotifyconnect" isn't style-file defined
---line 19 of file reference.bib
-Warning--entry type for "sonosnet" isn't style-file defined
 --line 26 of file reference.bib
+Warning--entry type for "sonosnet" isn't style-file defined
+--line 34 of file reference.bib
 Warning--entry type for "multicastdns" isn't style-file defined
---line 82 of file reference.bib
+--line 91 of file reference.bib
 Warning--entry type for "AirPlay-spec" isn't style-file defined
---line 121 of file reference.bib
+--line 130 of file reference.bib
 Too many commas in name 1 of "W. Keith Edwards, Rebecca E. Grinter, Ratul Mahajan, David Wetherall" for entry stateofHN
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Brent A. Miler, Toby Nixon, Charlie Tai, Mark D. Wood" for entry upnp
@@ -29,45 +31,45 @@ Too many commas in name 1 of "Jung-Tae Kim, Yeon-Joo Oh, Hoon-Ki Lee, Eui-Hyun P
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Jung-Tae Kim, Yeon-Joo Oh, Hoon-Ki Lee, Eui-Hyun Paik, Kwang-Roh Park" for entry DLNA_proxy2
 while executing---line 944 of file unsrt.bst
-You've used 18 entries,
+You've used 19 entries,
             1791 wiz_defined-function locations,
-            529 strings with 5375 characters,
-and the built_in function-call counts, 3051 in all, are:
-= -- 283
-> -- 67
+            531 strings with 5423 characters,
+and the built_in function-call counts, 3140 in all, are:
+= -- 288
+> -- 68
 < -- 4
-+ -- 34
++ -- 35
 - -- 16
 * -- 132
-:= -- 468
-add.period$ -- 47
-call.type$ -- 18
-change.case$ -- 22
+:= -- 474
+add.period$ -- 48
+call.type$ -- 19
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 162
-empty$ -- 335
+cite$ -- 19
+duplicate$ -- 167
+empty$ -- 353
 format.name$ -- 16
-if$ -- 716
+if$ -- 740
 int.to.chr$ -- 0
-int.to.str$ -- 18
+int.to.str$ -- 19
 missing$ -- 8
-newline$ -- 86
+newline$ -- 89
 num.names$ -- 15
-pop$ -- 59
+pop$ -- 65
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 103
+skip$ -- 111
 stack$ -- 0
 substring$ -- 148
-swap$ -- 48
+swap$ -- 49
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 25
-width$ -- 20
-write$ -- 178
+width$ -- 21
+write$ -- 183
 (There were 9 error messages)

@@ -5,8 +5,8 @@ To fulfill the need of interoperability among devices in home networking,
 Tuxera Inc. started a project named Streambels(later renamed as AllConnect). The
 project aims to solve the interoperability issue in multimedia home networking
 by making a universal solution that can connect all available devices at home
-and make them work together regardless of what protocol they use.
-
+and make them work together regardless of what protocol they use.\\
+\\
 Most devices at home are embedded solutions and have their own firmwares, it is
 hard to update or even impossible to upgrade the software running on these
 devices. On the other hand, most home network users
@@ -14,16 +14,17 @@ devices. On the other hand, most home network users
 to manually set up the more advanced
  network features to achieve certain degree of device interoperability. Plus most of these network infrastructures are not designed to be easily configured. Due to these reasons, building interoperability among different devices through a mobile device seems to be the most straightforward solution, for mobile devices can serve as a very flexible and programmable portal for home-networking.  Other advantages of mobile devices include their great processing power, networking capabilities and their wide adoption and availability. Through the available platforms and tools, a mobile application could possibly be
  developed to control all multimedia streaming data flows and act as a personal access
- portal for home networking.
-
+ portal for home networking.\\
+\\
 After a year of development, our team have built up an Android application that
 can be used to control and connect every known type of multimedia device at home.
-Encouragingly, the number of our application users have grown to nearly one million so far, providing a strong proof of the effectiveness of our solution. 
+Encouragingly, the number of our application users have grown to nearly one
+million so far, providing a strong proof of the effectiveness of our solution.
 
 \subsection{Architecture overview}
 The system architecture is consist of three major parts: discovery, content
-management and streaming.
-
+management and streaming.\\
+\\
 Discovery component is responsible for device discovery which takes advantage of
 both Multicast DNS and Simple Service Discovery Protocol. As discussed in
 \ref{upnp}, the UPnP service uses Simple Service Discovery Protocol for device
@@ -34,21 +35,21 @@ Application URL header, while the UPnP/DLNA devices will return a message with
 a XML body, which gives detailed service URL and description URL. SSDP is used
 for both DLNA discovery and DIAL discovery. Multicast DNS is developed and
 implemented by Apple Inc., and there is an open source implementation on its
-website.
-
+website.\\
+\\
 Content management component is responsible for organizing and
 navigating multimedia contents which can be found in the home network. In our
 solution, this includes both phone's local storage and DLNA digital media
 servers that connected to home network. The sources can be used in all of the
-three protocols that we support.
-
+three protocols that we support.\\
+\\
 Streaming component is responsible for streaming multimedia content to selected
 multimedia receivers, such as TVs, wireless speakers, set top boxes etc. In our
 solution, since DLNA, AirPlay video/ photo and Chromecast all use HTTP streaming
 while AirPlay music uses RTSP. Two types of media servers are built inside our
 application. A RAOP server handles the AirPlay music streaming, a HTTP server
-handles all the streaming else.
-
+handles all the streaming else.\\
+\\
 In order to serve media for all the receivers, two types of serve method need to
 be implemented in a HTTP server. Since the DLNA guideline gave detailed
 specification how the media file should be served on a HTTP server, the HTTP server should be
@@ -60,47 +61,85 @@ library for our need, it is easy to use, Apache licensed, very tiny and
 efficient implementation, since it is minimal implemented, so it is also easy to
 be modified and add additional headers to be compatible with DLNA receivers.
 
-
-A simplified version of our implementation is shown in the figure \ref{chart3}
-below:
+\subsection{Implementation}
+The target platform is Android, Android APIs provide many useful interfaces and
+give permissions like accessing Internet, accessing WiFi state change, allowing
+WiFi multicast, reading phone storage etc. The programming language used is
+Java, while some transcoding work is dependent on some pre-compiled native C
+libraries.\\
+\\
+Since Apple has not provided its official specification of AirPlay, the
+implementation is mostly written following unofficial guidelines. However, Apple
+provide its official mDNS implementation, this piece of code is reused and
+compiled as a shared native library. Remote Audio Output Protocol(RAOP) is
+implemented as a UDP server and TCP control channel, working together following
+the unofficial specification.\\
+\\
+DLNA has open specification for its members. Tuxera is a member of DLNA so we
+got detailed specification and test tools. There is also an open source UPnP/DLNA
+library called "cling"\cite{cling}, it has basic minimal implementation of UPnP
+device discovery, description information parsing, and basic message handling.
+Thus we mostly develop DLNA support on top of the cling library.\\
+\\
+Google provide Chromecast SDK for different mobile platforms, so integration
+with Chromecast became easy, in streambels project, the Chromecast integration
+is built upon Chromecast API.\\
+\\
+In order to stream content from phone's storage to other receivers, a simple
+media server is implemented based on NanoHTTPD, which is an open source light
+weight file server implementation. We heavily modified the source in order to
+support features like proxy content from online resource, add all needed
+additional headers required by DLNA. We also map all the media to unique media
+IDs and added access control and only allow media access from given IP
+addresses.\\
+\\
+A simplified version of our implementation is shown in the
+figure \ref{chart3} below:
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/chart3}
 \caption{Simplified flow chart \label{chart3}}
 \end{figure}
 
 In terms of data flow, as described in figure \ref{chart4}, there are three
-different types of data flow models: 
-
+different types of data flow models:\\
+\\ 
 If the streamed content is stored in mobile phone, a streaming server in the
-application is used to stream the content from phone to selected receiver.
-
+application is used to stream the content from phone to selected receiver.\\
+\\
 Otherwise, if the content locates on the Internet, and the receiver is a DLNA
 Media Renderer, a proxy is needed to firstly download the resource stream, add
 the required headers by DLNA protocols and then stream the content to selected
-DLNA Media Renderer.
-
+DLNA Media Renderer.\\
+\\
 Finally, if the streamed content locates in a DLNA Digital Media Server, the
 source can be directly used by all receivers, in this case, the content
 streaming happened directly from media server to receivers, application is only
-used as a control point and do not participate in the media transmission.
-
+used as a control point and do not participate in the media transmission.\\
+\\
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/data_flow}
 \caption{Simplified data flow \label{chart4}}
 \end{figure}
 
 \subsection{UX design}
-In terms of UI and UX, our designer Hien did a great job of defining a simple
-and intuitive user interface \ref{chart5}, which benefits a lot for the user
-experience.
+In terms of UI and UX, the application should be simple enough to be used by
+everyone, it shouldn't be difficult for people to locate the media, browse
+content on different sources, and follow the data flow between devices. The
+control of devices should also be intuitive so that inter operation with
+each other goes seamlessly.\\
+\\
+Our designer Hien did a great job of defining a simple and intuitive user
+interface \ref{chart5}, which benefits a lot for the user experience.\\
+\\
 A multimedia home networking solution should be content centric, so the
 application actually looks like a multimedia player, a cast button is added in
 order to select cast devices. The content is categorized into 4 sections: music,
 video, photo and online sources. In Android, since the system provides share
-intent method for inter activity communication. In every place in the
+intent method for inter activity communication, . In every place in the
 application, selected receiver is visible to user, it is also visible as a
 button for switchig between different receivers. 9 themes are also available
-for users to select, which makes the application more fun to user.
+for users to select, which makes the application more fun to user.\\
+\\
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/streambels_ui}
 \caption{Application UX design \label{chart5}}
@@ -114,28 +153,27 @@ for users to select, which makes the application more fun to user.
 \subsection{Features}
 As described previously that AirPlay, DLNA and other standards work
 differently and have different features, but according to the previous study,
-we could combine some common use cases of both protocols.
-
+we could combine some common use cases of both protocols.\\
+\\
 The Android application we developed can handle most multimedia devices in 
 a typical home networking. It has various features that make it a useful and
-universal solution for multimedia home networking.
-
+universal solution for multimedia home networking.\\
+\\
 Firstly, the app itself is a multimedia playing, all media stored locally on the
 phone storage and all media located in the home DLNA media servers can be
-browsed and played on the phone.
-
+browsed and played on the phone.\\
+\\
 Secondly, the app is fully compatible with AirPlay, DLNA, Chromecast and FireTV
-receiver devices. 
-
+receiver devices.\\
+\\ 
 Thirdly and most importantly, the application make the DLNA media server works
 together with all kind of receivers regardless of protocol used. The app served
-as a bridge of different multimedia receivers and media sources.
-
+as a bridge of different multimedia receivers and media sources.\\
+\\
 Last, YouTube and other on-line channels like Vimeo and Facebook are supported
 as media source, and can be streamed regardless of protocol to all supported
-receivers that are connected to home network.
-
-
+receivers that are connected to home network.\\
+\\
 \begin{itemize}
 \item[--]Firstly the app is a multimedia player, it can play music, photos and videos 
 on SD card locally on Android phone
@@ -161,19 +199,19 @@ Streambels has embedded a media streaming server for local files and streaming
 proxy for bridging the gap between online resources and home networking. By
 using built-in proxy, Streambels is able to share on-line resources from
 Internet to devices in home networking environment. New services and new
-content providers can be easily added by just call the proxy interface.
-
+content providers can be easily added by just call the proxy interface.\\
+\\
 The proxy system enables a huge extensibility possibility, which connects the
-home networking and Internet or Cloud Services.
-
+home networking and Internet or Cloud Services.\\
+\\
 Further development abstracted all the protocols and developed an API for all
 content holders or cloud services to integrate their service.
 
 \subsection{Test methodology}
 Software testing is quite important for a modern IT project. Through testing we
 can assure performance and stability, before releasing the app to App store, we
-conduct a series of tests.
-
+conduct a series of tests.\\
+\\
 These tests include unit test, integration test and functional test.
 Unit tests is written while coding, when each class is finished, unit tests will
 be written for each method, we set up an continuous integration server so that
@@ -185,27 +223,25 @@ possible use cases, prepared a huge media base which contains all kind of media
 files, we do manual test before the app is finally released in the market.
 
 \subsection{Evaluation methodology}
-Experimental setup
-
+Experimental setup\\
+\\
 Since the project is targeted to Android market, and is directly used by
 end users, feedback is really important to us for the continuous development. We
 used Email for normal communication, user can edit feedback content directly
-inside the application, and later content is sent to us by email.
-
+inside the application, and later content is sent to us by email.\\
+\\
 There is no perfect application, so crash sometimes happen, thanks to Google,
 the Google will help to collect the crash reports and show it inside developer
-console.
-
+console.\\
+\\
 Inside Streambels, we also used Google's Analytics API, which give us
 great convenience to collect number of users and sessions every day. Other
 information like operation system version, application version, active users
 helped us to have insights into who are our users and how can we market for more
-people in the world.
-
+people in the world.\\
+\\
 It is also interesting to see what kind of technologies are most used in their
 daily life, thanks to Google's analytics SDK, we can trigger events when user
 selected their receivers, so after months of statistics, we can figure out the
 most popular standards and most popular online channels that user uses, and in
 turn make better optimizations for users need.
-
-
