@@ -164,44 +164,41 @@ With the general architecture of UPnP devices being introduced. We now move on t
 control point interacts with two or more UPnP devices, one of which acts as either a source or a 
 sink. While coordinated by the AV control point, the devices themselves interact with each other using a non-UPnP communication protocol. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. 
 
-\begin{figure}[htb]
-\centering \includegraphics[height=9cm]{charts/upnp_playback}
-\caption{UPnP A/V playback architecture \label{upnp_playback}}
-\end{figure}
+\begin{figure}[htb] 
+\centering \includegraphics[height=9cm]{charts/upnp_playback} 
+\caption{UPnP A/V playback architecture \label{upnp_playback}} 
+\end{figure} 
 
-\begin{enumerate}
-\item Media Server \\
-The media server is used to locate content available in the home network. It's
-primary purpose is to allow control points to enumerate (browse or search)
-content items that are available for the user to render. The media server
-contains a ContentDirectory Service(CDS), a ConnectionManager Service(CM)
-, and an optional AVTransport Service(AVT) which depends on the supported
-transfer protocols. Some media servers are capable of transferring multiple
-content items at the same time.
+\begin{enumerate} 
+\item Media Server \\ 
+The media server is used to locate available content in the home network. It's 
+primary purpose is to allow control points to enumerate (browse or search) 
+content items that are available for the user to render. The media server 
+contains a ContentDirectory Service(CDS), a ConnectionManager Service(CM) 
+, and an optional AVTransport Service(AVT) which depends on the supported 
+transfer protocols. Some media servers are capable of transferring multiple 
+content items at the same time. 
 
-The ContentDirectory service is used by control point to enumerate the content
-on the server. The primary action is ContentDirectroy::Browse(). After
-invoking this action, the control point can obtain detailed information of each
-item that the server can provide. This detailed information includes name,
-artist, date created, size and also the transfer protocols and data formats that
-supported by the for particular item. By parsing this detailed information,
-control point is able to distinguish whetehr the item can be rendered by the
-given media renderer.
+The ContentDirectory service is used by the control point to enumerate the content 
+on the server. The primary action is ContentDirectroy::Browse(). After 
+invoking this action, the control point can obtain detailed information of each 
+item that the server can provide. This detailed information includes name, 
+artist, date created, size and also the transfer protocols and data formats that 
+supported by the for particular item. By parsing this detailed information, 
+the control point is able to distinguish whether the item can be rendered by the 
+given media renderer. 
 
-The ConnectionManager service is used to manage the connections between a
-control point and device. The primary action is
-ConnectionManager:: PrepareForConnection(), which is invoked by the control
-point to the server and make it prepare itself for an upcoming transfer. This
-action will return the instanceID of an AVTransport service that will be used
-later to control the flow of content, for example, to stop, pause, seek the
-stream etc. The instanceID is used to distinguish multiple instances of the
-AVTransport service, each is associated with a particular connection to
-renderer, thus it enables multiple renderer support at the same time. When the
-control point need to disconnect the connection, it will invoke the media
-server's ConnectionManager::ConnectionComplete() action to release the
-connection. When the ConnectionManager::PrepareForConnection() action is not
-implemented, the control point is only able to support single renderer at a
-time. In this case 0 will be used as InstanceID.
+The ConnectionManager service is used to manage the connections between a 
+control point and a device. The primary action is 
+ConnectionManager:: PrepareForConnection(), which is invoked by the control 
+point to prepare the server for an upcoming transfer. This 
+action will return the instanceID of an AVTransport service that will be used 
+later to control, say to stop, pause, seek, the flow of content. The instanceID is used to distinguish multiple instances of the AVTransport service. Since each instance is associated with a particular connection to the renderer, the instanceID enables multiple renderer support at the same time. When the 
+control point need to disconnect the connection, it will invoke the media 
+server's ConnectionManager::ConnectionComplete() action to release the 
+connection. When the ConnectionManager::PrepareForConnection() action is not 
+implemented, the control point is only able to support a single renderer at a 
+time. In this case 0 will be used as InstanceID. 
 
 The AVTransport service is used by control point to control the playback of the
 content. Operations like Stop, Pause, Seek are supported by this service. This

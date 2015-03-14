@@ -1,208 +1,168 @@
-%% Background chapter
-%% author Liu Peng
+%% Background chapter 
+%% author Liu Peng 
 
 Home networking has been a hot topic for quite a few years. Thanks to the rapid development 
-of electronics and computer science, home networking devices are getting more affordable 
-and more powerful that people would have at least several multimedia devices that can be 
-connected to network.
+of electronics and computer science, home networking devices are becoming more affordable 
+and more powerful than they ever were. It is now so common that a person would have several multimedia devices that can be connected to the network. In this chapter, we give an overview of current solutions of home networking that bridges these multimedia devices. By making comparison among these solutions we try to identify the challenges that face home networking. 
 
-In this chapter, we give a overview of current solutions to home networking,
-compare each solution and describe the problem to solve.
+\subsection{Overview} 
+Early researches \cite{link_layer_old} \cite{end_user} \cite{link_layer} 
+ conducted on home networking mainly aims to find out how home 
+ networking infrastructures can be built. The subjects of these researches, including cable connection, wireless connection, optical connection etc, concerns more about the physical layer of the home network.  So far, it has turned out that the IEEE 802.11 protocol stack, among all others, is the most successful and  widely deployed home networking infrastructure. 
 
-\subsection{Overview}
-Early research \cite{link_layer_old} \cite{end_user} \cite{link_layer}
- in home networking area  has been made mainly on how to implement home
- networking infrastructures, like the cable connection, wireless connection,
- optical connection etc. So far, it turns out that IEEE 802.11 protocol stack
- is most successful and most widely deployed home networking infrastructure.
+Nowadays, a typical scenario of home networking is that an IEEE 802.11 supportive wireless router connecting to a Ethernet cable or optical cable from the network operator creates a local network and other user devices simply join this network. The wireless Access Point(AP) employs the 802.11 b/g/n/ac protocol, utilizing the 2.4 GHz or 5 GHz frequency channels and providing a 100+ Mbps  network connection, whose bandwidth is sufficient for transmitting the popular High Definition (1080p) videos. 
 
-Nowadays, a typical scenario is that a wireless router connected to Ethernet
-cable or optical cable from network operator, while other devices connect to
-the same local network created by the wireless router. A wireless
-Access Point(AP) is using 802.11 b/g/n/ac protocol, utilize 2.4 GHz or 5 GHz
-frequency channels and provide a 100+ Mbps network connection. This bandwidth
-is sufficient enough for transmitting High Definition (1080p) videos.
+In terms of network and application layer technologies, different device 
+manufactures tend to choose their preferred multimedia-sharing protocols from the pool of protocols that have been evolving and developing for a long time.
 
-In terms of network and application layer technologies, different device
-manufactures choose their preferred multimedia-sharing protocols. The
-development of multimedia-sharing protocols has also experienced a long
-research period.
+Since late 1990s, UPnP protocol had been developed for home networking usage. 
+At that time, XML was popular and widely used by different network applications.
+Under such background, UPnP was designed to fully make use of XML. UPnP is 
+independent of media types and devices and it runs on the TCP/IP stack, thus it can 
+be easily applied to modern network infrastructures. 
 
-Since late 1990s, UPnP protocol has been developed for home networking usage.
-At that time, XML is popular and widely used by different network applications,
-in such a background, UPnP is also designed to make full use of XML. UPnP is
-independent of media and device, and it is running on TCP/IP stack, so it can
-be easily applied to modern network infrastructures.
+In June 2003, Sony and several leading consumer electronic manufacturer s
+established the Digital Living Network Alliance (DLNA), a nonprofit 
+collaborative trade association. The DLNA standard is based on the widely used UPnP 
+protocol but it added some restrictions on media formats and some compatibility 
+requirements. A device hardware and software can be certified by DLNA 
+organizations to prove that it can work with other devices that also passed 
+this certification. 
 
-In June 2003, Sony and several leading consumer electronic manufacturer
-companies established the Digital Living Network Alliance (DLNA), a nonprofit
-collaborative trade association. The DLNA standard is based on widely used UPnP
-protocol but it added some restrictions on media formats and some compatibility
-requirements. Device hardware and software can be certified by DLNA
-organization to prove that it should work with other devices that also passed
-this certification.
+In 2010, Apple quit DLNA and developed its own multimedia home networking 
+solution, known as AirPlay. By adding screen mirroring, authentication and Remote 
+Audio Output Protocol(RAOP) music streaming, Apple tried to forge a more advanced 
+home network sharing system, aiming to provide a unique user experience among Apple 
+products. Apple's solution had indeed attracted people's interest, and the user experience 
+had proved much better than that of other similar products in the market. With its improvement
+ over the years,  Apple's solution has now been acknowledged as one of the most popular streaming 
+solutions .
 
-In 2010, Apple quitted DLNA and developed its own multimedia home networking
-solution, called AirPlay. By adding screen mirroring, authentication and Remote
-Audio Output Protocol(RAOP) music streaming, Apple tried to make a more advanced
-home network sharing system and create a unique user experience between Apple
-products. It indeed attracts people's interest, and the user experience of
-Apple's product is much better than other similar products in the market. And it
-has been developed over time to become one of the most popular streaming
-solution accepted by people today.
+Two years later, Wi-Fi alliance released its Miracast technology, and 
+participated in pushing new standard in wireless home networking. The Miracast 
+uses the Wi-Fi direct technology and it does not require a wireless local 
+network. Instead, a peer-to-peer connection is created between the sharing and 
+receiving devices. After its release, some major software and hardware 
+companies soon accepted this new standard. Google, for example integrated Miracast 
+support into its Android operating system, and provided screen-mirroring feature 
+to other Miracast receivers. 
 
-Two years later, Wi-Fi alliance released its Miracast technology, and
-participated in pushing new standard in wireless home networking. The Miracast
-uses Wi-Fi direct technology, so that it doesn't require a wireless local
-network, instead, a peer-to-peer connection is created between the sharing and
-receiving devices. After its releasing, some major software and hardware
-companies soon accept the new standard. Google, for example integrated Miracast
-support into its Android operating system, and provide screen-mirroring feature
-to other Miracast receivers.
+The competition in home networking rages on over the years. In 2013, Google released a 35-dollar 
+Dongle, using its Chromecast protocol, which makes it possible to watch 
+YouTube and Netflix video directly on TV with such a dongle device. Laptop and mobile 
+devices with official YouTube App or Chrome browser can control Dongle 
+through the home local network. In this solution, the home networking is pushed to the 
+cloud, since YouTube and Netflix content are directly downloaded from Internet whereas
+mobile devices just act as a controller to chose interested contents. 
 
-The competition is far from the end, in 2013, Google released a 35-dollar
-dongle, using its Chromecast protocol, Chromecast makes it possible to watch
-YouTube and Netflix video directly on TV with such a device. Laptop and mobile
-devices with official YouTube App or Chrome browser can control the dongle
-through the local network in home. The home networking has been pushed to
-cloud, since YouTube and Netflix content are directly downloaded from Internet,
-mobile devices just act as a controller of picking interested contents.
+At the same time, in September 2013, Spotify, a startup music service 
+company also took part in making its own home networking solution, called 
+Spotify Connect. Spotify Connect provides an interface for users at home to access its huge 
+music database, and directly browse and stream using its mobile application. Home 
+networking has again been pushed towards cloud and Internet services in Spotify Connect. 
 
-Almost at the same time, September 2013, Spotify, a startup music service
-company has also taken part in making its own home networking solution, called
-Spotify Connect, it provides an interface for speakers in home access its huge
-music database, and directly browse and stream using mobile application. Home
-networking has again been pushed towards cloud and Internet services.
+Since so many companies would like to develop their own devices and even their 
+own protocols. The market is a bit messy. Devices from different companies are not compatible with other and users have to buy different device in order to access different services like Netflix and Spotify, which are provided by different companies.  This has created a big demand on a solution that can connect those devices at home and make them work together friendly. 
 
-Since so many companies would like to develop their own devices and even their
-own protocols. The market is a bit mess, devices are not compatible with other
-devices, users have to buy new device to have services from those companies
-like Netflix and Spotify. There is great need of creating some solution that can
-connect those devices in home and make them work together friendly.
+In response of this market need, our Streambels project has been initiated, aiming to fill the gap among different protocols and connect these different types of devices in the home networking environment. 
 
-Streambels project is just created for this need, we try to fill the gap between
-different protocols and connect devices in home networking environment.
-
-\subsection{Available protocols}
+\subsection{Available protocols} 
 \subsubsection[UPnP]{UPnP \footnote{Universal Plug and Play}}
-Universal Plug and Play (UPnP) is a series of networking protocols defined to
-work together to seamlessly discover the presence of all devices in the network
-and establish functional network services for data sharing, communications, and
-entertainment between these discovered devices. 
+\textbf{UPnP device architecture}\\ 
+Universal Plug and Play (UPnP) is a series of networking protocols defined to 
+work together and seamlessly discover the presence of all devices in the network 
+, establishing functional network services for data sharing, communications, and 
+entertainment among these discovered devices. 
 
-In most UPnP scenarios, a control point controls the operation of one or more
-UPnP devices. The interaction usually occurs in isolation between control point
-and each device. It is control point's responsibility to coordinate the operation of
-each devices, while the individual devices do not interact directly with each other.
+In most UPnP scenarios, a control point controls the operation of one or more 
+UPnP devices. The interaction usually occurs in isolation between control point 
+and each device. It is the control point's responsibility to coordinate the operation of 
+each devices and the individual devices do not really interact directly with each other. 
 
-The UPnP device architecture \cite{upnp} \label{upnp} \label{upnpdevice}
-includes seven parts:
-
-\begin{enumerate}
-\item Addressing \\
-UPnP devices have a DHCP client and searches for a DHCP server when connected to the network. 
-An UPnP device firstly scans for the DHCP server and then requests an IP address when the DHCP 
-server is found. Otherwise, if there is no response from DHCP server, the device uses automatic 
-IP address. It randomly chooses an address in the 169.254/16 random and tests it using ARP probe 
-to determine if it is already used. The same procedure repeats until an unused address is found. 
-After first IP address is set, it then will periodically check for DHCP server, when a server 
-responds, it will use the assigned addresses and stop using the address generated by Auto-IP 
-after a period of parallel use to complete interactions in progress.
-If there is DNS server in the network, it can also use domain names instead of the numerical IP address.
-\item Discovery \\
-UPnP devices advertise their services to network using UPnP discover protocol, which is based on 
+The UPnP device architecture \cite{upnp} \label{upnp} \label{upnpdevice} 
+includes seven parts: 
+ 
+\begin{enumerate} 
+\item Addressing \\ 
+UPnP devices have a DHCP client and it needs to search for a DHCP server when connecting to the network. An UPnP device first scans for the DHCP server and then requests an IP address when the DHCP server is found. If there is no response from the DHCP server, the device uses a automatically allocated IP address, which is acquired by randomly choosing an address in the 169.254/16 range and testing it using ARP probe to determine if it is already used. The same procedure repeats until an unused address is found. After the first IP address is set, the UpnP device periodically communicates with the DHCP server, waiting for a DHCP response that provides an available IP address. At this the device stops using the address generated by Auto-IP as soon as the interaction in progress with the old Auto-IP is completed. If there is a DNS server in the network, it can also use domain names instead of the numerical IP address. 
+\item Discovery \\ 
+UPnP devices advertise their services to network using the UPnP discover protocol, which is based on 
 Simple Service Discovery Protocol (SSDP). An UPnP control point searches the existence of 
-UPnP devices in the network using SSDP. The discover message contains a few specific attributes 
-of a device and its services, these attributes include device type, unique identifier and a 
-pointer to more detailed information.
-The device send multicast several NOTIFY message to a pre defined address and port to advertise 
+UPnP devices in the network using SSDP. The discovery message contains a few specific attributes 
+of a device and its services.These attributes include device type, unique identifier and a 
+pointer to more detailed information. 
+The device send multicast several NOTIFY messages to a pre defined address and port to advertise 
 its availability. A control point will listen to this standard multicast address and get 
-notifications when new devices are available in the network.
-An advertisement message has its lifetime, so devices in the network will periodically send 
-NOTIFY message before the previous message expires. When the device or servers becomes unavailable 
-or shut down intentionally, previous advertisements are canceled by sending cancellation messages, 
-otherwise, the advertisements will eventually expire on its own.
+notifications when new devices are available in the network. 
+An advertisement message has a lifetime, so devices in the network would periodically send 
+the NOTIFY message before the previous message expires. When the device or servers becomes unavailable or when they are shut down intentionally, previous advertisements are canceled by sending cancellation messages. Otherwise, the advertisements will eventually expire on its own. 
 Control point can search for devices actively by multicasting an SSDP Search message. Other devices 
-in the network will respond to the search message by unicasting directly to the requesting control point.
-\item Description \\
-The discovery message contains URL to the description information. A control point can send HTTP 
-GET request to the URL to get detailed UPnP description of the device. The description includes 
-a device description and several service descriptions. 
+in the network will respond to the search message by unicasting directly to the requesting control point. 
+\item Description \\ 
+The discovery message contains the URL(Uniform resource Locater) of the description information. A control point can send HTTP GET request based on this URL to get detailed UPnP description of the device. The description includes a device description and several service descriptions. 
 
 A device description includes vender related information such as model name, serial number and 
-manufacture name. A device may have many services, for each service, the device description lists 
-the service type, name and URL to the detailed service description, control and eventing. A device 
-description may also include embedded devices and a URL to a presentation page.
+manufacture name. A device may have many services. For each service, the device description lists 
+the service type, name and URL of the detailed service description, control and eventing. A device 
+description may also include embedded devices and a URL of a presentation page. 
 
 A service description includes a list of actions that servers can accept, arguments of each action, 
-and a list of state variables. The state variables reflect the device's status during runtime.
+and a list of state variables. The state variables reflect the device's status during runtime. 
 
-The description is in XML syntax and is based on standard UPnP device template or service template, 
-which is defined by UPnP forum. The template language is written in XML syntax and is derived from 
-an XML schema language, so it is machine-readable and automated tools can parse check easily.
+The description follows the XML syntax and is based on standard UPnP device description template or service description template, which are defined by the UPnP forum. The template language is written in XML syntax and is derived from an XML schema language. In this sense, the template language is machine-readable and automated tools can parse it easily. 
 
 By using description, vender has the flexibility to extend services, embed other devices and include 
-additional UPnP services, actions or state variables. The control point can be aware of these added 
-features by retrieving device's description.
-\item Control \\
-A control point can ask services in a device to invoke actions by sending control messages. The control 
-process is a form of remote procedure call: a control point sends the action to device's service, and 
-when the action has completed on the remote device, the service returns the results or errors of the action.
+additional UPnP services, actions or state variables. The control point can be aware of these added features by retrieving these device descriptions. 
+\item Control \\ 
+A control point can ask services in a device and invoke actions by sending control messages. The control process is a form of remote procedure call: a control point sends the action to device's service, and when the action has completed on the remote device, the service returns the action results or the corresponding error messages. 
 
-The control messages are expressed in XML using the Simple Object Access Protocol (SOAP) and sent by 
-HTTP request. The action results are also received by HTTP responses. The action may cause state variable 
-change and those changes will be reflected in the eventing messages.
-\item Eventing \\
-UPnP service description defines a list of state variables, which updates at runtime. The service 
+The control messages are constructed in XML format using the Simple Object Access Protocol (SOAP) and conveyed though HTTP requests. Received through HTTP responses, the action results may cause the state variables to change and those changes are reflected in the eventing messages. 
+\item Eventing \\ 
+UPnP service description defines a list of state variables, which are updated at runtime. The service 
 publishes those changed state variables in the form of event messages, and a control point can 
-subscribe to this information.
+subscribe to this publishing service to learn these state transitions. 
 
-A control point can subscribe the event notification by sending a subscription message to the 
-subscription URL specified in the device description and provides a URL to receive the event messages.
+A control point subscribes to the event notification by sending a subscription message to the 
+subscription URL, which is specified in the device description. And the control point also provides a URL to receive the event messages. 
 
 Since there is no mechanism to subscribe to a subset of evented state variables, all subscribed 
 control points will receive all event messages regardless of why the state variable changed. 
 
 When the subscription is accepted, the device gives a unique identifier for the subscription and 
 the duration of the subscription. The device will also send an initialize event message, which 
-includes the names and current values for all evented variables.
+includes the names and current values for all evented variables. 
 
-The event messages are General Event Notification Architecture(GENA) NOTIFY
-messages, sent using HTTP with a XML body, which specifies the names of one or
-more state variables and new values of those variables. Once the state variable
-changed, the event message is sent immediately sent to control point, thus the
-control point can get timely information and could display a responsive user
-interface. The control point then send HTTP OK message to acknowledge device
-that the event message is received. The event message also contains a sequence
-number that allows the detection of possible lost or disordered messages.
+The event messages are General Event Notification Architecture(GENA) NOTIFY 
+messages, sent through HTTP with a XML body, which specifies the names of one or 
+more state variables and new values of those variables. Once the state variable 
+changes, the event message is immediately sent to the control point, thus the 
+control point can get a timely notification and could display a responsive user 
+interface. The control point then send HTTP OK message to acknowledge the device 
+that the event message is received. The event message also contains a sequence 
+number that allows the detection of possible lost or disordered messages. 
 
-The subscription must be renewed periodically to extend lifetime and keep it active. The renew 
+The subscription must be renewed periodically to extend its lifetime and keep it active. The renew 
 message which contains the subscription identifier is sent to the same URL in the subscription 
 message. When the subscription expires, the device will stop sending eventing message to the 
-control point, and any attempt to renew the expired subscription is rejected.
+control point, and any attempt to renew the expired subscription is rejected. 
 
-A subscription can be canceled by sending an appropriate message to the subscription URL.
+A subscription can be canceled by sending an appropriate message to the subscription URL. 
 
-\item Presentation \\
-Many UPnP devices provide a presentation URL to "web" interface for users. User can access the 
-presentation URL by a standard web browser. Control point send an HTTP GET request to the 
-presentation URL to get a HTML page from the device, and display the page in a web browser, thus 
-provide a more user-friendly interface for control and view the status of device. 
+\item Presentation \\ 
+Many UPnP devices provide a presentation URL to "web" interface for users. Users can access the 
+presentation URL though a standard web browser. The control point sends an HTTP GET request to the 
+presentation URL to get a HTML page from the device, and displays the page in a web browser, 
+providing a more user-friendly interface for controlling and viewing the status of the device. 
 
-The presentation page is totally specified by the device vender, but it must be an HTML page. 
-UPnP architecture does not define the details of presentation page, but it should be user friendly 
-and have some basic functionality.
+The presentation page, which is an HTML page, is solely specified by the device vender.
+The UPnP architecture does not define the details of the presentation page, however it suggests that the presentation page shall be user friendly and shall possess some basic functionalities. 
 
-\end{enumerate}
+\end{enumerate} 
 
-So far I described the general device architecture of UPnP devices, to
-emphasis the topic of this paper, we focus on the multimedia device types in
-home networking. In particular audio and video use cases\label{upnpav}. The AV
-control point interacts with two or more UPnP devices acting as source and
-sink, respectively. While coordinated by the AV control point, the devices
-themselves interact with each other using a non-UPnP communication protocol.
-The control point configures the devices as needed, triggers the flow of
-content, then gets out of the way.
+\textbf{UPnP A/V devices}\\
+With the general architecture of UPnP devices being introduced. We now move on to study the UPnP A/V(audio/video) devices in home networking \label{upnpav}. The AV 
+control point interacts with two or more UPnP devices, one of which acts as either a source or a 
+sink. While coordinated by the AV control point, the devices themselves interact with each other using a non-UPnP communication protocol. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. 
 
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/upnp_playback}
