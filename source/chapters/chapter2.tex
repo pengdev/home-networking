@@ -223,8 +223,7 @@ The RenderingControl service is used by the control point to control how the ren
 renders the incoming content. Characteristics like brightness, contrast, 
 volume, mute etc, can be controlled by this service. The RenderingControl service 
 supports multiple, dynamic instances, which allows a renderer to mix one or 
-more items together. such as Picture-in-Picture window on a TV or audio mixer 
-device. Multiple connections can be distinguished by their unique InstanceID. 
+more items together. Such a dynamic instance could be a Picture-in-Picture window on a TV or a mixed audio stream. Multiple connections can be distinguished by their unique InstanceID. 
 
 The ConnectionManager service is used to manage connections associated with a 
 device, the primary action is the ConnectionManager::GetProtocolInfo() action. 
@@ -389,42 +388,39 @@ A particular type of DLNA Device Profile is the Commercial Video Profile (CVP). 
 
 \subsubsection{AirPlay} 
 AirPlay is Apple Inc's home networking solution. It is a family of protocols 
-to display different types of media content on Apple TV from other iOS devices. 
-The AirPlay support displaying photos and slideshows from iOS device, streaming 
-audio from iOS device or iTunes, displaying videos from iOS device and 
-show the whole screen on Apple TV, called AirPlay Mirroring. 
+used to display different types of media content on Apple TV from other iOS devices. 
+AirPlay support multiple functions, including displaying photos and sideshows from iOS devices, streaming audio from iOS devices or iTunes, as well as displaying videos from iOS device and 
+showing the whole screen on Apple TV, which is known as AirPlay Mirroring. 
 
-AirPlay's specification is not open to public, but on Internet there are 
-hackers reverse engineered the protocol stack and made unofficial specification 
-\cite{AirPlay-spec}. The specification include 6 parts, which are described 
-below: 
+AirPlay's specification is not open to public. However unofficial specifications have been made by some hackers through reverse engineering the protocol stack \cite{AirPlay-spec}. These unofficial specifications could be found on the Internet \cite{AirPlay-spec}.  
+The specification includes 6 parts, which are described below: 
 
 \begin{enumerate} 
 \item Service Discovery \\ 
-The service discovery of AirPlay roots from the IETF Zeroconf Working Group, 
-which aims at improving ease-of-use (Zero Configuration) of network. The 
-Zeroconf working group tries to make it possible to take two devices in the 
-network to communicate usefully using IP, without needing specialist to manually 
+The service discovery of AirPlay stems from the IETF Zeroconf Working Group, 
+who is dedicated to improve the ease-of-use (Zero Configuration) of networks. The 
+Zeroconf working group has made it possible to make two devices in the 
+network to communicate effectively using IP, without requiring a specialist to manually 
 configure the network. 
 
 AirPlay's service discovery is based on Multicast DNS \cite{multicastdns}, which 
-fulfills Zeroconf requirement. Multicast DNS is a way of using familiar DNS 
+fulfills the Zeroconf requirement. Multicast DNS is a way of using familiar DNS 
 programming interfaces, packet formats and operating semantics, in a small 
 network where no conventional DNS server has been installed. The requirements 
 for Zeroconf name resolution could be met by designing an entirely new 
-protocol, it is better to provide this functionality by making minimal changes 
-to the current standard DNS protocol. By using multicast DNS, most current 
-applications need no changes at all to work correctly using mDNS in a Zeroconf network, 
-engineers do not have to learn an entirely new protocol, and current network 
-packet capture tools can already decode and display DNS packets, so they do not 
+protocol, since it is better to provide this functionality by making minimal changes 
+to the current standard DNS protocol. By using Multicast DNS, most current 
+applications need no changes at all to work correctly using mDNS in a Zeroconf network. Besides,
+engineers do not have to learn an entirely new protocol. Moreover current network 
+packet capture tools are already capable of  decoding and displaying the DNS packets. Thus they do not 
 have to be updated to understand new packet formats. 
 
 An AirPlay device such as the Apple TV publishes two services. The first one is 
-RAOP (Remote Audio Output Protocol), used for audio streaming, and the other 
-one is the AirPlay service, for photo and video content. 
+RAOP (Remote Audio Output Protocol), used for audio streaming. The second 
+one is the AirPlay service, used for photos and video content. 
 
-The AirPlay server is a HTTP server (RFC 2616). Two connections are made to this 
-server, the second one being used as a reverse HTTP connection. This allows a 
+The AirPlay server is an HTTP server (RFC 2616). Two connections are made to this 
+server, with the second one being used as a reverse HTTP connection. This allows a 
 client to receive asynchronous events, such as playback status changes, from a 
 server. 
 \item Video streaming \\ 
@@ -813,7 +809,7 @@ Apple users, since a lot of speaker manufactures implement their own AirPlay
 receiver on their AirPlay compatible speakers. And indeed it provides enough easy to use features to fulfill daily usage. 
 \item[--]Since bundled with Android operating system, Miracast has experienced a fast growth in 
 the past two years, many TVs built in the Miracast support to accept peer-to-peer Wi-Fi direct connection. 
-\item[--]Chromecast dongle is really cheap device that everyone wants to try, it can easily upgrade 
+\item[--]Chromecast dongle is a cheap device that everyone wants to try. It can easily upgrade 
 old TV to "Smart TV", and since Google has provided good content support for it, it is soon accepted 
 by huge amount of users. Except for Google play online sales, it also ranked top 3 best selling devices 
 recently. 
