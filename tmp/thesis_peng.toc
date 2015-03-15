@@ -8,30 +8,30 @@
 \contentsline {subsection}{\numberline {1.3}Document overview}{2}{subsection.1.3}
 \contentsline {section}{\numberline {2}Background}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Available protocols}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}UPnP}{4}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}DLNA}{11}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{13}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}DIAL}{16}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{18}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Other protocols}{22}{subsubsection.2.2.6}
-\contentsline {subsection}{\numberline {2.3}Comparison of existing solutions}{22}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}History}{22}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Market}{23}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Technology feature}{24}{subsubsection.2.3.3}
-\contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{26}{section.3}
-\contentsline {subsection}{\numberline {3.1}Architecture overview}{26}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Implementation}{27}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}UX design}{29}{subsection.3.3}
+\contentsline {subsection}{\numberline {2.2}Available protocols}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}UPnP}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}DLNA}{12}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{14}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}DIAL}{17}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{19}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Other protocols}{23}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Comparison of existing solutions}{23}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}History}{23}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Market}{24}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Technology feature}{25}{subsubsection.2.3.3}
+\contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{27}{section.3}
+\contentsline {subsection}{\numberline {3.1}Architecture overview}{27}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Implementation}{28}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}UX design}{30}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Features}{30}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Extensibility}{32}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Test methodology}{32}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Evaluation methodology}{32}{subsection.3.7}
-\contentsline {section}{\numberline {4}Results}{34}{section.4}
-\contentsline {subsection}{\numberline {4.1}Performance}{34}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Statistics}{34}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}User study}{35}{subsection.4.3}
-\contentsline {section}{\numberline {5}Discussion}{44}{section.5}
-\contentsline {subsection}{\numberline {5.1}Further development}{44}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{44}{subsection.5.2}
-\contentsline {section}{References}{45}{section*.10}
+\contentsline {subsection}{\numberline {3.6}Test methodology}{33}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Evaluation methodology}{33}{subsection.3.7}
+\contentsline {section}{\numberline {4}Results}{35}{section.4}
+\contentsline {subsection}{\numberline {4.1}Performance}{35}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Statistics}{36}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}User study}{36}{subsection.4.3}
+\contentsline {section}{\numberline {5}Discussion}{45}{section.5}
+\contentsline {subsection}{\numberline {5.1}Further development}{45}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{45}{subsection.5.2}
+\contentsline {section}{References}{46}{section*.10}
