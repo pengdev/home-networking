@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  15 MAR 2015 20:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  17 MAR 2015 01:23
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1164,17 +1164,22 @@ Package pdftex.def Info: charts/dial_rest-eps-converted-to.pdf used on input li
 ne 611.
 (pdftex.def)             Requested size: 404.20566pt x 256.0748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--646
+Underfull \hbox (badness 10000) in paragraph at lines 618--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--646
+Underfull \hbox (badness 10000) in paragraph at lines 618--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 618--646
+Underfull \hbox (badness 10000) in paragraph at lines 618--637
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--637
 
  []
 
@@ -1189,7 +1194,7 @@ Package epstopdf Info: Source file: <charts/miracast_model.eps>
 (epstopdf)                    size: 10334 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_model-eps-
 converted-to.pdf charts/miracast_model.eps>
-(epstopdf)             \includegraphics on input line 648.
+(epstopdf)             \includegraphics on input line 639.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/miracast_model-eps-converted-to.pdf, id=426, 721.69624pt x 935.495pt>
@@ -1197,7 +1202,7 @@ File: charts/miracast_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/miracast_model-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_model-eps-converted-to.pdf used on inp
-ut line 648.
+ut line 639.
 (pdftex.def)             Requested size: 307.306pt x 398.33858pt.
 Package epstopdf Info: Source file: <charts/miracast_technology_architecture.ep
 s>
@@ -1210,7 +1215,7 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_technology
 _architecture-eps-converted-to.pdf charts/miracast_technology_architecture.eps>
 
-(epstopdf)             \includegraphics on input line 656.
+(epstopdf)             \includegraphics on input line 646.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/miracast_technology_architecture-eps-converted-to.pdf, id=428, 657.4562
@@ -1220,65 +1225,92 @@ File: charts/miracast_technology_architecture-eps-converted-to.pdf Graphic file
 
 <use charts/miracast_technology_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_technology_architecture-eps-converted-
-to.pdf used on input line 656.
+to.pdf used on input line 646.
 (pdftex.def)             Requested size: 294.88951pt x 142.26378pt.
- [20 <./charts/miracast_model-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 727--727
-[][]\T1/cmr/m/n/12 Session es-tab-
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+
+ []
+
+[20 <./charts/miracast_model-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--727
-\T1/cmr/m/n/12 lish-ment and
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--736
-[][]\T1/cmr/m/n/12 User in-put back
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--736
-\T1/cmr/m/n/12 chan-nel setup
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
  []
 
-[21 <./charts/miracast_technology_architecture-eps-converted-to.pdf>]
-Overfull \vbox (25.08643pt too high) has occurred while \output is active []
 
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 757--757
-[][]\T1/cmr/m/n/12 Display ses-sion
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--701
+
+ []
+
+[21 <./charts/miracast_technology_architecture-eps-converted-to.pdf>] [22]
 [23] <charts/dlna_market.png, id=472, 433.62pt x 256.7994pt>
 File: charts/dlna_market.png Graphic file (type png)
 
 <use charts/dlna_market.png>
-Package pdftex.def Info: charts/dlna_market.png used on input line 790.
+Package pdftex.def Info: charts/dlna_market.png used on input line 729.
 (pdftex.def)             Requested size: 432.42134pt x 256.0748pt.
 
-Overfull \hbox (5.63pt too wide) in paragraph at lines 790--791
+Overfull \hbox (5.63pt too wide) in paragraph at lines 729--730
  [][][] 
  []
 
 [24 <./charts/dlna_market.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 803--810
+Underfull \hbox (badness 10000) in paragraph at lines 742--749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--810
+Underfull \hbox (badness 10000) in paragraph at lines 742--749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 853--240
+Underfull \hbox (badness 10000) in paragraph at lines 792--240
 
  []
 
@@ -1747,7 +1779,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
 Here is how much of TeX's memory you used:
  17719 strings out of 493308
  331103 string characters out of 6137816
- 806058 words of memory out of 5000000
+ 806057 words of memory out of 5000000
  20605 multiletter control sequences out of 15000+600000
  29365 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1768,7 +1800,7 @@ t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (53 pages, 1088797 bytes).
+Output written on thesis_peng.pdf (53 pages, 1088716 bytes).
 PDF statistics:
  780 PDF objects out of 1000 (max. 8388607)
  665 compressed objects within 7 object streams
