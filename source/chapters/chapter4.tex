@@ -1,48 +1,21 @@
-%% Resluts chapter
+%% Results chapter
 %% author Liu Peng
 
-After designing, implementing and testing the application. We started several
-evaluation tests on the streaming performance. Finally we had released the
-application in Google Play Store in Nov 2013. So far, we have improved the
-application in many aspects and also brought many new features to it. During
-the past one year, we have accumulated many useful data and interesting
-results. In this chapter we will present and analyze those results.
+After designing, implementing and testing the application. We started several evaluation tests on the streaming performance. Finally we had released the application in Google Play Store in Nov 2013. So far, we have improved the application in many aspects and also brought many new features to it. During the past one year, we have accumulated many useful data and interesting results. In this chapter we will present and analyze those results.
 
 \subsection{Performance}
-In terms of streaming, our solution include two major streaming components. It
-would be helpful to study how the media streaming protocol have the better 
-performance while streaming multimedia contents. And also, by comparing
-different streaming types of media, we could investigate which protocol is best
-suitable for certain type of media. Two major streaming technology we
-used in our solution are HTTP streaming and RTSP streaming.\\
+In terms of streaming, our solution include two major streaming components. It would be helpful to study and compare which streaming protocol have the better performance while streaming multimedia contents. Moreover, by comparing different streaming types of media, we could investigate which protocol is best suitable for certain type of media. \\
+\\Two major streaming technology we used in our solution are HTTP streaming and RTSP streaming.\\
 \\
-Hypertext Transfer Protocol (HTTP) refers to the protocol used to deliver web
-pages and images across the Internet worldwide. HTTP is an adopted, open
-standard-the most ubiquitous mode of delivery on-line. HTTP is a "stateless"
-protocol; think of it as an airline ticket to anywhere. HTTP can be delivered
-by a variety of web servers, both commercial and open source.\\
+Hypertext Transfer Protocol (HTTP) refers to the protocol used to deliver web pages and images across the Internet worldwide. HTTP is an adopted, open standard and the most ubiquitous mode of delivery on-line. HTTP can be delivered by a variety of web servers, both commercial and open source.\\
 \\
-Real Time Streaming Protocol (RTSP) is a network control protocol used in
-entertainment and communications systems to control streaming media servers.
-RTSP is used to establish and control media sessions between two points,
-usually server and player client. Clients of media servers issue VCR-like
-commands, such as PLAY and PAUSE, to facilitate real-time control of playback
-of media files from the server. Microsoft's Smooth Streaming is a hybrid
-delivery method that acts like traditional RTSP streaming but is based on HTTP
-PDL. Apple's HTTP Live Streaming (HLS) is another example of using HTTP to
-deliver video with new techniques.\\
+Real Time Streaming Protocol (RTSP) is a network control protocol used in entertainment and communications systems to control streaming media servers. RTSP is used to establish and control media sessions between two points, usually server and player client. Clients of media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate real-time control of playback of media files from the server. AirPlay uses RAOP, a RTSP-like streaming protocol, for the streaming of iTunes music. \\
 \\
-AirPlay uses RTSP streaming for the iTunes music. Thus we chose a mp3 music and
-try to stream it to an AirPlay Speaker and an DLNA Speaker, and we used
-Wireshark running on rooted Android phone to capture the packets in the network.
-The result is presented below, the initial packet count is relatively high,
-this is because there is a lot multicast messages in the network for device
-discovery, after that, streaming graph shows that after an initial increase in
-the traffic, network traffic is relatively stable, this is because the TCP
-protocol reaches the best optimized transmission speed.\\
+Since we have both protocols implemented in our application. We could compare the performance by streaming the same content to two receivers using different protocol. We selected a mp3 music file and try to stream it to an AirPlay Speaker and an DLNA Speaker, and we used Wireshark running on rooted Android phone to capture the packets in the network.\\
 \\
-Next step, we added packet loss in the network, and see the influence to the two
-streaming process, result is shown below:
+The result is presented below, the initial packet count is relatively high. This is because there is a lot multicast messages in the network for device discovery. After that, streaming graph shows that after an initial increase in the traffic, network traffic enters a relatively stable state. This is because the TCP protocol reaches the best optimized transmission speed.\\
+\\
+Next, we added packet loss in the network and compare the influence to the two streaming process. The result is shown in Figure below:
 \begin{figure}[H]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -138,19 +111,15 @@ streaming process, result is shown below:
 \end{figure}
 
 \subsection{Statistics}
-Through one year's releasing, we have reached 895000 downloads from 223
-countries all around the world, with around 8000 daily active users. So far, the
-average rating of our app is 3.9 out of 9934 ratings. The application turns out
-to be popular in countries like France, United States, Germany, United Kingdom
-and Brazil.
+Through one year's releasing, our application have reached 895000 downloads from 223 countries all around the world, with around 10000 daily active users. So far, the average rating of our app is 3.9 out of 9934 ratings. The application turns out to be popular in countries like France, United States, Germany, United Kingdom and Brazil.
 
 \begin{itemize}
-\item[--]Totally more than 290000 downloads
-\item[--]Used by people from 201 countries
-\item[--]8000+ daily active users
+\item[--]Totally more than 895000 downloads
+\item[--]Used by people from 223 countries
+\item[--]10000+ daily active users
 \item[--]1,241,074 visits to home page
-\item[--]Average rating 3.9, 3521 user gave rates
-\item[--]On-line for 3 months
+\item[--]Average rating 3.9, 9934 user gave rates
+\item[--]On-line for 16 months
 \end{itemize}
 \begin{figure}[htb]
 \centering \includegraphics[height=5cm]{charts/android_versions}
