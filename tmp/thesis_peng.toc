@@ -27,11 +27,13 @@
 \contentsline {subsection}{\numberline {3.5}Extensibility}{32}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Test methodology}{32}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}Evaluation methodology}{33}{subsection.3.7}
-\contentsline {section}{\numberline {4}Results}{34}{section.4}
-\contentsline {subsection}{\numberline {4.1}Performance}{34}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Statistics}{35}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}User study}{35}{subsection.4.3}
-\contentsline {section}{\numberline {5}Discussion}{44}{section.5}
-\contentsline {subsection}{\numberline {5.1}Further development}{44}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{44}{subsection.5.2}
-\contentsline {section}{References}{45}{section*.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Experimental setup}{33}{subsubsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.2}User study and feedback collection}{33}{subsubsection.3.7.2}
+\contentsline {section}{\numberline {4}Results}{35}{section.4}
+\contentsline {subsection}{\numberline {4.1}Performance}{35}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Statistics}{36}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}User study}{36}{subsection.4.3}
+\contentsline {section}{\numberline {5}Discussion}{45}{section.5}
+\contentsline {subsection}{\numberline {5.1}Further development}{45}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{45}{subsection.5.2}
+\contentsline {section}{References}{46}{section*.7}

@@ -125,8 +125,21 @@ These tests include unit test, integration test and functional test.
 Unit tests were written while coding, when each class was finished, unit tests would be written for each method. We also set up an continuous integration server so that each time we commit anything to the git repository, full set of unit tests will be executed. If there were any failure in the unit tests, developer will be immediately notified. Integration tests were done in a way that we ensure each function module should work together with other modules in the system. Last, we listed all the possible use cases in paper and prepared a huge media base which contains all kind of media files. With all these preparations ready, manual tests were conducted before the app is finally released in the market.
 
 \subsection{Evaluation methodology}
-Experimental setup(TBD)\\
+The evaluation of this application can be described in 2 categorizes. Experiment
+should be conducted to evaluate the performance of different standards. Another aspect worth studying is the users' usage and feedback.
+\subsubsection{Experimental setup}
+The test environment is set up as shown in Figure \ref{}. XBMC media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using 802.11 g wirelessly. \\
 \\
+With support of both AirPlay and DLNA protocols, XBMC is an open source media center software that can run on different platforms. It is a popular software solution that is widely used in home networks, it has been ported to different platforms including Raspberry PI.\\
+\\
+Network Link Conditioner is an application provided by Xcode that runs on Mac to emulate network conditions, such as packet loss, network delay and bandwidth. By changing the configurations, different network conditions can be set to decide the boundary network conditions.\\
+\\
+Wireshark is an application an useful developer tool to capture and analyze network traffic. It can be installed on both the sender and receiver side, however, it can only be installed on rooted Android phones to gain the access to network interface on Android. In our setup, Wireshark is installed on MacBook, since we need to adjust network condition on receiver side, and there might be packet loss since some protocols may use UDP protocol.\\
+\\
+When testing starts, same content will be streamed to receiver using two different standards, AirPlay and DLNA. The same test will be run several times to get the average statistics. Different parameters will also be tested by using different network condition configurations.
+\\
+3 parameters are taken into consideration when conducting the tests: bandwidth, packet loss and delay. 
+\subsubsection{User study and feedback collection}
 Since the product is targeted to Android market and is directly used by end users, user feedback is really important to us for improving the product continuously. Email is used for normal communication between user and our support. A submission window is built inside the application, so that users can easily send feedback to us directly by Email.\\
 \\
 There is no perfect program, crashes sometimes happen. Thanks to Google, all crash reports are collected and showed inside developer console. This makes it a lot easier to track and debug our application.\\
