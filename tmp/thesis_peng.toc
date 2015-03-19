@@ -1,7 +1,7 @@
 \contentsline {section}{Abstract{}}{ii}{section*.1}
 \contentsline {section}{Preface}{iii}{section*.2}
 \contentsline {section}{Contents}{iv}{section*.4}
-\contentsline {section}{Symbols and abbreviations}{vi}{section*.6}
+\contentsline {section}{Abbreviations}{vi}{section*.6}
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Home networking}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Problem description}{1}{subsection.1.2}
@@ -34,4 +34,4 @@
 \contentsline {section}{\numberline {5}Discussion}{44}{section.5}
 \contentsline {subsection}{\numberline {5.1}Further development}{44}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{44}{subsection.5.2}
-\contentsline {section}{References}{45}{section*.10}
+\contentsline {section}{References}{45}{section*.7}
