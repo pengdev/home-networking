@@ -1,0 +1,3 @@
+1. Stress test for media streaming, find boundry values for bandwidth, packet loss, delay and number of concurrent streams.
+2. QoS, service avability for device discovery.
+3. Table of user statistics.
