@@ -31,56 +31,53 @@ million so far, providing a strong proof of the effectiveness of our solution.
 \subsection{Architecture overview}
 In order to solve the multimedia home networking interoperability problem, the system should be designed to control media playback sessions. Consequently, content navigation, manage receiver device, and media playback should be the most important three components. In our solution, the system architecture consists of three major parts: device discovery, content management and streaming.\\
 \\
-Discovery component is responsible for device discovery. As discussed
-in\ref{upnp}, UPnP devices and DIAL devices use Simple Service Discovery Protocol for device discovery. An application firstly send a M-Search request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then the application listens to other devices' response. A DIAL device will return a response with Application URL header, while the UPnP/DLNA devices will return a message with a XML body, which gives detailed service URL and description URL. On the other hand, Apple's products use Multicast DNS is for discovery. \\
+The discovery component is responsible for device discovery. As discussed
+in\ref{upnp}, UPnP/DLNA devices and DIAL devices use Simple Service Discovery Protocol(SSDP) for device discovery. An application firstly sends a M-Search request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then the application listens to other devices' responses. A DIAL device will return a response with an Application URL header, while the UPnP/DLNA devices will return a message with a XML body, which provides detailed service URLs and description URLs. Instead of using the SSDP discovery, Apple's products, in comparison, use Multicast DNS for device and service discovery. Obviously, in order to support the three types of devices, namely the UpnP/DLNA devices, the DIAL devices and the Apple Airplay devices, we need to integrate these two mentioned discovery mechanisms, namely, the SSDP mechanism and the Multicast DNS mechanism, into our solution.\\
 \\
-For the three protocols we are planning to support, we need to implement two kinds of discovery mechanism: Simple Service Discovery Protocol(SSDP) and Multicast DNS protocol.\\
+The content management component is responsible for organizing and
+ navigating multimedia contents that can be discovered in the home network. In our solution, these content sources include both the local storage of smart phones and DLNA digital media servers that are connected to home network. As long as the discovered device belongs to the three device types that we support, its content could be streamed using our application solution.\\
 \\
-Content management component is responsible for organizing and
-navigating multimedia contents which can be found in the home network. In our solution, these content sources include both phone's local storage and DLNA digital media servers that are connected to home network. Content from these sources could be streamed using all of the
-three protocols that we support.\\
-\\
-Streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes. Since DLNA, AirPlay video/ photo and Chromecast all use HTTP streaming, while AirPlay music uses Remote Audio Output Protocol (RAOP). In our solution, two types of media server are built inside our application. A RAOP server will handle the AirPlay music streaming and a HTTP media server will handle the streaming of all the other solutions.
+The streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes, etc. In a typical home networking environment, DLNA , AirPlay video/ photo and Chromecast all use HTTP streaming. The only exception, the AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, we integrate two types of media servers inside our application solution. With our application, the built-in RAOP server would handle the AirPlay music streaming and the built-in HTTP media server would handle streaming of all other types.
 
 \subsection{Implementation}
-Since the application is built upon Android platform, we studied Android system architecture and Android Software Development Kit (SDK). Fortunately, Android SDK provides many useful Application Programming Interfaces (APIs) and gives crucial permissions to access hardware features, such as accessing Internet, accessing WiFi state change, allowing WiFi multicast, reading phone storage. The programming language used in developing Android Application is Java, however some CPU-intensive work such as transcoding have to be implemented in C and embed to the application using Android Native development kit (NDK).\\
+Since the application is built upon the Android platform, we conducted studies on the Android system architecture and the Android Software Development Kit (SDK). Thankfully, the Android SDK provides many useful Application Programming Interfaces (APIs) and grants crucial permissions to access necessary services and hardware features, such as the permission to access the Internet , the permission to access the WiFi device state change, the permission to allow WiFi multicast and  the permission to read phone storage. The programming language used in developing our Android Application is Java. However some CPU-intensive works, such as transcoding, have to be implemented in C and then embedded to the application using the Android Native development kit (NDK).\\
 \\
-While Apple has not provided its official specification of AirPlay, the implementation of AirPlay is mostly written following the unofficial guidelines. However, Apple provide its official Multicast DNS (mDNS) implementation. This piece of code is reused and compiled as a shared native library. Remote Audio Output Protocol (RAOP) is
-implemented according to the unofficial guidelines. The implementation includes a UDP server and TCP control channel.\\
+Since Apple has not provided its official specification for AirPlay, our implementation for supporting AirPlay is mostly written under unofficial guidelines. However, Apple has provided its official Multicast DNS (mDNS) implementation. Thus, this piece of code is reused and compiled as a shared native library. Similar with the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
+ also implemented under unofficial guidelines. To be specific, the RAOP supporting component includes a UDP server and a TCP control channel.\\
 \\
-DLNA has open specification only for its members. Tuxera is a member of DLNA so we got detailed specification and test tools. Since DLNA is a popular standard, there are a lot of open source UPnP/DLNA
-libraries. In our implementation, we used a library called "cling"\cite{cling}, it has minimal implementation of UPnP
-device discovery, description information parsing, and basic message handling. More code is written by us to ensure the media format compatibility across different devices.\\
+With Tuxera being a member of DLNA , we are able to access the detailed specifications and test tools for DLNA. Moreover,  there are a lot of open source UpnP/DLNA
+ libraries available since DLNA is now a popular standard. Specifically, in our implementation, we uses a library called "cling"\cite{cling}, which provides minimal implementation of UpnP
+ device discovery, description information parsing, and basic message handling. By extending "cling"\cite{cling}, we are able to provide media formats compatibility across different devices.\\
 \\
-Google has officially provided Chromecast SDK for different mobile platforms, so integration with Chromecast becomes trivial. In Streambels project, the Chromecast integration is built upon Chromecast API.\\
+Google has officially provided the Chromecast SDK for different mobile platforms, which enables us to  implement the Chromecast integration with ease. In the Streambels project, the Chromecast integration is built upon the Chromecast API.\\
 \\
 When it comes to media server implementation, according to the DLNA guideline,
 certain additional headers need to be implemented in the stream. This
-requirement demand the HTTP server to be flexible to add DLNA specific
-headers. Another requirement is that "Seek" action needs to be supported on the server side, in the implementation we need to enable byte based seeking operation.\\
+requires the HTTP server to possess the functionality to add DLNA specific
+headers. Another requirement is that the "Seek" action needs to be supported on the server side. To support "Seek", byte based seeking operations are enabled in our implementation.\\
 \\
-For receivers other than DLNA standard, a basic file server with byte range support will be sufficient to do the work.\\
+For receivers who do not use the DLNA standard, a basic file server with byte range support will be sufficient to do the work.\\
 \\
 In order to serve media for all the receivers from both online and local storage, a separate media proxy also needs to be implemented.\\
 \\
 After investigating and comparing multiple server implementations on Android, we
-concluded that NanoHTTPD is the ideal solution for our need. It is easy to use,
-Apache licensed, very tiny and efficient implementation. Because it is minimal implemented, it is also easy to be modified. Additional headers can be easily added to be compatible with DLNA receivers. Besides, a proxy is also easy to integrate with the NanoHTTPD.\\
+concluded that NanoHTTPD is the ideal choice for our solution, because NanoHTTPD is easy to use,
+Apache licensed, very tiny and efficient. Since NanoHTTPD is minimally implemented, it is easy to be modified and extended. With NanoHTTPD , additional headers can be easily added to make the server implementation compatible with DLNA receivers. Besides, a proxy is also easy to integrate with  NanoHTTPD.\\
 \\
-Taking all these technical details into consideration, we concluded a simplified
-architecture of our implementation, which is shown in the Figure \ref{chart3}.
+Taking all these technical details into consideration, we devised a simplified
+architecture for our implementation, which is shown in Figure \ref{chart3}.
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/chart3}
 \caption{Simplified application architecture\label{chart3}}
 \end{figure}
 
-When streaming content, the data flow can be described in three different models. Figure \ref{chart4} shows the following three use scenarios:\\
+When streaming content, the data flow is different for different scenarios . Figure \ref{chart4} shows the three use scenarios and their corresponding data flows:\\
 \\ 
-If the content is stored in mobile phone, a streaming server in the application will be used to stream the content from phone to selected receiver.\\
+If the content is stored in a mobile phone, a streaming server in the application will be used to stream the content from phone to the selected receiver.\\
 \\
-Otherwise, if the content is located on Internet and the receiver is a DLNA Media Renderer, a proxy will be needed. The proxy will firstly download the resource stream, then add the required headers by DLNA specification and finally stream the modified content to the selected DLNA Media Renderer.\\
+In contrast, if the content is located on the Internet and the receiver is a DLNA Media Renderer, a proxy will be needed. To be specific, the proxy will first download the resource stream and then add certain headers required by the DLNA specification. After that, the proxy streams the modified content to the selected DLNA Media Renderer.\\
 \\
-Finally, if the streamed content locates in a DLNA Digital Media Server, then the source can be used directly by all receivers. In this case, the streaming proceeds directly from media server to receivers. Application will only be used as a control point and do not participate in the media transmission in this scenario.\\
+Finally, if the streamed content locates in a DLNA Digital Media Server, then the source can be used directly by all receivers. In this case, the streaming proceeds directly from the media server to receivers. Our application, in this scenario, will only be used as a control point and do not really participate in the media transmission.\\
 \\
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/data_flow}
@@ -88,65 +85,66 @@ Finally, if the streamed content locates in a DLNA Digital Media Server, then th
 \end{figure}
 
 \subsection{UX design}
-In terms of UI and UX, the application should be simple enough to be used by everyone. Users should be able to locate the media, browse
-content on different sources, and follow the data flow between devices without any difficulty. The control of different devices should also be intuitive so that the interoperation between different devices goes seamlessly.\\
+In terms of UI and UX, the application should be simple enough to use. Users should be able to locate the media, browse
+ content on different sources, and follow the data flow between devices without any difficulty. The control of different devices should also be intuitive so that the inter-operation between different devices can be seamless.\\
 \\
 A multimedia home networking solution should be content centric so that user can easily navigate through different sources. The application is designed similar to a multimedia player. A cast button is added at the top of the application to make it easier to select cast devices. The content is categorized into 4 sections: music, video, photo and online sources. In Android, since the system provides share intent method for inter-activity communication, an interface is also made to manage share intents from other activities. The selected receiver is designed to be visible to user from everywhere inside the application. \\
 \\
-Having all these considerations in mind, the final appearance of the application becomes simple but effective. Figure \ref{chart5} shows the final design of our application.
+Bearing all these considerations in mind, the final appearance of the application becomes simple and effective. Figure \ref{chart5} shows the final design of our application.
 \begin{figure}[htb]
 \centering \includegraphics[height=8cm]{charts/allconnect-app}
 \caption{Application UX design \label{chart5}}
 \end{figure}
 
 \subsection{Features}
-The Android application we developed can handle most multimedia devices in a typical home networking. It has various features that make it a useful and universal solution for multimedia home networking.\\
+The Android application we have developed can handle most multimedia devices in typical home networking. It also provides various features, making it a powerful and universal solution for multimedia home networking.\\
 \\
-Firstly, the app itself is a multimedia player. All the media stored locally on the phone storage, all the media located in the DLNA media servers can be browsed and played on the phone.\\
+Firstly, the application itself is a multimedia player. Both the media stored locally on the phone storage and the media located in the DLNA media servers can be browsed and played locally on the phone.\\
 \\
 Secondly, the application is fully compatible with AirPlay, DLNA, Chromecast and FireTV receiver devices. All devices can be discovered as renderer devices.\\
 \\ 
-Thirdly and most importantly, the application make the DLNA media server works together with all kind of receivers regardless of protocol used. The app served as a bridge of different multimedia receivers and media sources.\\
+Thirdly and most importantly, the application enables the DLNA media server to work together with all kind of receivers regardless of the protocol used. The app served as a bridge for different multimedia receivers and media sources.\\
 \\
-Last, YouTube and other on-line channels like Vimeo and Facebook are supported as media source. These content can be streamed regardless of protocol to all supported receivers that are connected to home network.
+Lastly, YouTube and other on-line channels like Vimeo and Facebook are supported as available media sources. These content can be streamed, regardless of the protocol, to all supported receivers that are connected to home network.
 
 \subsection{Extensibility}
-Streambels has embedded a media streaming server for local files and streaming proxy for bridging the gap between online resources and home networking. By using built-in proxy, Streambels is able to share on-line resources from Internet to devices in home networking environment. \\
+Streambels has embedded a media streaming server for local files and a streaming proxy for bridging the gap between online resources and home networking. By using a built-in proxy, Streambels is able to share on-line resources from the Internet to devices in home networking environment. \\
 \\
-New service providers and content providers can integrate home networking support to their product easily by just sending formatted intent to our application following our guideline. The proxy will automatically bridge the gap between internet and home netowrk.\\
+New service providers and content providers can integrate home networking support into their products easily by just sending formatted intent to our application following our guidelines. The proxy will automatically bridge the gap between the Internet and home network.\\
 \\
-The proxy system enables a huge extensibility possibility, which makes it possible to connect home networking to Internet or Cloud Services.\\
+The proxy system provides great extensibility and makes it possible to connect home networking to Internet or Cloud Services.\\
 \\
-In the future we could also develop a Software Development Kit (SDK) to make this technology even directly be used by other application builders.
+In the future we could also develop a Software Development Kit (SDK) to grant the availability of our technology, enabling other application builders to directly use our home-networking solutions.
 \subsection{Test methodology}
-Software testing is extremely important for a modern IT project. Buggy implementation may kill the product in the very beginning. Through testing we could assure the performance and stability of our product. Before the final releasing to App store, the application needs to be thoroughly tested.\\
+Software testing is extremely important for a modern IT project. Buggy implementations may kill the product in the very beginning since it can badly undermine user experiences. Through testing we could assure the performance and stability of our product. Thus, before the final releasing to the Google Play store, the application was thoroughly tested.\\
 \\
-These tests include unit test, integration test and functional test.
-Unit tests were written while coding, when each class was finished, unit tests would be written for each method. We also set up an continuous integration server so that each time we commit anything to the git repository, full set of unit tests will be executed. If there were any failure in the unit tests, developer will be immediately notified. Integration tests were done in a way that we ensure each function module should work together with other modules in the system. Last, we listed all the possible use cases in paper and prepared a huge media base which contains all kind of media files. With all these preparations ready, manual tests were conducted before the app is finally released in the market.
+These tests included unit test, integration test and functional test.
+Unit tests were conducted while coding the application. When each class was finished, unit tests would be written for each method. We also set up an continuous integration server so that each time we commit anything to the git repository, full set of unit tests would be executed. If there were any failure in the unit tests, developer would be immediately notified. Integration tests were done in such a way that we ensured each function module work together with other modules in the system. Lastly, we listed all the possible use cases in paper and prepare a huge media base which contains all kind of media files. With all these preparations ready, manual tests were conducted before the app is finally released in the market.
 
 \subsection{Evaluation methodology}
-The evaluation of this application can be described in 2 categorizes. Experiment
-should be conducted to evaluate the performance of different standards. Another aspect worth studying is the users' usage and feedback.
+The evaluation of this application includes two parts. The first part involves experiment
+s
+that help evaluate the application performance. The second part invovles a study on the application usage in the market and user feedbacks.
+
 \subsubsection{Experimental setup}
-The test environment is set up as shown in Figure \ref{}. XBMC media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using 802.11 g wirelessly. \\
+The test environment is set up as in Figure \ref{}. The XBMC media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using the 802.11 g wireless interface. \\
 \\
-With support of both AirPlay and DLNA protocols, XBMC is an open source media center software that can run on different platforms. It is a popular software solution that is widely used in home networks, it has been ported to different platforms including Raspberry PI.\\
+With the support of both AirPlay and DLNA protocols, XBMC is an open source media center software that can run on different platforms. It is a popular software solution that is widely used in home networks, which has been ported to different platforms including Raspberry PI.\\
 \\
-Network Link Conditioner is an application provided by Xcode that runs on Mac to emulate network conditions, such as packet loss, network delay and bandwidth. By changing the configurations, different network conditions can be set to decide the boundary network conditions.\\
+Network Link Conditioner is an application provided by Xcode that runs on Mac to emulate network conditions, such as packet loss, network delay and bandwidth variations. By changing the configurations, different network conditions can be set to determine the boundary network conditions.\\
 \\
-Wireshark is an application an useful developer tool to capture and analyze network traffic. It can be installed on both the sender and receiver side, however, it can only be installed on rooted Android phones to gain the access to network interface on Android. In our setup, Wireshark is installed on MacBook, since we need to adjust network condition on receiver side, and there might be packet loss since some protocols may use UDP protocol.\\
+Wireshark is an useful developer tool to capture and analyze network traffic. It can be installed on both the sender and receiver side. However, it can only be installed on rooted Android phones to gain the access to network interface on Android. In our setup, Wireshark is installed on MacBook because we need to adjust network condition on the receiver side and there might be packet loss since some protocols may use UDP protocol.\\
 \\
-When testing starts, same content will be streamed to receiver using two different standards, AirPlay and DLNA. The same test will be run several times to get the average statistics. Different parameters will also be tested by using different network condition configurations.
+When the test starts, the same content will be streamed to receivers using two different standards, AirPlay and DLNA. The same test will be run several times to get the average statistics. Different parameters will also be tested by using different network condition configurations.
 \\
 3 parameters are taken into consideration when conducting the tests: bandwidth, packet loss and delay. 
 \subsubsection{User study and feedback collection}
 Since the product is targeted to Android market and is directly used by end users, user feedback is really important to us for improving the product continuously. Email is used for normal communication between user and our support. A submission window is built inside the application, so that users can easily send feedback to us directly by Email.\\
 \\
-There is no perfect program, crashes sometimes happen. Thanks to Google, all crash reports are collected and showed inside developer console. This makes it a lot easier to track and debug our application.\\
+There is no perfect program, crashes sometimes happen. Thanks to Google, all crash reports are collected and displayed inside developer console. This makes it a lot easier to track and debug our application.\\
 \\
-Inside Streambels, we also integrated Google's Analytics API. The API provided great convenience for us to collect number of users and sessions every day. Other information such as version of operating system, application version, active users helped us to achieve better insights to our users and helped us to market our application to more
-people in the world.\\
+Inside Streambels, we also integrated Google's Analytics API. The API provided great convenience for us to collect number of users and sessions every day. Other information such as operating system version, application version and the number of active users as well as user feedbacks, have helped us to gain more insight in our application and the market response, making it easier for us to improve the application and do better marketing. 
 \\
-It is also interesting to see what kind of technologies are most used in their daily life. With the analytics SDK, we could trigger events when user select their receivers. After months of statistics, we have figured out the most popular standards and most popular online channels that user uses.\\
+It is also interesting to see what kind of technologies are most used in their daily life. With the analytics SDK, we could trigger events when user select their receivers. After months of monitoring and statistics collection, we have been able to figure out the most popular standards and most popular online channels .\\
 \\
 These valuable information will in turn help our decision making on how we should improve our application. Some of these result will be discussed in chapter 4.
