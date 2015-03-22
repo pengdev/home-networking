@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {3.6}Test methodology}{32}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}Evaluation methodology}{33}{subsection.3.7}
 \contentsline {subsubsection}{\numberline {3.7.1}Experimental setup}{33}{subsubsection.3.7.1}
-\contentsline {subsubsection}{\numberline {3.7.2}User study and feedback collection}{33}{subsubsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2}User study and feedback collection}{34}{subsubsection.3.7.2}
 \contentsline {section}{\numberline {4}Results}{35}{section.4}
 \contentsline {subsection}{\numberline {4.1}Performance}{35}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Statistics}{36}{subsection.4.2}
