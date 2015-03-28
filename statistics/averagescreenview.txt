@@ -1,0 +1,826 @@
+
+R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.65 (6913) x86_64-apple-darwin13.4.0]
+
+> source("/Users/pengliu/Documents/Aalto/thesis/Thesis_final/statistics/googleAnalytics.r")
+Loading required package: RGoogleAnalytics
+Loading required package: lubridate
+Loading required package: httr
+Error in structure(list(appname = appname, secret = secret, key = key),  : 
+  object 'client.secret' not found
+2015-03-27 23:04:39.967 R[74018:1426718] *** WARNING: Method convertPointFromBase: in class NSView is deprecated on 10.7 and later. It should not be used in new applications. 
+> install.packages("devtools")<br> library(devtools)
+Error: unexpected '>' in "install.packages("devtools")<br>"
+> install.packages("devtools")
+--- Please select a CRAN mirror for use in this session ---
+also installing the dependencies ‘brew’, ‘whisker’, ‘evaluate’, ‘rstudioapi’, ‘roxygen2’
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/brew_1.0-6.tgz'
+Content type 'application/x-gzip' length 98041 bytes (95 KB)
+opened URL
+==================================================
+downloaded 95 KB
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/whisker_0.3-2.tgz'
+Content type 'application/x-gzip' length 47727 bytes (46 KB)
+opened URL
+==================================================
+downloaded 46 KB
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/evaluate_0.5.5.tgz'
+Content type 'application/x-gzip' length 37747 bytes (36 KB)
+opened URL
+==================================================
+downloaded 36 KB
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/rstudioapi_0.2.tgz'
+Content type 'application/x-gzip' length 22508 bytes (21 KB)
+opened URL
+==================================================
+downloaded 21 KB
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/roxygen2_4.1.0.tgz'
+Content type 'application/x-gzip' length 360981 bytes (352 KB)
+opened URL
+==================================================
+downloaded 352 KB
+
+trying URL 'http://mirrors.dotsrc.org/cran/bin/macosx/mavericks/contrib/3.1/devtools_1.7.0.tgz'
+Content type 'application/x-gzip' length 296811 bytes (289 KB)
+opened URL
+==================================================
+downloaded 289 KB
+
+
+The downloaded binary packages are in
+	/var/folders/53/8y9zsny53td8zbd2ffkr6fv80000gn/T//Rtmp87L5R2/downloaded_packages
+> library(devtools)
+> install_github("rga", "skardhamar")
+Downloading github repo skardhamar/rga@master
+Installing rga
+'/Library/Frameworks/R.framework/Resources/bin/R' --vanilla CMD INSTALL  \
+  '/private/var/folders/53/8y9zsny53td8zbd2ffkr6fv80000gn/T/Rtmp87L5R2/devtools1212267fb1572/skardhamar-rga-0f77003'  \
+  --library='/Library/Frameworks/R.framework/Versions/3.1/Resources/library'  \
+  --install-tests 
+
+* installing *source* package ‘rga’ ...
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (rga)
+Warning message:
+Username parameter is deprecated. Please use skardhamar/rga 
+> library(rga)
+Loading required package: RCurl
+Loading required package: bitops
+Loading required package: jsonlite
+
+Attaching package: ‘jsonlite’
+
+The following object is masked from ‘package:utils’:
+
+    View
+
+> rga.open(instance="ga")
+Browse URL: https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/analytics.readonly&state=%2Fprofile&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=862341168163-qtefv92ckvn2gveav66im725c3gqj728.apps.googleusercontent.com&approval_prompt=force&access_type=offline 
+Please enter code here: 4/Hov0iICyKnrvIHj95amrY98DHzjQH4CL_JskjZHZz8g.gjIK6K0yBx4erjMoGjtSfTqo-Cu6mAI
+> 
+> id <- "79254207"
+> ga$getRefClass()
+Generator for class "rga":
+
+Class fields:
+                                                              
+Name:      client.id client.secret         where         token
+Class:     character     character     character          list
+
+ Class Methods:  
+    "callSuper", "copy", "explore", "export", "field", "getAccounts", "getClass", 
+"getData", "getDataInBatches", "getDataInWalks", "getFirstDate", "getGoals", 
+"getMCFData", "getMCFDataInBatches", "getMCFDataInWalks", "getMGMTData", 
+"getProfiles", "getRefClass", "getSegments", "getToken", "getWebProperties", 
+"import", "initFields", "initialize", "isToken", "isTokenExpired", "isWhere", 
+"prepare", "refreshToken", "setToken", "show", "status", "tokenExpiresIn", 
+"trace", "untrace", "usingMethods"
+
+
+ Reference Superclasses:  
+    "envRefClass"
+
+> source("/Users/pengliu/Documents/Aalto/thesis/Thesis_final/statistics/googleAnalytics.r")
+Error in structure(list(appname = appname, secret = secret, key = key),  : 
+  object 'client.secret' not found
+> query.list <- Init(start.date = "2013-11-28",
++                    end.date = "2013-12-04",
++                    dimensions = "ga:date,ga:pagePath,ga:hour,ga:medium",
++                    metrics = "ga:sessions,ga:pageviews",
++                    max.results = 10000,
++                    sort = "-ga:date",
++                    table.id = "ga:33093633")
+> 
+> ga.query <- QueryBuilder(query.list)
+> ls
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern) 
+{
+    if (!missing(name)) {
+        pos <- tryCatch(name, error = function(e) e)
+        if (inherits(pos, "error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+    }
+    all.names <- .Internal(ls(envir, all.names))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x7f969591df08>
+<environment: namespace:base>
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits")
+> myresults
+          date visits
+1   2013-11-27      0
+2   2013-11-28     12
+3   2013-11-29      5
+4   2013-11-30      0
+5   2013-12-01      0
+6   2013-12-02     46
+7   2013-12-03     44
+8   2013-12-04     63
+9   2013-12-05     75
+10  2013-12-06     17
+11  2013-12-07     23
+12  2013-12-08     10
+13  2013-12-09    122
+14  2013-12-10   1710
+15  2013-12-11   4211
+16  2013-12-12   4762
+17  2013-12-13   6455
+18  2013-12-14   9915
+19  2013-12-15  10469
+20  2013-12-16   6931
+21  2013-12-17   7207
+22  2013-12-18   7227
+23  2013-12-19   6362
+24  2013-12-20   7156
+25  2013-12-21  10722
+26  2013-12-22  12250
+27  2013-12-23  10046
+28  2013-12-24  12631
+29  2013-12-25  16192
+30  2013-12-26  13137
+31  2013-12-27  11922
+32  2013-12-28  13769
+33  2013-12-29  13684
+34  2013-12-30  11427
+35  2013-12-31  13348
+36  2014-01-01  14249
+37  2014-01-02  10864
+38  2014-01-03  10651
+39  2014-01-04  12786
+40  2014-01-05  12122
+41  2014-01-06   8821
+42  2014-01-07   8680
+43  2014-01-08   8578
+44  2014-01-09   8659
+45  2014-01-10   9871
+46  2014-01-11  14683
+47  2014-01-12  14942
+48  2014-01-13   9993
+49  2014-01-14   9985
+50  2014-01-15  10382
+51  2014-01-16  10672
+52  2014-01-17  14022
+53  2014-01-18  17806
+54  2014-01-19  16921
+55  2014-01-20  11159
+56  2014-01-21  10406
+57  2014-01-22  10556
+58  2014-01-23  10282
+59  2014-01-24  11031
+60  2014-01-25  14616
+61  2014-01-26  15281
+62  2014-01-27  10086
+63  2014-01-28   9556
+64  2014-01-29   9697
+65  2014-01-30   9882
+66  2014-01-31  10845
+67  2014-02-01  14612
+68  2014-02-02  14545
+69  2014-02-03   9964
+70  2014-02-04   9035
+71  2014-02-05   9405
+72  2014-02-06   9170
+73  2014-02-07  10026
+74  2014-02-08  13593
+75  2014-02-09  13203
+76  2014-02-10   8867
+77  2014-02-11   8237
+78  2014-02-12   8129
+79  2014-02-13   8479
+80  2014-02-14   9306
+81  2014-02-15  13030
+82  2014-02-16  13093
+83  2014-02-17   9613
+84  2014-02-18   9476
+85  2014-02-19   8898
+86  2014-02-20   8594
+87  2014-02-21   9550
+88  2014-02-22  12605
+89  2014-02-23  12783
+90  2014-02-24   8863
+91  2014-02-25   8196
+92  2014-02-26   8606
+93  2014-02-27   8883
+94  2014-02-28  10462
+95  2014-03-01  14120
+96  2014-03-02  13481
+97  2014-03-03   8962
+98  2014-03-04   8866
+99  2014-03-05   8590
+100 2014-03-06   8892
+101 2014-03-07   9564
+102 2014-03-08  12710
+103 2014-03-09  12269
+104 2014-03-10   8461
+105 2014-03-11   7827
+106 2014-03-12   7832
+107 2014-03-13   8174
+108 2014-03-14   9141
+109 2014-03-15  13332
+110 2014-03-16  13074
+111 2014-03-17   8491
+112 2014-03-18   8385
+113 2014-03-19   8603
+114 2014-03-20   8262
+115 2014-03-21   9143
+116 2014-03-22  12751
+117 2014-03-23  13380
+118 2014-03-24   8570
+119 2014-03-25   8222
+120 2014-03-26   8322
+121 2014-03-27   8352
+122 2014-03-28   9325
+123 2014-03-29  11786
+124 2014-03-30  11119
+125 2014-03-31   8043
+126 2014-04-01   7660
+127 2014-04-02   7768
+128 2014-04-03   7897
+129 2014-04-04   8700
+130 2014-04-05  11536
+131 2014-04-06  11626
+132 2014-04-07   8125
+133 2014-04-08   7469
+134 2014-04-09   7608
+135 2014-04-10   8242
+136 2014-04-11   9381
+137 2014-04-12  12077
+138 2014-04-13  11839
+139 2014-04-14   8511
+140 2014-04-15   8407
+141 2014-04-16   8444
+142 2014-04-17   8697
+143 2014-04-18  10916
+144 2014-04-19  12175
+145 2014-04-20  12589
+146 2014-04-21  11235
+147 2014-04-22   8495
+148 2014-04-23   8435
+149 2014-04-24   8626
+150 2014-04-25  10990
+151 2014-04-26  15898
+152 2014-04-27  15095
+153 2014-04-28  10627
+154 2014-04-29   9743
+155 2014-04-30   9512
+156 2014-05-01  12416
+157 2014-05-02  11421
+158 2014-05-03  13585
+159 2014-05-04  13586
+160 2014-05-05  10155
+161 2014-05-06   9143
+162 2014-05-07   9633
+163 2014-05-08  10395
+164 2014-05-09  10424
+165 2014-05-10  13704
+166 2014-05-11  14012
+167 2014-05-12   9267
+168 2014-05-13   9220
+169 2014-05-14   9054
+170 2014-05-15   9057
+171 2014-05-16   9978
+172 2014-05-17  12248
+173 2014-05-18  12417
+174 2014-05-19   8726
+175 2014-05-20   8621
+176 2014-05-21   9560
+177 2014-05-22  10734
+178 2014-05-23  11503
+179 2014-05-24  14767
+180 2014-05-25  14360
+181 2014-05-26  11796
+182 2014-05-27  10740
+183 2014-05-28  11257
+184 2014-05-29  12739
+185 2014-05-30  12463
+186 2014-05-31  14691
+187 2014-06-01  14221
+188 2014-06-02  10468
+189 2014-06-03   9887
+190 2014-06-04  10454
+191 2014-06-05  10368
+192 2014-06-06  10559
+193 2014-06-07  13705
+194 2014-06-08  14048
+195 2014-06-09  12148
+196 2014-06-10  10077
+197 2014-06-11  10251
+198 2014-06-12   9723
+199 2014-06-13  10212
+200 2014-06-14  13752
+201 2014-06-15  13948
+202 2014-06-16  10340
+203 2014-06-17   9865
+204 2014-06-18   9986
+205 2014-06-19  10322
+206 2014-06-20  10701
+207 2014-06-21  14089
+208 2014-06-22  14725
+209 2014-06-23  10642
+210 2014-06-24  10792
+211 2014-06-25  10587
+212 2014-06-26  10972
+213 2014-06-27  12111
+214 2014-06-28  14994
+215 2014-06-29  15684
+216 2014-06-30  11360
+217 2014-07-01  11377
+218 2014-07-02  11382
+219 2014-07-03  11533
+220 2014-07-04  12430
+221 2014-07-05  15498
+222 2014-07-06  15970
+223 2014-07-07  12190
+224 2014-07-08  11633
+225 2014-07-09  11444
+226 2014-07-10  11500
+227 2014-07-11  12987
+228 2014-07-12  15827
+229 2014-07-13  15597
+230 2014-07-14  12263
+231 2014-07-15  12475
+232 2014-07-16  12012
+233 2014-07-17  11716
+234 2014-07-18  12375
+235 2014-07-19  15170
+236 2014-07-20  15971
+237 2014-07-21  12528
+238 2014-07-22  12364
+239 2014-07-23  11920
+240 2014-07-24  11789
+241 2014-07-25  13000
+242 2014-07-26  15715
+243 2014-07-27  16976
+244 2014-07-28  13405
+245 2014-07-29  13190
+246 2014-07-30  12788
+247 2014-07-31  12514
+248 2014-08-01  13445
+249 2014-08-02  16345
+250 2014-08-03  16760
+251 2014-08-04  13421
+252 2014-08-05  12390
+253 2014-08-06  12670
+254 2014-08-07  13064
+255 2014-08-08  13828
+256 2014-08-09  16736
+257 2014-08-10  17868
+258 2014-08-11  13785
+259 2014-08-12  13319
+260 2014-08-13  12475
+261 2014-08-14  12790
+262 2014-08-15  14662
+263 2014-08-16  16206
+264 2014-08-17  17028
+265 2014-08-18  13204
+266 2014-08-19  12894
+267 2014-08-20  13057
+268 2014-08-21  13268
+269 2014-08-22  14230
+270 2014-08-23  18693
+271 2014-08-24  19320
+272 2014-08-25  14689
+273 2014-08-26  13677
+274 2014-08-27  13317
+275 2014-08-28  13140
+276 2014-08-29  14509
+277 2014-08-30  17917
+278 2014-08-31  18234
+279 2014-09-01  13733
+280 2014-09-02  12746
+281 2014-09-03  12882
+282 2014-09-04  12606
+283 2014-09-05  13223
+284 2014-09-06  17008
+285 2014-09-07  17462
+286 2014-09-08  12536
+287 2014-09-09  11870
+288 2014-09-10  11969
+289 2014-09-11  11928
+290 2014-09-12  13056
+291 2014-09-13  16641
+292 2014-09-14  17371
+293 2014-09-15  12014
+294 2014-09-16  11532
+295 2014-09-17  11671
+296 2014-09-18  11428
+297 2014-09-19  12711
+298 2014-09-20  16663
+299 2014-09-21  17234
+300 2014-09-22  12104
+301 2014-09-23  11448
+302 2014-09-24  11906
+303 2014-09-25  12176
+304 2014-09-26  12815
+305 2014-09-27  16311
+306 2014-09-28  17151
+307 2014-09-29  12210
+308 2014-09-30  11687
+309 2014-10-01  11946
+310 2014-10-02  11955
+311 2014-10-03  13639
+312 2014-10-04  17564
+313 2014-10-05  18063
+314 2014-10-06  12721
+315 2014-10-07  12233
+316 2014-10-08  12543
+317 2014-10-09  12347
+318 2014-10-10  13676
+319 2014-10-11  17560
+320 2014-10-12  17880
+321 2014-10-13  12928
+322 2014-10-14  12187
+323 2014-10-15  12189
+324 2014-10-16  12566
+325 2014-10-17  13747
+326 2014-10-18  17560
+327 2014-10-19  17960
+328 2014-10-20  13345
+329 2014-10-21  12977
+330 2014-10-22  13380
+331 2014-10-23  13254
+332 2014-10-24  14120
+333 2014-10-25  17902
+334 2014-10-26  19912
+335 2014-10-27  13446
+336 2014-10-28  13178
+337 2014-10-29  12622
+338 2014-10-30  13189
+339 2014-10-31  14242
+340 2014-11-01  17802
+341 2014-11-02  18201
+342 2014-11-03  12849
+343 2014-11-04  12107
+344 2014-11-05  12067
+345 2014-11-06  12412
+346 2014-11-07  13264
+347 2014-11-08  17872
+348 2014-11-09  18485
+349 2014-11-10  13356
+350 2014-11-11  13261
+351 2014-11-12  12472
+352 2014-11-13  12432
+353 2014-11-14  13811
+354 2014-11-15  17987
+355 2014-11-16  18311
+356 2014-11-17  13105
+357 2014-11-18  12133
+358 2014-11-19  12294
+359 2014-11-20  12511
+360 2014-11-21  13817
+361 2014-11-22  17363
+362 2014-11-23  17909
+363 2014-11-24  12619
+364 2014-11-25  12055
+365 2014-11-26  12270
+366 2014-11-27  12608
+367 2014-11-28  13727
+368 2014-11-29  17822
+369 2014-11-30  18619
+370 2014-12-01  12429
+371 2014-12-02  12157
+372 2014-12-03  12651
+373 2014-12-04  12346
+374 2014-12-05  13763
+375 2014-12-06  18075
+376 2014-12-07  18971
+377 2014-12-08  13781
+378 2014-12-09  12172
+379 2014-12-10  12058
+380 2014-12-11  12430
+381 2014-12-12  13478
+382 2014-12-13  18110
+383 2014-12-14  18252
+384 2014-12-15  12605
+385 2014-12-16  11972
+386 2014-12-17  12609
+387 2014-12-18  12752
+388 2014-12-19  14127
+389 2014-12-20  18899
+390 2014-12-21  19973
+391 2014-12-22  15054
+392 2014-12-23  13327
+393 2014-12-24   7613
+394 2014-12-25   6319
+395 2014-12-26   4722
+396 2014-12-27   4432
+397 2014-12-28   4328
+398 2014-12-29   3443
+399 2014-12-30   3243
+400 2014-12-31   3631
+401 2015-01-01   3885
+402 2015-01-02   3374
+403 2015-01-03   3425
+404 2015-01-04   3277
+405 2015-01-05   2613
+406 2015-01-06   2419
+407 2015-01-07   2294
+408 2015-01-08   6750
+409 2015-01-09  18977
+410 2015-01-10  27391
+411 2015-01-11  28572
+412 2015-01-12  20653
+413 2015-01-13  19327
+414 2015-01-14  20100
+415 2015-01-15  20235
+416 2015-01-16  22819
+417 2015-01-17  29961
+418 2015-01-18  31743
+419 2015-01-19  22703
+420 2015-01-20  21543
+421 2015-01-21  21514
+422 2015-01-22  21709
+423 2015-01-23  22679
+424 2015-01-24  30403
+425 2015-01-25  31694
+426 2015-01-26  22917
+427 2015-01-27  22162
+428 2015-01-28  20712
+429 2015-01-29  22693
+430 2015-01-30  23932
+431 2015-01-31  32346
+432 2015-02-01  33461
+433 2015-02-02  23038
+434 2015-02-03  21967
+435 2015-02-04  21345
+436 2015-02-05  22307
+437 2015-02-06  24721
+438 2015-02-07  32560
+439 2015-02-08  34708
+440 2015-02-09  25503
+441 2015-02-10  24470
+442 2015-02-11  24871
+443 2015-02-12  24119
+444 2015-02-13  25959
+445 2015-02-14  33571
+446 2015-02-15  36838
+447 2015-02-16  28071
+448 2015-02-17  27087
+449 2015-02-18  25544
+450 2015-02-19  25908
+451 2015-02-20  27400
+452 2015-02-21  36036
+453 2015-02-22  37994
+454 2015-02-23  27218
+455 2015-02-24  25608
+456 2015-02-25  25715
+457 2015-02-26  25405
+458 2015-02-27  27893
+459 2015-02-28  35219
+460 2015-03-01  38569
+461 2015-03-02  26763
+462 2015-03-03  24767
+463 2015-03-04  24629
+464 2015-03-05  25216
+465 2015-03-06  26892
+466 2015-03-07  33574
+467 2015-03-08  35309
+468 2015-03-09  25559
+469 2015-03-10  23663
+470 2015-03-11  23741
+471 2015-03-12  23796
+472 2015-03-13  26382
+473 2015-03-14  34848
+474 2015-03-15  36494
+475 2015-03-16  26768
+476 2015-03-17  24824
+477 2015-03-18  24166
+478 2015-03-19  24651
+479 2015-03-20  26792
+480 2015-03-21  34578
+481 2015-03-22  36854
+482 2015-03-23  26451
+483 2015-03-24  25406
+484 2015-03-25  25014
+485 2015-03-26  24407
+486 2015-03-27  25702
+> barplot(myresult$visits, main="Visit by day",xlab="Day",names.arg=myresult$date, las=1, col=rainbow(9))
+Error in barplot(myresult$visits, main = "Visit by day", xlab = "Day",  : 
+  object 'myresult' not found
+> barplot(myresults$visits, main="Visit by day",xlab="Day",names.arg=myresults$date, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits", dimensions ="ga.month")
+Error in ga$getData(id, start.date = "2013-11-27", end.date = "2015-03-27",  : 
+  error in fetching data: Invalid value 'ga.month'. Values must match the following regular expression: '(ga:.+)?'
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits", dimensions ="ga:month")
+> barplot(myresults$visits, main="Visit by month",xlab="Month",names.arg=myresults$month, las=1, col=rainbow(9))
+> myresults
+   month  visits
+1      1  942906
+2      2 1073759
+3      3 1064010
+4      4  298323
+5      5  351672
+6      6  350991
+7      7  407539
+8      8  456941
+9      9  406092
+10    10  442831
+11    11  435558
+12    12  581655
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits", dimensions ="ga.week")
+Error in ga$getData(id, start.date = "2013-11-27", end.date = "2015-03-27",  : 
+  error in fetching data: Invalid value 'ga.week'. Values must match the following regular expression: '(ga:.+)?'
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits", dimensions ="ga:week")
+> myresults
+   week visits
+1     1  59234
+2     2 135135
+3     3 249469
+4     4 257265
+5     5 256415
+6     6 255137
+7     7 262452
+8     8 278713
+9     9 276965
+10   10 271475
+11   11 260334
+12   12 266982
+13   13 232139
+14   14  62723
+15   15  64528
+16   16  68989
+17   17  76268
+18   18  82399
+19   19  77040
+20   20  72836
+21   21  76328
+22   22  88046
+23   23  79662
+24   24  80211
+25   25  79251
+26   26  84823
+27   27  89264
+28   28  91551
+29   29  91608
+30   30  93287
+31   31  98663
+32   32  98869
+33   33 101105
+34   34 102374
+35   35 106569
+36   36 100432
+37   37  95462
+38   38  93390
+39   39  93994
+40   40  96152
+41   41  99143
+42   42  99057
+43   43 102938
+44   44 104391
+45   45  98772
+46   46 101804
+47   47  99534
+48   48  99027
+49   49 100308
+50   50 128185
+51   51 157290
+52   52 161387
+53   53  53104
+> barplot(myresults$visits, main="Visit by month",xlab="Month",names.arg=myresults$week, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:visits", dimensions ="ga:nthMonth")
+> myresults
+   nthMonth visits
+1         0     17
+2         1 211933
+3         2 358084
+4         3 289223
+5         4 308049
+6         5 298323
+7         6 351672
+8         7 350991
+9         8 407539
+10        9 456941
+11       10 406092
+12       11 442831
+13       12 435541
+14       13 369722
+15       14 584822
+16       15 784536
+17       16 756200
+> barplot(myresults$visits, main="Visit by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:nthMonth")
+> barplot(myresults$visits, main="Visit by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+Error in barplot.default(myresults$visits, main = "Visit by month", xlab = "Month",  : 
+  'height' must be a vector or a matrix
+> myresults
+   nthMonth  users
+1         0      3
+2         1  75207
+3         2 118933
+4         3  94686
+5         4  98978
+6         5  96362
+7         6 100338
+8         7  92941
+9         8 101501
+10        9 111396
+11       10  99340
+12       11 104127
+13       12 100812
+14       13  90475
+15       14 131665
+16       15 160864
+17       16 151471
+> barplot(myresults$visits, main="Visit by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+Error in barplot.default(myresults$visits, main = "Visit by month", xlab = "Month",  : 
+  'height' must be a vector or a matrix
+> barplot(myresults$users, main="Visit by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> barplot(myresults$users, main="Users by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessionDurarion", dimensions ="ga:nthMonth")
+Error in ga$getData(id, start.date = "2013-11-27", end.date = "2015-03-27",  : 
+  error in fetching data: Unknown metric(s): ga:sessionDurarion
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessionDuration", dimensions ="ga:nthMonth")
+> myresults
+   nthMonth sessionDuration
+1         0             209
+2         1         4950906
+3         2         6885869
+4         3         5413329
+5         4         5705935
+6         5         5754217
+7         6        27612683
+8         7        70883203
+9         8        88681743
+10        9       103224186
+11       10        91723785
+12       11        99829811
+13       12       100772835
+14       13        84809859
+15       14        84939137
+16       15       118991998
+17       16       115108695
+> barplot(myresults$sessionDuration, main="Session duration by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessionDuration", dimensions ="ga:nthMonth")
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:exceptions", dimensions ="ga:nthMonth")
+> barplot(myresults$exceptions, main="Exceptions by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> myresults <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:avgScreenviewDuration", dimensions ="ga:nthMonth")
+> barplot(myresults$avgScreenviewDuration, main="Average screen view duration by month",xlab="Month",names.arg=myresults$nthMonth, las=1, col=rainbow(9))
+> 

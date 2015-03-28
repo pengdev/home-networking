@@ -1,0 +1,1972 @@
+
+R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.65 (6913) x86_64-apple-darwin13.4.0]
+
+[Workspace restored from /Users/pengliu/.RData]
+[History restored from /Users/pengliu/.Rapp.history]
+
+> result
+Error: object 'result' not found
+> myresults
+   nthMonth    hits
+1         0      24
+2         1  255546
+3         2  424156
+4         3  340129
+5         4  362232
+6         5  347324
+7         6  682203
+8         7 1231254
+9         8 1525130
+10        9 1715451
+11       10 1430176
+12       11 1558435
+13       12 1532711
+14       13 1293322
+15       14 1670064
+16       15 2159221
+17       16 2009957
+> hitspermonth <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:hits", dimensions ="ga:nthMonth")
+Error in .self$refreshToken() : could not find function "POST"
+> library(devtools)
+> library(rga)
+Loading required package: RCurl
+Loading required package: bitops
+Loading required package: jsonlite
+
+Attaching package: ‘jsonlite’
+
+The following object is masked from ‘package:utils’:
+
+    View
+
+Loading required package: httr
+> rga.open(instance="ga")
+> id <- "79254207"
+> hitsPerMonth <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:hits", dimensions ="ga:nthMonth")
+> usersPerMonth <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:nthMonth")
+> barplot(usersPerMonth$hits, main="Users by month",xlab="Nth Month",names.arg=usersPerMonth$nthMonth, las=1)
+Error in barplot.default(usersPerMonth$hits, main = "Users by month",  : 
+  'height' must be a vector or a matrix
+> barplot(usersPerMonth$users, main="Users by month",xlab="Nth Month",names.arg=usersPerMonth$nthMonth, las=1)
+> newUsersPerMonth <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:newUsers", dimensions ="ga:nthMonth")
+> barplot(newUsersPerMonth$newUsers, main="New users by month",xlab="Nth Month",names.arg=newUsersPerMonth$nthMonth, las=1)
+> sessionDurationPerMonth <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessionDuration", dimensions ="ga:nthMonth")
+> plot(sessionDuration$nthMonth,sessionDuration$sessionDuration,xlab="Nth Month",ylab="Session duration")
+Error in plot(sessionDuration$nthMonth, sessionDuration$sessionDuration,  : 
+  object 'sessionDuration' not found
+> plot(sessionDuration$nthMonth,sessionDuration$sessionDuration,type="n",xlab="Nth Month",ylab="Session duration")
+Error in plot(sessionDuration$nthMonth, sessionDuration$sessionDuration,  : 
+  object 'sessionDuration' not found
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="n",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="l",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="l",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="b",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="b",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="c",xlab="Nth Month",ylab="Session duration")
+> plot(sessionDurationPerMonth$nthMonth, sessionDurationPerMonth$sessionDuration,type="p",xlab="Nth Month",ylab="Session duration")
+> sessionDurationPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessionDuration", dimensions ="ga:nthDay")
+> plot(sessionDurationPerDay$nthDay, sessionDurationPerDay$sessionDuration,type="p",xlab="Nth Day",ylab="Session duration")
+> plot(sessionDurationPerDay$nthDay, sessionDurationPerDay$sessionDuration,type="l",xlab="Nth Day",ylab="Session duration")
+> lines(sessionDurationPerDay$nthDay, sessionDurationPerDay$sessionDuration)
+> sessionDurationPerDay
+    nthDay sessionDuration
+1        0               0
+2        1             102
+3        2             107
+4        3               0
+5        4               0
+6        5            2250
+7        6            5898
+8        7            2299
+9        8            5603
+10       9              80
+11      10             325
+12      11               6
+13      12            8574
+14      13           40235
+15      14          107400
+16      15          138758
+17      16          194047
+18      17          320906
+19      18          296695
+20      19          197583
+21      20          169495
+22      21          154963
+23      22          116116
+24      23          149466
+25      24          233015
+26      25          267220
+27      26          220387
+28      27          259839
+29      28          376764
+30      29          279016
+31      30          253738
+32      31          308359
+33      32          282730
+34      33          258352
+35      34          300787
+36      35          298550
+37      36          223300
+38      37          240089
+39      38          280175
+40      39          254978
+41      40          180926
+42      41          161993
+43      42          166017
+44      43          169624
+45      44          201588
+46      45          310738
+47      46          310525
+48      47          171249
+49      48          158876
+50      49          178276
+51      50          170978
+52      51          244425
+53      52          347161
+54      53          320762
+55      54          194871
+56      55          205704
+57      56          179052
+58      57          192272
+59      58          213920
+60      59          296139
+61      60          305784
+62      61          186494
+63      62          173405
+64      63          176319
+65      64          173286
+66      65          198393
+67      66          310294
+68      67          269149
+69      68          175557
+70      69          161423
+71      70          166773
+72      71          161577
+73      72          202120
+74      73          270685
+75      74          243471
+76      75          170210
+77      76          149918
+78      77          150351
+79      78          159243
+80      79          178454
+81      80          252986
+82      81          282533
+83      82          150934
+84      83          157854
+85      84          162808
+86      85          151953
+87      86          170013
+88      87          253499
+89      88          247280
+90      89          156616
+91      90          152825
+92      91          139338
+93      92          163646
+94      93          201819
+95      94          266988
+96      95          253285
+97      96          184479
+98      97          142589
+99      98          167988
+100     99          159665
+101    100          168092
+102    101          269959
+103    102          257267
+104    103          157618
+105    104          133537
+106    105          152703
+107    106          154234
+108    107          150565
+109    108          261555
+110    109          261716
+111    110          145105
+112    111          145515
+113    112          157939
+114    113          148880
+115    114          147807
+116    115          242968
+117    116          279367
+118    117          143426
+119    118          148936
+120    119          142636
+121    120          156851
+122    121          168248
+123    122          212457
+124    123          198016
+125    124          125544
+126    125          122573
+127    126          131576
+128    127          145206
+129    128          174602
+130    129          208598
+131    130          205594
+132    131          130651
+133    132          123207
+134    133          139671
+135    134          140507
+136    135          177242
+137    136          254995
+138    137          249885
+139    138          152772
+140    139          158742
+141    140          154597
+142    141          178694
+143    142          225114
+144    143          276659
+145    144          268153
+146    145          232469
+147    146          165390
+148    147          146530
+149    148          168511
+150    149          217730
+151    150          342886
+152    151          313002
+153    152          172078
+154    153          192132
+155    154          184451
+156    155          250594
+157    156          201834
+158    157          297807
+159    158          278579
+160    159          184675
+161    160          184780
+162    161          179789
+163    162          207351
+164    163          230403
+165    164          308957
+166    165          281225
+167    166          177042
+168    167          187825
+169    168          184099
+170    169          192592
+171    170          239422
+172    171          259008
+173    172          269580
+174    173          186327
+175    174          182114
+176    175          526963
+177    176         1534011
+178    177         1895736
+179    178         2713963
+180    179         2711947
+181    180         2083366
+182    181         1816507
+183    182         1958305
+184    183         2524466
+185    184         2404521
+186    185         2958895
+187    186         2854993
+188    187         1987633
+189    188         1822618
+190    189         1770908
+191    190         1996057
+192    191         2019480
+193    192         2774880
+194    193         2793366
+195    194         2286979
+196    195         1940666
+197    196         1982212
+198    197         1913677
+199    198         2054664
+200    199         2893919
+201    200         2624022
+202    201         1788981
+203    202         1828887
+204    203         1897331
+205    204         2054347
+206    205         2236969
+207    206         3159073
+208    207         3324245
+209    208         2290694
+210    209         2252569
+211    210         2270562
+212    211         2390230
+213    212         2721232
+214    213         3293380
+215    214         3326380
+216    215         2332249
+217    216         2453617
+218    217         2561326
+219    218         2381711
+220    219         2664676
+221    220         3312806
+222    221         3679375
+223    222         2642953
+224    223         2446759
+225    224         2454796
+226    225         2586374
+227    226         2841128
+228    227         3498356
+229    228         3282219
+230    229         2481094
+231    230         2379735
+232    231         2427211
+233    232         2362806
+234    233         2674328
+235    234         3438084
+236    235         3537083
+237    236         2699972
+238    237         2772059
+239    238         2486258
+240    239         2686934
+241    240         2881621
+242    241         3836937
+243    242         3889205
+244    243         2886770
+245    244         2915173
+246    245         2774642
+247    246         2745735
+248    247         3001534
+249    248         3720868
+250    249         3805759
+251    250         2940437
+252    251         2820182
+253    252         2844495
+254    253         2846859
+255    254         3028000
+256    255         3836702
+257    256         4132841
+258    257         3102243
+259    258         2952623
+260    259         2818612
+261    260         2855678
+262    261         3367047
+263    262         3734756
+264    263         3893010
+265    264         3061508
+266    265         3047660
+267    266         2898558
+268    267         3016073
+269    268         3175391
+270    269         4297194
+271    270         4496935
+272    271         3035172
+273    272         3147405
+274    273         2735823
+275    274         2925577
+276    275         3275110
+277    276         4267909
+278    277         4142225
+279    278         2802605
+280    279         2698572
+281    280         2682802
+282    281         2749120
+283    282         2906091
+284    283         4133710
+285    284         4053391
+286    285         2712944
+287    286         2676625
+288    287         2803856
+289    288         2682818
+290    289         2963189
+291    290         4150288
+292    291         4135840
+293    292         2690465
+294    293         2629333
+295    294         2470712
+296    295         2414232
+297    296         2971148
+298    297         4071623
+299    298         4153393
+300    299         2668132
+301    300         2509605
+302    301         2559333
+303    302         2616583
+304    303         2886025
+305    304         3980414
+306    305         3942291
+307    306         2571862
+308    307         2436783
+309    308         2631287
+310    309         2597115
+311    310         3040066
+312    311         4056588
+313    312         4104899
+314    313         2793275
+315    314         2594046
+316    315         2703089
+317    316         2579580
+318    317         3008267
+319    318         4321474
+320    319         4197612
+321    320         2868361
+322    321         2643408
+323    322         2645393
+324    323         2810974
+325    324         3246083
+326    325         4286909
+327    326         4198705
+328    327         3058934
+329    328         2726466
+330    329         2817215
+331    330         2899878
+332    331         3127156
+333    332         4253540
+334    333         4762817
+335    334         2970826
+336    335         2996069
+337    336         2814551
+338    337         2823015
+339    338         3252213
+340    339         4301154
+341    340         4230871
+342    341         2859351
+343    342         2660655
+344    343         2559853
+345    344         2795439
+346    345         3030354
+347    346         4444929
+348    347         4509172
+349    348         2853932
+350    349         2911747
+351    350         2839364
+352    351         2709089
+353    352         3147070
+354    353         4580406
+355    354         4398499
+356    355         2802547
+357    356         2696205
+358    357         2647722
+359    358         2857876
+360    359         3247406
+361    360         4260580
+362    361         4278127
+363    362         2990929
+364    363         2659752
+365    364         2627252
+366    365         2889529
+367    366         3311979
+368    367         4364109
+369    368         4306937
+370    369         2742062
+371    370         2698772
+372    371         2777245
+373    372         2693297
+374    373         3230285
+375    374         4471031
+376    375         4571962
+377    376         3045216
+378    377         2802953
+379    378         2786153
+380    379         2900180
+381    380         3330209
+382    381         4285802
+383    382         4341424
+384    383         2767563
+385    384         2689922
+386    385         2965847
+387    386         2853805
+388    387         3277363
+389    388         4433802
+390    389         4677974
+391    390         3322860
+392    391         3049593
+393    392         1719148
+394    393         1405099
+395    394         1018487
+396    395          918564
+397    396          915822
+398    397          720294
+399    398          619780
+400    399          777345
+401    400          850832
+402    401          769965
+403    402          781388
+404    403          659504
+405    404          471416
+406    405          495595
+407    406          503808
+408    407          961845
+409    408         2527028
+410    409         4083296
+411    410         4007122
+412    411         2717175
+413    412         2608200
+414    413         2850551
+415    414         2882747
+416    415         3265089
+417    416         4257150
+418    417         4247052
+419    418         3151669
+420    419         3012281
+421    420         2954599
+422    421         3114556
+423    422         3416307
+424    423         4771461
+425    424         4566070
+426    425         3398823
+427    426         3092169
+428    427         2765201
+429    428         3175830
+430    429         3558264
+431    430         5022144
+432    431         5156561
+433    432         3489445
+434    433         3222146
+435    434         3266284
+436    435         3522526
+437    436         3793263
+438    437         5263876
+439    438         5440472
+440    439         3776227
+441    440         3672754
+442    441         3797977
+443    442         3795717
+444    443         4033330
+445    444         5457744
+446    445         5610504
+447    446         4156519
+448    447         4005433
+449    448         3747265
+450    449         3799142
+451    450         4137685
+452    451         5585411
+453    452         5622797
+454    453         3900749
+455    454         3693791
+456    455         3845079
+457    456         3760456
+458    457         4039254
+459    458         5399591
+460    459         5801409
+461    460         3825377
+462    461         3664093
+463    462         3667525
+464    463         3945295
+465    464         4220906
+466    465         5364940
+467    466         5456654
+468    467         3847389
+469    468         3498830
+470    469         3603790
+471    470         3494198
+472    471         4017698
+473    472         5591316
+474    473         5652120
+475    474         4017525
+476    475         3727738
+477    476         3579599
+478    477         3639134
+479    478         3889819
+480    479         5707587
+481    480         5621052
+482    481         3953317
+483    482         3786690
+484    483         3760556
+485    484         3674863
+486    485         4201120
+> avgSessionDurationPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:avgSessionDuration", dimensions ="ga:nthDay")
+> lines(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration)
+> lines(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration)
+Error in plot.xy(xy.coords(x, y), type = type, ...) : 
+  plot.new has not been called yet
+> plot(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration,type="l",xlab="Nth Day",ylab="Average session duration")
+> plot(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration,type="l",xlab="Nth Day",ylab="Average session duration(Second)")
+> lines(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration)
+> plot(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration,type="l",xlab="Day",ylab="Average session duration(Second)")
+> lines(avgSessionDurationPerDay$nthDay, avgSessionDurationPerDay$avgSessionDuration)
+> sessionsPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:sessions", dimensions ="ga:nthDay")
+> plot(sessionsPerDay$nthDay, sessionsPerDay$sessions,type="l",xlab="Day",ylab="Sessions by day")
+> lines(sessionsPerDay$nthDay, sessionsPerDay$sessions)
+> screenViewsPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:screenviews", dimensions ="ga:nthDay")
+> plot(screenViewsPerDay$nthDay, screenViewsPerDay$screenviews,type="l",xlab="Day",ylab="Screenviews by day")
+> lines(screenViewsPerDay$nthDay, screenViewsPerDay$screenviews)
+> timeOnScreenPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:timeOnScreen", dimensions ="ga:nthDay")
+> plot(timeOnScreenPerDay$nthDay, timeOnScreenPerDay$timeOnScreen,type="l",xlab="Day",ylab="Time on screen by day")
+> lines(timeOnScreenPerDay$nthDay, timeOnScreenPerDay$timeOnScreen)
+> avgScreenviewDurationPerDay <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:avgScreenviewDuration", dimensions ="ga:nthDay")
+> plot(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration,type="l",xlab="Day",ylab="Average screenview by day")
+> lines(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration)
+> lines(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration)
+Error in plot.xy(xy.coords(x, y), type = type, ...) : 
+  plot.new has not been called yet
+> plot(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration,type="l",xlab="Day",ylab="Average screenview by day")
+> lines(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration)
+> plot(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration,type="l",xlab="Day",ylab="Average screenview duration by day")
+> lines(avgScreenviewDurationPerDay$nthDay, avgScreenviewDurationPerDay$avgScreenviewDuration)
+> countryByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:country", dimensions ="ga:users")
+Error in ga$getData(id, start.date = "2013-11-27", end.date = "2015-03-27",  : 
+  error in fetching data: No such dimension(s): ga:users
+No such metric(s): ga:country
+> countryByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:country")
+Notice: Data set contains sampled data
+> countryByUser
+                     country  users
+1                  (not set)   1881
+2                Afghanistan     27
+3                    Albania    204
+4                    Algeria   1309
+5             American Samoa     14
+6                    Andorra     14
+7                     Angola     95
+8          Antigua & Barbuda     14
+9                  Argentina   7757
+10                   Armenia    409
+11                     Aruba    164
+12                 Australia  18923
+13                   Austria   9243
+14                Azerbaijan    804
+15                   Bahamas    354
+16                   Bahrain    613
+17                Bangladesh    682
+18                  Barbados     55
+19                   Belarus   1718
+20                   Belgium  10211
+21                    Belize     41
+22                   Bermuda     41
+23                   Bolivia    532
+24      Bosnia & Herzegovina    804
+25                    Brazil  35310
+26    British Virgin Islands     14
+27                    Brunei     41
+28                  Bulgaria   2263
+29                  Cambodia    395
+30                  Cameroon     14
+31                    Canada  35951
+32     Caribbean Netherlands     14
+33                     Chile   5562
+34                     China   3749
+35                  Colombia   7157
+36                   Comoros     14
+37                Costa Rica   1786
+38                   Croatia   1554
+39                      Cuba     14
+40                   Curaçao     14
+41                    Cyprus    913
+42            Czech Republic   8248
+43             Côte d’Ivoire     95
+44                   Denmark  12502
+45                  Djibouti     14
+46        Dominican Republic   1541
+47                   Ecuador   2386
+48                     Egypt   2754
+49               El Salvador    436
+50                   Estonia    900
+51                  Ethiopia     14
+52             Faroe Islands     41
+53                      Fiji     41
+54                   Finland   6149
+55                    France 117245
+56             French Guiana     14
+57          French Polynesia     41
+58                     Gabon     14
+59                   Georgia     27
+60                   Germany 109924
+61                     Ghana    150
+62                 Gibraltar     14
+63                    Greece   3177
+64                 Greenland     14
+65                   Grenada     27
+66                Guadeloupe     95
+67                      Guam     82
+68                 Guatemala    982
+69                  Guernsey     41
+70                    Guinea     14
+71                    Guyana     27
+72                     Haiti     41
+73                  Honduras    341
+74                 Hong Kong  14492
+75                   Hungary   5481
+76                   Iceland    627
+77                     India  20477
+78                 Indonesia   3408
+79                      Iran  17614
+80                      Iraq    464
+81                   Ireland   5603
+82                    Israel   7730
+83                     Italy  30116
+84                   Jamaica    545
+85                     Japan  11725
+86                    Jersey     82
+87                    Jordan    791
+88                Kazakhstan   1718
+89                     Kenya    354
+90                    Kosovo    150
+91                    Kuwait   1541
+92                Kyrgyzstan     82
+93                      Laos    150
+94                    Latvia   1159
+95                   Lebanon    600
+96                     Libya     55
+97             Liechtenstein     27
+98                 Lithuania   1132
+99                Luxembourg    859
+100                    Macau    204
+101        Macedonia (FYROM)    668
+102               Madagascar     14
+103                 Malaysia   5508
+104                 Maldives     68
+105                     Mali     68
+106                    Malta    423
+107               Martinique     41
+108                Mauritius    314
+109                   Mexico  26380
+110                  Moldova    450
+111                   Monaco     41
+112                 Mongolia     27
+113               Montenegro     41
+114                  Morocco   3149
+115               Mozambique     95
+116          Myanmar (Burma)     27
+117                  Namibia     27
+118                    Nepal    341
+119              Netherlands  34737
+120            New Caledonia     41
+121              New Zealand   4117
+122                Nicaragua    136
+123                    Niger     27
+124                  Nigeria    382
+125 Northern Mariana Islands     14
+126                   Norway  11575
+127                     Oman    750
+128                 Pakistan   2795
+129                Palestine     95
+130                   Panama    927
+131         Papua New Guinea     27
+132                 Paraguay    232
+133                     Peru   2781
+134              Philippines   2727
+135                   Poland  12597
+136                 Portugal   4144
+137              Puerto Rico   2018
+138                    Qatar    791
+139                  Romania   6939
+140                   Russia  32870
+141                   Rwanda     27
+142                  Réunion    218
+143                    Samoa     14
+144             Saudi Arabia   7894
+145                  Senegal    136
+146                   Serbia   1500
+147               Seychelles     14
+148                Singapore   6067
+149             Sint Maarten     14
+150                 Slovakia   3286
+151                 Slovenia   1050
+152                  Somalia     14
+153             South Africa   3204
+154              South Korea   8862
+155                    Spain  32092
+156                Sri Lanka    314
+157                    Sudan    232
+158                   Sweden  20450
+159              Switzerland  10647
+160                    Syria    341
+161                   Taiwan  20872
+162               Tajikistan     55
+163                 Tanzania    218
+164                 Thailand  10252
+165                     Togo     41
+166        Trinidad & Tobago    600
+167                  Tunisia    668
+168                   Turkey  12979
+169             Turkmenistan     27
+170   Turks & Caicos Islands     27
+171      U.S. Virgin Islands     41
+172                   Uganda     68
+173                  Ukraine   8412
+174     United Arab Emirates   4744
+175           United Kingdom 100245
+176            United States 212568
+177                  Uruguay    941
+178               Uzbekistan     68
+179                Venezuela   1513
+180                  Vietnam   9066
+181                    Yemen    368
+182                   Zambia     41
+183                 Zimbabwe     14
+> pie(countryByUser$users, labels=countryByUser$country, main="Users by country")
+> receiverByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:eventLabel")
+Notice: Data set contains sampled data
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> receiverByUser
+          eventLabel  users
+1     airplay_device 253727
+2  chromecast_device  61772
+3        dlna_device 249937
+4    firetv_receiver  15460
+5      phone_speaker 295540
+6                ted   1036
+7    third-party-app   1609
+8            unknown  35678
+9              vimeo    245
+10           youtube 115759
+> ls
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern) 
+{
+    if (!missing(name)) {
+        pos <- tryCatch(name, error = function(e) e)
+        if (inherits(pos, "error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+    }
+    all.names <- .Internal(ls(envir, all.names))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x7fc2a2249508>
+<environment: namespace:base>
+> dsds
+Error: object 'dsds' not found
+> ls
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern) 
+{
+    if (!missing(name)) {
+        pos <- tryCatch(name, error = function(e) e)
+        if (inherits(pos, "error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+    }
+    all.names <- .Internal(ls(envir, all.names))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x7fc2a2249508>
+<environment: namespace:base>
+> receiverByUser
+          eventLabel  users
+1     airplay_device 253727
+2  chromecast_device  61772
+3        dlna_device 249937
+4    firetv_receiver  15460
+5      phone_speaker 295540
+6                ted   1036
+7    third-party-app   1609
+8            unknown  35678
+9              vimeo    245
+10           youtube 115759
+> receiverByUser <- receiverByUser[-6,]
+> receiverByUser
+          eventLabel  users
+1     airplay_device 253727
+2  chromecast_device  61772
+3        dlna_device 249937
+4    firetv_receiver  15460
+5      phone_speaker 295540
+7    third-party-app   1609
+8            unknown  35678
+9              vimeo    245
+10           youtube 115759
+> receiverByUser <- receiverByUser[-7,]
+> receiverByUser <- receiverByUser[-8,]
+> receiverByUser <- receiverByUser[-9,]
+> receiverByUser <- receiverByUser[-10,]
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2 chromecast_device  61772
+3       dlna_device 249937
+4   firetv_receiver  15460
+5     phone_speaker 295540
+7   third-party-app   1609
+9             vimeo    245
+> receiverByUser <- receiverByUser[-7,]
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2 chromecast_device  61772
+3       dlna_device 249937
+4   firetv_receiver  15460
+5     phone_speaker 295540
+7   third-party-app   1609
+> receiverByUser <- receiverByUser[-7,]
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2 chromecast_device  61772
+3       dlna_device 249937
+4   firetv_receiver  15460
+5     phone_speaker 295540
+7   third-party-app   1609
+> receiverByUser <- receiverByUser[-9,]
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2 chromecast_device  61772
+3       dlna_device 249937
+4   firetv_receiver  15460
+5     phone_speaker 295540
+7   third-party-app   1609
+> receiverByUser <- receiverByUser[-6,]
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2 chromecast_device  61772
+3       dlna_device 249937
+4   firetv_receiver  15460
+5     phone_speaker 295540
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> receiverByUser <- receiverByUser[-5,]
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity",clockwise = FALSE)
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity",clockwise = TRUE)
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> receiverByUser[r(2,3),] <- receiverByUser[r(3,2),]
+Error in `[.data.frame`(receiverByUser, r(3, 2), ) : 
+  could not find function "r"
+> receiverByUser[c(2,3),] <- receiverByUser[c(3,2),]
+> pie(receiverByUser$users, labels= receiverByUser$eventLabel, main="Receiver by popularity")
+> pct <- round(receiverByUser$users/sumU(receiverByUser$users)*100%)
+Error: unexpected input in "pct <- round(receiverByUser$users/sumU(receiverByUser$users)*100%)"
+> pct <- round(receiverByUser$users/sum(receiverByUser$users)*100%)
+Error: unexpected input in "pct <- round(receiverByUser$users/sum(receiverByUser$users)*100%)"
+> pct <- round(receiverByUser$users/sum(receiverByUser$users)*100%)
+Error: unexpected input in "pct <- round(receiverByUser$users/sum(receiverByUser$users)*100%)"
+> pct <- round((receiverByUser$users)/sum(receiverByUser$users)*100%)
+Error: unexpected input in "pct <- round((receiverByUser$users)/sum(receiverByUser$users)*100%)"
+> ls
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern) 
+{
+    if (!missing(name)) {
+        pos <- tryCatch(name, error = function(e) e)
+        if (inherits(pos, "error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+    }
+    all.names <- .Internal(ls(envir, all.names))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x7fc2a2249508>
+<environment: namespace:base>
+> receiverByUser
+         eventLabel  users
+1    airplay_device 253727
+2       dlna_device 249937
+3 chromecast_device  61772
+4   firetv_receiver  15460
+> slices <- receiverByUser$users
+> lbls <-receiverByUser$eventLabel
+> pct <-  round(slices/sum(slices)*100)
+> lbls <- paste(lbls, pct) 
+> lbls <- paste(lbls,"%",sep="")
+> pie(slices, labels= lbls, main="Receiver by popularity")
+> languageByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:language")
+Notice: Data set contains sampled data
+> languageByUser
+      language  users
+1    (not set)     55
+2        af-za     14
+3           ar     14
+4        ar-ae   7253
+5        ar-ar     14
+6        ar-eg   1936
+7         ar-g     14
+8        ar-il    164
+9      ar-iraq     14
+10  ar-morocoo     14
+11       ar-sa    136
+12       ar-tn     41
+13      ar-usa     14
+14       ar-ye     68
+15       az-az     68
+16       bg-bg   1691
+17       bn-bd     14
+18       bn-in     14
+19       bs-ba     55
+20       ca-es    859
+21          cs     27
+22       cs-by     14
+23       cs-cz   7839
+24       da-dk  10566
+25       da-no     14
+26       de-at   5794
+27       de-ch   4799
+28       de-de 108179
+29       de-fr     14
+30       de-gb     55
+31       de-li    164
+32       de-lu     27
+33       de-us     14
+34       el-gr   2522
+35          en    232
+36       en-ae    164
+37       en-am     14
+38       en-at     14
+39       en-au  14697
+40       en-ba     27
+41       en-be     27
+42       en-bg     27
+43       en-bh     55
+44       en-bo     27
+45       en-ca  20382
+46       en-ch     82
+47       en-cn     41
+48       en-cs     27
+49       en-cy     14
+50       en-cz    150
+51       en-de    245
+52       en-dk    123
+53       en-ee     14
+54       en-eg     55
+55       en-en     68
+56       en-fi     14
+57       en-fr     41
+58       en-gb 137013
+59       en-hk    491
+60       en-hr     68
+61       en-id     41
+62       en-ie   2536
+63       en-il     14
+64       en-in   4908
+65       en-it     14
+66       en-jm     14
+67       en-kr     14
+68       en-kw     14
+69       en-kz     14
+70       en-lt     27
+71       en-lu     27
+72       en-lv     14
+73       en-mx     14
+74       en-my    123
+75       en-ng     14
+76       en-nl    177
+77       en-no    150
+78       en-nz   3067
+79       en-ph   1172
+80       en-pk     27
+81       en-pl     14
+82       en-pt     14
+83       en-ro    191
+84       en-ru     95
+85       en-sa     68
+86       en-se    109
+87       en-sg   1295
+88       en-si     14
+89       en-sk     14
+90       en-th    136
+91       en-tr     27
+92       en-tw     27
+93       en-ua     14
+94       en-uk    191
+95       en-us 293917
+96       en-vn     95
+97       en-za   1691
+98          es    314
+99       es-41     14
+100     es-419     41
+101      es-ar   1036
+102      es-bo    136
+103      es-br     14
+104      es-ca     14
+105      es-cl    723
+106      es-co    777
+107      es-cr     55
+108      es-de     27
+109      es-do     95
+110      es-ec    286
+111      es-es  40995
+112      es-gb     68
+113      es-gt     41
+114      es-mx   6162
+115      es-pa    109
+116      es-pe    409
+117      es-pr     68
+118      es-sv     41
+119      es-us  39563
+120      es-uy    136
+121      es-ve    232
+122      es_es     14
+123         et     14
+124      et-ee    477
+125         eu     14
+126      eu-es     14
+127         fa    204
+128      fa-ae     68
+129      fa-eg     27
+130      fa-fa   3340
+131      fa-ir   6585
+132      fa-us     14
+133      fa-za     14
+134      fi-fi   3599
+135         fr    123
+136      fr-ae     14
+137      fr-be   1963
+138      fr-ca   4690
+139      fr-ch   1977
+140      fr-de     41
+141      fr-es     14
+142      fr-fr 119195
+143      fr-gb     95
+144      fr-ie     55
+145      fr-it     27
+146      fr-lu     27
+147      fr-ma     27
+148      fr-tr     14
+149      fr-us     14
+150      gb-gb     14
+151      gl-es     14
+152      he-il     68
+153      hi-in     27
+154      hr-hr   1254
+155      hu-hu   5371
+156      hu-rh     14
+157      hy-am     14
+158      il-il     14
+159         in     14
+160      in-id   1213
+161      is-is    164
+162         it     27
+163      it-at     14
+164      it-ch    204
+165      it-de     27
+166      it-it  28671
+167      it_it     14
+168         iw     14
+169      iw-il   4199
+170      iw-is     27
+171      iw-it     14
+172      iw-uk     14
+173      iw-us     41
+174      ja-ca     14
+175      ja-cn     14
+176      ja-jp  10457
+177      km-kh     14
+178      ko-gb     14
+179      ko-kr   8684
+180      ko-us     14
+181      ld-us     14
+182      lo-la     27
+183      lt-lt    695
+184      lv-lv    354
+185      mk-mk     41
+186      ms-my    177
+187      my-mm     41
+188      nb-no   9461
+189         nl     27
+190      nl-be   3354
+191      nl-gb     27
+192      nl-lu     14
+193      nl-nl  31329
+194      no-no     55
+195      pl-ch     14
+196      pl-cn     14
+197      pl-de     14
+198      pl-gb     68
+199      pl-pl  13592
+200      pl-us     14
+201         pt     14
+202      pt-br  33319
+203      pt-de     14
+204      pt-pt   4158
+205      pt-us     14
+206      ro-ro   4840
+207         ru    109
+208       ru-2     14
+209      ru-az     27
+210      ru-by     55
+211      ru-ch     14
+212      ru-cy     14
+213      ru-de     14
+214      ru-gb     27
+215      ru-kz     41
+216      ru-lv     55
+217      ru-ru  45398
+218      ru-ua    532
+219      ru-us     95
+220      si-lk     14
+221      sk-sk   2740
+222         sl     14
+223      sl-si    763
+224      sr-cs     27
+225      sr-rs    859
+226         sv     14
+227      sv-gb     14
+228      sv-se  17914
+229      ta-in     27
+230      th-gb     27
+231      th-th   6476
+232         tr     41
+233      tr-az     14
+234      tr-de     27
+235      tr-gb     14
+236      tr-ru     14
+237      tr-tr  13088
+238      uk-ua    777
+239         vi     14
+240      vi-us     55
+241      vi-vn   6994
+242      xx-us     14
+243      zh-cn   5930
+244      zh-hk   6244
+245      zh-tw  25480
+246      zz-zz     95
+> languageByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:language", sort="ga:users")
+Notice: Data set contains sampled data
+> languageByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:language", sort="-ga:users")
+Notice: Data set contains sampled data
+> languageByUser
+      language  users
+1        en-us 293917
+2        en-gb 137013
+3        fr-fr 119195
+4        de-de 108179
+5        ru-ru  45398
+6        es-es  40995
+7        es-us  39563
+8        pt-br  33319
+9        nl-nl  31329
+10       it-it  28671
+11       zh-tw  25480
+12       en-ca  20382
+13       sv-se  17914
+14       en-au  14697
+15       pl-pl  13592
+16       tr-tr  13088
+17       da-dk  10566
+18       ja-jp  10457
+19       nb-no   9461
+20       ko-kr   8684
+21       cs-cz   7839
+22       ar-ae   7253
+23       vi-vn   6994
+24       fa-ir   6585
+25       th-th   6476
+26       zh-hk   6244
+27       es-mx   6162
+28       zh-cn   5930
+29       de-at   5794
+30       hu-hu   5371
+31       en-in   4908
+32       ro-ro   4840
+33       de-ch   4799
+34       fr-ca   4690
+35       iw-il   4199
+36       pt-pt   4158
+37       fi-fi   3599
+38       nl-be   3354
+39       fa-fa   3340
+40       en-nz   3067
+41       sk-sk   2740
+42       en-ie   2536
+43       el-gr   2522
+44       fr-ch   1977
+45       fr-be   1963
+46       ar-eg   1936
+47       bg-bg   1691
+48       en-za   1691
+49       en-sg   1295
+50       hr-hr   1254
+51       in-id   1213
+52       en-ph   1172
+53       es-ar   1036
+54       ca-es    859
+55       sr-rs    859
+56       es-co    777
+57       uk-ua    777
+58       sl-si    763
+59       es-cl    723
+60       lt-lt    695
+61       ru-ua    532
+62       en-hk    491
+63       et-ee    477
+64       es-pe    409
+65       lv-lv    354
+66          es    314
+67       es-ec    286
+68       en-de    245
+69          en    232
+70       es-ve    232
+71          fa    204
+72       it-ch    204
+73       en-ro    191
+74       en-uk    191
+75       en-nl    177
+76       ms-my    177
+77       ar-il    164
+78       de-li    164
+79       en-ae    164
+80       is-is    164
+81       en-cz    150
+82       en-no    150
+83       ar-sa    136
+84       en-th    136
+85       es-bo    136
+86       es-uy    136
+87       en-dk    123
+88       en-my    123
+89          fr    123
+90       en-se    109
+91       es-pa    109
+92          ru    109
+93       en-ru     95
+94       en-vn     95
+95       es-do     95
+96       fr-gb     95
+97       ru-us     95
+98       zz-zz     95
+99       en-ch     82
+100      ar-ye     68
+101      az-az     68
+102      en-en     68
+103      en-hr     68
+104      en-sa     68
+105      es-gb     68
+106      es-pr     68
+107      fa-ae     68
+108      he-il     68
+109      pl-gb     68
+110  (not set)     55
+111      bs-ba     55
+112      de-gb     55
+113      en-bh     55
+114      en-eg     55
+115      es-cr     55
+116      fr-ie     55
+117      no-no     55
+118      ru-by     55
+119      ru-lv     55
+120      vi-us     55
+121      ar-tn     41
+122      en-cn     41
+123      en-fr     41
+124      en-id     41
+125     es-419     41
+126      es-gt     41
+127      es-sv     41
+128      fr-de     41
+129      iw-us     41
+130      mk-mk     41
+131      my-mm     41
+132      ru-kz     41
+133         tr     41
+134         cs     27
+135      de-lu     27
+136      en-ba     27
+137      en-be     27
+138      en-bg     27
+139      en-bo     27
+140      en-cs     27
+141      en-lt     27
+142      en-lu     27
+143      en-pk     27
+144      en-tr     27
+145      en-tw     27
+146      es-de     27
+147      fa-eg     27
+148      fr-it     27
+149      fr-lu     27
+150      fr-ma     27
+151      hi-in     27
+152         it     27
+153      it-de     27
+154      iw-is     27
+155      lo-la     27
+156         nl     27
+157      nl-gb     27
+158      ru-az     27
+159      ru-gb     27
+160      sr-cs     27
+161      ta-in     27
+162      th-gb     27
+163      tr-de     27
+164      af-za     14
+165         ar     14
+166      ar-ar     14
+167       ar-g     14
+168    ar-iraq     14
+169 ar-morocoo     14
+170     ar-usa     14
+171      bn-bd     14
+172      bn-in     14
+173      cs-by     14
+174      da-no     14
+175      de-fr     14
+176      de-us     14
+177      en-am     14
+178      en-at     14
+179      en-cy     14
+180      en-ee     14
+181      en-fi     14
+182      en-il     14
+183      en-it     14
+184      en-jm     14
+185      en-kr     14
+186      en-kw     14
+187      en-kz     14
+188      en-lv     14
+189      en-mx     14
+190      en-ng     14
+191      en-pl     14
+192      en-pt     14
+193      en-si     14
+194      en-sk     14
+195      en-ua     14
+196      es-41     14
+197      es-br     14
+198      es-ca     14
+199      es_es     14
+200         et     14
+201         eu     14
+202      eu-es     14
+203      fa-us     14
+204      fa-za     14
+205      fr-ae     14
+206      fr-es     14
+207      fr-tr     14
+208      fr-us     14
+209      gb-gb     14
+210      gl-es     14
+211      hu-rh     14
+212      hy-am     14
+213      il-il     14
+214         in     14
+215      it-at     14
+216      it_it     14
+217         iw     14
+218      iw-it     14
+219      iw-uk     14
+220      ja-ca     14
+221      ja-cn     14
+222      km-kh     14
+223      ko-gb     14
+224      ko-us     14
+225      ld-us     14
+226      nl-lu     14
+227      pl-ch     14
+228      pl-cn     14
+229      pl-de     14
+230      pl-us     14
+231         pt     14
+232      pt-de     14
+233      pt-us     14
+234       ru-2     14
+235      ru-ch     14
+236      ru-cy     14
+237      ru-de     14
+238      si-lk     14
+239         sl     14
+240         sv     14
+241      sv-gb     14
+242      tr-az     14
+243      tr-gb     14
+244      tr-ru     14
+245         vi     14
+246      xx-us     14
+> countryByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:country", sort="-ga:users")
+Notice: Data set contains sampled data
+> countryByUser
+                     country  users
+1              United States 212568
+2                     France 117245
+3                    Germany 109924
+4             United Kingdom 100245
+5                     Canada  35951
+6                     Brazil  35310
+7                Netherlands  34737
+8                     Russia  32870
+9                      Spain  32092
+10                     Italy  30116
+11                    Mexico  26380
+12                    Taiwan  20872
+13                     India  20477
+14                    Sweden  20450
+15                 Australia  18923
+16                      Iran  17614
+17                 Hong Kong  14492
+18                    Turkey  12979
+19                    Poland  12597
+20                   Denmark  12502
+21                     Japan  11725
+22                    Norway  11575
+23               Switzerland  10647
+24                  Thailand  10252
+25                   Belgium  10211
+26                   Austria   9243
+27                   Vietnam   9066
+28               South Korea   8862
+29                   Ukraine   8412
+30            Czech Republic   8248
+31              Saudi Arabia   7894
+32                 Argentina   7757
+33                    Israel   7730
+34                  Colombia   7157
+35                   Romania   6939
+36                   Finland   6149
+37                 Singapore   6067
+38                   Ireland   5603
+39                     Chile   5562
+40                  Malaysia   5508
+41                   Hungary   5481
+42      United Arab Emirates   4744
+43                  Portugal   4144
+44               New Zealand   4117
+45                     China   3749
+46                 Indonesia   3408
+47                  Slovakia   3286
+48              South Africa   3204
+49                    Greece   3177
+50                   Morocco   3149
+51                  Pakistan   2795
+52                      Peru   2781
+53                     Egypt   2754
+54               Philippines   2727
+55                   Ecuador   2386
+56                  Bulgaria   2263
+57               Puerto Rico   2018
+58                 (not set)   1881
+59                Costa Rica   1786
+60                   Belarus   1718
+61                Kazakhstan   1718
+62                   Croatia   1554
+63        Dominican Republic   1541
+64                    Kuwait   1541
+65                 Venezuela   1513
+66                    Serbia   1500
+67                   Algeria   1309
+68                    Latvia   1159
+69                 Lithuania   1132
+70                  Slovenia   1050
+71                 Guatemala    982
+72                   Uruguay    941
+73                    Panama    927
+74                    Cyprus    913
+75                   Estonia    900
+76                Luxembourg    859
+77                Azerbaijan    804
+78      Bosnia & Herzegovina    804
+79                    Jordan    791
+80                     Qatar    791
+81                      Oman    750
+82                Bangladesh    682
+83         Macedonia (FYROM)    668
+84                   Tunisia    668
+85                   Iceland    627
+86                   Bahrain    613
+87                   Lebanon    600
+88         Trinidad & Tobago    600
+89                   Jamaica    545
+90                   Bolivia    532
+91                      Iraq    464
+92                   Moldova    450
+93               El Salvador    436
+94                     Malta    423
+95                   Armenia    409
+96                  Cambodia    395
+97                   Nigeria    382
+98                     Yemen    368
+99                   Bahamas    354
+100                    Kenya    354
+101                 Honduras    341
+102                    Nepal    341
+103                    Syria    341
+104                Mauritius    314
+105                Sri Lanka    314
+106                 Paraguay    232
+107                    Sudan    232
+108                  Réunion    218
+109                 Tanzania    218
+110                  Albania    204
+111                    Macau    204
+112                    Aruba    164
+113                    Ghana    150
+114                   Kosovo    150
+115                     Laos    150
+116                Nicaragua    136
+117                  Senegal    136
+118                   Angola     95
+119            Côte d’Ivoire     95
+120               Guadeloupe     95
+121               Mozambique     95
+122                Palestine     95
+123                     Guam     82
+124                   Jersey     82
+125               Kyrgyzstan     82
+126                 Maldives     68
+127                     Mali     68
+128                   Uganda     68
+129               Uzbekistan     68
+130                 Barbados     55
+131                    Libya     55
+132               Tajikistan     55
+133                   Belize     41
+134                  Bermuda     41
+135                   Brunei     41
+136            Faroe Islands     41
+137                     Fiji     41
+138         French Polynesia     41
+139                 Guernsey     41
+140                    Haiti     41
+141               Martinique     41
+142                   Monaco     41
+143               Montenegro     41
+144            New Caledonia     41
+145                     Togo     41
+146      U.S. Virgin Islands     41
+147                   Zambia     41
+148              Afghanistan     27
+149                  Georgia     27
+150                  Grenada     27
+151                   Guyana     27
+152            Liechtenstein     27
+153                 Mongolia     27
+154          Myanmar (Burma)     27
+155                  Namibia     27
+156                    Niger     27
+157         Papua New Guinea     27
+158                   Rwanda     27
+159             Turkmenistan     27
+160   Turks & Caicos Islands     27
+161           American Samoa     14
+162                  Andorra     14
+163        Antigua & Barbuda     14
+164   British Virgin Islands     14
+165                 Cameroon     14
+166    Caribbean Netherlands     14
+167                  Comoros     14
+168                     Cuba     14
+169                  Curaçao     14
+170                 Djibouti     14
+171                 Ethiopia     14
+172            French Guiana     14
+173                    Gabon     14
+174                Gibraltar     14
+175                Greenland     14
+176                   Guinea     14
+177               Madagascar     14
+178 Northern Mariana Islands     14
+179                    Samoa     14
+180               Seychelles     14
+181             Sint Maarten     14
+182                  Somalia     14
+183                 Zimbabwe     14
+> pie(countryByUser$users, labels= countryByUser$country, main="Country by popularity")
+> countryByUser
+                     country  users
+1              United States 212568
+2                     France 117245
+3                    Germany 109924
+4             United Kingdom 100245
+5                     Canada  35951
+6                     Brazil  35310
+7                Netherlands  34737
+8                     Russia  32870
+9                      Spain  32092
+10                     Italy  30116
+11                    Mexico  26380
+12                    Taiwan  20872
+13                     India  20477
+14                    Sweden  20450
+15                 Australia  18923
+16                      Iran  17614
+17                 Hong Kong  14492
+18                    Turkey  12979
+19                    Poland  12597
+20                   Denmark  12502
+21                     Japan  11725
+22                    Norway  11575
+23               Switzerland  10647
+24                  Thailand  10252
+25                   Belgium  10211
+26                   Austria   9243
+27                   Vietnam   9066
+28               South Korea   8862
+29                   Ukraine   8412
+30            Czech Republic   8248
+31              Saudi Arabia   7894
+32                 Argentina   7757
+33                    Israel   7730
+34                  Colombia   7157
+35                   Romania   6939
+36                   Finland   6149
+37                 Singapore   6067
+38                   Ireland   5603
+39                     Chile   5562
+40                  Malaysia   5508
+41                   Hungary   5481
+42      United Arab Emirates   4744
+43                  Portugal   4144
+44               New Zealand   4117
+45                     China   3749
+46                 Indonesia   3408
+47                  Slovakia   3286
+48              South Africa   3204
+49                    Greece   3177
+50                   Morocco   3149
+51                  Pakistan   2795
+52                      Peru   2781
+53                     Egypt   2754
+54               Philippines   2727
+55                   Ecuador   2386
+56                  Bulgaria   2263
+57               Puerto Rico   2018
+58                 (not set)   1881
+59                Costa Rica   1786
+60                   Belarus   1718
+61                Kazakhstan   1718
+62                   Croatia   1554
+63        Dominican Republic   1541
+64                    Kuwait   1541
+65                 Venezuela   1513
+66                    Serbia   1500
+67                   Algeria   1309
+68                    Latvia   1159
+69                 Lithuania   1132
+70                  Slovenia   1050
+71                 Guatemala    982
+72                   Uruguay    941
+73                    Panama    927
+74                    Cyprus    913
+75                   Estonia    900
+76                Luxembourg    859
+77                Azerbaijan    804
+78      Bosnia & Herzegovina    804
+79                    Jordan    791
+80                     Qatar    791
+81                      Oman    750
+82                Bangladesh    682
+83         Macedonia (FYROM)    668
+84                   Tunisia    668
+85                   Iceland    627
+86                   Bahrain    613
+87                   Lebanon    600
+88         Trinidad & Tobago    600
+89                   Jamaica    545
+90                   Bolivia    532
+91                      Iraq    464
+92                   Moldova    450
+93               El Salvador    436
+94                     Malta    423
+95                   Armenia    409
+96                  Cambodia    395
+97                   Nigeria    382
+98                     Yemen    368
+99                   Bahamas    354
+100                    Kenya    354
+101                 Honduras    341
+102                    Nepal    341
+103                    Syria    341
+104                Mauritius    314
+105                Sri Lanka    314
+106                 Paraguay    232
+107                    Sudan    232
+108                  Réunion    218
+109                 Tanzania    218
+110                  Albania    204
+111                    Macau    204
+112                    Aruba    164
+113                    Ghana    150
+114                   Kosovo    150
+115                     Laos    150
+116                Nicaragua    136
+117                  Senegal    136
+118                   Angola     95
+119            Côte d’Ivoire     95
+120               Guadeloupe     95
+121               Mozambique     95
+122                Palestine     95
+123                     Guam     82
+124                   Jersey     82
+125               Kyrgyzstan     82
+126                 Maldives     68
+127                     Mali     68
+128                   Uganda     68
+129               Uzbekistan     68
+130                 Barbados     55
+131                    Libya     55
+132               Tajikistan     55
+133                   Belize     41
+134                  Bermuda     41
+135                   Brunei     41
+136            Faroe Islands     41
+137                     Fiji     41
+138         French Polynesia     41
+139                 Guernsey     41
+140                    Haiti     41
+141               Martinique     41
+142                   Monaco     41
+143               Montenegro     41
+144            New Caledonia     41
+145                     Togo     41
+146      U.S. Virgin Islands     41
+147                   Zambia     41
+148              Afghanistan     27
+149                  Georgia     27
+150                  Grenada     27
+151                   Guyana     27
+152            Liechtenstein     27
+153                 Mongolia     27
+154          Myanmar (Burma)     27
+155                  Namibia     27
+156                    Niger     27
+157         Papua New Guinea     27
+158                   Rwanda     27
+159             Turkmenistan     27
+160   Turks & Caicos Islands     27
+161           American Samoa     14
+162                  Andorra     14
+163        Antigua & Barbuda     14
+164   British Virgin Islands     14
+165                 Cameroon     14
+166    Caribbean Netherlands     14
+167                  Comoros     14
+168                     Cuba     14
+169                  Curaçao     14
+170                 Djibouti     14
+171                 Ethiopia     14
+172            French Guiana     14
+173                    Gabon     14
+174                Gibraltar     14
+175                Greenland     14
+176                   Guinea     14
+177               Madagascar     14
+178 Northern Mariana Islands     14
+179                    Samoa     14
+180               Seychelles     14
+181             Sint Maarten     14
+182                  Somalia     14
+183                 Zimbabwe     14
+> first20countries <- head(countryByUser,20)
+> first20countries
+          country  users
+1   United States 212568
+2          France 117245
+3         Germany 109924
+4  United Kingdom 100245
+5          Canada  35951
+6          Brazil  35310
+7     Netherlands  34737
+8          Russia  32870
+9           Spain  32092
+10          Italy  30116
+11         Mexico  26380
+12         Taiwan  20872
+13          India  20477
+14         Sweden  20450
+15      Australia  18923
+16           Iran  17614
+17      Hong Kong  14492
+18         Turkey  12979
+19         Poland  12597
+20        Denmark  12502
+> sum(countryByUser$users)
+[1] 1183859
+> sum(first20countries$users)
+[1] 918344
+> sum(countryByUser$users) - sum(first20countries$users)
+[1] 265515
+> first20countries$country[21] <- "Others"
+Error in `$<-.data.frame`(`*tmp*`, "country", value = c("United States",  : 
+  replacement has 21 rows, data has 20
+> first20countries <- rbind(first20countries, data.frame(country = Other, users = 265515))
+Error in data.frame(country = Other, users = 265515) : 
+  object 'Other' not found
+> first20countries <- rbind(first20countries, data.frame(country = "Other", users = 265515))
+> first20countries
+          country  users
+1   United States 212568
+2          France 117245
+3         Germany 109924
+4  United Kingdom 100245
+5          Canada  35951
+6          Brazil  35310
+7     Netherlands  34737
+8          Russia  32870
+9           Spain  32092
+10          Italy  30116
+11         Mexico  26380
+12         Taiwan  20872
+13          India  20477
+14         Sweden  20450
+15      Australia  18923
+16           Iran  17614
+17      Hong Kong  14492
+18         Turkey  12979
+19         Poland  12597
+20        Denmark  12502
+21          Other 265515
+> slices <- first20countries$users
+> lbls <-first20countries$country
+> pct <-  round(slices/sum(slices)*100)
+> 
+> lbls <- paste(lbls, pct)
+> lbls <- paste(lbls,"%",sep="")
+> pie(slices, labels= lbls, main="Countries by popularity")
+> first12countries <- head(countryByUser,12)
+> sum(countryByUser$users) - sum(first12countries$users)
+[1] 395549
+> first12countries <- rbind(first12countries, data.frame(country = "Other", users = 395549))
+> slices <- first12countries$users
+> lbls <-first12countries$country
+> pct <-  round(slices/sum(slices)*100)
+> lbls <- paste(lbls, pct)
+> lbls <- paste(lbls,"%",sep="")
+> pie(slices, labels= lbls, main="Countries by popularity")
+> 
