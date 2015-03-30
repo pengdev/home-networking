@@ -14,3 +14,8 @@ lbls <- paste(lbls,"%",sep="")
 pie(slices, labels= lbls, main="Receiver by popularity")
 
 countryByUser <- ga$getData(id, start.date="2013-11-27",end.date="2015-03-27", metrics="ga:users", dimensions ="ga:country", sort="-ga:users")
+
+
+first12countries <- head(countryByUser,12)
+sum(countryByUser$users) - sum(first20countries$users)
+first20countries <- rbind(first20countries, data.frame(country = "Other", users = 265515))
