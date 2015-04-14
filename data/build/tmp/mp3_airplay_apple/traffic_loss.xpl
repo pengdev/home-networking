@@ -1,0 +1,75 @@
+dtime signed
+title
+packet loss per second over time
+xlabel
+time
+ylabel
+events/second
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 1
+yellow
+dot 15.166407 0
+line 15.166407 0 0.000000 0
+ltext 7.083203 1 blue
+Retransmits
+blue
+dot 15.166407 1
+line 15.166407 1 0.000000 1
+ltext 22.209591 1 yellow
+Triple Dupacks
+yellow
+dot 30.252775 1
+line 30.252775 1 15.166407 0
+blue
+dot 30.252775 1
+line 30.252775 1 15.166407 1
+yellow
+dot 45.796994 0
+line 45.796994 0 30.252775 1
+blue
+dot 45.796994 0
+line 45.796994 0 30.252775 1
+yellow
+dot 62.527816 0
+line 62.527816 0 45.796994 0
+blue
+dot 62.527816 0
+line 62.527816 0 45.796994 0
+yellow
+dot 77.910938 0
+line 77.910938 0 62.527816 0
+blue
+dot 77.910938 1
+line 77.910938 1 62.527816 0
+yellow
+dot 93.703969 0
+line 93.703969 0 77.910938 0
+blue
+dot 93.703969 1
+line 93.703969 1 77.910938 1
+yellow
+dot 108.916288 0
+line 108.916288 0 93.703969 0
+blue
+dot 108.916288 0
+line 108.916288 0 93.703969 1
+yellow
+dot 125.043621 0
+line 125.043621 0 108.916288 0
+blue
+dot 125.043621 0
+line 125.043621 0 108.916288 0
+yellow
+dot 141.192696 0
+line 141.192696 0 125.043621 0
+blue
+dot 141.192696 0
+line 141.192696 0 125.043621 0
+yellow
+dot 157.323766 0
+line 157.323766 0 141.192696 0
+blue
+dot 157.323766 0
+line 157.323766 0 141.192696 0

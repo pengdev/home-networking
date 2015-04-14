@@ -1,0 +1,12 @@
+set title "idle connections over time by port"
+set xlabel "time"
+set ylabel "idle connections"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_idle.labels";
+plot "traffic_idle.datasets" index 0 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 1 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 2 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 3 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 4 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 5 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 6 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 7 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 8 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 9 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 10 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 11 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 12 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 13 using ($1-946684800.0):2 with lines, "traffic_idle.datasets" index 14 using ($1-946684800.0):2 with dots, "traffic_idle.datasets" index 15 using ($1-946684800.0):2 with lines;
+set term postscript
+set output "traffic_idle.ps"
+replot

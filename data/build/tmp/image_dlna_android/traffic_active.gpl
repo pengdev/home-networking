@@ -1,0 +1,11 @@
+set title ""
+set xlabel "x"
+set ylabel "y"
+set format x ""
+set format y ""
+set nokey
+load "traffic_active.labels";
+;
+set term postscript
+set output "traffic_active.ps"
+replot

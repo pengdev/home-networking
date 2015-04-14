@@ -15,112 +15,114 @@ Since we have both protocols implemented in our application. We could compare th
 \\
 The result is presented below, the initial packet count is relatively high. This is because there is a lot multicast messages in the network for device discovery. After that, streaming graph shows that after an initial increase in the traffic, network traffic enters a relatively stable state. This is because the TCP protocol reaches the best optimized transmission speed.\\
 \\
-Next, we added packet loss in the network and compare the influence to the two streaming process. The result is shown in Figure below:
-\begin{figure}[H]
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/AirPlay_traffic_data}
-%%\hspace{0.1cm}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/AirPlay_traffic_5loss_data}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/AirPlay_traffic_10loss_data}
-%%\hspace{0.1cm}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/AirPlay_traffic_15loss_data}
-\end{minipage}
-\caption{AirPlay streaming performance in terms of packet loss}\label{multiavp}
+Next, we added packet loss in the network and compare the influence to the two
+streaming process. The result is shown in Figure \ref{airplay_vs_dlna_traffic}:\\
+\begin{figure}
+\hfill
+\subfigure[AirPlay]{\includegraphics[width=7.2cm]{charts/oneMoreTime_airplay_android}}
+\hfill
+\subfigure[DLNA]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android}}
+\hfill
+\caption{AirPlay vs DLNA streaming traffic
+comparison \label{airplay_vs_dlna_traffic}}
+\end{figure}
+
+According to Figure \ref{airplay_vs_dlna_traffic}, the stream traffic for
+AirPlay and DLNA streaming is very different. For AirPlay streaming, the traffic
+growth is nearly linear, because the ROAP is a push like process, content can be
+streamed in real time. However, for DLNA streaming, HTTP streaming is a pull
+like process, the server fetches content from media server, so the content can
+be buffered at the top network speed at the beginning of the playback.
+Therefore, there is a short download period at the beginning of DLNA's
+graph. \\ 
+\\
+Next, we try to limit the bandwidth and evaluate the performance change using
+two solutions. We limited the bandwidth to 500kbps, 700kbps and 1000kbps
+respectively and got Figure \ref{dlna_traffic_bw}:\\
+
+\begin{figure}
+\hfill
+\subfigure[No
+limit]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android}}
+\hfill
+\subfigure[500kbps]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android_bw_500k}}
+\hfill
+\subfigure[700kbps]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android_bw_700k}}
+\hfill
+\subfigure[1000kbps]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android_bw_1000k}}
+\hfill
+\caption{DLNA streaming traffic comparison in
+bandwidth constrained situation\label{dlna_traffic_bw}}
 \end{figure}
 
 
 
-\begin{figure}[H]
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/dlna_traffic_data}
-%%\hspace{0.1cm}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/dlna_traffic_5loss_data}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/dlna_traffic_10loss_data}
-%%\hspace{0.1cm}
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\includegraphics[width=\textwidth]{charts/dlna_traffic_15loss_data}
-\end{minipage}
-\caption{DLNA streaming performance in terms of packet loss}\label{multiavp}
-\end{figure}
-
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/AirPlay_traffic_data}
-\caption{AirPlay traffic data chart \label{chart6}}
-\end{figure}
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/dlna_traffic_data}
-\caption{DLNA traffic data chart \label{chart6}}
-\end{figure}
-
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/badnetwork_AirPlay_traffic_data}
-\caption{AirPlay bad network traffic data chart \label{chart6}}
-\end{figure}
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/badnetwork_dlna_traffic_data}
-\caption{DLNA bad network traffic data chart \label{chart6}}
+\begin{figure}
+\hfill
+\subfigure[No
+limit]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_data}}
+\hfill
+\subfigure[5
+percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_5loss_data}}
+\hfill
+\subfigure[10
+percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_10loss_data}}
+\hfill
+\subfigure[15
+percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_15loss_data}}
+\hfill
+\caption{AirPlay streaming performance in terms of packet loss \label{multiavp}}
 \end{figure}
 
 
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/AirPlay_traffic_5loss_data}
-\caption{AirPlay bad network traffic data chart \label{chart6}}
-\end{figure}
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/dlna_traffic_5loss_data}
-\caption{DLNA bad network traffic data chart \label{chart6}}
-\end{figure}
-
-
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/AirPlay_traffic_10loss_data}
-\caption{AirPlay bad network traffic data chart \label{chart6}}
-\end{figure}
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/dlna_traffic_10loss_data}
-\caption{DLNA bad network traffic data chart \label{chart6}}
+\begin{figure}
+\hfill
+\subfigure[No
+limit]{\includegraphics[width=7.2cm]{charts/dlna_traffic_data}}
+\hfill
+\subfigure[5
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_5loss_data}}
+\hfill
+\subfigure[10
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_10loss_data}}
+\hfill
+\subfigure[15
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_15loss_data}}
+\hfill
+\caption{DLNA streaming performance in terms of packet loss \label{multiavp}}
 \end{figure}
 
 
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/AirPlay_traffic_15loss_data}
-\caption{AirPlay bad network traffic data chart \label{chart6}}
+
+\begin{figure}
+\hfill
+\subfigure[AirPlay
+normal]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_data}}
+\hfill
+\subfigure[DLNA normal]{\includegraphics[width=7.2cm]{charts/dlna_traffic_data}}
+\hfill
+\subfigure[AirPlay
+bad
+network]{\includegraphics[width=7.2cm]{charts/badnetwork_AirPlay_traffic_data}}
+\hfill
+\subfigure[DLNA
+bad network]{\includegraphics[width=7.2cm]{charts/badnetwork_dlna_traffic_data}}
+\hfill
+\caption{Comparison of AirPlay and DLNA in bad network conditions
+\label{multiavp}}
 \end{figure}
-\begin{figure}[htb]
-\centering \includegraphics[height=10cm]{charts/dlna_traffic_15loss_data}
-\caption{DLNA bad network traffic data chart \label{chart6}}
-\end{figure}
+
 
 \subsection{Statistics}
-Through 16 months' releasing, our application have reached 924000 downloads from 223 countries all around the world, with around 10000 daily active users. This means our users almost cover 99% of the earth, a world map of our users is shown in Figure \ref{user_map}. So far, we got ratings from 10253 users, currently the average rating is 3.9 out of 5. The distribution is shown in Figure \ref{ratings}.
+Through 16 months' releasing, our application have achieved 924000 downloads from 223 countries all around the world, with around 10000 daily active users. This means our users almost cover 99% of the earth, a world map of our users is shown in Figure \ref{user_map}. So far, we got ratings from 10253 users, currently the average rating is 3.9 out of 5. The distribution is shown in Figure \ref{ratings}.
 
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/rating_distribution}
 \caption{Rating distribution\label{ratings}}
 \end{figure}
 
-
-The application turns out to be popular in countries like France, United States, Germany, United Kingdom and Brazil. The user distribution is shown in Figure \ref{user_country}.
-
+According to the rating distribution graph, most users are satisfied with our solution and gave 5 stars rating. However, the average rating is heavily influenced by the 1 star rating users. The reason of those unsatisfied users is that it happens that the receiver user have in home is not compatible with our application due to different reasons. It might be protocols are not supported yet, such as Roku box. Network condition problem also contributes to the incompatibility problem, some routers have by default disabled multicast due to security reasons. Another major cause of the incompatibility problem is that even use the same protocol, take DLNA for example, a minor implementation difference may cause the break of connection, thus, in the later phase, we have made receiver specific hacks to make our application work with most DLNA receivers regardless of which implementation they use.
+In terms of user distribution, in 16 months, our application turns out to be popular in countries like France, United States, Germany, United Kingdom and Brazil. The user distribution is shown in Figure \ref{user_country}.
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/os_version_popularity}
 \caption{Popularity of different Android versions \label{os_versions}}
@@ -146,7 +148,6 @@ The application turns out to be popular in countries like France, United States,
 \centering \includegraphics[height=9cm]{charts/sessions_per_day}
 \caption{Sessions per day \label{sessions_perday}}
 \end{figure}
-
 
 \subsection{User study}
 \begin{itemize}

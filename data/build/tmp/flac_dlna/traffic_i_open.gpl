@@ -1,0 +1,12 @@
+set title "open connections over time by port - instantaneous"
+set xlabel "time"
+set ylabel "number of connections"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_i_open.labels";
+plot "traffic_i_open.datasets" index 0 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 1 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 2 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 3 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 4 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 5 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 6 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 7 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 8 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 9 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 10 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 11 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 12 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 13 using ($1-946684800.0):2 with lines, "traffic_i_open.datasets" index 14 using ($1-946684800.0):2 with dots, "traffic_i_open.datasets" index 15 using ($1-946684800.0):2 with lines;
+set term postscript
+set output "traffic_i_open.ps"
+replot

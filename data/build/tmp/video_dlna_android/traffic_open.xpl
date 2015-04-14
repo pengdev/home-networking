@@ -1,0 +1,143 @@
+dtime signed
+title
+open connections over time by port
+xlabel
+time
+ylabel
+open connections
+red
+dot 0.000000 1
+green
+dot 0.000000 1
+pink
+dot 0.000000 1
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 1
+purple
+dot 0.000000 1
+yellow
+dot 0.000000 1
+blue
+dot 0.000000 3
+red
+dot 0.000000 1
+green
+dot 0.000000 5
+ltext 7.002943 1 red
+54265
+red
+dot 15.005887 1
+line 15.005887 1 0.000000 1
+ltext 7.002943 1 green
+63537
+green
+dot 15.005887 1
+line 15.005887 1 0.000000 1
+ltext 7.002943 1 pink
+39006
+pink
+dot 15.005887 1
+line 15.005887 1 0.000000 1
+magenta
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+ltext 7.002943 1 orange
+51470
+orange
+dot 15.005887 1
+line 15.005887 1 0.000000 1
+purple
+dot 15.005887 0
+line 15.005887 0 0.000000 1
+yellow
+dot 15.005887 0
+line 15.005887 0 0.000000 1
+ltext 7.002943 3 blue
+1449
+blue
+dot 15.005887 3
+line 15.005887 3 0.000000 3
+ltext 7.002943 1 red
+36828
+red
+dot 15.005887 1
+line 15.005887 1 0.000000 1
+ltext 7.002943 5 green
+total
+green
+dot 15.005887 4
+line 15.005887 4 0.000000 5
+red
+dot 30.025431 1
+line 30.025431 1 15.005887 1
+green
+dot 30.025431 1
+line 30.025431 1 15.005887 1
+pink
+dot 30.025431 1
+line 30.025431 1 15.005887 1
+magenta
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+orange
+dot 30.025431 1
+line 30.025431 1 15.005887 1
+purple
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+yellow
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+blue
+dot 30.025431 3
+line 30.025431 3 15.005887 3
+red
+dot 30.025431 1
+line 30.025431 1 15.005887 1
+green
+dot 30.025431 4
+line 30.025431 4 15.005887 4
+pink
+dot 45.766980 1
+magenta
+dot 45.766980 1
+orange
+dot 45.766980 1
+purple
+dot 45.766980 1
+yellow
+dot 45.766980 1
+blue
+dot 45.766980 1
+red
+dot 45.766980 1
+line 45.766980 1 30.025431 1
+green
+dot 45.766980 1
+line 45.766980 1 30.025431 1
+pink
+dot 45.766980 1
+line 45.766980 1 30.025431 1
+magenta
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+orange
+dot 45.766980 1
+line 45.766980 1 30.025431 1
+purple
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+yellow
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+blue
+dot 45.766980 9
+line 45.766980 9 30.025431 3
+red
+dot 45.766980 1
+line 45.766980 1 30.025431 1
+green
+dot 45.766980 10
+line 45.766980 10 30.025431 4

@@ -1,0 +1,130 @@
+dtime signed
+title
+connections still open after 60 seconds
+
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+pink
+dot 0.000000 0
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 0
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+red
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+green
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+pink
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+magenta
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+orange
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+purple
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+yellow
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+blue
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+red
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+green
+dot 15.005887 0
+line 15.005887 0 0.000000 0
+red
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+green
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+pink
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+magenta
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+orange
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+purple
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+yellow
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+blue
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+red
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+green
+dot 30.025431 0
+line 30.025431 0 15.005887 0
+pink
+dot 45.766980 0
+magenta
+dot 45.766980 0
+orange
+dot 45.766980 0
+purple
+dot 45.766980 0
+yellow
+dot 45.766980 0
+blue
+dot 45.766980 0
+red
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+green
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+pink
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+magenta
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+orange
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+purple
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+yellow
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+blue
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+red
+dot 45.766980 0
+line 45.766980 0 30.025431 0
+green
+dot 45.766980 0
+line 45.766980 0 30.025431 0

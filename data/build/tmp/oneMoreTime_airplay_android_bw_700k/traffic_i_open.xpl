@@ -1,0 +1,100 @@
+dtime signed
+title
+open connections over time by port - instantaneous
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 1
+blue
+dot 0.000000 1
+green
+dot 0.000000 1
+yellow
+dot 0.433205 1
+purple
+dot 0.433205 1
+ltext 0.216602 2 green
+total
+green
+dot 0.433205 2
+line 0.433205 2 0.000000 1
+orange
+dot 7.638493 1
+magenta
+dot 7.638493 1
+green
+dot 7.638493 3
+line 7.638493 3 0.433205 2
+red
+dot 23.517874 0
+line 23.517874 0 0.000000 1
+blue
+dot 23.517874 0
+line 23.517874 0 0.000000 1
+green
+dot 23.517874 2
+line 23.517874 2 7.638493 3
+yellow
+dot 23.669544 0
+line 23.669544 0 0.433205 1
+purple
+dot 23.669544 0
+line 23.669544 0 0.433205 1
+green
+dot 23.669544 1
+line 23.669544 1 23.517874 2
+ltext 165.053337 2 orange
+45287
+orange
+dot 322.468182 2
+line 322.468182 2 7.638493 1
+ltext 165.053337 2 magenta
+36666
+magenta
+dot 322.468182 2
+line 322.468182 2 7.638493 1
+green
+dot 322.468182 2
+line 322.468182 2 23.669544 1
+pink
+dot 322.478762 1
+magenta
+dot 322.478762 3
+line 322.478762 3 322.468182 2
+green
+dot 322.478762 3
+line 322.478762 3 322.468182 2
+green
+dot 322.802699 1
+magenta
+dot 322.802699 4
+line 322.802699 4 322.478762 3
+green
+dot 322.802699 4
+line 322.802699 4 322.478762 3
+red
+dot 322.949573 1
+magenta
+dot 322.949573 5
+line 322.949573 5 322.802699 4
+green
+dot 322.949573 5
+line 322.949573 5 322.802699 4
+blue
+dot 323.442733 1
+magenta
+dot 323.442733 6
+line 323.442733 6 322.949573 5
+green
+dot 323.442733 6
+line 323.442733 6 322.949573 5
+yellow
+dot 323.605918 1
+magenta
+dot 323.605918 7
+line 323.605918 7 323.442733 6
+green
+dot 323.605918 7
+line 323.605918 7 323.442733 6

@@ -1,0 +1,12 @@
+set title "bytes per second over time by port"
+set xlabel "time"
+set ylabel "bytes/second"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_bytes.labels";
+plot "traffic_bytes.datasets" index 0 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 1 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 2 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 3 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 4 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 5 using ($1-946684800.0):2 with dots, "traffic_bytes.datasets" index 6 using ($1-946684800.0):2 with dots;
+set term postscript
+set output "traffic_bytes.ps"
+replot

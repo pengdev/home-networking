@@ -1,0 +1,12 @@
+set title "half open connections over time"
+set xlabel "time"
+set ylabel "number of half open connections"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_halfopen.labels";
+plot "traffic_halfopen.datasets" index 0 using ($1-946684800.0):2 with lines, "traffic_halfopen.datasets" index 1 using ($1-946684800.0):2 with dots;
+set term postscript
+set output "traffic_halfopen.ps"
+replot

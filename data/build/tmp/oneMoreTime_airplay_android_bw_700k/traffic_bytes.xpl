@@ -1,0 +1,52 @@
+dtime signed
+title
+bytes per second over time by port
+xlabel
+time
+ylabel
+bytes/second
+magenta
+dot 0.000000 190
+orange
+dot 0.000000 190
+purple
+dot 0.000000 1933
+yellow
+dot 0.000000 1933
+blue
+dot 0.000000 3211
+red
+dot 0.000000 3211
+green
+dot 0.000000 5335
+magenta
+dot 299.141028 0
+line 299.141028 0 0.000000 190
+orange
+dot 299.141028 0
+line 299.141028 0 0.000000 190
+ltext 149.070514 967 purple
+1133
+purple
+dot 299.141028 1
+line 299.141028 1 0.000000 1933
+ltext 149.070514 967 yellow
+41426
+yellow
+dot 299.141028 1
+line 299.141028 1 0.000000 1933
+ltext 149.070514 1606 blue
+1449
+blue
+dot 299.141028 1
+line 299.141028 1 0.000000 3211
+ltext 149.070514 1606 red
+38143
+red
+dot 299.141028 1
+line 299.141028 1 0.000000 3211
+ltext 149.070514 2669 green
+total
+green
+dot 299.141028 3
+line 299.141028 3 0.000000 5335

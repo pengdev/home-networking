@@ -1,0 +1,53 @@
+dtime signed
+title
+half open connections over time
+xlabel
+time
+ylabel
+number of half open connections
+green
+dot 0.000000 0
+ltext 8.048649 1 green
+Halfopen Conns
+green
+dot 16.097298 2
+line 16.097298 2 0.000000 0
+green
+dot 31.438490 1
+line 31.438490 1 16.097298 2
+green
+dot 46.850589 0
+line 46.850589 0 31.438490 1
+green
+dot 62.329585 2
+line 62.329585 2 46.850589 0
+green
+dot 77.672335 0
+line 77.672335 0 62.329585 2
+green
+dot 93.108249 0
+line 93.108249 0 77.672335 0
+green
+dot 108.496099 0
+line 108.496099 0 93.108249 0
+green
+dot 123.717197 0
+line 123.717197 0 108.496099 0
+green
+dot 139.272116 0
+line 139.272116 0 123.717197 0
+green
+dot 154.460674 1
+line 154.460674 1 139.272116 0
+green
+dot 170.075980 0
+line 170.075980 0 154.460674 1
+green
+dot 185.423748 0
+line 185.423748 0 170.075980 0
+green
+dot 200.761423 2
+line 200.761423 2 185.423748 0
+green
+dot 216.162822 2
+line 216.162822 2 200.761423 2

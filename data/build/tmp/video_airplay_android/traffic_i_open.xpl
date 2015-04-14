@@ -1,0 +1,151 @@
+dtime signed
+title
+open connections over time by port - instantaneous
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 1
+blue
+dot 0.000000 1
+green
+dot 0.000000 1
+yellow
+dot 0.702117 1
+purple
+dot 0.702117 1
+ltext 0.351058 2 green
+total
+green
+dot 0.702117 2
+line 0.702117 2 0.000000 1
+orange
+dot 1.602638 1
+magenta
+dot 1.602638 1
+green
+dot 1.602638 3
+line 1.602638 3 0.702117 2
+pink
+dot 1.621078 1
+green
+dot 1.621078 1
+green
+dot 1.621078 4
+line 1.621078 4 1.602638 3
+pink
+dot 1.694233 0
+line 1.694233 0 1.621078 1
+green
+dot 1.694233 0
+line 1.694233 0 1.621078 1
+green
+dot 1.694233 3
+line 1.694233 3 1.621078 4
+red
+dot 1.694234 1
+ltext 1.694233 1 green
+39006
+green
+dot 1.694234 1
+line 1.694234 1 1.694233 0
+green
+dot 1.694234 4
+line 1.694234 4 1.694233 3
+blue
+dot 1.695630 1
+green
+dot 1.695630 2
+line 1.695630 2 1.694234 1
+green
+dot 1.695630 5
+line 1.695630 5 1.694234 4
+green
+dot 2.917647 1
+line 2.917647 1 1.695630 2
+blue
+dot 2.917647 0
+line 2.917647 0 1.695630 1
+green
+dot 2.917647 4
+line 2.917647 4 1.695630 5
+yellow
+dot 2.973005 1
+green
+dot 2.973005 2
+line 2.973005 2 2.917647 1
+green
+dot 2.973005 5
+line 2.973005 5 2.917647 4
+yellow
+dot 3.007012 0
+line 3.007012 0 2.973005 1
+green
+dot 3.007012 1
+line 3.007012 1 2.973005 2
+green
+dot 3.007012 4
+line 3.007012 4 2.973005 5
+purple
+dot 3.007014 1
+green
+dot 3.007014 2
+line 3.007014 2 3.007012 1
+green
+dot 3.007014 5
+line 3.007014 5 3.007012 4
+orange
+dot 7.092540 1
+ltext 3.046270 2 blue
+1449
+blue
+dot 7.092540 2
+line 7.092540 2 0.000000 1
+green
+dot 7.092540 6
+line 7.092540 6 3.007014 5
+orange
+dot 7.092964 0
+line 7.092964 0 7.092540 1
+blue
+dot 7.092964 1
+line 7.092964 1 7.092540 2
+green
+dot 7.092964 5
+line 7.092964 5 7.092540 6
+magenta
+dot 7.094462 1
+blue
+dot 7.094462 2
+line 7.094462 2 7.092964 1
+green
+dot 7.094462 6
+line 7.094462 6 7.092964 5
+magenta
+dot 7.094605 0
+line 7.094605 0 7.094462 1
+blue
+dot 7.094605 1
+line 7.094605 1 7.094462 2
+green
+dot 7.094605 5
+line 7.094605 5 7.094462 6
+yellow
+dot 21.754386 0
+line 21.754386 0 0.702117 1
+purple
+dot 21.754386 0
+line 21.754386 0 0.702117 1
+green
+dot 21.754386 4
+line 21.754386 4 7.094605 5
+red
+dot 21.754681 0
+line 21.754681 0 0.000000 1
+blue
+dot 21.754681 0
+line 21.754681 0 7.094605 1
+green
+dot 21.754681 3
+line 21.754681 3 21.754386 4

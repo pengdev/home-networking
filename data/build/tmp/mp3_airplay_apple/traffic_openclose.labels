@@ -1,0 +1,3 @@
+set label "Number Opens" at (7.083203-946684800.000000), 7.000000 right
+set label "Number Closes" at (7.083203-946684800.000000), 3.000000 right
+set label "Total Open" at (7.083203-946684800.000000), 6.000000 right

@@ -1,6 +1,6 @@
 #!/bin/bash
-RECEIVER_IP="192.168.0.102"
-SENDER_IP="192.168.0.103"
+RECEIVER_IP="192.168.1.61"
+SENDER_IP="192.168.1.185"
 if [ $# -eq 0 ] ; then
 	echo "Usage: $0 filename"
 else
