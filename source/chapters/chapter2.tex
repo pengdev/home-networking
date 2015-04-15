@@ -1,7 +1,7 @@
 %% Background chapter 
 %% author Liu Peng 
 
-Home networking has been a hot topic for quite a few years. Thanks to the rapid development 
+Home networking has been a hot topic for several years. Thanks to the rapid development 
 of electronics and computer science, home networking devices are becoming more affordable 
 and more powerful than they ever were. It is now so common that a person would
 have several multimedia devices that can be connected to the network. In this
@@ -9,10 +9,10 @@ chapter, we give an overview of current solutions of home networking that
 bridges these multimedia devices. By making comparison among these solutions we
 try to identify the challenges that face home networking.
 \subsection{Overview} 
-Early researches \cite{link_layer_old} \cite{end_user} \cite{link_layer}
-conducted on home networking mainly aims to find out how home networking
-infrastructures can be built. The subjects of these researches, including cable
-connection, wireless connection, optical connection etc, concerns more about
+Early research \cite{link_layer_old} \cite{end_user} \cite{link_layer}
+conducted on home networking mainly aimed to find out how home networking
+infrastructure can be built. The subjects of the research, including cable
+connection, wireless connection, optical connection etc, concern more about
 the physical layer of the home network.  So far, it has turned out that the
 IEEE 802.11 protocol stack, among all others, is the most successful and 
 widely deployed home networking infrastructure.\\
@@ -35,7 +35,7 @@ Under such background, UPnP was designed to fully make use of XML. UPnP is
 independent of media types and devices and it runs on the TCP/IP stack, thus it can 
 be easily applied to modern network infrastructures.\\
 \\ 
-In June 2003, Sony and several leading consumer electronic manufacturer s
+In June 2003, Sony and several leading consumer electronic manufacturers
 established the Digital Living Network Alliance (DLNA), a nonprofit 
 collaborative trade association. The DLNA standard is based on the widely used UPnP 
 protocol but it added some restrictions on media formats and some compatibility 
@@ -47,8 +47,8 @@ In 2010, Apple quit DLNA and developed its own multimedia home networking
 solution, known as AirPlay. By adding screen mirroring, authentication and Remote 
 Audio Output Protocol(RAOP) music streaming, Apple tried to forge a more advanced 
 home network sharing system, aiming to provide a unique user experience among Apple 
-products. Apple's solution had indeed attracted people's interest, and the user experience 
-had proved much better than that of other similar products in the market. With its improvement
+products. Apple's solution indeed attracted people's interest, and the user experience 
+proved much better than that of other similar products in the market. With its improvement
  over the years,  Apple's solution has now been acknowledged as one of the most popular streaming 
 solutions.\\
 \\
@@ -58,29 +58,29 @@ uses the Wi-Fi direct technology and it does not require a wireless local
 network. Instead, a peer-to-peer connection is created between the sharing and 
 receiving devices. After its release, some major software and hardware 
 companies soon accepted this new standard. Google, for example integrated Miracast 
-support into its Android operating system, and provided screen-mirroring feature 
+support into its Android operating system, and provided a screen-mirroring feature 
 to other Miracast receivers. \\
 \\
 The competition in home networking rages on over the years. In 2013, Google released a 35-dollar 
 Dongle, using its Chromecast protocol, which makes it possible to watch 
 YouTube and Netflix video directly on TV with such a dongle device. Laptop and mobile 
-devices with official YouTube App or Chrome browser can control Dongle 
+devices with official YouTube App or Chrome browser can control the Dongle 
 through the home local network. In this solution, the home networking is pushed to the 
-cloud, since YouTube and Netflix content are directly downloaded from Internet whereas
-mobile devices just act as a controller to chose interested contents. \\
+cloud, since YouTube and Netflix content are directly downloaded from the Internet whereas the
+mobile device just acts as a controller for choosing the contents. \\
 \\
 At the same time, in September 2013, Spotify, a startup music service 
 company also took part in making its own home networking solution, called 
 Spotify Connect. Spotify Connect provides an interface for users at home to access its huge 
 music database, and directly browse and stream using its mobile application. Home 
-networking has again been pushed towards cloud and Internet services in Spotify Connect. \\
+networking has again been pushed towards the cloud and Internet services in Spotify Connect. \\
 \\
 Since so many companies would like to develop their own devices and even their 
-own protocols. The market is a bit messy. Devices from different companies are not compatible with other and users have to buy different device in order to access different services like Netflix and Spotify, which are provided by different companies.  This has created a big demand on a solution that can connect those devices at home and make them work together friendly. \\
+own protocols, the market is a bit messy. Devices from different companies are not compatible with each other and users have to buy a different device in order to access different services like Netflix and Spotify, which are provided by different companies.  This has created a big demand on a solution that can connect those devices at home and make them work together in a user friendly manner. \\
 \\
 In response of this market need, our Streambels project has been initiated, aiming to fill the gap among different protocols and connect these different types of devices in the home networking environment.
 \subsection{Available protocols} 
-\subsubsection[UPnP]{UPnP \footnote{Universal Plug and Play}}
+\subsubsection[UPnP]{Universal Plug and Play}
 \textbf{UPnP device architecture}\\ 
 Universal Plug and Play (UPnP) is a series of networking protocols defined to 
 work together and seamlessly discover the presence of all devices in the network 
@@ -90,20 +90,19 @@ entertainment among these discovered devices.\\
 In most UPnP scenarios, a control point controls the operation of one or more 
 UPnP devices. The interaction usually occurs in isolation between control point 
 and each device. It is the control point's responsibility to coordinate the operation of 
-each devices and the individual devices do not really interact directly with each other. \\
+each device and the individual devices do not really interact directly with each other. \\
 \\
 The UPnP device architecture \cite{upnp} \label{upnp} \label{upnpdevice} 
 includes seven parts:
 \begin{enumerate} 
 \item Addressing \\ 
-UPnP devices have a DHCP client and it needs to search for a DHCP server when connecting to the network. An UPnP device first scans for the DHCP server and then requests an IP address when the DHCP server is found. If there is no response from the DHCP server, the device uses a automatically allocated IP address, which is acquired by randomly choosing an address in the 169.254/16 range and testing it using ARP probe to determine if it is already used. The same procedure repeats until an unused address is found. After the first IP address is set, the UPnP device periodically communicates with the DHCP server, waiting for a DHCP response that provides an available IP address. At this the device stops using the address generated by Auto-IP as soon as the interaction in progress with the old Auto-IP is completed. If there is a DNS server in the network, it can also use domain names instead of the numerical IP address. 
+UPnP devices have a DHCP client that needs to search for a DHCP server when connecting to the network. An UPnP device first scans for the DHCP server and then requests an IP address when the DHCP server is found. If there is no response from the DHCP server, the device uses an automatically allocated IP address, which is acquired by randomly choosing an address in the 169.254/16 range and testing it using an ARP probe to determine if it is already in use. The same procedure repeats until an unused address is found. After the first IP address is set, the UPnP device periodically communicates with the DHCP server, waiting for a DHCP response that provides an available IP address. At this the device stops using the address generated by Auto-IP as soon as the interaction in progress with the old Auto-IP is completed. If there is a DNS server in the network, it can also use domain names instead of the numerical IP address. 
 \item Discovery \\ 
-UPnP devices advertise their services to network using the UPnP discover protocol, which is based on 
-Simple Service Discovery Protocol (SSDP). An UPnP control point searches the existence of 
-UPnP devices in the network using SSDP. The discovery message contains a few specific attributes 
+UPnP devices advertise their services to the network using the UPnP discover protocol, which is based on 
+Simple Service Discovery Protocol (SSDP). An UPnP control point searches other UPnP devices in the network using SSDP. The discovery message contains a few specific attributes 
 of a device and its services.These attributes include device type, unique identifier and a 
 pointer to more detailed information. 
-The device send multicast several NOTIFY messages to a pre defined address and port to advertise 
+The device multicasts several NOTIFY messages to a pre-defined address and port to advertise 
 its availability. A control point will listen to this standard multicast address and get 
 notifications when new devices are available in the network. 
 An advertisement message has a lifetime, so devices in the network would periodically send 
