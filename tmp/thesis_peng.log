@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  18 APR 2015 18:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  18 APR 2015 22:31
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -813,14 +813,7 @@ File: amsgen.sty 1999/11/30 v2.0
 )
 \pmbraise@=\dimen160
 )
-(./thesis_peng.aux
-
-LaTeX Warning: Label `multiavp' multiply defined.
-
-
-LaTeX Warning: Label `multiavp' multiply defined.
-
-)
+(./thesis_peng.aux)
 \openout1 = `thesis_peng.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
@@ -837,7 +830,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
- (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen161
@@ -1645,19 +1639,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--29
 [35
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 30--42
+Underfull \hbox (badness 10000) in paragraph at lines 30--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--42
+Underfull \hbox (badness 10000) in paragraph at lines 30--40
 
  []
 
 File: charts/oneMoreTime_dlna_android.pdf Graphic file (type pdf)
 <use charts/oneMoreTime_dlna_android.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android.pdf used on input line
- 46.
+ 44.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
 <charts/oneMoreTime_dlna_android_bw_500k.pdf, id=573, 794.97pt x 614.295pt>
@@ -1665,7 +1659,7 @@ File: charts/oneMoreTime_dlna_android_bw_500k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_500k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_500k.pdf used on in
-put line 48.
+put line 46.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
 <charts/oneMoreTime_dlna_android_bw_700k.pdf, id=574, 794.97pt x 614.295pt>
@@ -1673,7 +1667,7 @@ File: charts/oneMoreTime_dlna_android_bw_700k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_700k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_700k.pdf used on in
-put line 50.
+put line 48.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
 <charts/oneMoreTime_dlna_android_bw_1000k.pdf, id=575, 794.97pt x 614.295pt>
@@ -1681,154 +1675,163 @@ File: charts/oneMoreTime_dlna_android_bw_1000k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_1000k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_1000k.pdf used on i
-nput line 52.
+nput line 50.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/AirPlay_traffic_data.pdf, id=576, 794.97pt x 614.295pt>
-File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
-
-<use charts/AirPlay_traffic_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 62.
-
-(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
-
-<charts/AirPlay_traffic_5loss_data.pdf, id=577, 794.97pt x 614.295pt>
-File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
-
-<use charts/AirPlay_traffic_5loss_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_5loss_data.pdf used on input li
-ne 65.
-(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
-
-<charts/AirPlay_traffic_10loss_data.pdf, id=578, 794.97pt x 614.295pt>
-File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
-
-<use charts/AirPlay_traffic_10loss_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
-ine 68.
-(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
-
-<charts/AirPlay_traffic_15loss_data.pdf, id=579, 794.97pt x 614.295pt>
-File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
-
-<use charts/AirPlay_traffic_15loss_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_15loss_data.pdf used on input l
-ine 71.
-(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
-
-<charts/dlna_traffic_data.pdf, id=580, 794.97pt x 614.295pt>
+<charts/dlna_traffic_data.pdf, id=578, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_data.pdf>
-Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 80.
+Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 64.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/dlna_traffic_5loss_data.pdf, id=581, 794.97pt x 614.295pt>
+<charts/dlna_traffic_5loss_data.pdf, id=579, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_5loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_5loss_data.pdf used on input line 
-83.
+67.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/dlna_traffic_10loss_data.pdf, id=582, 794.97pt x 614.295pt>
+<charts/dlna_traffic_10loss_data.pdf, id=580, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_10loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_10loss_data.pdf used on input line
- 86.
+ 70.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/dlna_traffic_15loss_data.pdf, id=583, 794.97pt x 614.295pt>
+<charts/dlna_traffic_15loss_data.pdf, id=581, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_15loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_15loss_data.pdf used on input line
- 89.
+ 73.
+(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--78
+
+ []
+
+[36 <./charts/oneMoreTime_airplay_android.pdf, page is rotated 90 degrees> <./c
+harts/oneMoreTime_dlna_android.pdf, page is rotated 90 degrees>] [37 <./charts/
+oneMoreTime_dlna_android_bw_500k.pdf, page is rotated 90 degrees> <./charts/one
+MoreTime_dlna_android_bw_700k.pdf, page is rotated 90 degrees> <./charts/oneMor
+eTime_dlna_android_bw_1000k.pdf, page is rotated 90 degrees>]
+<charts/AirPlay_traffic_data.pdf, id=616, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
+
+<use charts/AirPlay_traffic_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 82.
+
+(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
+
+<charts/AirPlay_traffic_5loss_data.pdf, id=617, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
+
+<use charts/AirPlay_traffic_5loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_5loss_data.pdf used on input li
+ne 85.
+(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
+
+<charts/AirPlay_traffic_10loss_data.pdf, id=618, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
+
+<use charts/AirPlay_traffic_10loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
+ine 88.
+(pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
+
+<charts/AirPlay_traffic_15loss_data.pdf, id=619, 794.97pt x 614.295pt>
+File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
+
+<use charts/AirPlay_traffic_15loss_data.pdf>
+Package pdftex.def Info: charts/AirPlay_traffic_15loss_data.pdf used on input l
+ine 91.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 99.
-
+Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 105
+.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
  <use charts/dlna_traffic_data.pdf>
-Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 101.
+Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 107.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/badnetwork_AirPlay_traffic_data.pdf, id=584, 794.97pt x 614.295pt>
+<charts/badnetwork_AirPlay_traffic_data.pdf, id=620, 794.97pt x 614.295pt>
 File: charts/badnetwork_AirPlay_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/badnetwork_AirPlay_traffic_data.pdf>
 Package pdftex.def Info: charts/badnetwork_AirPlay_traffic_data.pdf used on inp
-ut line 105.
+ut line 111.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/badnetwork_dlna_traffic_data.pdf, id=585, 794.97pt x 614.295pt>
+<charts/badnetwork_dlna_traffic_data.pdf, id=621, 794.97pt x 614.295pt>
 File: charts/badnetwork_dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/badnetwork_dlna_traffic_data.pdf>
 Package pdftex.def Info: charts/badnetwork_dlna_traffic_data.pdf used on input 
-line 108.
+line 114.
 (pdftex.def)             Requested size: 204.85974pt x 158.29755pt.
 
-<charts/rating_distribution.pdf, id=586, 505.89pt x 505.89pt>
+<charts/rating_distribution.pdf, id=622, 505.89pt x 505.89pt>
 File: charts/rating_distribution.pdf Graphic file (type pdf)
 
 <use charts/rating_distribution.pdf>
-Package pdftex.def Info: charts/rating_distribution.pdf used on input line 119.
+Package pdftex.def Info: charts/rating_distribution.pdf used on input line 125.
 
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
-<charts/os_version_popularity.pdf, id=588, 505.89pt x 505.89pt>
+<charts/os_version_popularity.pdf, id=624, 505.89pt x 505.89pt>
 File: charts/os_version_popularity.pdf Graphic file (type pdf)
 
 <use charts/os_version_popularity.pdf>
-Package pdftex.def Info: charts/os_version_popularity.pdf used on input line 12
-6.
+Package pdftex.def Info: charts/os_version_popularity.pdf used on input line 13
+2.
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
- [36 <./charts/oneMoreTime_airplay_android.pdf, page is rotated 90 degrees> <./
-charts/oneMoreTime_dlna_android.pdf, page is rotated 90 degrees>] [37 <./charts
-/oneMoreTime_dlna_android_bw_500k.pdf, page is rotated 90 degrees> <./charts/on
-eMoreTime_dlna_android_bw_700k.pdf, page is rotated 90 degrees> <./charts/oneMo
-reTime_dlna_android_bw_1000k.pdf, page is rotated 90 degrees>] [38 <./charts/Ai
-rPlay_traffic_data.pdf, page is rotated 90 degrees> <./charts/AirPlay_traffic_5
-loss_data.pdf, page is rotated 90 degrees> <./charts/AirPlay_traffic_10loss_dat
-a.pdf, page is rotated 90 degrees> <./charts/AirPlay_traffic_15loss_data.pdf, p
-age is rotated 90 degrees>] [39 <./charts/dlna_traffic_data.pdf, page is rotate
-d 90 degrees> <./charts/dlna_traffic_5loss_data.pdf, page is rotated 90 degrees
-> <./charts/dlna_traffic_10loss_data.pdf, page is rotated 90 degrees> <./charts
-/dlna_traffic_15loss_data.pdf, page is rotated 90 degrees>] [40 <./charts/badne
-twork_AirPlay_traffic_data.pdf, page is rotated 90 degrees> <./charts/badnetwor
-k_dlna_traffic_data.pdf, page is rotated 90 degrees>] <charts/session_world_map
-.pdf, id=680, 794.97pt x 614.295pt>
+ [38 <./charts/dlna_traffic_data.pdf, page is rotated 90 degrees> <./charts/dln
+a_traffic_5loss_data.pdf, page is rotated 90 degrees> <./charts/dlna_traffic_10
+loss_data.pdf, page is rotated 90 degrees> <./charts/dlna_traffic_15loss_data.p
+df, page is rotated 90 degrees>] [39 <./charts/AirPlay_traffic_data.pdf, page i
+s rotated 90 degrees> <./charts/AirPlay_traffic_5loss_data.pdf, page is rotated
+ 90 degrees> <./charts/AirPlay_traffic_10loss_data.pdf, page is rotated 90 degr
+ees> <./charts/AirPlay_traffic_15loss_data.pdf, page is rotated 90 degrees>] [4
+0 <./charts/badnetwork_AirPlay_traffic_data.pdf, page is rotated 90 degrees> <.
+/charts/badnetwork_dlna_traffic_data.pdf, page is rotated 90 degrees>]
+<charts/session_world_map.pdf, id=683, 794.97pt x 614.295pt>
 File: charts/session_world_map.pdf Graphic file (type pdf)
 
 <use charts/session_world_map.pdf>
-Package pdftex.def Info: charts/session_world_map.pdf used on input line 131.
+Package pdftex.def Info: charts/session_world_map.pdf used on input line 137.
 (pdftex.def)             Requested size: 398.33858pt x 307.81224pt.
 
-<charts/receiver_popularity.pdf, id=681, 844.34906pt x 560.50125pt>
+<charts/receiver_popularity.pdf, id=684, 844.34906pt x 560.50125pt>
 File: charts/receiver_popularity.pdf Graphic file (type pdf)
 
 <use charts/receiver_popularity.pdf>
-Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 136.
+Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 142.
 
 (pdftex.def)             Requested size: 385.77701pt x 256.0748pt.
 
-<charts/country_popularity.pdf, id=682, 505.89pt x 505.89pt>
+<charts/country_popularity.pdf, id=685, 505.89pt x 505.89pt>
 File: charts/country_popularity.pdf Graphic file (type pdf)
 
 <use charts/country_popularity.pdf>
-Package pdftex.def Info: charts/country_popularity.pdf used on input line 141.
+Package pdftex.def Info: charts/country_popularity.pdf used on input line 147.
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
-<charts/sessions_per_day.pdf, id=683, 505.89pt x 505.89pt>
+<charts/sessions_per_day.pdf, id=686, 505.89pt x 505.89pt>
 File: charts/sessions_per_day.pdf Graphic file (type pdf)
 
 <use charts/sessions_per_day.pdf>
-Package pdftex.def Info: charts/sessions_per_day.pdf used on input line 147.
+Package pdftex.def Info: charts/sessions_per_day.pdf used on input line 153.
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 ) [41 <./charts/rating_distribution.pdf>]
 [42 <./charts/os_version_popularity.pdf> <./charts/session_world_map.pdf>]
@@ -1860,17 +1863,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
 (rerunfilecheck)             Checksum: 3FBB4E819110FA958123BF548B8EE53B;2483.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 17926 strings out of 493308
- 335050 string characters out of 6137816
- 809453 words of memory out of 5000000
- 20789 multiletter control sequences out of 15000+600000
+ 17928 strings out of 493308
+ 335071 string characters out of 6137816
+ 809567 words of memory out of 5000000
+ 20791 multiletter control sequences out of 15000+600000
  26898 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,10n,58p,976b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1889,10 +1888,10 @@ ist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (53 pages, 1483462 bytes).
+Output written on thesis_peng.pdf (53 pages, 1484893 bytes).
 PDF statistics:
- 1157 PDF objects out of 1200 (max. 8388607)
- 957 compressed objects within 10 object streams
+ 1160 PDF objects out of 1200 (max. 8388607)
+ 960 compressed objects within 10 object streams
  196 named destinations out of 1000 (max. 500000)
  485 words of extra memory for PDF output out of 10000 (max. 10000000)
 

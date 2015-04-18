@@ -36,9 +36,7 @@ be buffered at the top network speed at the beginning of the playback.
 Therefore, there is a short download period at the beginning of DLNA's
 graph. \\ 
 \\
-Next, we try to limit the bandwidth and evaluate the performance change using
-two solutions. We limited the bandwidth to 500kbps, 700kbps and 1000kbps
-respectively and got Figure \ref{dlna_traffic_bw}:\\
+Then, we try to limit the bandwidth and evaluate the performance change using these two solutions. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and got Figure \ref{dlna_traffic_bw} for streaming a mp3 music to Kodi using DLNA standard:\\
 
 \begin{figure}
 \hfill
@@ -55,6 +53,28 @@ limit]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android}}
 bandwidth constrained situation\label{dlna_traffic_bw}}
 \end{figure}
 
+According to Figure \ref{dlna_traffic_bw}, the initial loading speed is dependent on the bandwidth of network. When there is not limit of bandwidth, the loading speed is the fastest among all the four network conditions. When the network bandwidth is limited, as the bandwidth of network increases, the initial loading speed is increasing accordingly. This proved that in DLNA streaming, since HTTP streaming is used, most of the content is fully downloaded in the initial phase of streaming. The quality of steaming can be guaranteed when the initial buffer is finished. The receiver will take the buffered content and play locally.\\
+\\
+On the other hand, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets can be delivered to the receiver, it is a best-effort transmission. When the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted, all music information is lost since the too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly, the playback is cut and choppy. After the bandwidth is increased to 1000 kbps, the music can work properly and basically no noise can be heard.\\
+\\
+Next step, we simulated packet loss for DLNA and AirPlay streaming, 5\%, 10\% and 15\% packet loss are adopted separately for DLNA and AirPlay streaming. The result of DLNA streaming is shown in Figure \ref{dlna_pl}. 
+\begin{figure}
+\hfill
+\subfigure[No
+limit]{\includegraphics[width=7.2cm]{charts/dlna_traffic_data}}
+\hfill
+\subfigure[5
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_5loss_data}}
+\hfill
+\subfigure[10
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_10loss_data}}
+\hfill
+\subfigure[15
+percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_15loss_data}}
+\hfill
+\caption{DLNA streaming performance in terms of packet loss \label{dlna_pl}}
+\end{figure}
+According to Figure \ref{dlna_pl},
 
 \begin{figure}
 \hfill
@@ -70,26 +90,12 @@ percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_10loss_data}}
 \subfigure[15
 percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_15loss_data}}
 \hfill
-\caption{AirPlay streaming performance in terms of packet loss \label{multiavp}}
+\caption{AirPlay streaming performance in terms of packet loss \label{airplay_pl}}
 \end{figure}
 
 
-\begin{figure}
-\hfill
-\subfigure[No
-limit]{\includegraphics[width=7.2cm]{charts/dlna_traffic_data}}
-\hfill
-\subfigure[5
-percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_5loss_data}}
-\hfill
-\subfigure[10
-percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_10loss_data}}
-\hfill
-\subfigure[15
-percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_15loss_data}}
-\hfill
-\caption{DLNA streaming performance in terms of packet loss \label{multiavp}}
-\end{figure}
+
+
 
 
 
