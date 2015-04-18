@@ -110,7 +110,7 @@ the NOTIFY message before the previous message expires. When the device or a ser
 The control point can search for devices actively by multicasting an SSDP Search message. Other devices 
 in the network will respond to the search message by unicasting directly to the requesting control point. 
 \item Description \\ 
-The discovery message contains the URL(Uniform resource Locater) of the description information. A control point can send a HTTP GET request based on this URL to get a detailed UPnP description of the device. The description includes the device description and several service descriptions. 
+The discovery message contains the URL(Uniform resource Locater) of the description information. A control point can send an HTTP GET request based on this URL to get a detailed UPnP description of the device. The description includes the device description and several service descriptions. 
 
 A device description includes vendor related information such as model name, serial number and 
 manufacture name. A device may have many services. For each service, the device description lists 
@@ -567,13 +567,13 @@ The DIAL Service Discovery protocol is based on Simple Service Discovery
 Protocol (SSDP), which is defined as part of UPnP device architecture discussed 
 in \ref{upnp}. 
 
-A DIAL client will first send an M-Search request, which includes  the Search Target 
+A DIAL client will firstly send an M-Search request, which includes  the Search Target 
 header, over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. After that the SSDP/UPnP server responds with a response message including a LOCATION header 
 containing an absolute HTTP URL for the UPnP description of the root device. 
 When receiving the M-SEARCH response, the DIAL client then sends an HTTP GET 
 request to the URL found in the LOCATION header of the M-SEARCH response, to 
 get a prospected HTTP response message containing a XML format UPnP device description. The 
-overall flow of DIAL discovery is shown in figure \ref{dial_discovery}. 
+overall flow of DIAL discovery is shown in Figure \ref{dial_discovery}. 
 
 \begin{figure}[htb] \centering 
 \includegraphics[height=9cm]{charts/dial_discovery} 
@@ -592,19 +592,19 @@ A DIAL client sends an HTTP GET request to the application resource URL.
 The server receiving the request then extract the application name and check if the 
 application is installed or not. If the application is not recognized, the 
 server will either return 404 Not Found or trigger the installation of this specific 
-application. If the application has been installed, the DIAL server return 
+application. If the application has been installed, the DIAL server returns 
 an HTTP response with 200 OK and a body contains MIME type in XML. 
 
-The client then sends a HTTP POST request to the application resource URL to 
+The client then sends an HTTP POST request to the application resource URL to 
 launch the desired application. On receipt of a valid POST request, the DIAL 
 server will extract the application name, run the application, and then send 
-a HTTP response with the LOCATION header, to inform the absolute HTTP URL, which 
+an HTTP response with the LOCATION header, to inform the absolute HTTP URL, which 
 identifies the running instance of the application. 
 
 The first-screen application can also send small amount of data to the DIAL 
-server, and then DIAL server can send the information to DIAL clients. 
-After the application is launched and communication is established, the DIAL 
-client can communicate directly with the application. The flow chart of  the DIAL REST service is  shown as figure \ref{dial_rest}. 
+server, and then the DIAL server can send the information to DIAL clients. 
+After the application is launched and the communication is established, the DIAL 
+client can communicate directly with the application. The flow chart of  the DIAL REST service is  shown in Figure \ref{dial_rest}. 
 
 \begin{figure}[htb] \centering \includegraphics[height=9cm]{charts/dial_rest} 
 \caption{DIAL REST service: application launch \label{dial_rest}} 
@@ -615,12 +615,12 @@ client can communicate directly with the application. The flow chart of  the DIA
 
 Miracast \cite{miracast_industry} is very different on technology perspective.
 Devices which utilizing Miracast technology are not necessarily connected to
-the same local network, Wi-Fi peer to peer connection will be created when
+the same local network, a Wi-Fi peer to peer connection will be created when
 needed. This makes Miracast more adaptive than other technologies, in other
 words, Miracast is not limited to the pre-configured network infrastructure.\\
 \\
 Another point worth mentioning is that Miracast utilizes many Wi-Fi alliance
-building blocks that is constantly developed over the years. These components
+building blocks that are constantly developed over the years. These components
 include Wi-Fi CERTIFIED n (improved throughput and coverage), Wi-Fi Direct
 (device-to- device connectivity), Wi-Fi Protected Access 2 (WPA2) (security),
 Wi-Fi Multimedia (WMM) (traffic management) and Wi-Fi Protected Setup. These
@@ -631,14 +631,15 @@ Not limited to Wi-Fi direct connection, some Miracast devices also support Tunne
 \\
 In most cases, Miracast connections are expected to be predominantly established between Wi-Fi devices connected with each other directly, without an AP acting as an intermediary. When two devices connect with each other directly, one fulfills its role as the source(the transmitting device) and the other functions as a display(the device receiving and rendering the content to the user).\\
 \\
-There are 4 typical topologies that are supported by Miracast. The  Source could directly connect to Display without AP present, or the Source with access to AP and direct connect to Display, or the source could directly connect to Display with AP present, but not connected, or the Source and Display could connect to each other and connect to AP at the same time. These four topologies can be described as in Figure  \ref{miracast_model}.
+There are 4 typical topologies that are supported by Miracast. The  Source could directly connect to the Display without AP present, or the Source with access to AP and direct connect to the Display, or the source could directly connect to the Display with AP present, but not connected, or the Source and the Display could connect to each other and connect to AP at the same time. These four topologies can be described as in Figure  \ref{miracast_model}.
 
 \begin{figure}[htb] \centering 
 \includegraphics[height=14cm]{charts/miracast_model} 
 \caption{Miracast topologies \label{miracast_model}} 
 \end{figure} 
 
-On technology perspective, as mentioned previously, Miracast is built upon many different Wi-Fi technologies. These technologies are built together in an architecture that can be described by Figure \ref{miracast_architect}. 
+On technology's perspective, as mentioned previously, Miracast is built upon
+many different Wi-Fi technologies. These technologies are built together in an architecture that can be described by Figure \ref{miracast_architect}. \\
 
 \begin{figure}[htb] \centering 
 \includegraphics[height=5cm]{charts/miracast_technology_architecture} 
@@ -672,10 +673,10 @@ Source and display devices discover each other prior to connection setup. The De
 Source and display devices discover each other's Miracast capabilities prior to connection setup. The Service discovery mechanism is defined in the Wi-Fi P2P specification. \\
 \\
 \textbf{Device selection}\\
-A remote device is selected for connection setup. User input and local policies may be used to decide which device is a display and which is a source. \\
+A remote device is selected for connection setup. The user input and the local policies may be used to decide which device is a display and which is a source. \\
 \\
 \textbf{Connection setup} \\
-Connection setup selects a method (Wi-Fi Direct or TDLS) to manage the connection. Wi-Fi Direct sets up a group owner and client to initiate a device-to-device link. A WPA2 single-hop link with selected devices is established. Upon the establishment of connectivity between the source and display devices, the display initiates a Transmission Control Protocol (TCP) connection, with a control port using Real-Time Streaming Protocol (RTSP) to create and manage the sessions between source and display devices. \\ 
+Connection setup selects a method (Wi-Fi Direct or TDLS) to manage the connection. Wi-Fi Direct sets up a group owner and client to initiate a device-to-device link. A WPA2 single-hop link with selected devices is established. Upon the establishment of connectivity between the source and display devices, the display initiates a Transmission Control Protocol (TCP) connection, with a control port using Real-Time Streaming Protocol (RTSP) to create and manage the sessions between the source and the display devices. \\ 
 \\
 \textbf{Capability negotiation} \\
 Source and display devices determine the parameters for the Miracast session. \\ 
@@ -689,13 +690,13 @@ Upon completion of capability negotiation, the source and display devices setup 
 using Moving Picture Experts Group 2 Transport Stream (MPEG2-TS) coding and encapsulated by Real-Time Protocol (RTP) User Datagram Protocol (UDP) and Internet Protocol (IP). Finally, IEEE 802.11 packetization enables the source device to send content to the display device. \\
 \\
 \textbf{User input back channel setup (optional)}\\
-A User Interface Back Channel(UIBC) for transmitting control and data information related to user interaction with the user interface is set up. User inputs at a display are packetized using a UIBC packet header and transported using Transmission Control Protocol/Internet Protocol (TCP/IP).\\
+Optionally, There could be a User Interface Back Channel(UIBC) for transmitting control and data information related to user interaction with the user interface. User inputs at a display are packetized using a UIBC packet header and transported back using Transmission Control Protocol/Internet Protocol (TCP/IP).\\
 \\
 \textbf{Payload control}\\
-When the payload transfer starts, devices may adapt transmission parameters on the basis of channel conditions and power     consumption. Adaptation can be achieved by: Compression ratio change and macroblock skipping (using the H.264 standard); Frame skipping (if the display device supports this functionality, the source device may skip some of the frames to be transmitted according to the current resolution); Format change. \\
+When the payload transfer starts, devices may adapt transmission parameters on the basis of channel conditions and power     consumption. Adaptation can be achieved by either compression ratio change and macroblock skipping (using the H.264 standard) or frame skipping (if the display device supports this functionality, the source device may skip some of the frames to be transmitted according to the current resolution) or format change. \\
 \\ 
 \textbf{Display session teardown} \\
-Either the source or the display terminates the Miracast session.
+Either the source or the display can terminate the Miracast session.
 \subsubsection{Other protocols}
 Apart from all the mentioned standards above, many other companies or associations 
 also developed their own proposals, such as SonosNet \cite{sonosnet} that is 
@@ -703,70 +704,72 @@ based on peer to peer network and Spotify Connect \cite{spotifyconnect}. With al
 
 \subsection{Comparison of existing solutions} 
 \subsubsection{History} 
-\begin{itemize} 
-\item[--]DLNA is proposed by several leading consumer electronic manufactures based on the UPnP 
+DLNA is proposed by several leading consumer electronic manufactures based on the UPnP 
 technology. From early 2000s on, over 2.2 billion devices with DLNA have been shipped, 
-making it possible to share audio and video seamlessly among different smart devices. Moreover, the DLNA alliance had been holding two meetings annually to discuss the marketing and development related issues, making DLNA a more and more accomplished standard. 
-
-\item[--]AirPlay, on the other hand, is proposed by Apple Inc. After departing the DLNA alliance in 2010, Apple proposed AirPlay, which brought more advanced features such as screen mirroring, RAOP audio streaming and some authentication functionalities. 
-\item[--]Miracast is a most recent technology. It was formerly known as Wi-Fi Display, which was originally proposed in 2012 by the Wi-Fi alliance. Different than AirPlay and DLNA, it is not based on home AP but Wi-Fi direct instead. It provides a screen-mirroring feature that resembles Apple's AirPlay Mirroring. Now it has gained great popularity among manufactures and software ventures alike. For instance, Google has launched its Android 4.2 with native support for Miracast. The latest Kitkat Android 4.4 has even been certified as Miracast compatible, by the Wi-Fi alliance according to the Wi-Fi Display Specification. It is now commonly acknowledged that this standard will soon become very popular in multi-screen sharing market. 
-\item[--]Chromecast or Google cast is another new technology in 
+making it possible to share audio and video seamlessly among different smart devices. Moreover, the DLNA alliance had been holding two meetings annually to discuss the marketing and development related issues, making DLNA a more and more accomplished standard. \\
+\\
+AirPlay, on the other hand, is proposed by Apple Inc. After departing the DLNA alliance in 2010, Apple proposed AirPlay, which brought more advanced features such as screen mirroring, RAOP audio streaming and some authentication functionalities. \\
+\\
+Miracast is a most recent technology. It was formerly known as Wi-Fi Display, which was originally proposed in 2012 by the Wi-Fi alliance. Different from AirPlay and DLNA, it is not based on home AP but Wi-Fi direct instead. It provides a screen-mirroring feature that resembles Apple's AirPlay Mirroring. Now it has gained great popularity among manufactures and software ventures alike. For instance, Google has launched its Android 4.2 with native support for Miracast. The latest Kitkat Android 4.4 has even been certified as Miracast compatible, by the Wi-Fi alliance according to the Wi-Fi Display Specification. It is now commonly acknowledged that this standard will soon become very popular in multi-screen sharing market. \\
+\\
+Chromecast or Google cast is another new technology in 
 market. Released in 2013, a piece of 2.83-inch (72 mm) dongle hardware, which utilizes the Google cast standard, has become a hot topic recently. With a 35\$ price tag, it has been ranked as the most 
 popular device of its kind. The Google cast standard was proposed with the joint effort of 
 Google and Netflix. Since they are Internet companies, this standard has been 
-designed with Cloud in mind. With the support of Cloud, the content is directly streamed from YouTube or Netflix servers to the Chromecast dongle. One thing worth mentioning is that when using dangle, any applications running on mobile platforms are just acting as a control points. Dangle also provides features like browser mirroring. For example, with a Chromecast plugin, a Chrome browser can stream its web tab to dangle who transfer the signal to a big screen TV. In a foreseeable future, the Google cast standard could become more and more popular. 
-\end{itemize} 
+designed with Cloud in mind. With the support of Cloud, the content is directly streamed from YouTube or Netflix servers to the Chromecast dongle. One thing worth mentioning is that when using the dangle, any applications running on mobile platforms are just acting as a control points. The dangle also provides features like browser mirroring. For example, with a Chromecast plugin, a Chrome browser can stream its web tab to the dangle who transfer the signal to a big screen TV. In a foreseeable future, the Google cast standard could become more and more popular. 
 \subsubsection{Market} 
-\begin{itemize} 
-\item[--]DLNA is one of the first proposed solutions for multimedia home 
+DLNA is one of the first proposed solutions for multimedia home 
 networking, thus it is so far the most accepted one. Figure 
 \ref{dlna_market} shows the history and prediction of the DLNA-certified device sales. In 2018, the 
-sales will reach 7.32 billion, nearly the same as the human population on earth. 
-
+sales will reach 7.32 billion, nearly the same as the human population on earth. \\
+\\
 \begin{figure}[htb] 
 \centering \includegraphics[height=9cm]{charts/dlna_market} 
 \caption{Cumulative Global DLNA-Certified Device sales \label{dlna_market}} 
 \end{figure} 
 
-\item[--]AirPlay is bundled with Apple products. With great sales of Apple TV, Airport Express, 
-Mac, iPhone, iPad, iPod, many families have become accustomed to use Apple's product for everything. In this sense AirPlay has become the easiest way to build home networking solutions. Moreover, it could be the only solution for Apple users, since a lot of speaker manufactures implement their own AirPlay receiver on their AirPlay compatible speakers. And indeed AirPlay provides enough easy to use features for daily usage. 
-\item[--]Bundled with Android operating system, Miracast has experienced a fast growth in 
-the past two years. Many TVs have been built with Miracast support, to accept peer-to-peer Wi-Fi direct connection. 
-\item[--]Chromecast dongle is a cheap device that everyone wants to try. It can be used to easily upgrade an old TV to a "Smart TV".  What's more, since Google has provided good content support for Chromecast dongle, it has soon been accepted by huge amount of users. 
-\end{itemize} 
+AirPlay is bundled with Apple products. With great sales of Apple TV, Airport Express, 
+Mac, iPhone, iPad, iPod, many families have become accustomed to use Apple's product for everything. In this sense AirPlay has become the easiest way to build home networking solutions. Moreover, it could be the only solution for Apple users, since a lot of speaker manufactures implement their own AirPlay receiver implementations on their AirPlay compatible speakers. And indeed AirPlay provides enough easy to use features for daily usage. \\
+\\
+Bundled with Android operating system, Miracast has experienced a fast growth in 
+the past two years. Many latest TVs have been built with Miracast support, to accept peer-to-peer Wi-Fi direct connection. \\
+\\
+Chromecast dongle is a cheap device that everyone wants to try. It can be used to easily upgrade an old TV to a "Smart TV".  What's more, since Google has provided good content support for Chromecast dongle, it has soon been accepted by huge amount of users. \\
+\\
+In Chapter \ref{chapter4}, we will have a presentation of the popularity of different standards according to the result of our solution.
 
 \subsubsection{Technology feature} 
 \begin{enumerate} 
 \item Media format support \\ 
 AirPlay and Chromecast has very limited media format support, since there are 
-only limited Apple device types. For example, Chromecast has only released 2 devices so far and there is not much change in the media format. Similarly Apple TV, even in its third generation,  has merely seen the improvements in its high definition supports, rather than the changes in media format support.  \\
+only limited device types. For example, Chromecast has only released 2 devices so far and there is not much change in the media format. Similarly Apple TV, even in its third generation,  has merely seen the improvements in its high definition supports, rather than the changes in media format support.  \\
 \\
-In contrast, DLNA not only specified mandatory media formats such as LPCM, JPEG  and MP4, but provided a lot more optional media formats in its specifications as well. \\
+In contrast, DLNA not only specifies mandatory media formats such as LPCM, JPEG  and MP4, but provides a lot more optional media formats in its specifications as well. \\
 \\
-Since Miracast is a screen mirroring technology, all formats that can be played on a device are supported in Miracast streaming. Consequently, there is no mandate on media format in Miracast.  
+Since Miracast is a screen mirroring technology, all formats that can be played on the device are supported in Miracast streaming. Consequently, there is no mandate on media format in Miracast.  
 
 \item Networking technologies used \\ 
 
 A short technology specification comparison is made to help better understand
-the existing solutions. Table \ref{Table1} below shows the main technology used 
+the existing solutions. Table \ref{Table1} shows the main technology used 
 in different popular solutions. 
 %% table 1, compare technology 
 \begin{table}[htb] 
-\caption{Technology used comparison\label{Table1}} 
+\caption{Comparison of used technologies\label{Table1}} 
 \begin{center} 
 \fbox{ 
 \begin{tabular}{c|l|l|l}  
 \textbf{ } & Device discovery & Control Protocol & Streaming protocol \\ \hline 
-\textbf{DLNA} & SSDP & UPnP & HTTP \\ \hline 
-\textbf{AirPlay} & Multicast DNS & HTTP & HTTP/RTSP \\ \hline 
-\textbf{DIAL} & SSDP & Chromecast & HTTP \\ \hline 
-\textbf{Miracast} & Wi-Fi direct &  & Wi-Fi direct 
+\textbf{DLNA} & SSDP & UPnP/HTTP & HTTP \\ \hline 
+\textbf{AirPlay} & Multicast DNS & HTTP/RTSP & HTTP/RTP \\ \hline 
+\textbf{DIAL} & SSDP & DIAL/HTTP & HTTP \\ \hline 
+\textbf{Miracast} & Wi-Fi direct & RTSP & RTP 
 \end{tabular} 
 } 
 \end{center} 
 \end{table} 
 
-Compared to some standards which only provide basic features, others also offer advanced 
+Compared to some standards, for instance, DLNA, which only provide basic features, other standards, for example, AirPlay, also offer advanced 
 features, including screen mirroring. Table \ref{Table2} below shows 
 the advanced features provided by different solutions
 %% table 2, compare advance feature 
@@ -789,6 +792,6 @@ the advanced features provided by different solutions
 
 According to the comparison, each standard has its own features and uses 
 different protocols to communicate. There are, however, many common features and protocols that are supported by most standards. For example, the HTTP protocol is frequently used to handle video 
-and photo streaming, by many streaming solutions. Another example is that the UPnP device discovery protocol SSDP is commonly used for device discovery. \\
+and photo streaming, by many streaming solutions. Another example is that SSDP, the discovery protocol used by the UPnP devices, is commonly used for device discovery for many other standards. \\
 \\
 Since multiple standards share the commonly used protocols in their implementations, it is possible to make an application that is aware of all these common protocols. In this sense, making such a mobile application to connect multiple types of devices in a home network can be a good solution to home-networking interoperability. 
