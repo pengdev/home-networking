@@ -14,7 +14,7 @@ devices. On the other hand, most home network users
 to manually set up the more advanced
  network features to achieve certain degree of device interoperability. Plus
  most of these network infrastructures are not designed to be easily
- configured. Due to these reasons, building interoperability among different
+ configured. Due to these reasons, building interoperability among different 
  devices through a mobile device seems to be the most straightforward solution,
  for mobile devices can serve as a very flexible and programmable portal for
  home-networking.  Other advantages of mobile devices include their great
@@ -37,12 +37,12 @@ in\ref{upnp}, UPnP/DLNA devices and DIAL devices use Simple Service Discovery Pr
 The content management component is responsible for organizing and
  navigating multimedia contents that can be discovered in the home network. In our solution, these content sources include both the local storage of smart phones and DLNA digital media servers that are connected to home network. As long as the discovered device belongs to the three device types that we support, its content could be streamed using our application solution.\\
 \\
-The streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes, etc. In a typical home networking environment, DLNA , AirPlay video/ photo and Chromecast all use HTTP streaming. The only exception, the AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, we integrate two types of media servers inside our application solution. With our application, the built-in RAOP server would handle the AirPlay music streaming and the built-in HTTP media server would handle streaming of all other types.
+The streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes, etc. In a typical home networking environment, DLNA, AirPlay video/photo and Chromecast all use HTTP streaming. The only exception, the AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, we integrate two types of media servers inside our application solution. With our application, the built-in RAOP server would handle the AirPlay music streaming and the built-in HTTP media server would handle streaming of all other types.
 
 \subsection{Implementation}
-Since the application is built upon the Android platform, we conducted studies on the Android system architecture and the Android Software Development Kit (SDK). Thankfully, the Android SDK provides many useful Application Programming Interfaces (APIs) and grants crucial permissions to access necessary services and hardware features, such as the permission to access the Internet , the permission to access the WiFi device state change, the permission to allow WiFi multicast and  the permission to read phone storage. The programming language used in developing our Android Application is Java. However some CPU-intensive works, such as transcoding, have to be implemented in C and then embedded to the application using the Android Native development kit (NDK).\\
+Since the application is built upon the Android platform, we conducted studies on the Android system architecture and the Android Software Development Kit (SDK). Thankfully, the Android SDK provides many useful Application Programming Interfaces (APIs) and grants crucial permissions to access necessary services and hardware features, such as the permission to access the Internet , the permission to access the WiFi device state change, the permission to allow WiFi multicast and  the permission to read phone storage. The programming language used in developing our Android Application is Java. However some CPU-intensive works, such as transcoding, have to be implemented in C and then embedded to the application using the Android Native Development Kit (NDK).\\
 \\
-Since Apple has not provided its official specification for AirPlay, our implementation for supporting AirPlay is mostly written under unofficial guidelines. However, Apple has provided its official Multicast DNS (mDNS) implementation. Thus, this piece of code is reused and compiled as a shared native library. Similar with the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
+Since Apple has not provided its official specification for AirPlay, our implementation for supporting AirPlay is mostly written under unofficial guidelines. However, Apple has provided its official Multicast DNS (mDNS) implementation in C. Thus, this piece of code is reused and compiled as a shared native library. Similar with the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
  also implemented under unofficial guidelines. To be specific, the RAOP supporting component includes a UDP server and a TCP control channel.\\
 \\
 With Tuxera being a member of DLNA , we are able to access the detailed specifications and test tools for DLNA. Moreover,  there are a lot of open source UPnP/DLNA
@@ -62,7 +62,7 @@ In order to serve media for all the receivers from both online and local storage
 \\
 After investigating and comparing multiple server implementations on Android, we
 concluded that NanoHTTPD is the ideal choice for our solution, because NanoHTTPD is easy to use,
-Apache licensed, very tiny and efficient. Since NanoHTTPD is minimally implemented, it is easy to be modified and extended. With NanoHTTPD , additional headers can be easily added to make the server implementation compatible with DLNA receivers. Besides, a proxy is also easy to integrate with  NanoHTTPD.\\
+Apache licensed, very tiny and efficient. Since NanoHTTPD is minimally implemented, it is also easy to be modified and extended. With NanoHTTPD , additional headers can be easily added to make the server implementation compatible with DLNA receivers. Besides, a proxy is also easy to integrate with  NanoHTTPD.\\
 \\
 Taking all these technical details into consideration, we devised a simplified
 architecture for our implementation, which is shown in Figure \ref{chart3}.
@@ -88,7 +88,7 @@ Finally, if the streamed content locates in a DLNA Digital Media Server, then th
 In terms of UI and UX, the application should be simple enough to use. Users should be able to locate the media, browse
  content on different sources, and follow the data flow between devices without any difficulty. The control of different devices should also be intuitive so that the inter-operation between different devices can be seamless.\\
 \\
-A multimedia home networking solution should be content centric so that user can easily navigate through different sources. The application is designed similar to a multimedia player. A cast button is added at the top of the application to make it easier to select cast devices. The content is categorized into 4 sections: music, video, photo and online sources. In Android, since the system provides share intent method for inter-activity communication, an interface is also made to manage share intents from other activities. The selected receiver is designed to be visible to user from everywhere inside the application. \\
+A multimedia home networking solution should be content centric so that user can easily navigate through different sources. The application is designed similar to a multimedia player. A cast button is added at the top of the application to make it easier to select cast devices. The content is categorized into 4 sections: music, video, photo and online sources. In Android, since the system provides share intent method for inter-activity communication, an interface is also made to manage share intents from other activities, which enables streaming from other on-line content providers. The selected receiver is designed to be visible to user from everywhere inside the application. \\
 \\
 Bearing all these considerations in mind, the final appearance of the application becomes simple and effective. Figure \ref{chart5} shows the final design of our application.
 \begin{figure}[htb]
@@ -122,13 +122,12 @@ These tests included unit test, integration test and functional test.
 Unit tests were conducted while coding the application. When each class was finished, unit tests would be written for each method. We also set up an continuous integration server so that each time we commit anything to the git repository, full set of unit tests would be executed. If there were any failure in the unit tests, developer would be immediately notified. Integration tests were done in such a way that we ensured each function module work together with other modules in the system. Lastly, we listed all the possible use cases in paper and prepare a huge media base which contains all kind of media files. With all these preparations ready, manual tests were conducted before the app is finally released in the market.
 
 \subsection{Evaluation methodology}
-The evaluation of this application includes two parts. The first part involves experiment
-s
+The evaluation of this application includes two parts. The first part involves experiments
 that help evaluate the application performance. The second part invovles a study on the application usage in the market and user feedbacks.
 
 \subsubsection{Experimental setup}
 The test environment is set up as in Figure \ref{setup}. The XBMC
-media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using the 802.11 g wireless interface. \\
+media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using the 802.11 ac wireless interface. \\
 \begin{figure}[htb]
 \centering \includegraphics[height=7cm]{charts/experiment_setup}
 \caption{Experiment setup \label{setup}}
@@ -143,12 +142,12 @@ When the test starts, the same content will be streamed to receivers using two d
 \\
 3 parameters are taken into consideration when conducting the tests: bandwidth, packet loss and delay. 
 \subsubsection{User study and feedback collection}
-Since the product is targeted to Android market and is directly used by end users, user feedback is really important to us for improving the product continuously. Email is used for normal communication between user and our support. A submission window is built inside the application, so that users can easily send feedback to us directly by Email.\\
+Since the product is targeted to Android market and is directly used by end users, user feedback is really important to us for improving the product continuously. Email is used for normal communication between the user and our support. A submission window is built inside the application, so that users can easily send feedback to us directly by Email.\\
 \\
 There is no perfect program, crashes sometimes happen. Thanks to Google, all crash reports are collected and displayed inside developer console. This makes it a lot easier to track and debug our application.\\
 \\
-Inside Streambels, we also integrated Google's Analytics API. The API provided great convenience for us to collect number of users and sessions every day. Other information such as operating system version, application version and the number of active users as well as user feedbacks, have helped us to gain more insight in our application and the market response, making it easier for us to improve the application and do better marketing. 
+Inside Streambels, we also integrated Google's Analytics API. The API provided great convenience for us to collect number of users and sessions every day. Other information such as operating system version, application version and the number of active users as well as user feedbacks, have helped us to gain more insight in our application and the market response, making it easier for us to improve the application and do better marketing.\\ 
 \\
-It is also interesting to see what kind of technologies are most used in their daily life. With the analytics SDK, we could trigger events when user select their receivers. After months of monitoring and statistics collection, we have been able to figure out the most popular standards and most popular online channels .\\
+It is also interesting to see what kind of technologies are most used in their daily life. With the Google analytics SDK, we could trigger events when user select their receivers. After months of monitoring and statistics collection, we have been able to figure out the most popular standards and most popular online channels .\\
 \\
-These valuable information will in turn help our decision making on how we should improve our application. Some of these result will be discussed in chapter 4.
+These valuable information will in turn help our decision making on how we should improve our application. Some of these result will be discussed in Chapter \ref{chapter4}.
