@@ -11,12 +11,11 @@ Hypertext Transfer Protocol (HTTP) refers to the protocol used to deliver web pa
 \\
 Real Time Streaming Protocol (RTSP) is a network control protocol used in entertainment and communications systems to control streaming media servers. RTSP is used to establish and control media sessions between two points, usually server and player client. Clients of media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate real-time control of playback of media files from the server. AirPlay uses RAOP, a RTSP-like streaming protocol, for the streaming of iTunes music. \\
 \\
-Since we have both protocols implemented in our application. We could compare the performance by streaming the same content to two receivers using different protocol. We selected a mp3 music file and try to stream it to an AirPlay Speaker and an DLNA Speaker, and we used Wireshark running on rooted Android phone to capture the packets in the network.\\
+\textbf{Comparison of AirPlay and DLNA traffic}\\
 \\
-The result is presented below, the initial packet count is relatively high. This is because there is a lot multicast messages in the network for device discovery. After that, streaming graph shows that after an initial increase in the traffic, network traffic enters a relatively stable state. This is because the TCP protocol reaches the best optimized transmission speed.\\
+Since we have both protocols implemented in our application. We could compare the performance by streaming the same content to two receivers using different protocol, typically, DLNA music streaming uses HTTP protocol and AirPlay music streaming uses ROAP protocol. We selected a mp3 music file and try to stream it to an AirPlay Speaker and an DLNA Speaker, and we used Wireshark running on rooted Android phone to capture the packets in the network.\\
 \\
-Next, we added packet loss in the network and compare the influence to the two
-streaming process. The result is shown in Figure \ref{airplay_vs_dlna_traffic}:\\
+After the experiment environment is set up, a series of test is conducted and the result is presented in Figure \ref{airplay_vs_dlna_traffic}.
 \begin{figure}
 \hfill
 \subfigure[AirPlay]{\includegraphics[width=7.2cm]{charts/oneMoreTime_airplay_android}}
@@ -26,8 +25,7 @@ streaming process. The result is shown in Figure \ref{airplay_vs_dlna_traffic}:\
 \caption{AirPlay vs DLNA streaming traffic
 comparison \label{airplay_vs_dlna_traffic}}
 \end{figure}
-
-According to Figure \ref{airplay_vs_dlna_traffic}, the stream traffic for
+According to the figure, the stream traffic for
 AirPlay and DLNA streaming is very different. For AirPlay streaming, the traffic
 growth is nearly linear, because the ROAP is a push like process, content can be
 streamed in real time. However, for DLNA streaming, HTTP streaming is a pull
@@ -36,7 +34,9 @@ be buffered at the top network speed at the beginning of the playback.
 Therefore, there is a short download period at the beginning of DLNA's
 graph. \\ 
 \\
-Then, we try to limit the bandwidth and evaluate the performance change using these two solutions. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and got Figure \ref{dlna_traffic_bw} for streaming a mp3 music to Kodi using DLNA standard:\\
+\textbf{Bandwidth limited situation}\\
+\\
+Then, we planned to limit the bandwidth and evaluate the performance change using these two solutions. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and got Figure \ref{dlna_traffic_bw} for streaming a mp3 music to Kodi using DLNA standard.
 
 \begin{figure}
 \hfill
@@ -53,11 +53,17 @@ limit]{\includegraphics[width=7.2cm]{charts/oneMoreTime_dlna_android}}
 bandwidth constrained situation\label{dlna_traffic_bw}}
 \end{figure}
 
-According to Figure \ref{dlna_traffic_bw}, the initial loading speed is dependent on the bandwidth of network. When there is not limit of bandwidth, the loading speed is the fastest among all the four network conditions. When the network bandwidth is limited, as the bandwidth of network increases, the initial loading speed is increasing accordingly. This proved that in DLNA streaming, since HTTP streaming is used, most of the content is fully downloaded in the initial phase of streaming. The quality of steaming can be guaranteed when the initial buffer is finished. The receiver will take the buffered content and play locally.\\
+According to the figure, the initial loading speed is dependent on the bandwidth of network. When there is not limit of bandwidth, the loading speed is the fastest among all the four network conditions. When the network bandwidth is limited, as the bandwidth of network increases, the initial loading speed is increasing accordingly. This proved that in DLNA streaming, since HTTP streaming is used, most of the content is fully downloaded in the initial phase of streaming. The quality of steaming can be guaranteed when the initial buffer is finished. The receiver will take the buffered content and play locally.\\
 \\
-On the other hand, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets can be delivered to the receiver, it is a best-effort transmission. When the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted, all music information is lost since the too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly, the playback is cut and choppy. After the bandwidth is increased to 1000 kbps, the music can work properly and basically no noise can be heard.\\
+On the other hand, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets can be delivered to the receiver, it is a best-effort transmission. The sound quality can not be guaranteed because there is no buffer or retransmission mechanism on the receiver side, the transmission is almost real-time. Given this reason, when the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted, all music information is lost since the too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly, the playback is cut and choppy. After the bandwidth is increased to 1000 kbps, the music can work properly and basically no noise can be heard.\\
 \\
-Next step, we simulated packet loss for DLNA and AirPlay streaming, 5\%, 10\% and 15\% packet loss are adopted separately for DLNA and AirPlay streaming. The result of DLNA streaming is shown in Figure \ref{dlna_pl}. 
+Another thing worth mentioning is that in the experiment, same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not useable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required for DLNA streaming is considerably smaller than AirPlay streaming.\\
+\\
+Generally speaking, DLNA is more tolerant than AirPlay streaming in case of limited bandwidth.\\
+\\
+\textbf{Influence of packet loss}\\
+\\
+Next step, we simulated packet loss on the receiver side and conduct the same test for DLNA and AirPlay streaming. 5\%, 10\% and 15\% packet loss are adopted separately for DLNA and AirPlay streaming. The result of DLNA streaming is shown in Figure \ref{dlna_pl}. \\
 \begin{figure}
 \hfill
 \subfigure[No
@@ -74,8 +80,12 @@ percent loss]{\includegraphics[width=7.2cm]{charts/dlna_traffic_15loss_data}}
 \hfill
 \caption{DLNA streaming performance in terms of packet loss \label{dlna_pl}}
 \end{figure}
-According to Figure \ref{dlna_pl},
-
+\\
+According to the figure, when there is not packet loss, very little retransmission data is seen in the graph. When the packet loss ratio is increased from 5\% to 10\%, the portion of retransmitted data is getting larger and larger, however, there is no noticeable loss of sound quality. But when the packet loss ratio is increased to 15\%, significant amount of retransmission can be found in the graph, and the streaming is cut and wait for buffering three times during one song's playback. In the case of DLNA streaming, packet loss is a key impediment for streaming, when packet loss get worse enough, for instance, in our experiment, 15\% packet loss will make the streaming unusable.\\
+\\
+On the other hand, same experiment with AirPlay streaming was conducted, and the results which is shown in Figure \ref{airplay_pl}. According to the figure, in the case of AirPlay streaming, since UDP is used for music streaming, the ROAP server embedded in Streambels keeps sending data to receiver using UDP regardless of packet loss. On the receiver side, the player tries its best to decode the broken data. There is no mechanism for acknowledgement or retransmission. Surprisingly, the sound quality is much better compared with DLNA streaming. The reason behind is that retransmission of TCP mechanism consumes more and more bandwidth in the case of DLNA streaming, in the same situation, AirPlay streaming tries to deliver all contents in its best effort.\\
+\\
+Totally speaking, in the case of packet loss, AirPlay is more tolerant than DLNA standard.
 \begin{figure}
 \hfill
 \subfigure[No
@@ -94,59 +104,46 @@ percent loss]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_15loss_data}}
 \end{figure}
 
 
-
-
-
-
-
-\begin{figure}
-\hfill
-\subfigure[AirPlay
-normal]{\includegraphics[width=7.2cm]{charts/AirPlay_traffic_data}}
-\hfill
-\subfigure[DLNA normal]{\includegraphics[width=7.2cm]{charts/dlna_traffic_data}}
-\hfill
-\subfigure[AirPlay
-bad
-network]{\includegraphics[width=7.2cm]{charts/badnetwork_AirPlay_traffic_data}}
-\hfill
-\subfigure[DLNA
-bad network]{\includegraphics[width=7.2cm]{charts/badnetwork_dlna_traffic_data}}
-\hfill
-\caption{Comparison of AirPlay and DLNA in bad network conditions
-\label{multiavp}}
-\end{figure}
-
-
 \subsection{Statistics}
-Through 16 months' releasing, our application have achieved 924000 downloads from 223 countries all around the world, with around 10000 daily active users. This means our users almost cover 99% of the earth, a world map of our users is shown in Figure \ref{user_map}. So far, we got ratings from 10253 users, currently the average rating is 3.9 out of 5. The distribution is shown in Figure \ref{ratings}.
-
+Through 16 months' releasing, our application have achieved 924000 downloads from 223 countries all around the world, with around 10000 daily active users. This means our users almost cover 99\% of the earth, a world map of our users is shown in Figure \ref{user_map}. \\
+\\
 \begin{figure}[htb]
-\centering \includegraphics[height=9cm]{charts/rating_distribution}
+\centering \includegraphics[width=14cm]{charts/session_world_map}
+\caption{World map of visits \label{user_map}}
+\end{figure}\\
+\\
+So far, we got ratings from 10253 users, currently the average rating is 3.9 out of 5. The distribution is shown in Figure \ref{ratings}. According to the rating distribution graph, most users are satisfied with our solution and gave 5 stars rating. However, the average rating is heavily influenced by the 1 star rating users. The reason of those unsatisfied users is that it happens that the receiver user have in home is not compatible with our application due to different reasons. It might be protocols are not supported yet, such as Roku box. Network condition problem also contributes to the incompatibility problem, some routers have by default disabled multicast due to security reasons. Another major cause of the incompatibility problem is that even use the same protocol, take DLNA for example, a minor implementation difference may cause the break of connection, thus, in the later phase, we have made receiver specific hacks to make our application work with most DLNA receivers regardless of which implementation they use.\\
+\\
+\begin{figure}[htb]
+\centering \includegraphics[height=7cm]{charts/rating_distribution}
 \caption{Rating distribution\label{ratings}}
-\end{figure}
-
-According to the rating distribution graph, most users are satisfied with our solution and gave 5 stars rating. However, the average rating is heavily influenced by the 1 star rating users. The reason of those unsatisfied users is that it happens that the receiver user have in home is not compatible with our application due to different reasons. It might be protocols are not supported yet, such as Roku box. Network condition problem also contributes to the incompatibility problem, some routers have by default disabled multicast due to security reasons. Another major cause of the incompatibility problem is that even use the same protocol, take DLNA for example, a minor implementation difference may cause the break of connection, thus, in the later phase, we have made receiver specific hacks to make our application work with most DLNA receivers regardless of which implementation they use.
-In terms of user distribution, in 16 months, our application turns out to be popular in countries like France, United States, Germany, United Kingdom and Brazil. The user distribution is shown in Figure \ref{user_country}.
+\end{figure}\\
+\\
+In terms of user distribution, in the last 16 months, our application turns out
+to be popular in countries like France, United States, Germany, United Kingdom
+and Brazil. The user distribution is shown in Figure \ref{user_country}.\\
+\\
+\begin{figure}[htb]
+\centering \includegraphics[height=8cm]{charts/country_popularity}
+\caption{Popularity in different countries \label{user_country}}
+\end{figure}\\
+\\
+We have also translated the description of our application to nine languages:
+ English, Russian, German, Italian, Japanese, French, Chinese, Spanish and Korean. Which may be also an important reason why our users are so international.\\
+\\
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/os_version_popularity}
 \caption{Popularity of different Android versions \label{os_versions}}
 \end{figure}
 
-\begin{figure}[htb]
-\centering \includegraphics[width=14cm]{charts/session_world_map}
-\caption{World map of visits \label{user_map}}
-\end{figure}
+
 
 \begin{figure}[htb]
 \centering \includegraphics[height=9cm]{charts/receiver_popularity}
 \caption{Popularity of receiver types \label{receiver_types}}
 \end{figure}
 
-\begin{figure}[htb]
-\centering \includegraphics[height=9cm]{charts/country_popularity}
-\caption{Popularity in different countries \label{user_country}}
-\end{figure}
+
 
 
 \begin{figure}[htb]
