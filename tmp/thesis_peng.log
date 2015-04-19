@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  19 APR 2015 21:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  19 APR 2015 22:51
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1813,7 +1813,7 @@ File: charts/os_version_popularity.pdf Graphic file (type pdf)
 <use charts/os_version_popularity.pdf>
 Package pdftex.def Info: charts/os_version_popularity.pdf used on input line 13
 5.
-(pdftex.def)             Requested size: 199.17207pt x 199.16928pt.
+(pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
 <charts/receiver_popularity.pdf, id=652, 844.34906pt x 560.50125pt>
 File: charts/receiver_popularity.pdf Graphic file (type pdf)
@@ -1821,14 +1821,18 @@ File: charts/receiver_popularity.pdf Graphic file (type pdf)
 <use charts/receiver_popularity.pdf>
 Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 144.
 
-(pdftex.def)             Requested size: 300.03589pt x 199.16928pt.
+(pdftex.def)             Requested size: 385.77701pt x 256.0748pt.
 
-<charts/sessions_per_day.pdf, id=654, 505.89pt x 505.89pt>
+
+LaTeX Warning: Reference `session_perday' on page 40 undefined on input line 14
+7.
+
+<charts/sessions_per_day.pdf, id=653, 505.89pt x 505.89pt>
 File: charts/sessions_per_day.pdf Graphic file (type pdf)
 
 <use charts/sessions_per_day.pdf>
 Package pdftex.def Info: charts/sessions_per_day.pdf used on input line 150.
-(pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
+(pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--153
 
@@ -1889,8 +1893,18 @@ irPlay_traffic_5loss_data.pdf, page is rotated 90 degrees> <./charts/AirPlay_tr
 affic_10loss_data.pdf, page is rotated 90 degrees> <./charts/AirPlay_traffic_15
 loss_data.pdf, page is rotated 90 degrees>] [41 <./charts/session_world_map.pdf
 >] [42 <./charts/rating_distribution.pdf> <./charts/country_popularity.pdf>]
-[43 <./charts/os_version_popularity.pdf>] [44 <./charts/receiver_popularity.pdf
-> <./charts/sessions_per_day.pdf>]) [45] (./chapters/chapter5.tex
+[43 <./charts/os_version_popularity.pdf>])
+Underfull \hbox (badness 10000) in paragraph at lines 155--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--252
+
+ []
+
+[44 <./charts/receiver_popularity.pdf>] [45 <./charts/sessions_per_day.pdf>]
+(./chapters/chapter5.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--17
 
  []
@@ -1917,13 +1931,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
 (rerunfilecheck)             Checksum: 3FBB4E819110FA958123BF548B8EE53B;2483.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 17913 strings out of 493308
- 334574 string characters out of 6137816
+ 17914 strings out of 493308
+ 334590 string characters out of 6137816
  811486 words of memory out of 5000000
- 20782 multiletter control sequences out of 15000+600000
+ 20783 multiletter control sequences out of 15000+600000
  26898 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,10n,58p,1102b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1942,10 +1960,10 @@ ist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2013/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (54 pages, 1486009 bytes).
+Output written on thesis_peng.pdf (54 pages, 1487066 bytes).
 PDF statistics:
- 1153 PDF objects out of 1200 (max. 8388607)
- 954 compressed objects within 10 object streams
+ 1152 PDF objects out of 1200 (max. 8388607)
+ 953 compressed objects within 10 object streams
  192 named destinations out of 1000 (max. 500000)
  475 words of extra memory for PDF output out of 10000 (max. 10000000)
 
