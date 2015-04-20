@@ -30,8 +30,9 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Experimental setup}{33}{subsubsection.3.7.1}
 \contentsline {subsubsection}{\numberline {3.7.2}User study and feedback collection}{34}{subsubsection.3.7.2}
 \contentsline {section}{\numberline {4}Results}{35}{section.4}
-\contentsline {subsection}{\numberline {4.1}Performance}{35}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Statistics}{41}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.1}Performance evaluation}{35}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}streaming}{35}{subsubsection.4.1.1}
+\contentsline {subsection}{\numberline {4.2}Statistics}{40}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}User study}{44}{subsection.4.3}
 \contentsline {section}{\numberline {5}Discussion}{46}{section.5}
 \contentsline {subsection}{\numberline {5.1}Further development}{46}{subsection.5.1}
