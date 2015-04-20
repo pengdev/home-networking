@@ -35,5 +35,14 @@
 \contentsline {subsection}{\numberline {4.3}User study}{44}{subsection.4.3}
 \contentsline {section}{\numberline {5}Discussion}{46}{section.5}
 \contentsline {subsection}{\numberline {5.1}Further development}{46}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{46}{subsection.5.2}
-\contentsline {section}{References}{47}{section*.7}
+\contentsline {subsubsection}{\numberline {5.1.1}Support for more platforms}{46}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Developing an Software Development Kit}{46}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Integration of receiver functionality}{46}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Support for multi-session}{46}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Optimization for codec}{47}{subsubsection.5.1.5}
+\contentsline {subsection}{\numberline {5.2}Future of multimedia home networking}{47}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Device discovery}{47}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Information exchange}{47}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Streaming protocol}{47}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Internet of things}{47}{subsubsection.5.2.4}
+\contentsline {section}{References}{48}{section*.7}

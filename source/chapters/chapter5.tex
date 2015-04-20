@@ -1,23 +1,25 @@
 %% Discussion chapter
 %% author Liu Peng
 
-Write discussion here.
+The launch of Streambels has been successful, but the problem of multimedia home networking is still not completely solved. More manufacturers still keep developing and pushing new standards to the market. It is not possible to develop and support all the content sources and all the protocols in the future. To improve our solution and solve the problems of home networking, a better understanding and outlook of the future of home networking and accept new challenges.
 
 \subsection{Further development}
-Development of a universal streaming SDK is essential for different
-manufacturers and on-line content providers. (Connect SDK by LG)\\
-\\
-Multi-room and Multi-Session support, stream video and audio to different
-devices with synchronization.\\
-\\
-Kernel level optimization, multimedia transcoding, file system and network layer
-optimization.\\
-\\
-More platforms.
+\subsubsection{Support for more platforms}
+The development on Android has been completed and achieved good result. The next step of developing is to make the solution also work on other platforms. Apple iOS and Microsoft Windows are the other two most popular mobile operating systems used by people. It is essential to firstly move on to iOS first since it has a larger user base. The work on iOS version implementation has already started, the first version currently is already released in the market, we are keep improving it to the same quality as Android version.
+\subsubsection{Developing an Software Development Kit}
+One of the limitations of our solution is that we can only work with limited content sources. There are thousands of content providers out there and it will be impossible to integrate with all content sources by ourselves. An ideal solution would to develop a Software Development Kit (SDK), so the content providers can directly integrate our solution in their software clients, enabling the access to the devices in home networking. Since the release of our Streambels, we have been actively developing this SDK. In the near future our solution will be used by more and more Internet content provides.
+\subsubsection{Integration of receiver functionality}
+Another limitation of our current solution is the content sharing between phones and tablets, sharing content between Android and iOS mobile platforms. In the further development, the receiver functionality is also planed to be integrated to our solution. By developing our own protocol using existing architecture, the compatibility can be guaranteed across different mobile platforms.
+\subsubsection{Support for multi-session}
+In our current solution, only one receiver device can be selected at the same time. However, there is a use case that user may want to stream the same item to different receiver at the same time. There is also a use case that different media items are needed to streamed to different receivers, the multi-session support becomes a valid demand. Further improvements should also take this demand into consideration, and integrate the support for multi-session streaming.
+\subsubsection{Optimization for codec}
+One big problem that is not solved of multimedia home networking is that the codec is quite different from device to device. Having aggregated all content sources, the application should also convert the format of content to a format that is supported by the receiver. In further development, the better transcoding support should be built in our solution.
 \subsection{Future of multimedia home networking}
-\begin{itemize}
-\item[--] Multiple standards may still exist for quite a long time
-\item[--] More devices will support streaming technologies, there will be more interactions between devices like mobile phone and TVs
-\item[--] Cloud and local storage will both work and make it easy for users to access their multimedia content
-\item[--] Internet of things, smart home
-\end{itemize}
+\subsubsection{Device discovery}
+Given all the previous study about different standards in the market, there are mainly two mechanism of service discovery introduced: Simple Service Discovery Protocol(SSDP) and multicast DNS.  
+\subsubsection{Information exchange}
+RESTful will replace XML.
+\subsubsection{Streaming protocol}
+HTTP streaming will become main stream solution while RTSP will be used for real-time streaming.
+\subsubsection{Internet of things}
+More devices will be connected, more information will become available on the Internet.
