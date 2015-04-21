@@ -4,15 +4,15 @@ The top-level auxiliary file: thesis_peng.aux
 The style file: unsrt.bst
 Database file #1: reference.bib
 Warning--entry type for "cling" isn't style-file defined
---line 12 of file reference.bib
+--line 46 of file reference.bib
 Warning--entry type for "spotifyconnect" isn't style-file defined
---line 26 of file reference.bib
+--line 60 of file reference.bib
 Warning--entry type for "sonosnet" isn't style-file defined
---line 34 of file reference.bib
+--line 68 of file reference.bib
 Warning--entry type for "multicastdns" isn't style-file defined
---line 91 of file reference.bib
+--line 125 of file reference.bib
 Warning--entry type for "AirPlay-spec" isn't style-file defined
---line 130 of file reference.bib
+--line 164 of file reference.bib
 Warning--I didn't find a database entry for "??"
 Too many commas in name 1 of "W. Keith Edwards, Rebecca E. Grinter, Ratul Mahajan, David Wetherall" for entry stateofHN
 while executing---line 944 of file unsrt.bst
@@ -22,6 +22,8 @@ Too many commas in name 1 of "John Ritchie, Thomas Kuehnel, Wouter van der Beek,
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Yeon-Joo Oh, Jung-Tae Kim, Eui-Hyun Paik, Kwang-Rog Park" for entry DLNA_proxy
 while executing---line 944 of file unsrt.bst
+Name 1 in "Hatem Hamad, Motaz Saad, and Ramzi Abed" has a comma at the end for entry performance_restful_saop
+while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Kimio Oguchi, Kunio Tojo, Takayoshi Okodo, Yohei Tsuchida, Tomoyuki Yamaguchi, Takahiro Murooka" for entry next_generation
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Kimio Oguchi, Kunio Tojo, Takayoshi Okodo, Yohei Tsuchida, Tomoyuki Yamaguchi, Takahiro Murooka" for entry next_generation
@@ -32,45 +34,45 @@ Too many commas in name 1 of "Jung-Tae Kim, Yeon-Joo Oh, Hoon-Ki Lee, Eui-Hyun P
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Jung-Tae Kim, Yeon-Joo Oh, Hoon-Ki Lee, Eui-Hyun Paik, Kwang-Roh Park" for entry DLNA_proxy2
 while executing---line 944 of file unsrt.bst
-You've used 19 entries,
+You've used 22 entries,
             1791 wiz_defined-function locations,
-            532 strings with 5425 characters,
-and the built_in function-call counts, 3140 in all, are:
-= -- 288
-> -- 68
-< -- 4
-+ -- 35
-- -- 16
-* -- 132
-:= -- 474
-add.period$ -- 48
-call.type$ -- 19
-change.case$ -- 23
+            546 strings with 5915 characters,
+and the built_in function-call counts, 3780 in all, are:
+= -- 351
+> -- 84
+< -- 5
++ -- 42
+- -- 20
+* -- 167
+:= -- 572
+add.period$ -- 57
+call.type$ -- 22
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 167
-empty$ -- 353
-format.name$ -- 16
-if$ -- 740
+cite$ -- 22
+duplicate$ -- 200
+empty$ -- 416
+format.name$ -- 20
+if$ -- 891
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 8
-newline$ -- 89
-num.names$ -- 15
-pop$ -- 65
+int.to.str$ -- 22
+missing$ -- 10
+newline$ -- 104
+num.names$ -- 18
+pop$ -- 71
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 111
+skip$ -- 131
 stack$ -- 0
-substring$ -- 148
-swap$ -- 49
-text.length$ -- 4
+substring$ -- 191
+swap$ -- 60
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 25
-width$ -- 21
-write$ -- 183
-(There were 9 error messages)
+while$ -- 31
+width$ -- 24
+write$ -- 216
+(There were 10 error messages)

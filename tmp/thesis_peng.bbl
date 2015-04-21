@@ -69,6 +69,24 @@ WiFi Alliance.
 \bibitem{cling}
 Cling - java/android upnp library and tools.
 
+\bibitem{zeroconf_vs_upnp}
+Petri Palmila.
+\newblock Zeroconf and upnp techniques.
+\newblock Technical report, Helsinki University of Technology, March 2007.
+
+\bibitem{restful_webservice}
+Frank~Leymann Cesare~Pautasso, Olaf~Zimmermann.
+\newblock Restful web services vs. ``big'' web services: Making the right
+  architectural decision.
+\newblock {\em WWW 2008 / Refereed Track: Web Engineering - Web Service
+  Deployment}, pages 805--814, 2008.
+
+\bibitem{performance_restful_saop}
+Motaz~Saad Hatem~Hamad and Ramzi Abed.
+\newblock Performance evaluation of restful web services for mobile devices.
+\newblock {\em International Arab Journal of e-Technology}, 1(3):72--78,
+  January 2010.
+
 \bibitem{next_generation}
 Takayoshi Okodo Yohei Tsuchida Tomoyuki Yamaguchi-Takahiro~Murooka
   Kimio~Oguchi, Kunio~Tojo.
