@@ -61,13 +61,24 @@ WiFi Alliance.
 \newblock Technical report, WiFi Alliance, September 2012.
 
 \bibitem{sonosnet}
-11 2013.
+Sonos net, 11 2013.
 
 \bibitem{spotifyconnect}
-1 2014.
+Spotigy connect, 1 2014.
 
 \bibitem{cling}
 Cling - java/android upnp library and tools.
+
+\bibitem{dalvik_arch}
+David Ehringer.
+\newblock The dalvik virtual machine architecture.
+\newblock Technical report, 2010.
+
+\bibitem{tux_webserver}
+Stephen P.~Molloy Chuck~Lever, Marius Aamodt~Eriksen.
+\newblock An analysis of the tux web server.
+\newblock Technical report, Center for Information Technology Integration
+  University of Michigan, November 2010.
 
 \bibitem{zeroconf_vs_upnp}
 Petri Palmila.
