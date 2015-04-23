@@ -9,11 +9,11 @@
 \contentsline {section}{\numberline {2}Background}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Available protocols}{5}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}UPnP}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}Universal Plug and Play}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}DLNA}{12}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{14}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}DIAL}{17}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{18}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{19}{subsubsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.6}Other protocols}{23}{subsubsection.2.2.6}
 \contentsline {subsection}{\numberline {2.3}Comparison of existing solutions}{23}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}History}{23}{subsubsection.2.3.1}

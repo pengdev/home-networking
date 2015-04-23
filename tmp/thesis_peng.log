@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  22 APR 2015 19:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  23 APR 2015 23:24
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -1019,16 +1019,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--82
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--97
-
- []
-
-[4] [5] [6] [7]
 Package epstopdf Info: Source file: <charts/upnp_playback.eps>
 (epstopdf)                    date: 2014-06-08 17:59:43
 (epstopdf)                    size: 16887 bytes
@@ -1038,30 +1028,237 @@ Package epstopdf Info: Source file: <charts/upnp_playback.eps>
 (epstopdf)                    size: 9341 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/upnp_playback-eps-c
 onverted-to.pdf charts/upnp_playback.eps>
-(epstopdf)             \includegraphics on input line 179.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/upnp_playback-eps-converted-to.pdf, id=352, 813.0375pt x 518.93875pt>
+<charts/upnp_playback-eps-converted-to.pdf, id=328, 813.0375pt x 518.93875pt>
 File: charts/upnp_playback-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/upnp_playback-eps-converted-to.pdf>
 Package pdftex.def Info: charts/upnp_playback-eps-converted-to.pdf used on inpu
-t line 179.
+t line 205.
 (pdftex.def)             Requested size: 401.22041pt x 256.0748pt.
- [8 <./charts/upnp_playback-eps-converted-to.pdf>] [9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 271.
 
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 271.
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--294
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--326
+
+ []
+
+[4] [5] [6] [7] [8 <./charts/upnp_playback-eps-converted-to.pdf>] [9] [10]
 Package epstopdf Info: Source file: <charts/chart1.eps>
 (epstopdf)                    date: 2014-05-31 00:23:19
 (epstopdf)                    size: 15242 bytes
@@ -1070,51 +1267,52 @@ Package epstopdf Info: Source file: <charts/chart1.eps>
 (epstopdf)                    size: 9463 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/chart1-eps-converte
 d-to.pdf charts/chart1.eps>
-(epstopdf)             \includegraphics on input line 296.
+(epstopdf)             \includegraphics on input line 328.
 Package epstopdf Info: Output file is already uptodate.
-<charts/chart1-eps-converted-to.pdf, id=375, 1145.27875pt x 703.62875pt>
+
+<charts/chart1-eps-converted-to.pdf, id=372, 1145.27875pt x 703.62875pt>
 File: charts/chart1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/chart1-eps-converted-to.pdf>
 Package pdftex.def Info: charts/chart1-eps-converted-to.pdf used on input line 
-296.
+328.
 (pdftex.def)             Requested size: 416.79124pt x 256.0748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--317
+Underfull \hbox (badness 10000) in paragraph at lines 332--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--317
+Underfull \hbox (badness 10000) in paragraph at lines 332--349
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 319--326
+[11 <./charts/chart1-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 351--358
 
  []
 
-[11 <./charts/chart1-eps-converted-to.pdf>] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 400--407
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 432--439
 
  []
 
 [14]
-Overfull \hbox (45.90332pt too wide) in paragraph at lines 463--464
+Overfull \hbox (45.90332pt too wide) in paragraph at lines 495--496
  [][] 
  []
 
 
-Overfull \hbox (39.50775pt too wide) in paragraph at lines 483--484
+Overfull \hbox (39.50775pt too wide) in paragraph at lines 515--516
  [][] 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 553--564
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 585--596
 
  []
 
-[16]
+[17]
 Package epstopdf Info: Source file: <charts/dial_discovery.eps>
 (epstopdf)                    date: 2014-06-18 01:56:15
 (epstopdf)                    size: 13181 bytes
@@ -1124,16 +1322,16 @@ Package epstopdf Info: Source file: <charts/dial_discovery.eps>
 (epstopdf)                    size: 6409 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/dial_discovery-eps-
 converted-to.pdf charts/dial_discovery.eps>
-(epstopdf)             \includegraphics on input line 579.
+(epstopdf)             \includegraphics on input line 611.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/dial_discovery-eps-converted-to.pdf, id=458, 904.37875pt x 563.10374pt>
+<charts/dial_discovery-eps-converted-to.pdf, id=455, 904.37875pt x 563.10374pt>
 File: charts/dial_discovery-eps-converted-to.pdf Graphic file (type pdf)
 <use charts/dial_discovery-eps-converted-to.pdf>
 Package pdftex.def Info: charts/dial_discovery-eps-converted-to.pdf used on inp
-ut line 579.
+ut line 611.
 (pdftex.def)             Requested size: 411.27219pt x 256.0748pt.
- [17]
+ [18 <./charts/dial_discovery-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <charts/dial_rest.eps>
 (epstopdf)                    date: 2014-06-18 01:49:47
 (epstopdf)                    size: 15457 bytes
@@ -1142,7 +1340,7 @@ Package epstopdf Info: Source file: <charts/dial_rest.eps>
 (epstopdf)                    size: 7993 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/dial_rest-eps-conve
 rted-to.pdf charts/dial_rest.eps>
-(epstopdf)             \includegraphics on input line 609.
+(epstopdf)             \includegraphics on input line 641.
 Package epstopdf Info: Output file is already uptodate.
 
 <charts/dial_rest-eps-converted-to.pdf, id=468, 1292.83pt x 819.06pt>
@@ -1150,29 +1348,29 @@ File: charts/dial_rest-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/dial_rest-eps-converted-to.pdf>
 Package pdftex.def Info: charts/dial_rest-eps-converted-to.pdf used on input li
-ne 609.
+ne 641.
 (pdftex.def)             Requested size: 404.20566pt x 256.0748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--635
+Underfull \hbox (badness 10000) in paragraph at lines 648--667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--635
+Underfull \hbox (badness 10000) in paragraph at lines 648--667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--635
+Underfull \hbox (badness 10000) in paragraph at lines 648--667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--635
+Underfull \hbox (badness 10000) in paragraph at lines 648--667
 
  []
 
-[18 <./charts/dial_discovery-eps-converted-to.pdf>]
+[19 <./charts/dial_rest-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <charts/miracast_model.eps>
 (epstopdf)                    date: 2014-06-26 23:58:22
 (epstopdf)                    size: 18607 bytes
@@ -1182,21 +1380,22 @@ Package epstopdf Info: Source file: <charts/miracast_model.eps>
 (epstopdf)                    size: 10334 bytes
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_model-eps-
 converted-to.pdf charts/miracast_model.eps>
-(epstopdf)             \includegraphics on input line 637.
+(epstopdf)             \includegraphics on input line 669.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/miracast_model-eps-converted-to.pdf, id=482, 721.69624pt x 935.495pt>
+<charts/miracast_model-eps-converted-to.pdf, id=483, 721.69624pt x 935.495pt>
 File: charts/miracast_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/miracast_model-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_model-eps-converted-to.pdf used on inp
-ut line 637.
+ut line 669.
 (pdftex.def)             Requested size: 307.306pt x 398.33858pt.
- [19 <./charts/dial_rest-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 641--643
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--675
 
  []
 
+[20 <./charts/miracast_model-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <charts/miracast_technology_architecture.ep
 s>
 (epstopdf)                    date: 2014-06-27 00:18:19
@@ -1208,140 +1407,140 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=charts/miracast_technology
 _architecture-eps-converted-to.pdf charts/miracast_technology_architecture.eps>
 
-(epstopdf)             \includegraphics on input line 645.
+(epstopdf)             \includegraphics on input line 677.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/miracast_technology_architecture-eps-converted-to.pdf, id=494, 657.4562
+<charts/miracast_technology_architecture-eps-converted-to.pdf, id=498, 657.4562
 5pt x 317.185pt>
 File: charts/miracast_technology_architecture-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use charts/miracast_technology_architecture-eps-converted-to.pdf>
 Package pdftex.def Info: charts/miracast_technology_architecture-eps-converted-
-to.pdf used on input line 645.
+to.pdf used on input line 677.
 (pdftex.def)             Requested size: 294.88951pt x 142.26378pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
-
- []
-
-[20 <./charts/miracast_model-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--700
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--733
 
  []
 
 [21 <./charts/miracast_technology_architecture-eps-converted-to.pdf>] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 707--720
+Underfull \hbox (badness 10000) in paragraph at lines 740--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--720
+Underfull \hbox (badness 10000) in paragraph at lines 740--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--720
+Underfull \hbox (badness 10000) in paragraph at lines 740--753
 
  []
 
-[23] <charts/dlna_market.png, id=537, 433.62pt x 256.7994pt>
+[23] <charts/dlna_market.png, id=528, 433.62pt x 256.7994pt>
 File: charts/dlna_market.png Graphic file (type png)
 
 <use charts/dlna_market.png>
-Package pdftex.def Info: charts/dlna_market.png used on input line 727.
+Package pdftex.def Info: charts/dlna_market.png used on input line 760.
 (pdftex.def)             Requested size: 432.42134pt x 256.0748pt.
 
-Overfull \hbox (5.63pt too wide) in paragraph at lines 727--728
+Overfull \hbox (5.63pt too wide) in paragraph at lines 760--761
  [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 721--730
+Underfull \hbox (badness 10000) in paragraph at lines 754--763
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--740
+Underfull \hbox (badness 10000) in paragraph at lines 764--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--740
+Underfull \hbox (badness 10000) in paragraph at lines 764--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--740
+Underfull \hbox (badness 10000) in paragraph at lines 764--773
 
  []
 
 [24 <./charts/dlna_market.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 743--750
+Underfull \hbox (badness 10000) in paragraph at lines 776--783
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--750
+Underfull \hbox (badness 10000) in paragraph at lines 776--783
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 793--240
+[25])
+Underfull \hbox (badness 10000) in paragraph at lines 826--240
 
  []
 
-[25] [26] (./chapters/chapter3.tex
+[26] (./chapters/chapter3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--30
 
  []
@@ -1385,7 +1584,7 @@ Package epstopdf Info: Source file: <charts/chart3.eps>
 d-to.pdf charts/chart3.eps>
 (epstopdf)             \includegraphics on input line 70.
 Package epstopdf Info: Output file is already uptodate.
- <charts/chart3-eps-converted-to.pdf, id=569, 1198.4775pt x 754.82pt>
+ <charts/chart3-eps-converted-to.pdf, id=560, 1198.4775pt x 754.82pt>
 File: charts/chart3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/chart3-eps-converted-to.pdf>
@@ -1403,7 +1602,7 @@ rted-to.pdf charts/data_flow.eps>
 (epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<charts/data_flow-eps-converted-to.pdf, id=571, 948.54375pt x 599.23875pt>
+<charts/data_flow-eps-converted-to.pdf, id=562, 948.54375pt x 599.23875pt>
 File: charts/data_flow-eps-converted-to.pdf Graphic file (type pdf)
 
 <use charts/data_flow-eps-converted-to.pdf>
@@ -1487,7 +1686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--86
 
  []
 
-[28] [29] <charts/allconnect-app.png, id=585, 787.0203pt x 406.1574pt>
+[28] [29] <charts/allconnect-app.png, id=576, 787.0203pt x 406.1574pt>
 File: charts/allconnect-app.png Graphic file (type png)
 
 <use charts/allconnect-app.png>
@@ -1549,7 +1748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--123
 
  []
 
-[32] <charts/experiment_setup.png, id=612, 352.4367pt x 194.1654pt>
+[32] <charts/experiment_setup.png, id=603, 352.4367pt x 194.1654pt>
 File: charts/experiment_setup.png Graphic file (type png)
 
 <use charts/experiment_setup.png>
@@ -1591,7 +1790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--246
  []
 
 [34] (./chapters/chapter4.tex
-<charts/oneMoreTime_airplay_android.pdf, id=624, 794.97pt x 614.295pt>
+<charts/oneMoreTime_airplay_android.pdf, id=615, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_airplay_android.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_airplay_android.pdf>
@@ -1599,7 +1798,7 @@ Package pdftex.def Info: charts/oneMoreTime_airplay_android.pdf used on input l
 ine 24.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/oneMoreTime_dlna_android.pdf, id=625, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android.pdf, id=616, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android.pdf>
@@ -1658,7 +1857,7 @@ Package pdftex.def Info: charts/oneMoreTime_dlna_android.pdf used on input line
  51.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/oneMoreTime_dlna_android_bw_500k.pdf, id=652, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_500k.pdf, id=643, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_500k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_500k.pdf>
@@ -1673,7 +1872,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
 LaTeX Warning: Float too large for page by 10.81737pt on input line 55.
 
-<charts/oneMoreTime_dlna_android_bw_700k.pdf, id=653, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_700k.pdf, id=644, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_700k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_700k.pdf>
@@ -1681,7 +1880,7 @@ Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_700k.pdf used on in
 put line 57.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/oneMoreTime_dlna_android_bw_1000k.pdf, id=654, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_1000k.pdf, id=645, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_1000k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_1000k.pdf>
@@ -1696,14 +1895,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
 LaTeX Warning: Float too large for page by 10.81737pt on input line 61.
 
-<charts/dlna_traffic_data.pdf, id=657, 794.97pt x 614.295pt>
+<charts/dlna_traffic_data.pdf, id=648, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 78.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/dlna_traffic_5loss_data.pdf, id=658, 794.97pt x 614.295pt>
+<charts/dlna_traffic_5loss_data.pdf, id=649, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_5loss_data.pdf>
@@ -1745,7 +1944,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--83
 
 [38
 
-] <charts/dlna_traffic_10loss_data.pdf, id=665, 794.97pt x 614.295pt>
+] <charts/dlna_traffic_10loss_data.pdf, id=656, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_10loss_data.pdf>
@@ -1753,7 +1952,7 @@ Package pdftex.def Info: charts/dlna_traffic_10loss_data.pdf used on input line
  86.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/dlna_traffic_15loss_data.pdf, id=666, 794.97pt x 614.295pt>
+<charts/dlna_traffic_15loss_data.pdf, id=657, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_15loss_data.pdf>
@@ -1768,7 +1967,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
 LaTeX Warning: Float too large for page by 10.81737pt on input line 90.
 
-<charts/AirPlay_traffic_data.pdf, id=669, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_data.pdf, id=660, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_data.pdf>
@@ -1776,7 +1975,7 @@ Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 100
 .
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/AirPlay_traffic_5loss_data.pdf, id=670, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_5loss_data.pdf, id=661, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_5loss_data.pdf>
@@ -1791,7 +1990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
 LaTeX Warning: Float too large for page by 10.81737pt on input line 104.
 
-<charts/AirPlay_traffic_10loss_data.pdf, id=671, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_10loss_data.pdf, id=662, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_10loss_data.pdf>
@@ -1799,7 +1998,7 @@ Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
 ine 107.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/AirPlay_traffic_15loss_data.pdf, id=672, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_15loss_data.pdf, id=663, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_15loss_data.pdf>
@@ -1834,14 +2033,14 @@ loss_data.pdf, page is rotated 90 degrees>] [44 <./charts/AirPlay_traffic_data.
 pdf, page is rotated 90 degrees> <./charts/AirPlay_traffic_5loss_data.pdf, page
  is rotated 90 degrees>] [45 <./charts/AirPlay_traffic_10loss_data.pdf, page is
  rotated 90 degrees> <./charts/AirPlay_traffic_15loss_data.pdf, page is rotated
- 90 degrees>] <charts/session_world_map.pdf, id=753, 794.97pt x 614.295pt>
+ 90 degrees>] <charts/session_world_map.pdf, id=744, 794.97pt x 614.295pt>
 File: charts/session_world_map.pdf Graphic file (type pdf)
 
 <use charts/session_world_map.pdf>
 Package pdftex.def Info: charts/session_world_map.pdf used on input line 118.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/rating_distribution.pdf, id=755, 505.89pt x 505.89pt>
+<charts/rating_distribution.pdf, id=746, 505.89pt x 505.89pt>
 File: charts/rating_distribution.pdf Graphic file (type pdf)
 
 <use charts/rating_distribution.pdf>
@@ -1849,14 +2048,14 @@ Package pdftex.def Info: charts/rating_distribution.pdf used on input line 123.
 
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
-<charts/country_popularity.pdf, id=757, 505.89pt x 505.89pt>
+<charts/country_popularity.pdf, id=748, 505.89pt x 505.89pt>
 File: charts/country_popularity.pdf Graphic file (type pdf)
 
 <use charts/country_popularity.pdf>
 Package pdftex.def Info: charts/country_popularity.pdf used on input line 130.
 (pdftex.def)             Requested size: 256.07838pt x 256.0748pt.
 
-<charts/os_version_popularity.pdf, id=758, 505.89pt x 505.89pt>
+<charts/os_version_popularity.pdf, id=749, 505.89pt x 505.89pt>
 File: charts/os_version_popularity.pdf Graphic file (type pdf)
 
 <use charts/os_version_popularity.pdf>
@@ -1874,7 +2073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--138
 / android / files / webinars / BlackBerry _
  []
 
-<charts/receiver_popularity.pdf, id=764, 844.34906pt x 560.50125pt>
+<charts/receiver_popularity.pdf, id=755, 844.34906pt x 560.50125pt>
 File: charts/receiver_popularity.pdf Graphic file (type pdf)
 
 <use charts/receiver_popularity.pdf>
@@ -1882,7 +2081,7 @@ Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 142.
 
 (pdftex.def)             Requested size: 385.77701pt x 256.0748pt.
 
-<charts/sessions_per_day.pdf, id=766, 505.89pt x 505.89pt>
+<charts/sessions_per_day.pdf, id=757, 505.89pt x 505.89pt>
 File: charts/sessions_per_day.pdf Graphic file (type pdf)
 
 <use charts/sessions_per_day.pdf>
@@ -1924,23 +2123,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
-) [53] (./thesis_peng.bbl [54
+) [53] (./thesis_peng.bbl
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 59.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
+ [54
 
 ]) [55]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
- (./thesis_peng.aux)
+
+(./thesis_peng.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
-(rerunfilecheck)             Checksum: DAA6D04F7F739EE6429F09DA1BA4AFD7;3487.
+(rerunfilecheck)             Checksum: 9BBC0E6325FFCD76F249DC87A66DF0E9;3506.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 17992 strings out of 493308
- 336121 string characters out of 6137816
- 810938 words of memory out of 5000000
- 20826 multiletter control sequences out of 15000+600000
+ 17982 strings out of 493308
+ 336045 string characters out of 6137816
+ 831997 words of memory out of 5000000
+ 20825 multiletter control sequences out of 15000+600000
  29678 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,10n,58p,1236b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1961,10 +2169,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (61 pages, 1531960 bytes).
+Output written on thesis_peng.pdf (61 pages, 1531910 bytes).
 PDF statistics:
- 1282 PDF objects out of 1440 (max. 8388607)
- 1073 compressed objects within 11 object streams
- 220 named destinations out of 1000 (max. 500000)
+ 1270 PDF objects out of 1440 (max. 8388607)
+ 1061 compressed objects within 11 object streams
+ 211 named destinations out of 1000 (max. 500000)
  571 words of extra memory for PDF output out of 10000 (max. 10000000)
 
