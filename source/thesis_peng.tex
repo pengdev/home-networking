@@ -55,6 +55,7 @@
 %%
 \usepackage{graphicx}
 \usepackage{subfigure}
+\usepackage{titlesec} 
 
 %% Use the macros in this package to change how the hyperref package below 
 %% typesets its hypertext -- hyperlink colour, font, etc. See the package
@@ -82,6 +83,14 @@ linkcolor=blue,citecolor=black,pdfstartview=FitH]{hyperref}
 \setlength{\headheight}{1em}
 \setlength{\topmargin}{25mm-\headheight-\headsep}
 \setlength{\textheight}{23cm}
+
+
+%% add chapter title depth to 4, use paragraph to represent subsubsubsection
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 
 %% Output starts heref
@@ -183,7 +192,7 @@ linkcolor=blue,citecolor=black,pdfstartview=FitH]{hyperref}
 
 \input{chapters/preface}
 
-\vspace{1.8cm}
+\vspace{1.5cm}
 %\vspace{5cm}
 Otaniemi, 25.5.2014
 
