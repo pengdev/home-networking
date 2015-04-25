@@ -2,24 +2,21 @@
 %% author Liu Peng
 
 After designing, implementing and testing the application. We conducted several evaluation tests on the streaming performance. We had released the first edition of the application in Google Play Store in Nov 2013. Since then, we had been updating the application in order to improve its performance and enrich its features. During the past one year, we have collected a big amount of useful data and interesting results. In this chapter we will present and analyze these results.
-
-\subsection{Performance evaluation}
-\subsubsection{Device discovery}
-
-\subsubsection{Media Streaming}
+\subsection{Streaming performance evaluation}
 In terms of streaming, our solution includes two major streaming components. It would be helpful to study and compare which streaming protocol has the better performance while streaming multimedia contents. Moreover, by streaming different types of media and make comparison, we could reveal which protocol is more suitable for a certain type of media. \\
 \\The two major streaming technologies we used in our solution are HTTP streaming and RAOP streaming, respectively.\\
 \\
 Hypertext Transfer Protocol (HTTP) is the protocol used to deliver web pages and images across the World Wide Web. HTTP is a most widely adopted, open standard and the most ubiquitous method of content delivery on the Internet. HTTP objects can be delivered by a variety of web servers, including commercially used servers and open source servers. Both DLNA and Chromecast use HTTP to realize their streaming functionality.\\
 \\
-Unlike HTTP, another popular protocol, the Real Time Streaming Protocol (RTSP) is a network control protocol used in entertainment and communications systems to control media streaming servers. RTSP is used to establish and control media sessions between two points, usually the server and player client. Clients of media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate real-time control of playback of media files from the server.  The RAOP protocol, which is virtually another version of RTSP, is used by AirPlay, for the streaming of iTunes music.\\
-\\
-\textbf{Comparison of AirPlay and DLNA traffic}\\
-\\
+Unlike HTTP, another popular protocol, the Real Time Streaming Protocol (RTSP) is a network control protocol used in entertainment and communications systems to control media streaming servers. RTSP is used to establish and control media sessions between two points, usually the server and player client. Clients of media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate real-time control of playback of media files from the server.  The RAOP protocol, which is virtually another version of RTSP, is used by AirPlay, for the streaming of iTunes music.
+\subsubsection{Comparison of AirPlay and DLNA traffic}
 Since we have both protocols implemented in our application. We could
 compare the performance by streaming the same content to two receivers using the
 two different protocols. Typically, DLNA music streaming uses HTTP protocol and
-AirPlay music streaming uses ROAP protocol. We selected a mp3 music file and try to stream it to both an AirPlay Speaker and a DLNA Speaker, and we used Wireshark running on a rooted Android phone to capture the packets in the network.
+AirPlay music streaming uses ROAP protocol. We selected a mp3 music file and
+try to stream it to both an AirPlay Speaker and a DLNA Speaker, and we used
+Wireshark running on a rooted Android phone to capture the packets in the
+network.
 \begin{figure}[hb]
 \subfigure[AirPlay]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_airplay_android}}
 \subfigure[DLNA]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
@@ -27,8 +24,9 @@ AirPlay music streaming uses ROAP protocol. We selected a mp3 music file and try
 comparison \label{airplay_vs_dlna_traffic}}
 \end{figure}
 \clearpage
-After the experiment environment is set up, a series of test is conducted and the result is presented in Figure \ref{airplay_vs_dlna_traffic}.
-
+After the experiment environment is set up, a series of test is conducted and
+the result is presented in Figure \ref{airplay_vs_dlna_traffic}.\\
+\\
 According to the figure, the stream traffics of
 AirPlay and DLNA streaming are very different. In AirPlay streaming, the traffic
 growth is nearly linear, because ROAP is a push like process and content can be
@@ -36,11 +34,8 @@ streamed in real time. However, in DLNA streaming, since its HTTP communication 
 like process, the server can actively fetch content from the media server and the content can
 be buffered  up since the beginning of the playback, with the best effort of the network.
 Therefore, there is a short download period at the beginning of the DLNA
- streaming
-graph. \\ 
-\\
-\textbf{Performance under limited bandwidth }\\
-\\
+ streaming graph.
+\subsubsection{Performance under limited bandwidth }
 Then, we evaluate the performance of  the two streaming solutions under limited bandwidth. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and run the streaming. 
 During each round of the test streaming, the same mp3 music is streamed to Kodi
 using the DLNA standard. Figure \ref{dlna_traffic_bw} and
@@ -65,10 +60,8 @@ In contrast, AirPlay music streaming is based on ROAP, which is a RTP-like proto
 \\
 Another thing worth mentioning is that in the experiment, the same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not usable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required by DLNA streaming is considerably smaller than AirPlay streaming.\\
 \\
-Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.\\
-\\
-\textbf{Influence of packet loss}\\
-\\
+Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.
+\subsubsection{Influence of packet loss}
 After the bandwidth test, we then simulated packet loss on the receiver side and
 conducted the same test for DLNA and AirPlay streaming. 5\%, 10\% and 15\%
 packet loss are introduced to test both DLNA and AirPlay streaming. The result
