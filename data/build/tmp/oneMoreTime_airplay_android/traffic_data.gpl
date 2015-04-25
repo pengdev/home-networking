@@ -1,6 +1,6 @@
 set title "Total Data Sent Over Time"
-set xlabel "time"
-set ylabel "total bytes"
+set xlabel "Time"
+set ylabel "Total bytes"
 set format x "%.0f"
 set format y "%.0f"
 set xdata time
