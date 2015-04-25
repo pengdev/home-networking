@@ -1,0 +1,91 @@
+dtime signed
+title
+pure acks (no data) per second over time
+xlabel
+time
+ylabel
+pureacks/second
+magenta
+dot 0.000000 1
+orange
+dot 0.000000 1
+purple
+dot 0.000000 1
+yellow
+dot 0.000000 1
+blue
+dot 0.000000 1
+red
+dot 0.000000 1
+green
+dot 0.000000 9
+magenta
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+orange
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+purple
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+yellow
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+blue
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+red
+dot 15.532155 0
+line 15.532155 0 0.000000 1
+green
+dot 15.532155 0
+line 15.532155 0 0.000000 9
+magenta
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+orange
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+purple
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+yellow
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+blue
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+red
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+green
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+ltext 37.147431 1 magenta
+36666
+magenta
+dot 38.293785 2
+line 38.293785 2 37.001078 0
+ltext 37.147431 1 orange
+56042
+orange
+dot 38.293785 2
+line 38.293785 2 37.001078 0
+purple
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+yellow
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+blue
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+red
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+ltext 37.147431 2 green
+total
+green
+dot 38.293785 3
+line 38.293785 3 37.001078 0
+go

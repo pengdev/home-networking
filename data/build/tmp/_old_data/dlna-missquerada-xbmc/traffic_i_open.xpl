@@ -1,0 +1,254 @@
+dtime signed
+title
+open connections over time by port - instantaneous
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 1
+blue
+dot 0.000000 1
+green
+dot 0.000000 1
+yellow
+dot 0.100544 1
+purple
+dot 0.100544 1
+ltext 0.050272 2 green
+total
+green
+dot 0.100544 2
+line 0.100544 2 0.000000 1
+orange
+dot 2.664870 1
+ltext 1.382707 2 purple
+1449
+purple
+dot 2.664870 2
+line 2.664870 2 0.100544 1
+green
+dot 2.664870 3
+line 2.664870 3 0.100544 2
+magenta
+dot 4.586078 1
+purple
+dot 4.586078 3
+line 4.586078 3 2.664870 2
+green
+dot 4.586078 4
+line 4.586078 4 2.664870 3
+pink
+dot 4.586251 1
+purple
+dot 4.586251 4
+line 4.586251 4 4.586078 3
+green
+dot 4.586251 5
+line 4.586251 5 4.586078 4
+green
+dot 4.586251 1
+purple
+dot 4.586251 5
+line 4.586251 5 4.586251 4
+green
+dot 4.586251 6
+line 4.586251 6 4.586251 5
+red
+dot 4.586252 1
+purple
+dot 4.586252 6
+line 4.586252 6 4.586251 5
+green
+dot 4.586252 7
+line 4.586252 7 4.586251 6
+blue
+dot 4.586252 1
+purple
+dot 4.586252 7
+line 4.586252 7 4.586252 6
+green
+dot 4.586252 8
+line 4.586252 8 4.586252 7
+yellow
+dot 6.238767 1
+purple
+dot 6.238767 1
+green
+dot 6.238767 9
+line 6.238767 9 4.586252 8
+orange
+dot 6.385704 1
+ltext 6.312235 2 purple
+51220
+purple
+dot 6.385704 2
+line 6.385704 2 6.238767 1
+green
+dot 6.385704 10
+line 6.385704 10 6.238767 9
+magenta
+dot 6.820147 1
+purple
+dot 6.820147 3
+line 6.820147 3 6.385704 2
+green
+dot 6.820147 11
+line 6.820147 11 6.385704 10
+pink
+dot 7.063355 1
+purple
+dot 7.063355 4
+line 7.063355 4 6.820147 3
+green
+dot 7.063355 12
+line 7.063355 12 6.820147 11
+purple
+dot 7.124112 3
+line 7.124112 3 7.063355 4
+pink
+dot 7.124112 0
+line 7.124112 0 7.063355 1
+green
+dot 7.124112 11
+line 7.124112 11 7.063355 12
+purple
+dot 7.124764 2
+line 7.124764 2 7.124112 3
+orange
+dot 7.124764 0
+line 7.124764 0 6.385704 1
+green
+dot 7.124764 10
+line 7.124764 10 7.124112 11
+green
+dot 7.142788 1
+purple
+dot 7.142788 3
+line 7.142788 3 7.124764 2
+green
+dot 7.142788 11
+line 7.142788 11 7.124764 10
+red
+dot 7.265880 1
+purple
+dot 7.265880 4
+line 7.265880 4 7.142788 3
+green
+dot 7.265880 12
+line 7.265880 12 7.142788 11
+magenta
+dot 7.267103 0
+line 7.267103 0 6.820147 1
+purple
+dot 7.267103 3
+line 7.267103 3 7.265880 4
+green
+dot 7.267103 11
+line 7.267103 11 7.265880 12
+purple
+dot 7.308890 2
+line 7.308890 2 7.267103 3
+yellow
+dot 7.308890 0
+line 7.308890 0 6.238767 1
+green
+dot 7.308890 10
+line 7.308890 10 7.267103 11
+blue
+dot 7.320337 1
+purple
+dot 7.320337 3
+line 7.320337 3 7.308890 2
+green
+dot 7.320337 11
+line 7.320337 11 7.308890 10
+yellow
+dot 7.927298 1
+purple
+dot 7.927298 4
+line 7.927298 4 7.320337 3
+green
+dot 7.927298 12
+line 7.927298 12 7.320337 11
+green
+dot 7.987183 0
+line 7.987183 0 7.142788 1
+purple
+dot 7.987183 3
+line 7.987183 3 7.927298 4
+green
+dot 7.987183 11
+line 7.987183 11 7.927298 12
+yellow
+dot 7.987987 0
+line 7.987987 0 7.927298 1
+purple
+dot 7.987987 2
+line 7.987987 2 7.987183 3
+green
+dot 7.987987 10
+line 7.987987 10 7.987183 11
+purple
+dot 7.987988 1
+purple
+dot 7.987988 3
+line 7.987988 3 7.987987 2
+green
+dot 7.987988 11
+line 7.987988 11 7.987987 10
+red
+dot 20.252920 0
+line 20.252920 0 0.000000 1
+blue
+dot 20.252920 0
+line 20.252920 0 0.000000 1
+green
+dot 20.252920 10
+line 20.252920 10 7.987988 11
+orange
+dot 24.674537 0
+line 24.674537 0 2.664870 1
+purple
+dot 24.674537 6
+line 24.674537 6 4.586252 7
+green
+dot 24.674537 9
+line 24.674537 9 20.252920 10
+yellow
+dot 24.674922 0
+line 24.674922 0 0.100544 1
+purple
+dot 24.674922 5
+line 24.674922 5 24.674537 6
+green
+dot 24.674922 8
+line 24.674922 8 24.674537 9
+magenta
+dot 27.583654 0
+line 27.583654 0 4.586078 1
+purple
+dot 27.583654 4
+line 27.583654 4 24.674922 5
+green
+dot 27.583654 7
+line 27.583654 7 24.674922 8
+purple
+dot 38.537868 2
+line 38.537868 2 7.987988 3
+purple
+dot 38.537868 0
+line 38.537868 0 7.987988 1
+green
+dot 38.537868 6
+line 38.537868 6 27.583654 7
+purple
+dot 209.552587 1
+line 209.552587 1 38.537868 2
+red
+dot 209.552587 0
+line 209.552587 0 7.265880 1
+green
+dot 209.552587 5
+line 209.552587 5 38.537868 6
+go

@@ -1,0 +1,71 @@
+dtime signed
+title
+connections still open after 60 seconds
+
+xlabel
+time
+ylabel
+number of connections
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 0
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+ltext 93.113206 1 magenta
+36666
+magenta
+dot 187.226412 1
+line 187.226412 1 0.000000 0
+ltext 93.113206 1 orange
+59886
+orange
+dot 187.226412 1
+line 187.226412 1 0.000000 0
+purple
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+yellow
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+blue
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+red
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+ltext 93.113206 1 green
+total
+green
+dot 187.226412 1
+line 187.226412 1 0.000000 0
+magenta
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+orange
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+purple
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+yellow
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+blue
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+red
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+green
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+go

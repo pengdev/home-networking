@@ -1,0 +1,8 @@
+Overall totals by port
+TOTAL        bytes:        64422  pkts:        148  conns:        3  tput:      309 B/s
+Port  1133   bytes:        21893  pkts:         47  conns:        1  tput:      105 B/s
+Port  1449   bytes:        36545  pkts:         64  conns:        1  tput:      175 B/s
+Port 36666   bytes:         5984  pkts:         37  conns:        1  tput:       28 B/s
+Port 52221   bytes:        36545  pkts:         64  conns:        1  tput:      175 B/s
+Port 56291   bytes:        21893  pkts:         47  conns:        1  tput:      105 B/s
+Port 59886   bytes:         5984  pkts:         37  conns:        1  tput:       28 B/s

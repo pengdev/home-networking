@@ -1,0 +1,86 @@
+dtime signed
+title
+connections still open after 60 seconds
+
+xlabel
+time
+ylabel
+number of connections
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 0
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+magenta
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+orange
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+purple
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+yellow
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+blue
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+red
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+green
+dot 15.532155 0
+line 15.532155 0 0.000000 0
+magenta
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+orange
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+purple
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+yellow
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+blue
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+red
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+green
+dot 37.001078 0
+line 37.001078 0 15.532155 0
+magenta
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+orange
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+purple
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+yellow
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+blue
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+red
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+green
+dot 38.293785 0
+line 38.293785 0 37.001078 0
+go

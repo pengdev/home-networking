@@ -1,0 +1,70 @@
+dtime signed
+title
+pure acks (no data) per second over time
+xlabel
+time
+ylabel
+pureacks/second
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 0
+purple
+dot 0.000000 1
+yellow
+dot 0.000000 1
+blue
+dot 0.000000 1
+red
+dot 0.000000 1
+green
+dot 0.000000 6
+magenta
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+orange
+dot 187.226412 0
+line 187.226412 0 0.000000 0
+purple
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+yellow
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+blue
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+red
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+green
+dot 187.226412 0
+line 187.226412 0 0.000000 6
+ltext 187.528102 4 magenta
+36666
+magenta
+dot 187.829793 8
+line 187.829793 8 187.226412 0
+ltext 187.528102 4 orange
+59886
+orange
+dot 187.829793 8
+line 187.829793 8 187.226412 0
+purple
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+yellow
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+blue
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+red
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+ltext 187.528102 5 green
+total
+green
+dot 187.829793 9
+line 187.829793 9 187.226412 0
+go

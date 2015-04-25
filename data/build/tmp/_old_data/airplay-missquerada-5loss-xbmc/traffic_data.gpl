@@ -1,0 +1,12 @@
+set title "Total Data Sent Over Time"
+set xlabel "Time"
+set ylabel "Total bytes"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_data.labels";
+plot "traffic_data.datasets" index 0 using ($1-946684800.0):2 with dots, "traffic_data.datasets" index 1 using ($1-946684800.0):2 with lines, "traffic_data.datasets" index 2 using ($1-946684800.0):2 with lines, "traffic_data.datasets" index 3 using ($1-946684800.0):2 with dots;
+set term postscript
+set output "traffic_data.ps"
+replot

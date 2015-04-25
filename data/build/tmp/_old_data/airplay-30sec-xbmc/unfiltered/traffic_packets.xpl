@@ -1,0 +1,124 @@
+dtime signed
+title
+packets per second over time by port
+xlabel
+time
+ylabel
+packets/second
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 1
+pink
+dot 0.000000 0
+magenta
+dot 0.000000 1
+orange
+dot 0.000000 1
+purple
+dot 0.000000 2
+yellow
+dot 0.000000 2
+blue
+dot 0.000000 3
+red
+dot 0.000000 3
+green
+dot 0.000000 9
+purple
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+yellow
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+blue
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+red
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+green
+dot 16.153426 0
+line 16.153426 0 0.000000 1
+pink
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+magenta
+dot 16.153426 0
+line 16.153426 0 0.000000 1
+orange
+dot 16.153426 0
+line 16.153426 0 0.000000 1
+purple
+dot 16.153426 0
+line 16.153426 0 0.000000 2
+yellow
+dot 16.153426 0
+line 16.153426 0 0.000000 2
+blue
+dot 16.153426 0
+line 16.153426 0 0.000000 3
+red
+dot 16.153426 0
+line 16.153426 0 0.000000 3
+green
+dot 16.153426 0
+line 16.153426 0 0.000000 9
+magenta
+dot 19.354363 4
+orange
+dot 19.354363 4
+purple
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+yellow
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+blue
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+red
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+ltext 17.253894 4 green
+9000
+green
+dot 19.354363 8
+line 19.354363 8 16.153426 0
+pink
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+ltext 17.253894 2 magenta
+36666
+magenta
+dot 19.354363 3
+line 19.354363 3 16.153426 0
+ltext 17.253894 2 orange
+55925
+orange
+dot 19.354363 3
+line 19.354363 3 16.153426 0
+purple
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+yellow
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+blue
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+red
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+ltext 17.253894 6 green
+total
+green
+dot 19.354363 12
+line 19.354363 12 16.153426 0
+go

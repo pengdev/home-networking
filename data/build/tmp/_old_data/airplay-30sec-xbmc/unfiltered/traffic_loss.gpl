@@ -1,0 +1,13 @@
+set title "packet loss per second over time"
+set xlabel "time"
+set ylabel "events/second"
+set format x "%.0f"
+set format y "%.0f"
+set xdata time
+set nokey
+load "traffic_loss.labels";
+plot "traffic_loss.datasets" index 0 using ($1-946684800.0):2 with lines, "traffic_loss.datasets" index 1 using ($1-946684800.0):2 with dots, "traffic_loss.datasets" index 2 using ($1-946684800.0):2 with dots, "traffic_loss.datasets" index 3 using ($1-946684800.0):2 with lines;
+set term postscript
+set output "traffic_loss.ps"
+replot
+pause -1;

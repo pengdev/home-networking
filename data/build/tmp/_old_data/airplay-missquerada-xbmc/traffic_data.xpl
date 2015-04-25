@@ -1,0 +1,28 @@
+dtime signed
+title
+Total Data Sent Over Time
+xlabel
+time
+ylabel
+total bytes
+blue
+dot 0.000000 63409
+red
+dot 0.000000 62707
+ltext 93.113206 63715 blue
+All Data
+blue
+dot 187.226412 64020
+line 187.226412 64020 0.000000 63409
+ltext 93.113206 63013 red
+Non-Rexmitted Data
+red
+dot 187.226412 63318
+line 187.226412 63318 0.000000 62707
+blue
+dot 187.829793 64422
+line 187.829793 64422 187.226412 64020
+red
+dot 187.829793 63720
+line 187.829793 63720 187.226412 63318
+go

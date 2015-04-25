@@ -1,0 +1,242 @@
+dtime signed
+title
+open connections over time by port - instantaneous
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 1
+blue
+dot 0.000000 1
+green
+dot 0.000000 1
+yellow
+dot 2.849345 1
+ltext 1.424672 2 blue
+1449
+blue
+dot 2.849345 2
+line 2.849345 2 0.000000 1
+ltext 1.424672 2 green
+total
+green
+dot 2.849345 2
+line 2.849345 2 0.000000 1
+purple
+dot 2.849346 1
+blue
+dot 2.849346 3
+line 2.849346 3 2.849345 2
+green
+dot 2.849346 3
+line 2.849346 3 2.849345 2
+orange
+dot 2.849363 1
+blue
+dot 2.849363 4
+line 2.849363 4 2.849346 3
+green
+dot 2.849363 4
+line 2.849363 4 2.849346 3
+magenta
+dot 2.849384 1
+blue
+dot 2.849384 5
+line 2.849384 5 2.849363 4
+green
+dot 2.849384 5
+line 2.849384 5 2.849363 4
+pink
+dot 2.849404 1
+blue
+dot 2.849404 6
+line 2.849404 6 2.849384 5
+green
+dot 2.849404 6
+line 2.849404 6 2.849384 5
+green
+dot 2.849416 1
+blue
+dot 2.849416 7
+line 2.849416 7 2.849404 6
+green
+dot 2.849416 7
+line 2.849416 7 2.849404 6
+red
+dot 3.198809 1
+blue
+dot 3.198809 1
+green
+dot 3.198809 8
+line 3.198809 8 2.849416 7
+red
+dot 3.198809 0
+line 3.198809 0 3.198809 1
+blue
+dot 3.198809 0
+line 3.198809 0 3.198809 1
+green
+dot 3.198809 7
+line 3.198809 7 3.198809 8
+yellow
+dot 3.199807 1
+purple
+dot 3.199807 1
+green
+dot 3.199807 8
+line 3.199807 8 3.198809 7
+orange
+dot 3.223267 1
+ltext 3.211537 2 purple
+52870
+purple
+dot 3.223267 2
+line 3.223267 2 3.199807 1
+green
+dot 3.223267 9
+line 3.223267 9 3.199807 8
+magenta
+dot 6.622124 1
+purple
+dot 6.622124 3
+line 6.622124 3 3.223267 2
+green
+dot 6.622124 10
+line 6.622124 10 3.223267 9
+pink
+dot 6.877788 1
+purple
+dot 6.877788 4
+line 6.877788 4 6.622124 3
+green
+dot 6.877788 11
+line 6.877788 11 6.622124 10
+purple
+dot 7.021359 3
+line 7.021359 3 6.877788 4
+pink
+dot 7.021359 0
+line 7.021359 0 6.877788 1
+green
+dot 7.021359 10
+line 7.021359 10 6.877788 11
+purple
+dot 7.043045 2
+line 7.043045 2 7.021359 3
+orange
+dot 7.043045 0
+line 7.043045 0 3.223267 1
+green
+dot 7.043045 9
+line 7.043045 9 7.021359 10
+green
+dot 7.049365 1
+purple
+dot 7.049365 3
+line 7.049365 3 7.043045 2
+green
+dot 7.049365 10
+line 7.049365 10 7.043045 9
+magenta
+dot 7.161867 0
+line 7.161867 0 6.622124 1
+purple
+dot 7.161867 2
+line 7.161867 2 7.049365 3
+green
+dot 7.161867 9
+line 7.161867 9 7.049365 10
+red
+dot 7.161867 1
+purple
+dot 7.161867 3
+line 7.161867 3 7.161867 2
+green
+dot 7.161867 10
+line 7.161867 10 7.161867 9
+purple
+dot 7.418433 2
+line 7.418433 2 7.161867 3
+yellow
+dot 7.418433 0
+line 7.418433 0 3.199807 1
+green
+dot 7.418433 9
+line 7.418433 9 7.161867 10
+blue
+dot 7.424896 1
+purple
+dot 7.424896 3
+line 7.424896 3 7.418433 2
+green
+dot 7.424896 10
+line 7.424896 10 7.418433 9
+yellow
+dot 7.662550 1
+purple
+dot 7.662550 4
+line 7.662550 4 7.424896 3
+green
+dot 7.662550 11
+line 7.662550 11 7.424896 10
+yellow
+dot 7.755627 0
+line 7.755627 0 7.662550 1
+purple
+dot 7.755627 3
+line 7.755627 3 7.662550 4
+green
+dot 7.755627 10
+line 7.755627 10 7.662550 11
+green
+dot 7.755627 0
+line 7.755627 0 7.049365 1
+purple
+dot 7.755627 2
+line 7.755627 2 7.755627 3
+green
+dot 7.755627 9
+line 7.755627 9 7.755627 10
+purple
+dot 7.755628 1
+purple
+dot 7.755628 3
+line 7.755628 3 7.755627 2
+green
+dot 7.755628 10
+line 7.755628 10 7.755627 9
+orange
+dot 13.294511 1
+magenta
+dot 13.294511 1
+green
+dot 13.294511 11
+line 13.294511 11 7.755628 10
+orange
+dot 13.294561 0
+line 13.294561 0 13.294511 1
+magenta
+dot 13.294561 0
+line 13.294561 0 13.294511 1
+green
+dot 13.294561 10
+line 13.294561 10 13.294511 11
+pink
+dot 19.724460 1
+blue
+dot 19.724460 8
+line 19.724460 8 2.849416 7
+green
+dot 19.724460 11
+line 19.724460 11 13.294561 10
+purple
+dot 38.391429 2
+line 38.391429 2 7.755628 3
+purple
+dot 38.391429 0
+line 38.391429 0 7.755628 1
+green
+dot 38.391429 10
+line 38.391429 10 19.724460 11
+go

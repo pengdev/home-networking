@@ -1,0 +1,150 @@
+dtime signed
+title
+open connections over time by port - instantaneous
+xlabel
+time
+ylabel
+number of connections
+red
+dot 0.000000 1
+blue
+dot 0.000000 1
+green
+dot 0.000000 1
+yellow
+dot 0.238311 1
+purple
+dot 0.238311 1
+ltext 0.119155 2 green
+total
+green
+dot 0.238311 2
+line 0.238311 2 0.000000 1
+orange
+dot 4.898743 1
+magenta
+dot 4.898743 1
+green
+dot 4.898743 3
+line 4.898743 3 0.238311 2
+pink
+dot 5.112988 1
+green
+dot 5.112988 1
+green
+dot 5.112988 4
+line 5.112988 4 4.898743 3
+green
+dot 5.402406 0
+line 5.402406 0 5.112988 1
+pink
+dot 5.402406 0
+line 5.402406 0 5.112988 1
+green
+dot 5.402406 3
+line 5.402406 3 5.112988 4
+red
+dot 6.842767 1
+blue
+dot 6.842767 1
+green
+dot 6.842767 4
+line 6.842767 4 5.402406 3
+yellow
+dot 7.450441 1
+ltext 6.426423 1 green
+9000
+green
+dot 7.450441 1
+line 7.450441 1 5.402406 0
+green
+dot 7.450441 5
+line 7.450441 5 6.842767 4
+green
+dot 7.504912 0
+line 7.504912 0 7.450441 1
+yellow
+dot 7.504912 0
+line 7.504912 0 7.450441 1
+green
+dot 7.504912 4
+line 7.504912 4 7.450441 5
+purple
+dot 7.686971 1
+green
+dot 7.686971 1
+line 7.686971 1 7.504912 0
+green
+dot 7.686971 5
+line 7.686971 5 7.504912 4
+green
+dot 7.742126 0
+line 7.742126 0 7.686971 1
+purple
+dot 7.742126 0
+line 7.742126 0 7.686971 1
+green
+dot 7.742126 4
+line 7.742126 4 7.686971 5
+red
+dot 21.182175 0
+line 21.182175 0 0.000000 1
+blue
+dot 21.182175 0
+line 21.182175 0 0.000000 1
+green
+dot 21.182175 3
+line 21.182175 3 7.742126 4
+yellow
+dot 22.436197 0
+line 22.436197 0 0.238311 1
+purple
+dot 22.436197 0
+line 22.436197 0 0.238311 1
+green
+dot 22.436197 2
+line 22.436197 2 21.182175 3
+orange
+dot 38.965119 1
+green
+dot 38.965119 1
+line 38.965119 1 7.742126 0
+green
+dot 38.965119 3
+line 38.965119 3 22.436197 2
+magenta
+dot 38.976803 1
+green
+dot 38.976803 2
+line 38.976803 2 38.965119 1
+green
+dot 38.976803 4
+line 38.976803 4 38.965119 3
+green
+dot 39.019952 1
+line 39.019952 1 38.976803 2
+orange
+dot 39.019952 0
+line 39.019952 0 38.965119 1
+green
+dot 39.019952 3
+line 39.019952 3 38.976803 4
+green
+dot 39.034371 0
+line 39.034371 0 39.019952 1
+magenta
+dot 39.034371 0
+line 39.034371 0 38.976803 1
+green
+dot 39.034371 2
+line 39.034371 2 39.019952 3
+orange
+dot 39.613260 0
+line 39.613260 0 4.898743 1
+magenta
+dot 39.613260 0
+line 39.613260 0 4.898743 1
+green
+dot 39.613260 1
+line 39.613260 1 39.034371 2
+go

@@ -1,0 +1,117 @@
+dtime signed
+title
+connections still open after 60 seconds
+
+xlabel
+time
+ylabel
+number of connections
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+pink
+dot 0.000000 0
+magenta
+dot 0.000000 0
+orange
+dot 0.000000 0
+purple
+dot 0.000000 0
+yellow
+dot 0.000000 0
+blue
+dot 0.000000 0
+red
+dot 0.000000 0
+green
+dot 0.000000 0
+purple
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+yellow
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+blue
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+red
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+green
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+pink
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+magenta
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+orange
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+purple
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+yellow
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+blue
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+red
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+green
+dot 16.153426 0
+line 16.153426 0 0.000000 0
+magenta
+dot 19.354363 0
+orange
+dot 19.354363 0
+purple
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+yellow
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+blue
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+red
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+green
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+pink
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+magenta
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+orange
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+purple
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+yellow
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+blue
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+red
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+green
+dot 19.354363 0
+line 19.354363 0 16.153426 0
+go

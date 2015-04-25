@@ -1,0 +1,70 @@
+dtime signed
+title
+idle connections over time by port
+xlabel
+time
+ylabel
+idle connections
+magenta
+dot 0.000000 1
+orange
+dot 0.000000 1
+purple
+dot 0.000000 1
+yellow
+dot 0.000000 1
+blue
+dot 0.000000 1
+red
+dot 0.000000 1
+green
+dot 0.000000 3
+ltext 93.113206 1 magenta
+36666
+magenta
+dot 187.226412 1
+line 187.226412 1 0.000000 1
+ltext 93.113206 1 orange
+59886
+orange
+dot 187.226412 1
+line 187.226412 1 0.000000 1
+purple
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+yellow
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+blue
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+red
+dot 187.226412 0
+line 187.226412 0 0.000000 1
+ltext 93.113206 2 green
+total
+green
+dot 187.226412 1
+line 187.226412 1 0.000000 3
+magenta
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+orange
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+purple
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+yellow
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+blue
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+red
+dot 187.829793 0
+line 187.829793 0 187.226412 0
+green
+dot 187.829793 0
+line 187.829793 0 187.226412 1
+go
