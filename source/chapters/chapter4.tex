@@ -39,8 +39,12 @@ Therefore, there is a short download period at the beginning of the DLNA
 Then, we evaluate the performance of  the two streaming solutions under limited bandwidth. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and run the streaming. 
 During each round of the test streaming, the same mp3 music is streamed to Kodi
 using the DLNA standard. Figure \ref{dlna_traffic_bw} and
-\ref{dlna_traffic_bw_1} show the result.
-
+\ref{dlna_traffic_bw_1} show the result.\\
+\\
+According to the figure, the initial loading speed is dependent on the bandwidth of network. When there is no limit in bandwidth, the loading speed is the fastest. When the network bandwidth is limited, as the bandwidth of network increases, the initial loading speed would also increase. This proves that in DLNA streaming, most of the content is fully downloaded in the initial phase of streaming,  since HTTP streaming is used. The quality of steaming can be guaranteed when the initial buffering is finished. The receiver will take the buffered content and play locally.\\
+\\
+In contrast, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets are successfully delivered to the receiver. The UDP based delivery only provides a best-effort transmission. The sound quality can not be guaranteed because there is no buffer or retransmission mechanism on the receiver side and the transmission is almost real-time. Given this reason, when the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted. All music information is lost since too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly. The playback is choppy and noisy. After the bandwidth is increased to 1000 kbps, the music can then work smoothly and no noticeable noise can be heard.\\
+\\
 \begin{figure}[hb]%[!t]%[hb][!b]
 \subfigure[No
 limit]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
@@ -54,10 +58,7 @@ bandwidth constrained situation\label{dlna_traffic_bw}}
 \caption{DLNA streaming traffic comparison in
 bandwidth constrained situation\label{dlna_traffic_bw_1}}
 \end{figure}
-According to the figure, the initial loading speed is dependent on the bandwidth of network. When there is no limit in bandwidth, the loading speed is the fastest. When the network bandwidth is limited, as the bandwidth of network increases, the initial loading speed would also increase. This proves that in DLNA streaming, most of the content is fully downloaded in the initial phase of streaming,  since HTTP streaming is used. The quality of steaming can be guaranteed when the initial buffering is finished. The receiver will take the buffered content and play locally.\\
-\\
-In contrast, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets are successfully delivered to the receiver. The UDP based delivery only provides a best-effort transmission. The sound quality can not be guaranteed because there is no buffer or retransmission mechanism on the receiver side and the transmission is almost real-time. Given this reason, when the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted. All music information is lost since too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly. The playback is choppy and noisy. After the bandwidth is increased to 1000 kbps, the music can then work smoothly and no noticeable noise can be heard.\\
-\\
+\clearpage
 Another thing worth mentioning is that in the experiment, the same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not usable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required by DLNA streaming is considerably smaller than AirPlay streaming.\\
 \\
 Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.
@@ -113,33 +114,34 @@ percent loss]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_15l
 \end{figure}
 So far, we have received ratings from 10253 users and currently the average rating is 3.9 out of 5. The distribution is shown in Figure \ref{ratings}. According to the rating distribution graph, most users are satisfied with our solution and give the 5 stars rating. However, the average rating is heavily influenced by the 1 star rating users. The reason for those low ratings is that the receivers some users have in home are not compatible with our application due to different reasons. It might be that some protocols,such as Roku box, are not supported yet. Network condition problem also contributes to the incompatibility issues. For example some routers have by default disabled multicast due to security reasons. Another major cause of the incompatibility problem is that even with the same protocol, such as DLNA , a minor implementation difference may cause the break of connections. Thus, in the later phase, we have made receiver specific hacks to make our application work with most DLNA receivers, regardless of which implementation they use.
 \begin{figure}[!t]
-\centering \includegraphics[height=9cm]{charts/rating_distribution}
+\centering \includegraphics[height=8.5cm]{charts/rating_distribution}
 \caption{Rating distribution\label{ratings}}
 \end{figure}
 In terms of user distribution, in the last 16 months, our application turns out
 to be very popular in countries like France, United States, Germany, United Kingdom
 and Brazil. The user distribution is shown in Figure \ref{user_country}.
-\begin{figure}[hb]
-\centering \includegraphics[height=9cm]{charts/country_popularity}
+\begin{figure}[htb]
+\centering \includegraphics[height=8.5cm]{charts/country_popularity}
 \caption{Popularity in different countries \label{user_country}}
 \end{figure}
 We have also translated the description of our application to nine languages, which include English, Russian, German, Italian, Japanese, French, Chinese, Spanish and Korean. The multiple language support may also contribute to the popularity of our application in all parts of the world.
-\begin{figure}[hb]
-\centering \includegraphics[height=9cm]{charts/os_version_popularity}
+\begin{figure}[!t]
+\centering \includegraphics[height=8.5cm]{charts/os_version_popularity}
 \caption{Popularity of different Android versions \label{os_versions}}
 \end{figure}
 The most popular operating system used for our application is Android, but interestingly there are also tens of users was using our application on BlackBerry \footnote{\url{https://developer.blackberry.com/playbook/android/files/webinars/BlackBerry_Runtime_for_Android_Apps.pdf}}, which is another mobile operating system developed by BlackBerry Inc.  For all the users on Android system, the distribution is shown in Figure \ref{os_versions}. According to the statistics, Android Kitkart is the most widely used Android version, which is also our target system version. Most users have updated to the Kitkart version 4.4. We also have a very small part of users who are using the latest Android 5.0(Lollipop). These users are more likely to experience more bugs. The reason is that the latest Android uses Android RunTime (ART) to replace Dalvik runtime\cite{dalvik_arch}. The native code (C code) support is not optimized so well for the new ART architecture. However the native code support shall be improved in later update of Android Lollipop operating system.\\
 \\
 The most interesting statistic of our application is the receiver popularity, which is shown in Figure \ref{receiver_types}. Since our project aimed at developing a solution for multimedia home networking, it is especially useful to find out which protocol is the most popular one. According to the result from Google Analytics, the AirPlay and DLNA are the most popular standards, with a combined   usage rate of 87\% among all streaming sessions. Chromecast is the third most popular receiver while Amazon Fire TV is the least adopted receiver. The result can also suggest the future trend of multimedia home networking.
-\begin{figure}[hb]
-\centering \includegraphics[height=9cm]{charts/receiver_popularity}
+\begin{figure}[htb]
+\centering \includegraphics[height=8.5cm]{charts/receiver_popularity}
 \caption{Popularity of receiver types \label{receiver_types}}
 \end{figure}
-Our application has gone public for 16 months and it has seen a series of small updates and one major update on last Christmas. The number of daily visits is shown in Figure \ref{sessions_perday}. As shown in the figure, after the release, the number of users has seen a great increase in the first two months. After that, the number of active users has remained steady over the following six months, until we launched a major release after around a year. The new release included an updated UI and a better written streaming component. This release has brought a significant growth in users. Currently our application is hitting 15000 visits per day,  proving that our solution has been successful.
 \begin{figure}[hb]
-\centering \includegraphics[height=9cm]{charts/sessions_per_day}
+\centering \includegraphics[height=8.5cm]{charts/sessions_per_day}
 \caption{Sessions per day \label{sessions_perday}}
 \end{figure}
+Our application has gone public for 16 months and it has seen a series of small updates and one major update on last Christmas. The number of daily visits is shown in Figure \ref{sessions_perday}. As shown in the figure, after the release, the number of users has seen a great increase in the first two months. After that, the number of active users has remained steady over the following six months, until we launched a major release after around a year. The new release included an updated UI and a better written streaming component. This release has brought a significant growth in users. Currently our application is hitting 15000 visits per day,  proving that our solution has been successful.
+
 
 \subsection{User study}
 It is essential to listen to feedback from users and our application users can send their feedback to us in many ways, such as commenting on the Google Play Store or sending E-mail directly to us.\\
