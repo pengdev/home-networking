@@ -448,7 +448,10 @@ used to display different types of media content on Apple TV from other iOS devi
 AirPlay support multiple functions, including displaying photos and sideshows from iOS devices, streaming audio from iOS devices or iTunes, as well as displaying videos from a iOS device and 
 showing the whole screen on Apple TV, which is known as AirPlay Mirroring. \\
 \\
-AirPlay's specification is not open to public. However, unofficial specifications have been made by some hackers through reverse engineering the protocol stack \cite{AirPlay-spec}. These unofficial specifications could be found on the Internet \cite{AirPlay-spec}.  
+AirPlay's specification is not open to public. However, unofficial
+specifications have been made by some hackers through reverse engineering the
+protocol stack \footnote{\url{http://nto.github.io/AirPlay.html}}. These
+unofficial specifications could be found on the Internet \cite{AirPlay-spec}.
 The specification includes 6 parts, including service discovery, video
 streaming, photo streaming, music streaming, screen mirroring and
 authentication.\\
@@ -461,9 +464,9 @@ Zeroconf working group has made it possible to make two devices in the
 network to communicate effectively using IP, without requiring a specialist to manually 
 configure the network. \\
 \\
-AirPlay's service discovery is based on Multicast DNS \cite{multicastdns}, which 
-fulfills the Zeroconf requirement. Multicast DNS is a way of using familiar DNS 
-programming interfaces, packet formats and operating semantics, in a small 
+AirPlay's service discovery is based on Multicast DNS \cite{multicastdns}
+\footnote{\url{http://www.ietf.org/rfc/rfc6762.txt}}, which fulfills the
+Zeroconf requirement. Multicast DNS is a way of using familiar DNS programming interfaces, packet formats and operating semantics, in a small 
 network where no conventional DNS server has been installed. The requirements 
 for Zeroconf name resolution could be met by designing an entirely new 
 protocol, since it is better to provide this functionality by making minimal changes 
@@ -767,15 +770,19 @@ Optionally, There could be a User Interface Back Channel(UIBC) for transmitting 
 \\
 \textbf{Payload control}\\
 \\
-When the payload transfer starts, devices may adapt transmission parameters on the basis of channel conditions and power     consumption. Adaptation can be achieved by either compression ratio change and macroblock skipping (using the H.264 standard) or frame skipping (if the display device supports this functionality, the source device may skip some of the frames to be transmitted according to the current resolution) or format change. \\
+When the payload transfer starts, devices may adapt transmission parameters on
+the basis of channel conditions and power consumption. Adaptation can be achieved by either compression ratio change and macroblock skipping (using the H.264 standard) or frame skipping (if the display device supports this functionality, the source device may skip some of the frames to be transmitted according to the current resolution) or format change. \\
 \\ 
 \textbf{Display session teardown} \\
 \\
 Either the source or the display can terminate the Miracast session.
 \subsubsection{Other protocols}
 Apart from all the mentioned standards above, many other companies or associations 
-also developed their own proposals, such as SonosNet \cite{sonosnet} that is 
-based on peer to peer network and Spotify Connect \cite{spotifyconnect}. With all these standards and proposals competing the market, the war of standardization on home networking, however, is still not over. 
+also developed their own proposals, such as SonosNet \cite{sonosnet}
+\footnote{\url{https://sonos.custhelp.com/app/answers/detail/a_id/126/~/information-about-sonosnet}}
+that is based on peer to peer network and Spotify Connect \cite{spotifyconnect}
+\footnote{\url{https://www.spotify.com/fi/connect/}}. With all these standards
+and proposals competing the market, the war of standardization on home networking, however, is still not over.
 
 \subsection{Comparison of existing solutions} 
 \subsubsection{History} 
