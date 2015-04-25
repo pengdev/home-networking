@@ -1,2 +1,2 @@
-set label "All Data" at (7.000635-946684800.000000), 2613618.000000 right
-set label "Non-Rexmitted Data" at (7.000635-946684800.000000), 2588698.000000 right
+set label "All Data" at (7.000635-946684730.000000), 13013618.000000 right
+set label "Non-Rexmitted Data" at (7.000635-946684670.000000), 10088698.000000 right
