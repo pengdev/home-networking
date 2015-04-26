@@ -4,11 +4,10 @@
 Home networking has been a hot topic for several years. Thanks to the rapid development 
 of electronics and computer science, home networking devices are becoming more affordable 
 and more powerful than they ever were. It is now so common that a person would
-have several multimedia devices that can be connected to the network. In this
-chapter, we give an overview of current solutions of home networking that
-bridges these multimedia devices. By making comparison among these solutions we
-try to identify the challenges that face home networking.
-\subsection{Overview} 
+have several multimedia devices that can be connected to the network. \\
+\\
+This chapter reviews the history of home networking development and compares five most popular home networking solutions. Section \ref{2_1} presents an overview of current solutions of home networking that bridges these multimedia devices. Section \ref{2_2} describes the technical details of five most popular solutions. Section \ref{2_3} provides a comparison among these protocols and identifies the challenges that face home networking.
+\subsection{Overview\label{2_1}} 
 Early research \cite{link_layer_old} \cite{end_user} \cite{link_layer}
 conducted on home networking mainly aimed to find out how home networking
 infrastructure can be built. The subjects of the research, including cable
@@ -79,9 +78,13 @@ Since so many companies would like to develop their own devices and even their
 own protocols, the market is a bit messy. Devices from different companies are not compatible with each other and users have to buy a different device in order to access different services like Netflix and Spotify, which are provided by different companies.  This has created a big demand on a solution that can connect those devices at home and make them work together in a user friendly manner. \\
 \\
 In response of this market need, our Streambels project has been initiated, aiming to fill the gap among different protocols and connect these different types of devices in the home networking environment.
-\subsection{Available protocols} 
-\subsubsection[Universal Plug and Play]{Universal Plug and Play}
-\paragraph{UPnP device architecture}
+\subsection{Available protocols\label{2_2}} 
+This section describes the most popular solutions for multimedia home networking. Section \ref{2_2_1}, \ref{2_2_2}, \ref{2_2_3}, \ref{2_2_4} and \ref{2_2_5} provide the detailed technical implementations and simple use scenarios of Universal Plug and Play, DLNA, AirPlay, DIAL and Miracast. Section \ref{2_2_6} outlines other popular protocols proposed recently.
+\subsubsection[Universal Plug and Play]{Universal Plug and Play\label{2_2_1}}
+This section describes the Universal Plug and Play protocol stack and the UPnP
+Audio/Video device architecture which is more specifically targeted to
+multimedia home networking. Section \ref{2_2_1_1} introduces the general UPnP device architecture. Section \ref{2_2_1_2} presents the UPnP Audio/Video device architecture and a typical UPnP Audio/Video use scenario.
+\paragraph{UPnP device architecture\label{2_2_1_1}}
 Universal Plug and Play (UPnP) is a series of networking protocols defined to 
 work together and seamlessly discover the presence of all devices in the network 
 , establishing functional network services for data sharing, communications, and 
@@ -197,7 +200,7 @@ The presentation page, which is an HTML page, is solely specified by the device 
 The UPnP architecture does not define the details of the presentation page,
 however it suggests that the presentation page shall be user friendly and shall
 possess some basic functionalities.
-\paragraph{UPnP A/V devices}
+\paragraph{UPnP A/V devices\label{2_2_1_2}}
 We now move on to study the UPnP A/V(audio/video) devices in home networking
 \label{upnpav}. The UPnP A/V architecture is shown in Figure
 \ref{upnp_playback}.
@@ -343,10 +346,10 @@ RTP or other streaming protocols. \\
 The media playback control actions can also be invoked by the control point. Methods 
 supported include volume control, seek, pause etc. 
 
-\subsubsection[DLNA]{Digital Living Network Alliance} 
+\subsubsection[DLNA]{Digital Living Network Alliance\label{2_2_2}} 
 DLNA is a relatively old industry standard compared with other home networking 
 solutions. It is mainly based on the UPnP Audio/Video architecture, which is 
-discussed in section \ref{upnp}. As a result, it is widely used by many manufactures. Newer 
+discussed in section \ref{2_2_1_2}. As a result, it is widely used by many manufactures. Newer 
 home networking solutions are also influenced by DLNA and they follow similar 
 technologies used in DLNA. In this paper the DLNA and UPnP standard architectures are studied to help us gain a grasp of how a home networking solution could look like. \\
 \\
@@ -442,7 +445,7 @@ A particular type of DLNA Device Profile is the Commercial Video Profile (CVP).
 A CVP Device Profile is an extension of the DLNA guidelines that will allow
 content from service providers and multichannel video programming distributers to be distributed on the DLNA network. DLNA Commercial Video Profiles (CVPs) are defined as Device Profiles that consistently enable commercial content that enters the home network through a gateway device via an interface to a commercial content service provider. Since different regions of the world have different requirements for commercial content, there are multiple CVPs defined.
 
-\subsubsection{AirPlay} 
+\subsubsection{AirPlay\label{2_2_3}} 
 AirPlay is Apple Inc's home networking solution. It is a family of protocols 
 used to display different types of media content on Apple TV from other iOS devices. 
 AirPlay support multiple functions, including displaying photos and sideshows from iOS devices, streaming audio from iOS devices or iTunes, as well as displaying videos from a iOS device and 
@@ -607,7 +610,7 @@ user names accepted by Apple TV are described in table \ref{hda}.
 \end{center} 
 \end{table} 
 
-\subsubsection{DIAL} 
+\subsubsection{DIAL\label{2_2_4}} 
 Chromecast and FireTV use the DIAL \cite{dial} (DIscovery And Launch) protocol,
 co-developed by Netflix and YouTube, to search for available devices on a Wi-Fi network. 
 Once a device is discovered, the protocol synchronizes information on how to 
@@ -674,7 +677,7 @@ DIAL REST service is  shown in Figure \ref{dial_rest}.
 \caption{DIAL REST service: application launch \label{dial_rest}} 
 \end{figure} 
 
-\subsubsection{Miracast} %NOT Edited
+\subsubsection{Miracast\label{2_2_5}} %NOT Edited
 Miracast \cite{miracast_industry} is very different on technology perspective.
 Devices which utilizing Miracast technology are not necessarily connected to
 the same local network, a Wi-Fi peer to peer connection will be created when
@@ -776,7 +779,7 @@ the basis of channel conditions and power consumption. Adaptation can be achieve
 \textbf{Display session teardown} \\
 \\
 Either the source or the display can terminate the Miracast session.
-\subsubsection{Other protocols}
+\subsubsection{Other protocols\label{2_2_6}}
 Apart from all the mentioned standards above, many other companies or associations 
 also developed their own proposals, such as SonosNet \cite{sonosnet}
 \footnote{\url{https://sonos.custhelp.com/app/answers/detail/a_id/126/~/information-about-sonosnet}}
@@ -784,8 +787,9 @@ that is based on peer to peer network and Spotify Connect \cite{spotifyconnect}
 \footnote{\url{https://www.spotify.com/fi/connect/}}. With all these standards
 and proposals competing the market, the war of standardization on home networking, however, is still not over.
 
-\subsection{Comparison of existing solutions} 
-\subsubsection{History} 
+\subsection{Comparison of existing solutions\label{2_3}} 
+This section presents the comparison of all the existing solutions discussed in section \ref{2_2}, identities the challenges and proposes a solution for multimedia home networking. Section \ref{2_3_1} describes the evolution history of the popular home networking solutions. Section \ref{2_3_2} presents the market share of each standard. Section compares the technological details of available protocols and proposes a possible solution for multimedia home networking.
+\subsubsection{History\label{2_3_1}} 
 DLNA is proposed by several leading consumer electronic manufactures based on the UPnP 
 technology. From early 2000s on, over 2.2 billion devices with DLNA have been shipped, 
 making it possible to share audio and video seamlessly among different smart devices. Moreover, the DLNA alliance had been holding two meetings annually to discuss the marketing and development related issues, making DLNA a more and more accomplished standard. \\
@@ -799,7 +803,7 @@ market. Released in 2013, a piece of 2.83-inch (72 mm) dongle hardware, which ut
 popular device of its kind. The Google cast standard was proposed with the joint effort of 
 Google and Netflix. Since they are Internet companies, this standard has been 
 designed with Cloud in mind. With the support of Cloud, the content is directly streamed from YouTube or Netflix servers to the Chromecast dongle. One thing worth mentioning is that when using the dangle, any applications running on mobile platforms are just acting as a control points. The dangle also provides features like browser mirroring. For example, with a Chromecast plugin, a Chrome browser can stream its web tab to the dangle who transfer the signal to a big screen TV. In a foreseeable future, the Google cast standard could become more and more popular. 
-\subsubsection{Market} 
+\subsubsection{Market\label{2_3_2}} 
 DLNA is one of the first proposed solutions for multimedia home 
 networking, thus it is so far the most accepted one. Figure 
 \ref{dlna_market} shows the history and prediction of the DLNA-certified device sales. In 2018, the 
@@ -818,8 +822,9 @@ the past two years. Many latest TVs have been built with Miracast support, to ac
 Chromecast dongle is a cheap device that everyone wants to try. It can be used to easily upgrade an old TV to a "Smart TV".  What's more, since Google has provided good content support for Chromecast dongle, it has soon been accepted by huge amount of users. \\
 \\
 In Chapter \ref{chapter4}, we will have a presentation of the popularity of different standards according to the result of our solution.
-\subsubsection{Technology feature} 
-\paragraph{Media format support} 
+\subsubsection{Technology feature\label{2_3_3}} 
+This section compares the technical differences among the most popular standards. Section \ref{2_3_3_1} outlines the supported media formats of each standard. Section \ref{2_3_3_2} summarizes the common protocols used in different standards and proposes the idea of developing a suitable solution to solve the incompatibility problem in home networking.
+\paragraph{Media format support\label{2_3_3_1}} 
 AirPlay and Chromecast has very limited media format support, since there are 
 only limited device types. For example, Chromecast has only released 2 devices so far and there is not much change in the media format. Similarly Apple TV, even in its third generation,  has merely seen the improvements in its high definition supports, rather than the changes in media format support.  \\
 \\

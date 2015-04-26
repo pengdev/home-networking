@@ -23,8 +23,9 @@ to manually set up the more advanced
  could possibly be developed to control all multimedia streaming data flows and
  act as a personal access portal for home networking.\\
 \\
-After a year of development, our team have built up an Android application that
-can be used to control and connect every known type of multimedia device at home.
+After a year of development, our team have built up an Android
+application\footnote{\url{http://allconnectapp.com/}} that can be used to
+control and connect every known type of multimedia device at home.
 Encouragingly, the number of our application users have grown to nearly one
 million so far, providing a strong proof of the effectiveness of our solution.
 
@@ -32,7 +33,8 @@ million so far, providing a strong proof of the effectiveness of our solution.
 In order to solve the multimedia home networking interoperability problem, the system should be designed to control media playback sessions. Consequently, content navigation, manage receiver device, and media playback should be the most important three components. In our solution, the system architecture consists of three major parts: device discovery, content management and streaming.\\
 \\
 The discovery component is responsible for device discovery. As discussed
-in\ref{upnp}, UPnP/DLNA devices and DIAL devices use Simple Service Discovery Protocol(SSDP) for device discovery. An application firstly sends a M-Search request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then the application listens to other devices' responses. A DIAL device will return a response with an Application URL header, while the UPnP/DLNA devices will return a message with a XML body, which provides detailed service URLs and description URLs. Instead of using the SSDP discovery, Apple's products, in comparison, use Multicast DNS for device and service discovery. Obviously, in order to support the three types of devices, namely the UPnP/DLNA devices, the DIAL devices and the Apple Airplay devices, we need to integrate these two mentioned discovery mechanisms, namely, the SSDP mechanism and the Multicast DNS mechanism, into our solution.\\
+in \ref{upnp}, UPnP/DLNA devices and DIAL devices use Simple Service Discovery
+Protocol(SSDP) for device discovery. An application firstly sends a M-Search request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then the application listens to other devices' responses. A DIAL device will return a response with an Application URL header, while the UPnP/DLNA devices will return a message with a XML body, which provides detailed service URLs and description URLs. Instead of using the SSDP discovery, Apple's products, in comparison, use Multicast DNS for device and service discovery. Obviously, in order to support the three types of devices, namely the UPnP/DLNA devices, the DIAL devices and the Apple Airplay devices, we need to integrate these two mentioned discovery mechanisms, namely, the SSDP mechanism and the Multicast DNS mechanism, into our solution.\\
 \\
 The content management component is responsible for organizing and
  navigating multimedia contents that can be discovered in the home network. In our solution, these content sources include both the local storage of smart phones and DLNA digital media servers that are connected to home network. As long as the discovered device belongs to the three device types that we support, its content could be streamed using our application solution.\\
