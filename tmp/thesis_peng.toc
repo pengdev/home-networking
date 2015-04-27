@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {3.1}Architecture overview}{29}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Implementation}{30}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}UX design}{32}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Features}{34}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Features}{33}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Extensibility}{34}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Test methodology}{34}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.6}Test methodology}{35}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}Evaluation methodology}{35}{subsection.3.7}
 \contentsline {subsubsection}{\numberline {3.7.1}Experimental setup}{35}{subsubsection.3.7.1}
 \contentsline {subsubsection}{\numberline {3.7.2}User study and feedback collection}{36}{subsubsection.3.7.2}

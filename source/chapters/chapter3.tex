@@ -27,9 +27,19 @@ After a year of development, our team have built up an Android
 application\footnote{\url{http://allconnectapp.com/}} that can be used to
 control and connect every known type of multimedia device at home.
 Encouragingly, the number of our application users have grown to nearly one
-million so far, providing a strong proof of the effectiveness of our solution.
+million so far, providing a strong proof of the effectiveness of our solution.\\
+\\
+This chapter proposes the solution we developed for multimedia home networking.
+Section \ref{3_1} proposes the solution and introduces the overall architecture
+of the proposed solution. Section \ref{3_2} describes the detailed
+implementation aspects of our solution. Section \ref{3_3} describes the user
+interface and user experience design. Section \ref{3_4} discusses the features
+of our solution. Section \ref{3_5} discusses the possibility to extend our
+solution to other content sources. Section \ref{3_6} describes the methodology
+of software testing and how our solution is tested before releasing to market.
+Finally, Section \ref{3_7} introduces the methodology to evaluate our solution.
 
-\subsection{Architecture overview}
+\subsection{Architecture overview\label{3_1}}
 In order to solve the multimedia home networking interoperability problem, the system should be designed to control media playback sessions. Consequently, content navigation, manage receiver device, and media playback should be the most important three components. In our solution, the system architecture consists of three major parts: device discovery, content management and streaming.\\
 \\
 The discovery component is responsible for device discovery. As discussed
@@ -41,7 +51,7 @@ The content management component is responsible for organizing and
 \\
 The streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes, etc. In a typical home networking environment, DLNA, AirPlay video/photo and Chromecast all use HTTP streaming. The only exception, the AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, we integrate two types of media servers inside our application solution. With our application, the built-in RAOP server would handle the AirPlay music streaming and the built-in HTTP media server would handle streaming of all other types.
 
-\subsection{Implementation}
+\subsection{Implementation\label{3_2}}
 Since the application is built upon the Android platform, we conducted studies on the Android system architecture and the Android Software Development Kit (SDK). Thankfully, the Android SDK provides many useful Application Programming Interfaces (APIs) and grants crucial permissions to access necessary services and hardware features, such as the permission to access the Internet , the permission to access the WiFi device state change, the permission to allow WiFi multicast and  the permission to read phone storage. The programming language used in developing our Android Application is Java. However some CPU-intensive works, such as transcoding, have to be implemented in C and then embedded to the application using the Android Native Development Kit (NDK).\\
 \\
 Since Apple has not provided its official specification for AirPlay, our implementation for supporting AirPlay is mostly written under unofficial guidelines. However, Apple has provided its official Multicast DNS (mDNS) implementation in C. Thus, this piece of code is reused and compiled as a shared native library. Similar with the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
@@ -87,7 +97,7 @@ Finally, if the streamed content locates in a DLNA Digital Media Server, then th
 \caption{Simplified data flow \label{chart4}}
 \end{figure}
 
-\subsection{UX design}
+\subsection{UX design\label{3_3}}
 In terms of UI and UX, the application should be simple enough to use. Users should be able to locate the media, browse
  content on different sources, and follow the data flow between devices without any difficulty. The control of different devices should also be intuitive so that the inter-operation between different devices can be seamless.\\
 \\
@@ -99,7 +109,7 @@ Bearing all these considerations in mind, the final appearance of the applicatio
 \caption{Application UX design \label{chart5}}
 \end{figure}
 
-\subsection{Features}
+\subsection{Features\label{3_4}}
 The Android application we have developed can handle most multimedia devices in typical home networking. It also provides various features, making it a powerful and universal solution for multimedia home networking.\\
 \\
 Firstly, the application itself is a multimedia player. Both the media stored locally on the phone storage and the media located in the DLNA media servers can be browsed and played locally on the phone.\\
@@ -110,7 +120,7 @@ Thirdly and most importantly, the application enables the DLNA media server to w
 \\
 Lastly, YouTube and other on-line channels like Vimeo and Facebook are supported as available media sources. These content can be streamed, regardless of the protocol, to all supported receivers that are connected to home network.
 
-\subsection{Extensibility}
+\subsection{Extensibility\label{3_5}}
 Streambels has embedded a media streaming server for local files and a streaming proxy for bridging the gap between online resources and home networking. By using a built-in proxy, Streambels is able to share on-line resources from the Internet to devices in home networking environment. \\
 \\
 New service providers and content providers can integrate home networking support into their products easily by just sending formatted intent to our application following our guidelines. The proxy will automatically bridge the gap between the Internet and home network.\\
@@ -118,17 +128,19 @@ New service providers and content providers can integrate home networking suppor
 The proxy system provides great extensibility and makes it possible to connect home networking to Internet or Cloud Services.\\
 \\
 In the future we could also develop a Software Development Kit (SDK) to grant the availability of our technology, enabling other application builders to directly use our home-networking solutions.
-\subsection{Test methodology}
+\subsection{Test methodology\label{3_6}}
 Software testing is extremely important for a modern IT project. Buggy implementations may kill the product in the very beginning since it can badly undermine user experiences. Through testing we could assure the performance and stability of our product. Thus, before the final releasing to the Google Play store, the application was thoroughly tested.\\
 \\
 These tests included unit test, integration test and functional test.
 Unit tests were conducted while coding the application. When each class was finished, unit tests would be written for each method. We also set up an continuous integration server so that each time we commit anything to the git repository, full set of unit tests would be executed. If there were any failure in the unit tests, developer would be immediately notified. Integration tests were done in such a way that we ensured each function module work together with other modules in the system. Lastly, we listed all the possible use cases in paper and prepare a huge media base which contains all kind of media files. With all these preparations ready, manual tests were conducted before the app is finally released in the market.
 
-\subsection{Evaluation methodology}
-The evaluation of this application includes two parts. The first part involves experiments
-that help evaluate the application performance. The second part invovles a study on the application usage in the market and user feedbacks.
+\subsection{Evaluation methodology\label{3_7}}
+This section discusses the methodology to evaluate our application. Section
+\ref{3_7_1} describes the experiments to evaluate the performance of Streambels
+app. Section \ref{3_7_2} introduces the methodology we use to collect user
+activities and user feedbacks.
 
-\subsubsection{Experimental setup}
+\subsubsection{Experimental setup\label{3_7_1}}
 The test environment is set up as in Figure \ref{setup}. The XBMC
 media receiver is running on MacBook A and Streambels is running on a rooted Android phone. Both A and B are connected to a router C using the 802.11 ac wireless interface. \\
 \begin{figure}[htb]
@@ -144,7 +156,7 @@ Wireshark is an useful developer tool to capture and analyze network traffic. It
 When the test starts, the same content will be streamed to receivers using two different standards, AirPlay and DLNA. The same test will be run several times to get the average statistics. Different parameters will also be tested by using different network condition configurations.
 \\
 3 parameters are taken into consideration when conducting the tests: bandwidth, packet loss and delay. 
-\subsubsection{User study and feedback collection}
+\subsubsection{User study and feedback collection\label{3_7_2}}
 Since the product is targeted to Android market and is directly used by end users, user feedback is really important to us for improving the product continuously. Email is used for normal communication between the user and our support. A submission window is built inside the application, so that users can easily send feedback to us directly by Email.\\
 \\
 There is no perfect program, crashes sometimes happen. Thanks to Google, all crash reports are collected and displayed inside developer console. This makes it a lot easier to track and debug our application.\\
