@@ -1,6 +1,11 @@
 %% Discussion chapter
 %% author Liu Peng
-\subsection{Conclusion}
+This chapter reviews the work that is done during this thesis project and
+summarizes the conclusion of this thesis. Section \ref{5_1} draws the
+conclusion of this thesis project. Section \ref{5_2} describes the further
+possible development could be conducted to improve this solution. Finally,
+Section \ref{5_3} discusses the future trend of multimedia home networking.
+\subsection{Conclusion\label{5_1}}
 Since the launch in November 2013, our application has received over 1 million
 downloads and a daily active user number of over 15000. People from 99\% percent
 of all the countries have downloaded and tried our solution. We kept improving
@@ -9,7 +14,7 @@ Streambels and all these statistics have proven that our solution is competitive
 The launch of Streambels has been successful, but the problem of multimedia
  home networking is still not completely solved. More manufacturers still keep developing and pushing new standards to the market. It is not possible to develop and support all the content sources and all the protocols in the future. To improve our solution and solve the problems of home networking, a better understanding and outlook of the future of home networking and accept new challenges.
 
-\subsection{Further development}
+\subsection{Further development\label{5_2}}
 \subsubsection{Support for more platforms}
 The development on Android has been completed and achieved good result. The next step of developing is to make the solution also work on other platforms. Apple iOS and Microsoft Windows are the other two most popular mobile operating systems used by people. It is essential to firstly move on to iOS first since it has a larger user base. The work on iOS version implementation has already started, the first version currently is already released in the market, we are keep improving it to the same quality as Android version.
 \subsubsection{Developing an Software Development Kit}
@@ -23,7 +28,7 @@ One big problem that is not solved of multimedia home networking is that the cod
 \subsubsection{In-kernel media server}
 One of the key pediments for multimedia home networking is streaming performance. It is hard to guarantee streaming quality when streaming high bit rate contents. Since Tuxera has competence in developing file systems in kernel space and has many leading Android phone manufacturers using our file system kernel module, it is possible that media server functionality also be implemented and integrated to Linux kernel space. Thus, the application can use these functions exposed from the kernel in the user space.
 Moreover, similar in-kernel web servers such as TUX web server \cite{tux_webserver}, have already been implemented by different developers. Which also proves a in-kernel media server is doable.
-\subsection{Future of multimedia home networking}
+\subsection{Future of multimedia home networking\label{5_3}}
 \subsubsection{Device discovery}
 Given all the previous study about different standards in the market, there are mainly two mechanism of service discovery introduced: Simple Service Discovery Protocol(SSDP) as a part of UPnP and multicast DNS(mDNS) as part of Zeroconf. Research \cite{zeroconf_vs_upnp} has been done previously to discuss which one is the better solution. Generally speaking, mDNS is supports an easier way to implement a new device, since the technology is simpler. While implementing a new device in UPnP would be much harder, since for each new device type, a new UPnP forum will be started to handle the implementation.\\
 \\

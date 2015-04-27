@@ -1,29 +1,58 @@
 %% Results chapter
 %% author Liu Peng
 
-After designing, implementing and testing the application. We conducted several evaluation tests on the streaming performance. We had released the first edition of the application in Google Play Store in Nov 2013. Since then, we had been updating the application in order to improve its performance and enrich its features. During the past one year, we have collected a big amount of useful data and interesting results. In this chapter we will present and analyze these results.
-\subsection{Evaluation of streaming performance}
-In terms of streaming, our solution includes two major streaming components. It would be helpful to study and compare which streaming protocol has the better performance while streaming multimedia contents. Moreover, by streaming different types of media and make comparison, we could reveal which protocol is more suitable for a certain type of media. \\
-\\The two major streaming technologies we used in our solution are HTTP streaming and RAOP streaming, respectively.\\
+After designing, implementing and testing the application. We conducted several
+evaluation tests on the streaming performance. We had released the first
+edition of the application in Google Play Store in Nov 2013. Since then, we had
+been updating the application in order to improve its performance and enrich
+its features. During the past one year, we have collected a big amount of
+useful data and interesting results. \\
 \\
-Hypertext Transfer Protocol (HTTP) is the protocol used to deliver web pages and images across the World Wide Web. HTTP is a most widely adopted, open standard and the most ubiquitous method of content delivery on the Internet. HTTP objects can be delivered by a variety of web servers, including commercially used servers and open source servers. Both DLNA and Chromecast use HTTP to realize their streaming functionality.\\
+This chapter presents the results of our evaluation. Section \ref{4_1} evaluates
+the streaming performance of different streaming protocols. Section \ref{4_2}
+presents the statistics from our users. Section \ref{4_3} provides a user study
+and describes how we have improved the usability of our solution by utilizing
+this study.
+\subsection{Evaluation of streaming performance\label{4_1}}
+In terms of streaming, our solution includes two major streaming components. It
+would be helpful to study and compare which streaming protocol has the better
+performance while streaming multimedia contents in different network conditions.
+The two major streaming technologies we used in our solution are HTTP streaming
+and RAOP streaming, respectively.\\
 \\
-Unlike HTTP, another popular protocol, the Real Time Streaming Protocol (RTSP) is a network control protocol used in entertainment and communications systems to control media streaming servers. RTSP is used to establish and control media sessions between two points, usually the server and player client. Clients of media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate real-time control of playback of media files from the server.  The RAOP protocol, which is virtually another version of RTSP, is used by AirPlay, for the streaming of iTunes music.
-\subsubsection{Comparison of AirPlay and DLNA traffic}
+Hypertext Transfer Protocol (HTTP) is the protocol used to deliver web pages
+and images across the World Wide Web. HTTP is a most widely adopted, open
+standard and the most ubiquitous method of content delivery on the Internet.
+HTTP objects can be delivered by a variety of web servers, including
+commercially used servers and open source servers. Both DLNA and Chromecast use
+HTTP to realize their streaming functionality.\\
+\\
+Unlike HTTP, another popular protocol, the Real Time Streaming Protocol (RTSP)
+is a network control protocol used in entertainment and communications systems
+to control media streaming servers. RTSP is used to establish and control media
+sessions between two points, usually the server and player client. Clients of
+media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate
+real-time control of playback of media files from the server.  The RAOP
+protocol, which is virtually another version of RTSP, is used by AirPlay, for
+the streaming of iTunes music.\\
+\\
+This section presents the evaluation of HTTP and RTSP streaming servers and
+compares the streaming performance in different network conditions. Since
+typically DLNA uses HTTP for streaming while AirPlay uses ROAP, a
+RTSP-like protocol, for streaming music content, Section \ref{4_1_1} compares
+the streaming traffic of DLNA and AirPlay standards. Section \ref{4_1_2} compares
+the streaming performance of DLNA and AirPlay in limited bandwidth situation.
+Section \ref{4_1_3} presents the similar comparison but under high packet loss
+scenarios.
+\subsubsection{Comparison of AirPlay and DLNA traffic\label{4_1_1}}
 Since we have both protocols implemented in our application. We could
 compare the performance by streaming the same content to two receivers using the
 two different protocols. Typically, DLNA music streaming uses HTTP protocol and
 AirPlay music streaming uses ROAP protocol. We selected a mp3 music file and
 try to stream it to both an AirPlay Speaker and a DLNA Speaker, and we used
 Wireshark running on a rooted Android phone to capture the packets in the
-network.
-\begin{figure}[hb]
-\subfigure[AirPlay]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_airplay_android}}
-\subfigure[DLNA]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
-\caption{AirPlay vs DLNA streaming traffic
-comparison \label{airplay_vs_dlna_traffic}}
-\end{figure}
-\clearpage
+network.\\
+\\
 After the experiment environment is set up, a series of test is conducted and
 the result is presented in Figure \ref{airplay_vs_dlna_traffic}.\\
 \\
@@ -35,7 +64,14 @@ like process, the server can actively fetch content from the media server and th
 be buffered  up since the beginning of the playback, with the best effort of the network.
 Therefore, there is a short download period at the beginning of the DLNA
  streaming graph.
-\subsubsection{Performance under limited bandwidth }
+\begin{figure}[hb]
+\subfigure[AirPlay]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_airplay_android}}
+\subfigure[DLNA]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
+\caption{AirPlay vs DLNA streaming traffic
+comparison \label{airplay_vs_dlna_traffic}}
+\end{figure}
+\clearpage
+\subsubsection{Performance under limited bandwidth\label{4_1_2}}
 Then, we evaluate the performance of  the two streaming solutions under limited bandwidth. We limited the bandwidth to 500 kbps, 700 kbps and 1000 kbps respectively and run the streaming. 
 During each round of the test streaming, the same mp3 music is streamed to Kodi
 using the DLNA standard. Figure \ref{dlna_traffic_bw} and
@@ -62,7 +98,7 @@ bandwidth constrained situation\label{dlna_traffic_bw_1}}
 Another thing worth mentioning is that in the experiment, the same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not usable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required by DLNA streaming is considerably smaller than AirPlay streaming.\\
 \\
 Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.
-\subsubsection{Influence of packet loss}
+\subsubsection{Influence of packet loss\label{4_1_3}}
 After the bandwidth test, we then simulated packet loss on the receiver side and
 conducted the same test for DLNA and AirPlay streaming. 5\%, 10\% and 15\%
 packet loss are introduced to test both DLNA and AirPlay streaming. The result
@@ -106,7 +142,7 @@ percent loss]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_15l
 \end{figure}
 \clearpage
 
-\subsection{Statistics}
+\subsection{Statistics\label{4_2}}
 16 months after its release, our application has achieved 924000 downloads from 223 countries all around the world, with a daily active user number of over 15000. Our users almost cover 99\% of all continent and a world map of our user distribution is shown in Figure \ref{user_map}. 
 \begin{figure}[hb]
 \centering \includegraphics[width=0.9\columnwidth]{charts/session_world_map}
@@ -143,7 +179,7 @@ The most interesting statistic of our application is the receiver popularity, wh
 Our application has gone public for 16 months and it has seen a series of small updates and one major update on last Christmas. The number of daily visits is shown in Figure \ref{sessions_perday}. As shown in the figure, after the release, the number of users has seen a great increase in the first two months. After that, the number of active users has remained steady over the following six months, until we launched a major release after around a year. The new release included an updated UI and a better written streaming component. This release has brought a significant growth in users. Currently our application is hitting 15000 visits per day,  proving that our solution has been successful.
 
 
-\subsection{User study}
+\subsection{User study\label{4_3}}
 It is essential to listen to feedback from users and our application users can send their feedback to us in many ways, such as commenting on the Google Play Store or sending E-mail directly to us.\\
 \\
 Having been collecting user feedbacks for over 16 months, we have made several improvements accordingly. Most of the feedbacks are about trouble shooting. For example, device discovery problem has been the most common issue for most complaining users. The reason could be that phones and other receivers are not connected to the same Wi-Fi network, or the receivers are not turned on. With more and more user feedback collected, we felt obliged to set up a website for trouble shooting. After the setup of the feedback website we kept updating and improving the trouble shooting pages. Now most complaining users could find their answer in this trouble shooting pages.
