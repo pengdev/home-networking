@@ -2,57 +2,71 @@
 %% autor Liu Peng
 
 \subsection{Home networking}
-People's lives are being digitalized. Home multimedia devices nowadays such as digital TVs,
-smart phones, digital cameras, tablets, PCs, laptops and NAS (Network Attached
-Storage) are all being equipped with ever greater processing power and mass storage, wielding the power  to
- record our daily lives and handle the multimedia information. The digitalized world has also seen a rapid growing of network deployment. According to a research
-\cite{stateofHN} done in 2011, in this industrialized world, networking
-is being rapidly adopted at homes; for example, in the U.S. in 2009,
-approximately 63\% of homes had gained access to a broadband connection. Over 50\% had even installed their own "home network", which is defined as multiple computers or devices sharing a broadband
- connection via either a wired or wireless connection within the home. In a typical
-home scenario, most of these devices are connected to a local network such as a
+People's lives are being digitalized. This digitalization can be seen in the
+increasing number of home multimedia devices, such as digital TVs, smart
+phones, digital cameras, tablets, PCs, laptops and NAS (Network Attached
+Storage), which are all equipped with ever greater processing power and mass
+storage, wielding the power to record our daily lives and handle multimedia
+information. The digitalized world has also seen rapid growth in network
+deployment.  In this digitalized world, networking is being rapidly adopted at
+homes. For example, in the U.S. in 2009, approximately 63\% of the homes had
+already gained access to a broadband connection \cite{stateofHN}. Over 50\% of
+these households had even installed their own "home network", which is defined as
+multiple computers or devices sharing a broadband connection via either a wired
+or wireless connection within the home \cite{stateofHN}. In a typical home
+scenario, most of these devices are connected to a local network, such as a
 Wi-Fi hot spot, in order to allow music, pictures, videos and other content to
 be ported across different devices.
 
-\subsection{Problem description}
+\subsection{Motivation and Aims}
 While the adoption of home networks has steadily increased since the late 1990s
-and early 2000s, the home networks have indeed encountered problems and limitations
-\cite{stateofHN}. For example, the usability of home-networking technologies has become
-a key impediment to the adoption of new applications in the home, since the home-networking technology was originally developed for
- research labs and enterprise networks and does not account for the unique
- characteristics of home usage, such as the lack of professional administrators, deep
-heterogeneity, and expectations of privacy.\\
+and early 2000s, home networks have indeed encountered problems and limitations
+\cite{stateofHN}. For example, the usability of home-networking technologies has
+become a key impediment to the adoption of new applications in the home, since the
+home-networking technology was originally developed for research labs and
+enterprise networks and does not account for the unique characteristics of home
+usage, such as the lack of professional administrators, deep heterogeneity, and
+expectations of privacy. Among all the challenges of home-networking,
+connecting all media devices and making them work together is becoming
+increasingly interesting because of the rapid growth of consumer electronics
+markets. Although several widely used multimedia-streaming solutions have
+become available in the market, the standards employed are not compatible with
+each other. Moreover, even devices using the same standard are not always
+compatible with each other, since the implementation approaches may vary from
+device to device. These incompatibilities are causing great inconvenience to
+the end users.\\
 \\
-Among all the challenges of home-networking, connecting all media devices and making them work together is becoming increasingly interesting because of the rapid growth of consumer electronics markets. Although there are
- several widely used multimedia-streaming solutions in the market, the 
-standards employed are not compatible with each other. Furthermore, even devices using
-the same standard are not always compatible with each other, due to the fact
-that the implementation approaches could vary from device to device. These
-incompatibilities are causing great inconvenience to the end users.\\
-\\
-DLNA, AirPlay, Chromecast and Miracast are the four major multimedia home network
-digital living solutions. AirPlay is only used between Apple products; it
-provides various features, including iTunes play for music, AirPlay for video
-and photos and screen mirroring. Miracast (previously called Wi-Fi display) was
-proposed by Wi-Fi Alliance and has been receiving great popularity over the recent years.
-Since its release version 4.2.2, Android has officially added the support for Miracast. In comparison, DLNA has been the most widely deployed solution so far, with 2.2 billion installations worldwide.
-It was proposed by several industrial leading electronic manufacturers and network operators 
-including AT$\&$T, Broadcom, Cisco, Google, Huawei, Intel, LG Electronics, Microsoft, Nokia, 
+Currently, four major multimedia home network digital living solutions  are
+deployed: AirPlay, Miracast, DLNA, and Chromecast. AirPlay is only used
+between Apple products; it provides various features, including iTunes for
+playing music as well as AirPlay for video, photos and screen mirroring.
+Miracast (previously called Wi-Fi Display) was proposed by the Wi-Fi Alliance
+and has received great popularity over recent years. Since its release version
+4.2.2, Miracast has officially supported the Android operating system. Of the
+four standards, DLNA has become the most widely deployed solution, with 2.2
+billion installations worldwide. DLNA was proposed by several industrial
+leading electronic manufacturers and network operators, including AT$\&$T,
+Broadcom, Cisco, Google, Huawei, Intel, LG Electronics, Microsoft, Nokia,
 Panasonic, Samsung, Sony and Verizon.\\
 \\
-As a result of different technical designs and  human aspects, these standards proposed by
-different device manufactures naturally experience serious compatibility issues. It usually happens that
-end users can have several multimedia-devices, with each one using a
-distinctive and unique  protocol, making it challenging or even impossible
-sometimes to share media between those devices.\\
-\\
-These compatibility issues have really obliged us to make a study on those multimedia-streaming
- technologies and to develop a more easy-to-use multimedia home networking solution
- with more  advanced technologies.
+As a result of their different technical designs, these standards proposed by
+individual device manufacturers naturally experience serious compatibility
+issues. Thus, end users can have several multimedia-devices, with each one
+using a distinctive, unique protocol, making it challenging or even impossible
+sometimes to share media between those devices. These compatibility issues have
+motivated the need to determine the technological features common to the four
+multimedia-streaming standards and to develop a more easy-to-use multimedia
+home networking solution based on more advanced technologies.
 
 \subsection{Structure of the thesis}
-The overview of popular home networking standards and solutions is described in
-Chapter \ref{chapter2}. After a short comparison of these solutions, in Chapter \ref{chapter3} we
-describe a more universal solution for multimedia home networking and its
-implementation. Chapter \ref{chapter4} presents some statistics from the Google Store
-during the past few months. Besides, a study based on the user feedback is also presented. In Chapter \ref{chapter5}, the thesis is concluded by giving a discussion on the further development and prospect of home networking.
+The remainder of this thesis is divided into four chapters. Chapter
+\ref{chapter2} provides an overview of popular home networking standards
+currently in use. After a short comparison of these solutions, Chapter
+\ref{chapter3} develops and proposes a more universal solution for multimedia
+home networking and its implementation.
+Chapter \ref{chapter4} evaluates the streaming performance of our solution and
+presents some recent statistics from the Google Store to demonstrate the
+compatibility of the proposed solution. This chapter also presents a study
+based on the user feedback in order to further improve this solution. In
+Chapter \ref{chapter5}, the thesis is concluded by  discussing potential 
+further developments and prospect of home networking.
