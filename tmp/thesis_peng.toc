@@ -53,5 +53,5 @@
 \contentsline {subsubsection}{\numberline {5.3.1}Device discovery}{55}{subsubsection.5.3.1}
 \contentsline {subsubsection}{\numberline {5.3.2}Information exchange}{56}{subsubsection.5.3.2}
 \contentsline {subsubsection}{\numberline {5.3.3}Streaming protocol}{56}{subsubsection.5.3.3}
-\contentsline {subsubsection}{\numberline {5.3.4}Internet of things}{56}{subsubsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.4}Internet of things}{57}{subsubsection.5.3.4}
 \contentsline {section}{References}{58}{section*.3}
