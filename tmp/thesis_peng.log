@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  27 APR 2015 23:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.27)  28 APR 2015 22:42
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -2005,29 +2005,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--47
+Underfull \hbox (badness 10000) in paragraph at lines 17--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--47
+Underfull \hbox (badness 10000) in paragraph at lines 17--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--47
+Underfull \hbox (badness 10000) in paragraph at lines 17--40
 
  []
 
-<charts/oneMoreTime_airplay_android.pdf, id=668, 794.97pt x 614.295pt>
+[38
+
+] <charts/oneMoreTime_airplay_android.pdf, id=676, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_airplay_android.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_airplay_android.pdf>
 Package pdftex.def Info: charts/oneMoreTime_airplay_android.pdf used on input l
-ine 68.
+ine 53.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/oneMoreTime_dlna_android.pdf, id=669, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android.pdf, id=677, 794.97pt x 614.295pt>
+File: charts/oneMoreTime_dlna_android.pdf Graphic file (type pdf)
+
+<use charts/oneMoreTime_dlna_android.pdf>
+Package pdftex.def Info: charts/oneMoreTime_dlna_android.pdf used on input line
+ 54.
+(pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+[][][]
+ []
+
+
+LaTeX Warning: Float too large for page by 10.81737pt on input line 57.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
+
+ []
+
+[39] [40 <./charts/oneMoreTime_airplay_android.pdf, page is rotated 90 degrees>
+ <./charts/oneMoreTime_dlna_android.pdf, page is rotated 90 degrees>]
 File: charts/oneMoreTime_dlna_android.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android.pdf>
@@ -2035,84 +2073,56 @@ Package pdftex.def Info: charts/oneMoreTime_dlna_android.pdf used on input line
  69.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
-[][][]
- []
-
-
-LaTeX Warning: Float too large for page by 10.81737pt on input line 72.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--73
-
- []
-
-[38
-
-] [39] [40 <./charts/oneMoreTime_airplay_android.pdf, page is rotated 90 degree
-s> <./charts/oneMoreTime_dlna_android.pdf, page is rotated 90 degrees>]
-File: charts/oneMoreTime_dlna_android.pdf Graphic file (type pdf)
-
-<use charts/oneMoreTime_dlna_android.pdf>
-Package pdftex.def Info: charts/oneMoreTime_dlna_android.pdf used on input line
- 86.
-(pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
-
-<charts/oneMoreTime_dlna_android_bw_500k.pdf, id=695, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_500k.pdf, id=700, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_500k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_500k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_500k.pdf used on in
-put line 87.
+put line 70.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 90.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 73.
 
-<charts/oneMoreTime_dlna_android_bw_700k.pdf, id=696, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_700k.pdf, id=701, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_700k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_700k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_700k.pdf used on in
-put line 92.
+put line 75.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/oneMoreTime_dlna_android_bw_1000k.pdf, id=697, 794.97pt x 614.295pt>
+<charts/oneMoreTime_dlna_android_bw_1000k.pdf, id=702, 794.97pt x 614.295pt>
 File: charts/oneMoreTime_dlna_android_bw_1000k.pdf Graphic file (type pdf)
 
 <use charts/oneMoreTime_dlna_android_bw_1000k.pdf>
 Package pdftex.def Info: charts/oneMoreTime_dlna_android_bw_1000k.pdf used on i
-nput line 93.
+nput line 76.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 96.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 79.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--97
+Underfull \hbox (badness 10000) in paragraph at lines 60--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--97
+Underfull \hbox (badness 10000) in paragraph at lines 60--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--80
 
  []
 
@@ -2122,108 +2132,108 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--97
 s>] [43 <./charts/oneMoreTime_dlna_android_bw_700k.pdf, page is rotated 90 degr
 ees> <./charts/oneMoreTime_dlna_android_bw_1000k.pdf, page is rotated 90 degree
 s>]
-Underfull \hbox (badness 10000) in paragraph at lines 98--101
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
  []
 
-<charts/dlna_traffic_data.pdf, id=728, 794.97pt x 614.295pt>
+<charts/dlna_traffic_data.pdf, id=733, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_data.pdf>
-Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 108.
+Package pdftex.def Info: charts/dlna_traffic_data.pdf used on input line 91.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/dlna_traffic_5loss_data.pdf, id=729, 794.97pt x 614.295pt>
+<charts/dlna_traffic_5loss_data.pdf, id=734, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_5loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_5loss_data.pdf used on input line 
-110.
+93.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 112.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 95.
 
-<charts/dlna_traffic_10loss_data.pdf, id=730, 794.97pt x 614.295pt>
+<charts/dlna_traffic_10loss_data.pdf, id=735, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_10loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_10loss_data.pdf used on input line
- 116.
+ 99.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/dlna_traffic_15loss_data.pdf, id=731, 794.97pt x 614.295pt>
+<charts/dlna_traffic_15loss_data.pdf, id=736, 794.97pt x 614.295pt>
 File: charts/dlna_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/dlna_traffic_15loss_data.pdf>
 Package pdftex.def Info: charts/dlna_traffic_15loss_data.pdf used on input line
- 118.
+ 101.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 120.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 103.
 
-<charts/AirPlay_traffic_data.pdf, id=734, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_data.pdf, id=739, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_data.pdf>
-Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 130
+Package pdftex.def Info: charts/AirPlay_traffic_data.pdf used on input line 113
 .
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/AirPlay_traffic_5loss_data.pdf, id=735, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_5loss_data.pdf, id=740, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_5loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_5loss_data.pdf>
 Package pdftex.def Info: charts/AirPlay_traffic_5loss_data.pdf used on input li
-ne 132.
+ne 115.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 134.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 117.
 
-<charts/AirPlay_traffic_10loss_data.pdf, id=736, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_10loss_data.pdf, id=741, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_10loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_10loss_data.pdf>
 Package pdftex.def Info: charts/AirPlay_traffic_10loss_data.pdf used on input l
-ine 137.
+ine 120.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/AirPlay_traffic_15loss_data.pdf, id=737, 794.97pt x 614.295pt>
+<charts/AirPlay_traffic_15loss_data.pdf, id=742, 794.97pt x 614.295pt>
 File: charts/AirPlay_traffic_15loss_data.pdf Graphic file (type pdf)
 
 <use charts/AirPlay_traffic_15loss_data.pdf>
 Package pdftex.def Info: charts/AirPlay_traffic_15loss_data.pdf used on input l
-ine 139.
+ine 122.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 120--124
 [][][]
  []
 
 
-LaTeX Warning: Float too large for page by 10.81737pt on input line 142.
+LaTeX Warning: Float too large for page by 10.81737pt on input line 125.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--143
+Underfull \hbox (badness 10000) in paragraph at lines 104--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--143
+Underfull \hbox (badness 10000) in paragraph at lines 104--126
 
  []
 
@@ -2236,57 +2246,57 @@ data.pdf, page is rotated 90 degrees>] [47 <./charts/AirPlay_traffic_data.pdf,
 page is rotated 90 degrees> <./charts/AirPlay_traffic_5loss_data.pdf, page is r
 otated 90 degrees>] [48 <./charts/AirPlay_traffic_10loss_data.pdf, page is rota
 ted 90 degrees> <./charts/AirPlay_traffic_15loss_data.pdf, page is rotated 90 d
-egrees>] <charts/session_world_map.pdf, id=795, 794.97pt x 614.295pt>
+egrees>] <charts/session_world_map.pdf, id=800, 794.97pt x 614.295pt>
 File: charts/session_world_map.pdf Graphic file (type pdf)
 
 <use charts/session_world_map.pdf>
-Package pdftex.def Info: charts/session_world_map.pdf used on input line 148.
+Package pdftex.def Info: charts/session_world_map.pdf used on input line 131.
 (pdftex.def)             Requested size: 384.10959pt x 296.81728pt.
 
-<charts/rating_distribution.pdf, id=797, 505.89pt x 505.89pt>
+<charts/rating_distribution.pdf, id=802, 505.89pt x 505.89pt>
 File: charts/rating_distribution.pdf Graphic file (type pdf)
 
 <use charts/rating_distribution.pdf>
-Package pdftex.def Info: charts/rating_distribution.pdf used on input line 153.
+Package pdftex.def Info: charts/rating_distribution.pdf used on input line 136.
 
 (pdftex.def)             Requested size: 241.8518pt x 241.84842pt.
 
-<charts/country_popularity.pdf, id=799, 505.89pt x 505.89pt>
+<charts/country_popularity.pdf, id=804, 505.89pt x 505.89pt>
 File: charts/country_popularity.pdf Graphic file (type pdf)
 
 <use charts/country_popularity.pdf>
-Package pdftex.def Info: charts/country_popularity.pdf used on input line 160.
+Package pdftex.def Info: charts/country_popularity.pdf used on input line 143.
 (pdftex.def)             Requested size: 241.8518pt x 241.84842pt.
 
-<charts/os_version_popularity.pdf, id=800, 505.89pt x 505.89pt>
+<charts/os_version_popularity.pdf, id=805, 505.89pt x 505.89pt>
 File: charts/os_version_popularity.pdf Graphic file (type pdf)
 
 <use charts/os_version_popularity.pdf>
-Package pdftex.def Info: charts/os_version_popularity.pdf used on input line 16
-5.
+Package pdftex.def Info: charts/os_version_popularity.pdf used on input line 14
+8.
 (pdftex.def)             Requested size: 241.8518pt x 241.84842pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 [][][][][]$\T1/cmtt/m/n/10 https : / / developer . blackberry . com / playbook 
 / android / files / webinars / BlackBerry _
  []
 
-<charts/receiver_popularity.pdf, id=806, 844.34906pt x 560.50125pt>
+<charts/receiver_popularity.pdf, id=811, 844.34906pt x 560.50125pt>
 File: charts/receiver_popularity.pdf Graphic file (type pdf)
 
 <use charts/receiver_popularity.pdf>
-Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 172.
+Package pdftex.def Info: charts/receiver_popularity.pdf used on input line 155.
 
 (pdftex.def)             Requested size: 364.32562pt x 241.84842pt.
 
-<charts/sessions_per_day.pdf, id=807, 505.89pt x 505.89pt>
+<charts/sessions_per_day.pdf, id=812, 505.89pt x 505.89pt>
 File: charts/sessions_per_day.pdf Graphic file (type pdf)
 
 <use charts/sessions_per_day.pdf>
-Package pdftex.def Info: charts/sessions_per_day.pdf used on input line 176.
+Package pdftex.def Info: charts/sessions_per_day.pdf used on input line 159.
 (pdftex.def)             Requested size: 241.8518pt x 241.84842pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--180
+Underfull \hbox (badness 10000) in paragraph at lines 129--163
 
  []
 
@@ -2294,7 +2304,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--180
 
  <./charts/session_world_map.pdf>] [50 <./charts/rating_distribution.pdf> <./ch
 arts/country_popularity.pdf>] [51 <./charts/os_version_popularity.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 183--261
+Underfull \hbox (badness 10000) in paragraph at lines 166--261
 
  []
 
@@ -2339,7 +2349,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `thesis_peng.out' has not changed.
-(rerunfilecheck)             Checksum: 0838133333E77BB5254D6ECC5EC6791D;3705.
+(rerunfilecheck)             Checksum: 271D1ECFC89B5B59BA276B73267E97A6;3705.
 
 
 LaTeX Warning: There were undefined references.
@@ -2347,10 +2357,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  ) 
 Here is how much of TeX's memory you used:
- 18263 strings out of 493308
- 339726 string characters out of 6137816
- 827009 words of memory out of 5000000
- 21115 multiletter control sequences out of 15000+600000
+ 18267 strings out of 493308
+ 339842 string characters out of 6137816
+ 827199 words of memory out of 5000000
+ 21119 multiletter control sequences out of 15000+600000
  29678 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  69i,10n,58p,1130b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2371,10 +2381,10 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/urw/helvetic/uhvb8a.pfb>
-Output written on thesis_peng.pdf (65 pages, 1570175 bytes).
+Output written on thesis_peng.pdf (65 pages, 1571454 bytes).
 PDF statistics:
- 1322 PDF objects out of 1440 (max. 8388607)
- 1108 compressed objects within 12 object streams
+ 1327 PDF objects out of 1440 (max. 8388607)
+ 1113 compressed objects within 12 object streams
  198 named destinations out of 1000 (max. 500000)
  587 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {1.3}Structure of the thesis}{2}{subsection.1.3}
 \contentsline {section}{\numberline {2}Background}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Available protocols}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Available standards}{5}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Universal Plug and Play}{5}{subsubsection.2.2.1}
 \contentsline {paragraph}{\numberline {2.2.1.1}UPnP device architecture}{5}{paragraph.2.2.1.1}
 \contentsline {paragraph}{\numberline {2.2.1.2}UPnP A/V devices}{8}{paragraph.2.2.1.2}
