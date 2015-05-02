@@ -63,67 +63,51 @@ Figure \ref{dlna_traffic_bw_a} shows that when there is no limit in bandwidth, t
 \\
 In contrast, AirPlay music streaming is based on ROAP, which is a RTP-like protocol. The transport layer protocol used is UDP, thus not all packets are successfully delivered to the receiver. The UDP based delivery only provides a best-effort transmission. The sound quality can not be guaranteed because there is no buffer or retransmission mechanism on the receiver side and the transmission is almost real-time. Given this reason, when the bandwidth is limited to 500 kbps, the AirPlay playback is heavily interrupted. All music information is lost since too many packets are lost during the transmission. When the bandwidth is increased to 700 kbps, the AirPlay playback still can not work properly. The playback is choppy and noisy. After the bandwidth is increased to 1000 kbps, the music can then work smoothly and no noticeable noise can be heard.\\
 \\
-Another thing worth mentioning is that in the experiment, the same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not usable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required by DLNA streaming is considerably smaller than AirPlay streaming.
+Another thing worth mentioning is that in the experiment, the same mp3 music is used in both tests. But obviously the playback quality of DLNA is better than the playback using AirPlay. For instance, when the bandwidth is limited to 500 kbps, AirPlay streaming is basically not usable any more, while DLNA streaming is still working properly. The reason behind this is that in the case of DLNA streaming, the original mp3 music is directly streamed to receiver, while in the case of AirPlay music streaming, the same mp3 music is firstly decoded to PCM format and then encoded to Apple Lossless format. Since mp3 is a compressed media format while Apple lossless format is an uncompressed media format, the bandwidth required by DLNA streaming is considerably smaller than AirPlay streaming.\\
 \begin{figure}[hb]%[!t]%[hb][!b]
 \subfigure[No
-limit\label{dlna_traffic_bw_a}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
-\subfigure[500kbps\label{dlna_traffic_bw_b}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android_bw_500k}}
+limit\label{dlna_traffic_bw_a}]{\includegraphics[width=1\columnwidth]{charts/bytes_nolimit}}
+\subfigure[500kbps\label{dlna_traffic_bw_b}]{\includegraphics[width=1\columnwidth]{charts/bytes_500k}}
 \caption{DLNA streaming traffic comparison in
 bandwidth constrained situation\label{dlna_traffic_bw}}
 \end{figure}
 \begin{figure}[hb]%[!t]%[hb][!b]
-\subfigure[700kbps\label{dlna_traffic_bw_1_a}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android_bw_700k}}
-\subfigure[1000kbps\label{dlna_traffic_bw_1_b}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android_bw_1000k}}
+\subfigure[700kbps\label{dlna_traffic_bw_1_a}]{\includegraphics[width=1\columnwidth]{charts/bytes_700k}}
+\subfigure[1000kbps\label{dlna_traffic_bw_1_b}]{\includegraphics[width=1\columnwidth]{charts/bytes_1000k}}
 \caption{DLNA streaming traffic comparison in
 bandwidth constrained situation\label{dlna_traffic_bw_1}}
 \end{figure}
 \clearpage
-As a conclusion, in the scenario of limited bandwidth, DLNA have the advantage
-of sound quality compared to AirPlay standard. The buffer system, benefited from HTTP streaming mechanism, gives DLNA a more reliable data flow. While AirPlay streaming suffered from the packet loss of UDP and the sound quality is heavily affected. Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.
+As a conclusion, in the scenario of limited bandwidth, DLNA have the advantage of sound quality compared to AirPlay standard. The buffer system, benefited from HTTP streaming mechanism, gives DLNA a more reliable data flow. While AirPlay streaming suffered from the packet loss of UDP and the sound quality is heavily affected. Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth.
 \subsubsection{Influence of packet loss\label{4_1_3}}
 After the bandwidth test, we then simulated packet loss on the receiver side and
-conducted the same test for DLNA and AirPlay streaming. 5\%, 10\% and 15\%
-packet loss are introduced to test both DLNA and AirPlay streaming. The result
-of DLNA streaming is shown in Figure \ref{dlna_pl} and \ref{dlna_pl_1}.
+conducted the same test for DLNA and AirPlay streaming with the same setup
+described in \ref{3_7_1}. 5\%, 10\% and 15\% packet loss are introduced to test both DLNA and AirPlay streaming. Figure \ref{dlna_pl} and \ref{dlna_pl_1} show the result of DLNA streaming.\\
+\\
+According to Figure \ref{dlna_pl_a}, when there is no packet loss, very
+little retransmission data is seen in the graph. Figure \ref{dlna_pl_b} and \ref{dlna_pl_1_a} shows that when the packet loss ratio is increased from 5\% to 10\%, the portion of retransmitted data is getting larger and larger. However, there is no noticeable loss of sound quality. As shown in Figure \ref{dlna_pl_1_b}, when the packet loss ratio is increased to 15\%, significant amount of retransmission can be found in the graph, and the streaming stopped for buffering three times during one song's playback. In the case of DLNA streaming, packet loss is a key impediment. When packet loss rate climbs to a certain point, for instance 15\% in this test, the streaming becomes unusable.\\
+\\
+The same packet loss tests on AirPlay streaming was also conducted and the
+results are shown in Figure \ref{dlna_pl} and \ref{dlna_pl_1}. According
+to Figure \ref{dlna_a}, in the case of AirPlay streaming, since UDP is used, the ROAP server embedded in Streambels keeps sending data to the receiver using UDP regardless of the packet loss. On the receiver side, the player tries its best to decode the broken data. There is no mechanism for acknowledgement or retransmission. Surprisingly, the sound quality is much better compared with DLNA streaming. The reason behind is that retransmission of TCP consumes more and more bandwidth in the case of DLNA streaming, in the same situation. AirPlay streaming instead tries to deliver all contents with its best effort, without creating extra demand for retransmission.\\
+\\
+In a nutshell, in the case of packet loss, AirPlay is more tolerant to packet loss than DLNA.
 \begin{figure}[hb]
 \subfigure[No
-limit]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_data}}
+limit\label{dlna_pl_a}]{\includegraphics[width=1\columnwidth]{charts/packetloss_nolimit}}
 \subfigure[5
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_5loss_data}}
+percent loss\label{dlna_pl_a}]{\includegraphics[width=1\columnwidth]{charts/packetloss_5percent}}
 \caption{DLNA streaming performance in terms of packet loss \label{dlna_pl}}
 \end{figure}
 
 \begin{figure}[hb]
 \subfigure[10
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_10loss_data}}
+percent loss\label{dlna_pl_1_a}]{\includegraphics[width=1\columnwidth]{charts/packetloss_10percent}}
 \subfigure[15
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_15loss_data}}
+percent loss\label{dlna_pl_1_b}]{\includegraphics[width=1\columnwidth]{charts/packetloss_15percent}}
 \caption{DLNA streaming performance in terms of packet loss \label{dlna_pl_1}}
 \end{figure}
-According to the figure, when there is no packet loss, very little retransmission data is seen in the graph. When the packet loss ratio is increased from 5\% to 10\%, the portion of retransmitted data is getting larger and larger. However, there is no noticeable loss of sound quality. When the packet loss ratio is increased to 15\%, significant amount of retransmission can be found in the graph, and the streaming stopped for buffering three times during one song's playback. In the case of DLNA streaming, packet loss is a key impediment. When packet loss rate climbs to a certain point, for instance 15\% in our test, the streaming becomes unusable.\\
-\\
-The same packet loss tests on AirPlay streaming was also conducted and the
-results are shown in Figure \ref{airplay_pl} and \ref{airplay_pl_1}. According
-to the figure, in the case of AirPlay streaming, since UDP is used, the ROAP server embedded in Streambels keeps sending data to the receiver using UDP regardless of  the packet loss. On the receiver side, the player tries its best to decode the broken data. There is no mechanism for acknowledgement or retransmission. Surprisingly, the sound quality is much better compared with DLNA streaming. The reason behind is that retransmission of TCP consumes more and more bandwidth in the case of DLNA streaming, in the same situation. AirPlay streaming instead tries to deliver all contents with its best effort, without creating extra demand for retransmission.\\
-\\
-In a nutshell, in the case of packet loss, AirPlay is more tolerant to packet loss than DLNA.
-\begin{figure}[hb]
-\subfigure[No
-limit]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_data}}
-\subfigure[5
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_5loss_data}}
-\caption{AirPlay streaming performance in terms of packet loss \label{airplay_pl}}
-\end{figure}
-\begin{figure}[hb]
-\subfigure[10
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_10loss_data}}
-\subfigure[15
-percent loss]{\includegraphics[width=0.9\columnwidth]{charts/AirPlay_traffic_15loss_data}}
-\caption{AirPlay streaming performance in terms of packet loss
-\label{airplay_pl_1}}
-\end{figure}
 \clearpage
-
 \subsection{Statistics\label{4_2}}
 16 months after its release, our application has achieved 924000 downloads from 223 countries all around the world, with a daily active user number of over 15000. Our users almost cover 99\% of all continent and a world map of our user distribution is shown in Figure \ref{user_map}. 
 \begin{figure}[hb]
