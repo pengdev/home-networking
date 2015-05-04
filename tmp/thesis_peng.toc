@@ -37,21 +37,21 @@
 \contentsline {subsection}{\numberline {4.1}Evaluation of streaming performance}{38}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Comparison of AirPlay and DLNA traffic}{39}{subsubsection.4.1.1}
 \contentsline {subsubsection}{\numberline {4.1.2}Performance under limited bandwidth}{41}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Influence of packet loss}{44}{subsubsection.4.1.3}
-\contentsline {subsection}{\numberline {4.2}Statistics}{47}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}User study}{51}{subsection.4.3}
-\contentsline {section}{\numberline {5}Conclusion}{52}{section.5}
-\contentsline {subsection}{\numberline {5.1}Conclusion}{52}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Further development}{52}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Support for more platforms}{52}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Developing an Software Development Kit}{52}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Integration of receiver functionality}{53}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}Support for multi-session}{53}{subsubsection.5.2.4}
-\contentsline {subsubsection}{\numberline {5.2.5}Optimization for codec}{53}{subsubsection.5.2.5}
-\contentsline {subsubsection}{\numberline {5.2.6}In-kernel media server}{53}{subsubsection.5.2.6}
-\contentsline {subsection}{\numberline {5.3}Future of multimedia home networking}{53}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Device discovery}{53}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Information exchange}{54}{subsubsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.3}Streaming protocol}{54}{subsubsection.5.3.3}
-\contentsline {subsubsection}{\numberline {5.3.4}Internet of things}{55}{subsubsection.5.3.4}
-\contentsline {section}{References}{56}{section*.3}
+\contentsline {subsubsection}{\numberline {4.1.3}Influence of packet loss}{45}{subsubsection.4.1.3}
+\contentsline {subsection}{\numberline {4.2}Statistics}{48}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}User study}{52}{subsection.4.3}
+\contentsline {section}{\numberline {5}Conclusion}{53}{section.5}
+\contentsline {subsection}{\numberline {5.1}Conclusion}{53}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Further development}{53}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Support for more platforms}{53}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Developing an Software Development Kit}{53}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Integration of receiver functionality}{54}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Support for multi-session}{54}{subsubsection.5.2.4}
+\contentsline {subsubsection}{\numberline {5.2.5}Optimization for codec}{54}{subsubsection.5.2.5}
+\contentsline {subsubsection}{\numberline {5.2.6}In-kernel media server}{54}{subsubsection.5.2.6}
+\contentsline {subsection}{\numberline {5.3}Future of multimedia home networking}{54}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Device discovery}{54}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Information exchange}{55}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}Streaming protocol}{55}{subsubsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.4}Internet of things}{56}{subsubsection.5.3.4}
+\contentsline {section}{References}{57}{section*.3}
