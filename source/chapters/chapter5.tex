@@ -3,42 +3,148 @@
 This chapter reviews the work that is done during this thesis project and
 summarizes the conclusion of this thesis. Section \ref{5_1} draws the
 conclusion of this thesis project. Section \ref{5_2} describes the further
-possible development that could be conducted to improve our current home-networking solution. Finally, Section \ref{5_3} discusses the future trend of multimedia home networking.
+possible development that could be conducted to improve our current
+home-networking solution. Finally, Section \ref{5_3} discusses the future trend
+of multimedia home networking.
 \subsection{Conclusion\label{5_1}}
-Since its launch in November 2013, our application has received over 1 million
-downloads and a daily active user number of over 15000. People from 99\% percent
-of all the countries have downloaded and tried our solution. We kept improving
-Streambels and all these statistics have proven that our solution is competitive for multimedia home networking.\\
+Since its launch in November 2013, this application has received over one
+million downloads and a daily active user total of over 15000. People from 99\%
+percent of all the countries worldwide have downloaded and tried this solution.
+There is a process going on to improve Streambels and all these
+statistics have proven that this solution is competitive for multimedia home
+networking.\\
 \\
 The launch of Streambels has been successful, but the problem of multimedia
- home networking is still not completely solved. As more manufacturers are involved in the development of home networking, new standards are being pushed to the market constantly. It is literally not possible to develop a single system that support all future protocols . To improve our solution and solve the problems of home networking, a better understanding and outlook of the future of home networking is necessary. And new challenges must be identified and accepted.
+ home networking is still not completely solved. As more manufacturers are
+ involved in the development of home networking, new standards are being pushed
+ on the market constantly. It may not be possible to develop a single
+ system that support all future protocols. To improve this solution and solve
+ the problems of home networking, a better understanding and outlook of the
+ future of home networking is necessary. And new challenges must be identified
+ and accepted.
 
 \subsection{Further development\label{5_2}}
-\subsubsection{Support for more platforms}
-The development and implementation of our solution on Android has been completed and the outcome proves to be satisfactory. Our next step of developing is to extend the solution to other platforms, including Apple iOS and Microsoft Windows, which are widely recognized as the most popular mobile operating systems. We would like to expand our product on the iOS platform first since it has a larger user base. The work on the iOS version implementation has already started, and the release is already published in the market. We are keeping on improving the iOS version product currently, hoping that it will soon match the  quality level of our Android version.
-\subsubsection{Developing an Software Development Kit}
-One of the limitations of our solution is that it can only work with limited content sources. There are thousands of content providers in the market and it could hardly be possible to integrate the support of all content sources by own development team alone. An ideal solution would be to develop a Software Development Kit (SDK), so that the content providers can directly integrate our solution in their software clients, enabling the access to the devices in home networking. Since the release of our Streambels, we have been actively developing this SDK. In the foreseeable future our solution will likely be used by more and more Internet content provides.
-\subsubsection{Integration of receiver functionality}
-Another limitation of our current solution is the content sharing between phones and tablets, and the content sharing between Android and iOS mobile platforms. In the future development, the receiver functionalities will also be integrated into our solution. By developing our own protocol using existing architecture, the compatibility can be guaranteed across different mobile platforms.
-\subsubsection{Support for multi-session}
-In our current solution, only one receiver device can be selected at the one time. However, there is a use case that user may want to stream the same item to different receiver at the same time. There is also a use case that different media items need to be streamed to different receivers. In this sense, the multi-session support is in real demand. Further improvements should certainly take this demand into consideration, and integrate the support for multi-session streaming.
-\subsubsection{Optimization for codec}
-One big problem that is not solved for multimedia home networking is that the codec is quite different from device to device. Having aggregated all content sources, the application should also convert the format of the aggregated content to a format that is supported by the receiver. In further development, better transcoding support should be built in our solution.
-\subsubsection{In-kernel media server}
-One of the key pediments for multimedia home networking is the streaming performance. It is hard to guarantee streaming quality when streaming high bit rate contents. Since Tuxera have the experts in developing file systems in kernel space and has many leading Android phone manufacturers using our file system kernel module, it is possible for our company to integrate the media server functionalities into the Linux kernel space. In this way, the application can use these functions exposed from the kernel in the user space.
-Moreover, similar in-kernel web servers such as the TUX web server \cite{tux_webserver}, have already been implemented by different developers, proving that a in-kernel media server is possible to implement.
+\textbf{Support for more platforms}\\
+\\
+The development and implementation of our solution on Android has been completed
+and the outcome has proved to be satisfactory. The next step in development is
+to extend the solution to other platforms, including Apple iOS and Microsoft
+Windows, which are widely recognized as the most popular mobile operating
+systems. It is essential to move on to iOS first since it has a larger user
+base. The work on the iOS version implementation has already started with the
+release already released on the market. It will be continuously improved to
+the same quality as the Android version.\\
+\\
+\textbf{Developing an Software Development Kit}\\
+\\
+One of the limitations of this solution is that it can only work with limited
+content sources. There are thousands of content providers in the market, and it
+would be impossible to integrate the support of all content sources by the
+Tuxera development team alone. An ideal solution for this would be to develop a
+Software Development Kit (SDK), so that the content providers can directly
+integrate this solution into their software clients, enabling access to the
+devices in home networking. Since the release of Streambels, there have been
+actively developing of this SDK. In the foreseeable future, this solution will
+likely be used by more and more Internet content providers.\\
+\\
+\textbf{Integration of receiver functionality}\\
+\\
+Another limitation of this current solution is the content sharing between
+phones and tablets, and between the Android and iOS mobile platforms.
+In further development, the receiver functionalities is also planned to be
+integrated into this solution. By developing the in-house protocol using
+existing architecture, the compatibility can be guaranteed across different
+mobile platforms.\\
+\\
+\textbf{Support for multi-session}\\
+\\
+In this current solution, only one receiver device can be selected at the one
+time. However, there exists a use case whereby a user may want to stream the
+same item to a different receiver at the same time. Another use case exists
+whereby different media items are required to stream to different receivers;
+thus multi-session support becomes a valid demand. Further improvements
+for this should certainly take this demand into consideration, and integrate the
+support for multi-session streaming.\\
+\\
+\textbf{Optimization for codec}\\
+\\
+One significant problem that remains unsolved in multimedia home networking is
+that the codec varies from device to device. Having aggregated all content
+sources, the application should also convert the format of the aggregated
+content to a format that is supported by the receiver. In further development,
+better transcoding support should be integrated into this solution.\\
+\\
+\textbf{In-kernel media server}\\
+\\
+One of the key impediments for multimedia home networking is the streaming
+performance. It is challenging to guarantee streaming quality when streaming
+contents at a high bit rate. Since Tuxera has competence in developing file
+systems in kernel space with many leading Android phone manufacturers using its
+file system kernel module, it is possible for Tuxera to develop and integrate
+the media server functionalities into the Linux kernel space. Thus, the
+application can utilize these functions exposed from the kernel in the user
+space. Moreover, similar in-kernel web servers such as the TUX web server
+\cite{tux_webserver} have already been implemented by different developers.
+This also proves a in-kernel media server is possible to implement.
 \subsection{Future of multimedia home networking\label{5_3}}
-\subsubsection{Device discovery}
-According to all the previous study on the different standards in the market, there are mainly two mechanisms of service discovery introduced: Simple Service Discovery Protocol(SSDP) as a part of UPnP and multicast DNS(mDNS) as part of Zeroconf. Research \cite{zeroconf_vs_upnp} has been done previously to discuss which one is the better solution. Generally speaking, mDNS provides an easier way to implement a new device, since the technology is simpler. While implementing a new device in UPnP would be much harder, since for each new device type, a new UPnP forum will be started to handle the implementation.\\
+\textbf{Device discovery}\\
 \\
-It seems mDNS will finally over take SSDP due to its flexibility. One big sign of this take over is that in the latest DLNA road map, mDNS will also be enlisted in the service discovery protocol set, with the mandatory requirement of  backward compatibility. However there will be still a long way to go since UPnP has a strong alliance, including hundreds of companies.
-\subsubsection{Information exchange}
-As studied in Chapter \ref{chapter2}, for DLNA and AirPlay the control messages are sent through SOAP (Simple Object Access Protocol), which is based on Hypertext Transfer Protocol (HTTP) and its Extensible Markup Language (XML). However many research \cite{restful_webservice} shows that Representational State Transfer (REST) is the better solution due to its light weight and flexibility. Performance benchmark \cite{performance_restful_saop} has been done to compare the RESTful service to SOAP service and the result shows that the performance of RESTful is obviously better. Therefore future development of home networking solution might move to use RESTful rather than SOAP,  in order to provide higher flexibility and lower overhead.
-\subsubsection{Streaming protocol}
-According to the study conducted in Chapter \ref{chapter4}, HTTP streaming has better performance under limited bandwidth. While RTSP has a better performance in high packet loss situation. In the case of home networking where the network condition is usually good enough and packet loss is usually minute, HTTP would be a better solution. \\
+According to all the previous study on the different standards in the market,
+there are mainly two mechanisms of service discovery introduced: Simple Service
+Discovery Protocol (SSDP) as a part of UPnP and multicast DNS (mDNS) as part of
+Zeroconf. Research \cite{zeroconf_vs_upnp} has been conducted previously to
+assess which is the better solution. Generally speaking, mDNS provides an
+easier way to implement a new device, since the technology is simpler. While
+implementing a new device in UPnP would be much challenging, since a new UPnP
+forum will be started to handle the implementation for each new device type.\\
 \\
-However, there is still one big problem of HTTP streaming. In the case of streaming same content to different receivers at the same time, synchronization would be a really big issue for HTTP, since it is hard to tell the buffer size of a receiver. One more situation that HTTP can not solve is to transmit the data in real time,  as required by a screen mirroring application. In these cases, RTSP would be a better solution due to the fact that UDP is used and there is no buffering or retransmission of the same content.\\
+It seems mDNS will finally overtake SSDP due to its flexibility. One notable
+sign of this development is that in the latest DLNA road map, mDNS will also be
+included in the service discovery protocol set, with the mandatory requirement
+of backward compatibility. However there is still a long way to go since UPnP
+has a strong alliance, including hundreds of companies.\\
 \\
-To conclude, both HTTP and RTSP will be used in the future home networking. For streaming recorded media, HTTP streaming holds the advantages due to the buffer system. On the other hand, for screen mirroring and other usages where the content needs to be synchronized precisely, RTP would be a better solution.
-\subsubsection{Internet of things}
-As more devices acquires the capability to handle network based applications, home networks will see a dramatic growth in device types. The multimedia home networking will move towards the Internet of Things, and all the data would be aggregated and can be accessed anywhere in the world. The solution for the future home networking would be an Internet connected world.
+\textbf{Information exchange}\\
+\\
+As mentioned in Chapter \ref{chapter2}, for DLNA and AirPlay, the control
+messages are sent through SOAP (Simple Object Access Protocol), which is based on
+Hypertext Transfer Protocol (HTTP) and its Extensible Markup Language (XML).
+However, much research \cite{restful_webservice} shows that Representational
+State Transfer (REST) is the better solution due to its light weight and
+flexibility. Accordingly, performance benchmark \cite{performance_restful_saop}
+has been done to compare the RESTful service to SOAP service. The result of this
+research shows that the performance of RESTful is obviously higher compared to
+SOAP. Therefore, future development of a home networking solution might opt for
+RESTful rather than SOAP, in order to provide higher flexibility and lower
+overhead.\\
+\\
+\textbf{Streaming protocol}\\
+\\
+According to the study conducted in Chapter \ref{chapter4}, HTTP streaming
+performs better in limited bandwidth conditions. While performs better in high
+packet loss situation. In the case of home networking where the network
+condition is usually sufficient and packet loss is not a common phenomenon; thus
+HTTP would be a better solution. \\
+\\
+However, there still remains one significant problem with HTTP streaming. In the
+case of streaming the same content to different receivers at the same time,
+synchronization would represent a key issue for HTTP, since it is not possible
+to decide the buffer size of the receiver. One more situation that HTTP cannot
+solve is the transmission of the data in real time, as required by a screen
+mirroring application. In these cases, RTSP would be a better solution due to
+the fact that UDP is used and there is no buffering or retransmission of the
+same content.\\
+\\
+In general, both HTTP and RTSP will be used in future home networking. For
+the streaming of recorded media, HTTP streaming has an advantages over RTSP
+due to the buffer system. On the other hand, for screen mirroring and other
+usages where the content needs to be synchronized precisely, RTP would be a
+better solution.\\
+\\
+\textbf{Internet of Things}
+As more devices at home acquires the capability to handle network based
+applications, home networks could see a dramatic growth in device types. The
+multimedia home networking will move towards the Internet of Things, and all
+the data could be aggregated and accessed anywhere in the world. Consquently,
+the solution for future home networking could be an Internet-connected
+world.

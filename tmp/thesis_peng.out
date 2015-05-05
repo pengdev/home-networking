@@ -39,15 +39,5 @@
 \BOOKMARK [1][-]{section.5}{Conclusion}{}% 39
 \BOOKMARK [2][-]{subsection.5.1}{Conclusion}{section.5}% 40
 \BOOKMARK [2][-]{subsection.5.2}{Further development}{section.5}% 41
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Support for more platforms}{subsection.5.2}% 42
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Developing an Software Development Kit}{subsection.5.2}% 43
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Integration of receiver functionality}{subsection.5.2}% 44
-\BOOKMARK [3][-]{subsubsection.5.2.4}{Support for multi-session}{subsection.5.2}% 45
-\BOOKMARK [3][-]{subsubsection.5.2.5}{Optimization for codec}{subsection.5.2}% 46
-\BOOKMARK [3][-]{subsubsection.5.2.6}{In-kernel media server}{subsection.5.2}% 47
-\BOOKMARK [2][-]{subsection.5.3}{Future of multimedia home networking}{section.5}% 48
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Device discovery}{subsection.5.3}% 49
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Information exchange}{subsection.5.3}% 50
-\BOOKMARK [3][-]{subsubsection.5.3.3}{Streaming protocol}{subsection.5.3}% 51
-\BOOKMARK [3][-]{subsubsection.5.3.4}{Internet of things}{subsection.5.3}% 52
-\BOOKMARK [1][-]{section*.3}{References}{}% 53
+\BOOKMARK [2][-]{subsection.5.3}{Future of multimedia home networking}{section.5}% 42
+\BOOKMARK [1][-]{section*.3}{References}{}% 43
