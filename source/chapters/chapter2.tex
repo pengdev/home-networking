@@ -466,8 +466,10 @@ content from service providers and multichannel video programming distributers t
 \subsubsection{AirPlay\label{2_2_3}} 
 AirPlay is Apple Inc's home networking solution. It is a family of protocols 
 used to display different types of media content on Apple TV from other iOS devices. 
-AirPlay support multiple functions, including displaying photos and sideshows from iOS devices, streaming audio from iOS devices or iTunes, as well as displaying videos from a iOS device and 
-showing the whole screen on Apple TV, which is known as AirPlay Mirroring. \\
+AirPlay support multiple functions, including displaying photos and sideshows
+from iOS devices, streaming audio from iOS devices or iTunes, as well as
+displaying videos from a iOS device and showing the whole screen on Apple TV,
+which is known as AirPlay Mirroring. \\
 \\
 AirPlay's specification is not open to public. However, unofficial
 specifications have been made by some hackers through reverse engineering the
@@ -513,7 +515,7 @@ the streaming URL to Apple TV or other AirPlay receivers. While the URL is set,
 Apple TV starts to download video from the server using the URL and starts 
 playing when enough data is buffered. The control messages can be seen in 
 table \ref{video_stream}. One thing worth mentioning is that Apple TV does
-not support volume control for video streaming.\\
+not support volume control for video streaming \cite{AirPlay-spec}.\\
 %% table , Video Streaming 
 \begin{table}[htb] 
 \caption{AirPlay Video Control HTTP requests \label{video_stream}} 
@@ -562,9 +564,12 @@ table \ref{photo_stream}. \\
 \textbf{Music streaming} \\
 \\ 
 AirPlay music streaming is a bit different from video and image streaming. The 
-technology used is the RTSP streaming protocol, which is more of a "push like" protocol. Different than HTTP streaming where the server responds to a request, the RTSP streaming server actively pushes UDP packets to the receiver. However, Apple does not use the standard RTSP but instead uses its own implementation of RTSP, which is called RAOP (Remote 
-Audio Output Protocol). The control messages of RAOP can be seen in table 
-\ref{music_stream}. \\
+technology used is the RTSP streaming protocol, which is more of a "push like"
+protocol. Different than HTTP streaming where the server responds to a request,
+the RTSP streaming server actively pushes UDP packets to the receiver. However,
+Apple does not use the standard RTSP but instead uses its own implementation of
+RTSP, which is called RAOP (Remote Audio Output Protocol) \cite{AirPlay-spec}.
+The control messages of RAOP can be seen in table \ref{music_stream}. \\
 \begin{table}[htb] 
 \caption{AirPlay Audio Control RTSP requests \label{music_stream}} 
 \begin{center} 
@@ -586,13 +591,13 @@ Audio Output Protocol). The control messages of RAOP can be seen in table
 \textbf{Screen mirroring} \\
 \\ 
 AirPlay screen mirroring is achieved by transmitting an H.264 encoded video stream 
-over a TCP connection. The stream is packeted with a 128-byte header. The 
-audio uses the AAC-ELD format and is sent using the AirTunes protocol. 
+over a TCP connection \cite{AirPlay-spec}. The stream is packeted with a
+128-byte header. The audio uses the AAC-ELD format and is sent using the AirTunes protocol. 
 The NTP(Network time protocol) protocol is used for synchronization and the synchronization 
 takes place on UDP port 7010 (client) and 7011 (server). The 
 AirPlay server runs a NTP client. Requests are sent to an AirPlay client every 3 
 seconds. The reference time stamp marks the beginning of the 
-mirroring session.  The control messages can be seen in table 
+mirroring session. The control messages can be seen in table 
 \ref{mirroring_stream}. \\
 \begin{table}[htb] 
 \caption{AirPlay Mirroring Control HTTP requests \label{mirroring_stream}} 
@@ -638,8 +643,8 @@ streaming part uses HTTP streaming, which means a controller can directly set th
 streaming URL and the receiver will start downloading automatically. \\
 \\
 The DIAL protocol has two components: DIAL Service Discovery and the DIAL 
-Representational State Transfer (REST) Service. DIAL Service Discovery enables a 
-DIAL client device to discover DIAL servers on its local network and gain
+Representational State Transfer (REST) Service \cite{dial}. DIAL Service
+Discovery enables a DIAL client device to discover DIAL servers on its local network and gain
 access to the DIAL REST Service on those devices. The DIAL REST Service enables
 a DIAL client to query, launch, and optionally stop applications on a DIAL
 server device.\\
@@ -662,7 +667,7 @@ including a LOCATION header containing an absolute HTTP URL for the UPnP
 description of the root device. When receiving the M-SEARCH response, the DIAL
 client then sends an HTTP GET request to the URL found in the LOCATION header
 of the M-SEARCH response, to get a prospected HTTP response message containing
-a XML format UPnP device description. \\
+a XML format UPnP device description \cite{dial}. \\
 \\
 \textbf{DIAL REST Service} \\
 \\ 
@@ -678,7 +683,7 @@ The server receiving the request then extract the application name and check if 
 application is installed or not. If the application is not recognized, the 
 server will either return 404 Not Found or trigger the installation of this specific 
 application. If the application has been installed, the DIAL server returns 
-an HTTP response with 200 OK and a body contains MIME type in XML.\\ 
+an HTTP response with 200 OK and a body contains MIME type in XML \cite{dial}.\\ 
 \\
 The client then sends an HTTP POST request to the application resource URL to 
 launch the desired application. On receipt of a valid POST request, the DIAL 
@@ -706,9 +711,9 @@ Another point worth mentioning is that Miracast utilizes many Wi-Fi alliance
 building blocks that are constantly developed over the years. These components
 include Wi-Fi CERTIFIED n (improved throughput and coverage), Wi-Fi Direct
 (device-to- device connectivity), Wi-Fi Protected Access 2 (WPA2) (security),
-Wi-Fi Multimedia (WMM) (traffic management) and Wi-Fi Protected Setup. These
-technologies have enriched the user experience and increased user's trust in
-Wi-Fi.\\
+Wi-Fi Multimedia (WMM) (traffic management) and Wi-Fi Protected
+Setup \cite{miracast_industry}. These technologies have enriched the user
+experience and increased user's trust in Wi-Fi.\\
 \\
 Not limited to Wi-Fi direct connection, some Miracast devices also support Tunneled Direct Link Setup (TDLS), which allows devices to connect via an infrastructure network. TDLS enables more efficient data transfer and keeps the advantage of more advanced Wi-Fi capabilities at the same time.\\
 \\
@@ -853,7 +858,7 @@ only limited device types. For example, Chromecast has only released 2 devices s
 In contrast, DLNA not only specifies mandatory media formats such as LPCM, JPEG  and MP4, but provides a lot more optional media formats in its specifications as well. \\
 \\
 Since Miracast is a screen mirroring technology, all formats that can be played on the device are supported in Miracast streaming. Consequently, there is no mandate on media format in Miracast.  
-\paragraph{Networking technologies used}
+\paragraph{Networking technologies used\label{2_3_3_2}}
 A short technology specification comparison is made to help better understand
 the existing solutions. Table \ref{compare_tech} shows the main technology used 
 in different popular solutions. \\

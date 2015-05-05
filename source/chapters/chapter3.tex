@@ -47,13 +47,31 @@ request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900
 The content management component is responsible for organizing and
  navigating multimedia contents that can be discovered in the home network. In our solution, these content sources include both the local storage of smart phones and DLNA digital media servers that are connected to the home network. As long as the discovered device belongs to the three device types that this solution support, its content could be streamed using the application solution.\\
 \\
-The streaming component is responsible for streaming multimedia content to the selected multimedia receivers, such as TVs, wireless speakers, set top boxes and so on. In a typical home networking environment, DLNA, AirPlay video/photo, and Chromecast all use HTTP streaming. The only exception, AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, two types of media servers were integrated inside the application solution. With the application, the built-in RAOP server would handle the AirPlay music streaming, and the built-in HTTP media server would handle streaming of all other types.
+The streaming component is responsible for streaming multimedia content to the
+selected multimedia receivers, such as TVs, wireless speakers, set-top boxes and so on. In a typical home networking environment, DLNA, AirPlay video/photo, and Chromecast all use HTTP streaming. The only exception, AirPlay music, uses Remote Audio Output Protocol (RAOP). Because of this, two types of media servers were integrated inside the application solution. With the application, the built-in RAOP server would handle the AirPlay music streaming, and the built-in HTTP media server would handle streaming of all other types.
 
 \subsection{Implementation\label{3_2}}
-Since the application is built upon the Android platform, we conducted studies on the Android system architecture and the Android Software Development Kit (SDK). Thankfully, the Android SDK provides many useful Application Programming Interfaces (APIs) and grants crucial permissions to access necessary services and hardware features, such as the permission to access the Internet , the permission to access the WiFi device state change, the permission to allow WiFi multicast and  the permission to read phone storage. The programming language used in developing our Android Application is Java. However some CPU-intensive works, such as transcoding, have to be implemented in C and then embedded to the application using the Android Native Development Kit (NDK).\\
+Since the application is built upon the Android platform, we conducted research
+on the Android system architecture and the Android Software Development Kit
+(SDK). Thankfully, the Android SDK provides many useful Application Programming
+Interfaces (APIs) and grants crucial permissions to access necessary services
+and hardware features, such as the permission to access the Internet , the
+permission to access the WiFi device state change, the permission to allow WiFi
+multicast and  the permission to read phone storage. The programming language
+used in developing our Android Application is Java. However, some CPU-intensive
+works, such as transcoding, have to be implemented in C, and then embedded to
+the application using the Android Native Development Kit (NDK).\\
 \\
-Since Apple has not provided its official specification for AirPlay, our implementation for supporting AirPlay is mostly written under unofficial guidelines. However, Apple has provided its official Multicast DNS (mDNS) implementation in C. Thus, this piece of code is reused and compiled as a shared native library. Similar with the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
- also implemented under unofficial guidelines. To be specific, the RAOP supporting component includes a UDP server and a TCP control channel.\\
+Since Apple has not provided its official specification for AirPlay, our
+implementation for supporting AirPlay is mostly written under unofficial
+guidelines \cite{AirPlay-spec}. However, Apple has provided its official
+Multicast DNS (mDNS) implementation in C
+\footnote{\url{https://developer.apple.com/bonjour/index.html}}. Thus, this
+piece of code is reused and compiled as a shared native library. Similar with
+the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
+also implemented under unofficial guidelines.
+To be specific, the RAOP supporting component includes a UDP server and a TCP
+control channel.\\
 \\
 With Tuxera being a member of DLNA , we are able to access the detailed specifications and test tools for DLNA. Moreover,  there are a lot of open source UPnP/DLNA
  libraries available since DLNA is now a popular standard. Specifically, in our
