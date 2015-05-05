@@ -2,8 +2,8 @@
 %% author Liu Peng
 
 To fulfill the need for interoperability among devices in home networking,
-Tuxera Inc. started a project named Streambels(later renamed as AllConnect). The
-project aims to solve the interoperability issue in multimedia home networking
+Tuxera Inc. started a project named Streambels (later renamed as AllConnect).
+The project aims to solve the interoperability issue in multimedia home networking
 by making a universal solution that can connect all available devices at home
 and allow them to work together regardless of their protocol.\\
 \\
@@ -41,7 +41,8 @@ In order to solve the multimedia home networking interoperability problem, the s
 \\
 The discovery component is responsible for device discovery. As discussed
 in \ref{upnp}, UPnP/DLNA devices and DIAL devices utilize Simple Service Discovery
-Protocol(SSDP) for device discovery. An application firstly sends an M-Search request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then, the application listens to other devices' responses. A DIAL device will return a response with an Application URL header, while the UPnP/DLNA devices will return a message with an XML body, which provides detailed service URLs and description URLs. Instead of using the SSDP discovery, Apple products, by comparison, use Multicast DNS for device and service discovery. Obviously, in order to support the three types of devices, namely the UPnP/DLNA devices, the DIAL devices and the Apple Airplay devices, we need to integrate these two mentioned discovery mechanisms, namely, the SSDP mechanism and the Multicast DNS mechanism, into our solution.\\
+Protocol (SSDP) for device discovery. An application firstly sends an M-Search
+request over UDP to the IPv4 multicast address 239.255.255.250 and UDP port 1900. Then, the application listens to other devices' responses. A DIAL device will return a response with an Application URL header, while the UPnP/DLNA devices will return a message with an XML body, which provides detailed service URLs and description URLs. Instead of using the SSDP discovery, Apple products, by comparison, use Multicast DNS for device and service discovery. Obviously, in order to support the three types of devices, namely the UPnP/DLNA devices, the DIAL devices and the Apple Airplay devices, we need to integrate these two mentioned discovery mechanisms, namely, the SSDP mechanism and the Multicast DNS mechanism, into our solution.\\
 \\
 The content management component is responsible for organizing and
  navigating multimedia contents that can be discovered in the home network. In our solution, these content sources include both the local storage of smart phones and DLNA digital media servers that are connected to the home network. As long as the discovered device belongs to the three device types that this solution support, its content could be streamed using the application solution.\\
@@ -56,8 +57,9 @@ Since Apple has not provided its official specification for AirPlay, our impleme
 \\
 With Tuxera being a member of DLNA , we are able to access the detailed specifications and test tools for DLNA. Moreover,  there are a lot of open source UPnP/DLNA
  libraries available since DLNA is now a popular standard. Specifically, in our
- implementation, we uses a library called "cling"\cite{cling}
- \footnote{\url{http://4thline.org/projects/cling/}}, which provides minimal implementation of UPnP device discovery, description information parsing, and basic message handling. By extending "cling"\cite{cling}, we are able to provide media formats compatibility across different devices.\\
+ implementation, we uses a library called "cling" \cite{cling}
+ \footnote{\url{http://4thline.org/projects/cling/}}, which provides minimal
+ implementation of UPnP device discovery, description information parsing, and basic message handling. By extending "cling" \cite{cling}, we are able to provide media formats compatibility across different devices.\\
 \\
 Google has officially provided the Chromecast SDK for different mobile platforms, which enables us to  implement the Chromecast integration with ease. In the Streambels project, the Chromecast integration is built upon the Chromecast API.\\
 \\
@@ -66,13 +68,20 @@ certain additional headers need to be implemented in the stream. This
 requires the HTTP server to possess the functionality to add DLNA specific
 headers. Another requirement is that the "Seek" action needs to be supported on the server side. To support "Seek", byte based seeking operations are enabled in our implementation.\\
 \\
-For receivers who do not use the DLNA standard, a basic file server with byte range support will be sufficient to do the work.\\
+For receivers who do not use the DLNA standard, a basic file server with byte
+range support will be sufficient to do the work.\\
 \\
-In order to serve media for all the receivers from both online and local storage, a separate media proxy also needs to be implemented.\\
+In addition, in order to serve media for all the receivers from both online and
+local storage, a separate media proxy also needs to be implemented
+\cite{ipv6} \cite{DLNA_proxy2}.\\
 \\
 After investigating and comparing multiple server implementations on Android, we
-concluded that NanoHTTPD is the ideal choice for our solution, because NanoHTTPD is easy to use,
-Apache licensed, very tiny and efficient. Since NanoHTTPD is minimally implemented, it is also easy to be modified and extended. With NanoHTTPD , additional headers can be easily added to make the server implementation compatible with DLNA receivers. Besides, a proxy is also easy to integrate with  NanoHTTPD.\\
+concluded that NanoHTTPD\footnote{\url{http://nanohttpd.com/}} is the ideal
+choice for our solution, because NanoHTTPD is easy to use, Apache licensed,
+very tiny and efficient. Since NanoHTTPD is minimally implemented, it is also
+easy to be modified and extended. With NanoHTTPD , additional headers can be
+easily added to make the server implementation compatible with DLNA receivers.
+Besides, a proxy is also easy to integrate with  NanoHTTPD.\\
 \\
 Taking all these technical details into consideration, we devised a simplified
 architecture for our implementation, which is shown in Figure \ref{chart3}.

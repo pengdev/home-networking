@@ -1,83 +1,101 @@
 %% Background chapter 
 %% author Liu Peng 
-
-Home networking has been a hot topic for several years. Thanks to the rapid development 
-of electronics and computer science, home networking devices are becoming more affordable 
-and more powerful than they ever were. It is now so common that a person would
-have several multimedia devices that can be connected to the network. \\
+In recent years, the rapid development of electronics and computer science has
+enabled home networking devices to become more affordable and more powerful. It
+is currently so common that a person may own several multimedia devices that
+can be connected to the network. \\
 \\
-This chapter reviews the history of home networking development and compares five most popular home networking solutions. Section \ref{2_1} presents an overview of current solutions of home networking that bridges these multimedia devices. Section \ref{2_2} describes the technical details of five most popular solutions. Section \ref{2_3} provides a comparison among these protocols and identifies the challenges that face home networking.
+This chapter reviews the history of home networking development and compares
+five most popular home networking solutions. Section \ref{2_1} presents an
+overview of current solutions of home networking that bridges these multimedia
+devices. Section \ref{2_2} describes the technical details of five most popular
+solutions. Section \ref{2_3} provides a comparison among these protocols and
+identifies the challenges that face home networking.
 \subsection{Overview\label{2_1}} 
 Early research \cite{link_layer_old} \cite{end_user} \cite{link_layer}
-conducted on home networking mainly aimed to find out how home networking
-infrastructure can be built. The subjects of the research, including cable
-connection, wireless connection, optical connection etc, concern more about
+conducted on home networking mainly aimed to find out how to build home
+networking infrastructure. The subjects of the research, including cable
+connection, wireless connection, and optical connection, concern more about
 the physical layer of the home network.  So far, it has turned out that the
 IEEE 802.11 protocol stack, among all others, is the most successful and 
 widely deployed home networking infrastructure.\\
 \\
-Nowadays, a typical scenario of home networking is that an IEEE 802.11
-supportive wireless router connecting to a Ethernet cable or optical cable from
+Currently, a typical scenario of home networking is that an IEEE 802.11
+supportive wireless router connecting to an Ethernet cable or optical cable from
 the network operator creates a local network and other user devices simply join
-this network. The wireless Access Point(AP) employs the 802.11 b/g/n/ac
+this network. The wireless Access Point (AP) employs the 802.11 b/g/n/ac
 protocol, utilizing the 2.4 GHz or 5 GHz frequency channels and providing a
 100+ Mbps  network connection, whose bandwidth is sufficient for transmitting
 the popular High Definition (1080p) videos.\\
 \\
 In terms of network and application layer technologies, different device 
 manufactures tend to choose their preferred multimedia-sharing protocols from
-the pool of protocols that have been evolving and developing for a long time.\\
+the pool of protocols that have been developed for a long time.\\
 \\
-Since late 1990s, UPnP protocol had been developed for home networking usage. 
-At that time, XML was popular and widely used by different network applications.
-Under such background, UPnP was designed to fully make use of XML. UPnP is 
-independent of media types and devices and it runs on the TCP/IP stack, thus it can 
-be easily applied to modern network infrastructures.\\
+Since late 1990s, Universal Plug and Play (UPnP) protocol had been developed for
+home networking usage \cite{upnp}. At that time, XML was popular and widely
+used by different network applications. Under such background, UPnP was designed
+to fully make use of XML. UPnP is independent of media types and devices, and it
+runs on the TCP/IP stack, thus it can be easily applied to modern network infrastructures.\\
 \\ 
 In June 2003, Sony and several leading consumer electronic manufacturers
 established the Digital Living Network Alliance (DLNA), a nonprofit 
-collaborative trade association. The DLNA standard is based on the widely used UPnP 
-protocol but it added some restrictions on media formats and some compatibility 
-requirements. A device hardware and software can be certified by DLNA 
-organizations to prove that it can work with other devices that also passed 
-this certification. \\
+collaborative trade association\footnote{\url{http://www.dlna.org/dlna-for-industry/our-organization}}. The
+DLNA standard is based on the widely used UPnP protocol, but it added some
+restrictions on media formats and some compatibility requirements. A device
+hardware and software can be certified by DLNA organizations to prove that it
+can work with other devices that also passed this certification. \\
 \\
 In 2010, Apple quit DLNA and developed its own multimedia home networking 
-solution, known as AirPlay. By adding screen mirroring, authentication and Remote 
-Audio Output Protocol(RAOP) music streaming, Apple tried to forge a more advanced 
-home network sharing system, aiming to provide a unique user experience among Apple 
-products. Apple's solution indeed attracted people's interest, and the user experience 
-proved much better than that of other similar products in the market. With its improvement
- over the years,  Apple's solution has now been acknowledged as one of the most popular streaming 
-solutions.\\
+solution, known as AirPlay\footnote{\url{https://www.apple.com/airplay/}}. By
+adding screen mirroring, authentication and Remote Audio Output Protocol (RAOP)
+music streaming, Apple tried to forge a more advanced home network sharing
+system, aiming to provide a unique user experience among Apple products.
+Apple's solution indeed attracted people's interest, and the user experience
+proved much better than that of other similar products in the market. With its
+improvement over the years,  Apple's solution has now been acknowledged as one
+of the most popular streaming solutions.\\
 \\
-Two years later, Wi-Fi alliance released its Miracast technology, and 
-participated in pushing new standard in wireless home networking. The Miracast 
-uses the Wi-Fi direct technology and it does not require a wireless local 
-network. Instead, a peer-to-peer connection is created between the sharing and 
-receiving devices. After its release, some major software and hardware 
-companies soon accepted this new standard. Google, for example integrated Miracast 
-support into its Android operating system, and provided a screen-mirroring feature 
-to other Miracast receivers. \\
+Two years later, Wi-Fi alliance released its Miracast
+technology\footnote{\url{http://www.wi-fi.org/discover-wi-fi/wi-fi-certified-miracast}},
+and participated in pushing new standard in wireless home networking. The
+Miracast uses the Wi-Fi direct technology \cite{miracast_consumer} and it does
+not require a wireless local network. Instead, a peer-to-peer connection is
+created between the sharing and receiving devices. After its release, some
+major software and hardware companies soon accepted this new standard. Google,
+for example integrated Miracast support into its Android operating system, and
+provided a screen-mirroring feature to other Miracast
+receivers\footnote{\url{https://support.google.com/nexus/answer/2865484?hl=en}}.
 \\
-The competition in home networking rages on over the years. In 2013, Google released a 35-dollar 
-Dongle, using its Chromecast protocol, which makes it possible to watch 
-YouTube and Netflix video directly on TV with such a dongle device. Laptop and mobile 
-devices with official YouTube App or Chrome browser can control the Dongle 
-through the home local network. In this solution, the home networking is pushed to the 
-cloud, since YouTube and Netflix content are directly downloaded from the Internet whereas the
-mobile device just acts as a controller for choosing the contents. \\
+\\
+The competition in home networking rages on over the years. In 2013, Google
+released a 35-dollar
+Dongle\footnote{\url{http://www.google.com/chrome/devices/chromecast/}}, using
+its Chromecast protocol, which makes it possible to watch YouTube and Netflix
+video directly on TV with such a dongle device. Laptop and mobile devices with
+official YouTube App or Chrome browser can control the Dongle through the home
+local network. In this solution, the home networking is pushed to the cloud,
+since YouTube and Netflix content are directly downloaded from the Internet
+whereas the mobile device just acts as a controller for choosing the
+contents \cite{dial}.
+\\
 \\
 At the same time, in September 2013, Spotify, a startup music service 
 company also took part in making its own home networking solution, called 
-Spotify Connect. Spotify Connect provides an interface for users at home to access its huge 
-music database, and directly browse and stream using its mobile application. Home 
-networking has again been pushed towards the cloud and Internet services in Spotify Connect. \\
+Spotify Connect \cite{spotifyconnect}. Spotify Connect provides an interface for
+users at home to access its huge music database, and directly browse and stream
+using its mobile application. Home networking has again been pushed towards the
+cloud and Internet services in Spotify Connect. \\
 \\
-Since so many companies would like to develop their own devices and even their 
-own protocols, the market is a bit messy. Devices from different companies are not compatible with each other and users have to buy a different device in order to access different services like Netflix and Spotify, which are provided by different companies.  This has created a big demand on a solution that can connect those devices at home and make them work together in a user friendly manner. \\
+Since many companies would like to develop their own devices and even their 
+own protocols, the market becomes disordered. Devices from different companies
+are not compatible with each other, and users have to buy a different device in
+order to access different services like Netflix and Spotify, which are provided
+by different companies. This has created a significant demand on a solution that
+can connect those devices at home and make them work together in a user friendly manner. \\
 \\
-In response of this market need, our Streambels project has been initiated, aiming to fill the gap among different protocols and connect these different types of devices in the home networking environment.
+In response of this market need, the Streambels project has been initiated,
+aiming to fill the gap among different protocols and connect these different types of devices in the home networking environment.
 \subsection{Available standards\label{2_2}} 
 This section describes the most popular solutions for multimedia home networking. Section \ref{2_2_1}, \ref{2_2_2}, \ref{2_2_3}, \ref{2_2_4} and \ref{2_2_5} provide the detailed technical implementations and simple use scenarios of Universal Plug and Play, DLNA, AirPlay, DIAL and Miracast. Section \ref{2_2_6} outlines other popular protocols proposed recently.
 \subsubsection[Universal Plug and Play]{Universal Plug and Play\label{2_2_1}}
@@ -86,9 +104,9 @@ Audio/Video device architecture which is more specifically targeted to
 multimedia home networking. Section \ref{2_2_1_1} introduces the general UPnP device architecture. Section \ref{2_2_1_2} presents the UPnP Audio/Video device architecture and a typical UPnP Audio/Video use scenario.
 \paragraph{UPnP device architecture\label{2_2_1_1}}
 Universal Plug and Play (UPnP) is a series of networking protocols defined to 
-work together and seamlessly discover the presence of all devices in the network 
-, establishing functional network services for data sharing, communications, and 
-entertainment among these discovered devices.\\
+work together and seamlessly discover the presence of all devices in the
+network, establishing functional network services for data sharing,
+communications, and entertainment among these discovered devices.\\
 \\ 
 In most UPnP scenarios, a control point controls the operation of one or more 
 UPnP devices. The interaction usually occurs in isolation between control point 
@@ -121,7 +139,7 @@ requesting control point. \\
 \\
 \textbf{Description} \\
 \\ 
-The discovery message contains the URL(Uniform resource Locater) of the
+The discovery message contains the URL (Uniform resource Locater) of the
 description information. A control point can send an HTTP GET request based on
 this URL to get a detailed UPnP description of the device. The description includes the device description and several service descriptions. \\
 \\
@@ -171,7 +189,7 @@ When the subscription is accepted, the device gives a unique identifier for the 
 the duration of the subscription. The device will also send an initialize event message, which 
 includes the names and current values for all evented variables. \\
 \\
-The event messages are General Event Notification Architecture(GENA) NOTIFY 
+The event messages are General Event Notification Architecture (GENA) NOTIFY 
 messages, sent through HTTP with a XML body, which specifies the names of one or 
 more state variables and new values of those variables. Once the state variable 
 changes, the event message is immediately sent to the control point, thus the 
@@ -201,7 +219,7 @@ The UPnP architecture does not define the details of the presentation page,
 however it suggests that the presentation page shall be user friendly and shall
 possess some basic functionalities.
 \paragraph{UPnP A/V devices\label{2_2_1_2}}
-We now move on to study the UPnP A/V(audio/video) devices in home networking
+We now move on to study the UPnP A/V (audio/video) devices in home networking
 \label{upnpav}. The UPnP A/V architecture is shown in Figure
 \ref{upnp_playback}.
 \begin{figure}[hb] 
@@ -219,8 +237,8 @@ needed, triggers the flow of content, then gets out of the way.\\
 The media server is used to locate available content in the home network. Its 
 primary purpose is to allow control points to enumerate (browse or search) 
 content items that are available for the user to render. The media server 
-contains a ContentDirectory Service(CDS), a ConnectionManager Service(CM) 
-, and an optional AVTransport Service(AVT) which depends on the supported 
+contains a ContentDirectory Service (CDS), a ConnectionManager Service (CM) 
+, and an optional AVTransport Service (AVT) which depends on the supported 
 transfer protocols. Some media servers are capable of transferring multiple 
 content items at the same time. \\
 \\
@@ -285,7 +303,7 @@ upcoming transfer. It can also assign a unique ConnectionID that can be used by
 a 3rd party control point to obtain information about the connections that the media 
 renderer is using. In addition, depending on the transfer protocol and data 
 format used, this action may also return a unique AVTransport InstanceID that the control 
-point can use to control the flow of content(stop, pause, seek, etc). \\
+point can use to control the flow of content (stop, pause, seek, etc). \\
 \\
 The AVTransport service is used to control the flow of streamed content. Actions 
 like play, stop, pause and seek can be controlled depending on the transfer 
@@ -329,8 +347,8 @@ seen in Figure \ref{av_use_scenario}.
 \caption{Typical UPnP AV use scenario \label{av_use_scenario}} 
 \end{figure} 
 The first thing in the UPnP network communication is the Simple Service
-Discovery Protocol(SSDP)-based device discovery. A SSDP multicast message is sent when a 
-new device is added to the network. A control point would listen to these 
+Discovery Protocol (SSDP)-based device discovery. A SSDP multicast message is
+sent when a new device is added to the network. A control point would listen to these 
 multicast messages. On receiving the SSDP message, the control point would send a request for the device's description and services using the location found in the SSDP discovery message. Then the control point can issue the services action command using the Simple Object Access protocol (SOAP).\\
 \\ 
 In media sharing scenarios, the control point would browse the information about 
@@ -571,7 +589,7 @@ AirPlay screen mirroring is achieved by transmitting an H.264 encoded video stre
 over a TCP connection. The stream is packeted with a 128-byte header. The 
 audio uses the AAC-ELD format and is sent using the AirTunes protocol. 
 The NTP(Network time protocol) protocol is used for synchronization and the synchronization 
-takes place on UDP port 7010(client) and 7011(server). The 
+takes place on UDP port 7010 (client) and 7011 (server). The 
 AirPlay server runs a NTP client. Requests are sent to an AirPlay client every 3 
 seconds. The reference time stamp marks the beginning of the 
 mirroring session.  The control messages can be seen in table 
@@ -694,7 +712,9 @@ Wi-Fi.\\
 \\
 Not limited to Wi-Fi direct connection, some Miracast devices also support Tunneled Direct Link Setup (TDLS), which allows devices to connect via an infrastructure network. TDLS enables more efficient data transfer and keeps the advantage of more advanced Wi-Fi capabilities at the same time.\\
 \\
-In most cases, Miracast connections are expected to be predominantly established between Wi-Fi devices connected with each other directly, without an AP acting as an intermediary. When two devices connect with each other directly, one fulfills its role as the source(the transmitting device) and the other functions as a display(the device receiving and rendering the content to the user).\\
+In most cases, Miracast connections are expected to be predominantly established
+between Wi-Fi devices connected with each other directly, without an AP acting
+as an intermediary. When two devices connect with each other directly, one fulfills its role as the source (the transmitting device) and the other functions as a display (the device receiving and rendering the content to the user).\\
 \\
 There are four typical topologies that are supported by Miracast. As shown in
 Figure \ref{miracast_model}, the Source could directly connect to the Display
@@ -769,7 +789,8 @@ using Moving Picture Experts Group 2 Transport Stream (MPEG2-TS) coding and enca
 \\
 \textbf{User input back channel setup (optional)}\\
 \\
-Optionally, There could be a User Interface Back Channel(UIBC) for transmitting control and data information related to user interaction with the user interface. User inputs at a display are packetized using a UIBC packet header and transported back using Transmission Control Protocol/Internet Protocol (TCP/IP).\\
+Optionally, There could be a User Interface Back Channel (UIBC) for transmitting
+control and data information related to user interaction with the user interface. User inputs at a display are packetized using a UIBC packet header and transported back using Transmission Control Protocol/Internet Protocol (TCP/IP).\\
 \\
 \textbf{Payload control}\\
 \\
@@ -821,7 +842,8 @@ the past two years. Many latest TVs have been built with Miracast support, to ac
 \\
 Chromecast dongle is a cheap device that everyone wants to try. It can be used to easily upgrade an old TV to a "Smart TV".  What's more, since Google has provided good content support for Chromecast dongle, it has soon been accepted by huge amount of users. \\
 \\
-In Chapter \ref{chapter4}, we will have a presentation of the popularity of different standards according to the result of our solution.
+In Chapter \ref{chapter4}, we will have a presentation of the popularity of
+different standards according to the result of this solution.
 \subsubsection{Technology feature\label{2_3_3}} 
 This section compares the technical differences among the most popular standards. Section \ref{2_3_3_1} outlines the supported media formats of each standard. Section \ref{2_3_3_2} summarizes the common protocols used in different standards and proposes the idea of developing a suitable solution to solve the incompatibility problem in home networking.
 \paragraph{Media format support\label{2_3_3_1}} 

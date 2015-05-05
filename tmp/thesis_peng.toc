@@ -13,15 +13,15 @@
 \contentsline {paragraph}{\numberline {2.2.1.1}UPnP device architecture}{5}{paragraph.2.2.1.1}
 \contentsline {paragraph}{\numberline {2.2.1.2}UPnP A/V devices}{8}{paragraph.2.2.1.2}
 \contentsline {subsubsection}{\numberline {2.2.2}DLNA}{12}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{14}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}DIAL}{17}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{19}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.3}AirPlay}{15}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}DIAL}{18}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Miracast}{20}{subsubsection.2.2.5}
 \contentsline {subsubsection}{\numberline {2.2.6}Other protocols}{24}{subsubsection.2.2.6}
 \contentsline {subsection}{\numberline {2.3}Comparison of existing solutions}{24}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}History}{24}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1}History}{25}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Market}{25}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Technology feature}{26}{subsubsection.2.3.3}
-\contentsline {paragraph}{\numberline {2.3.3.1}Media format support}{26}{paragraph.2.3.3.1}
+\contentsline {paragraph}{\numberline {2.3.3.1}Media format support}{27}{paragraph.2.3.3.1}
 \contentsline {paragraph}{\numberline {2.3.3.2}Networking technologies used}{27}{paragraph.2.3.3.2}
 \contentsline {section}{\numberline {3}Developing a solution for multimedia home networking}{29}{section.3}
 \contentsline {subsection}{\numberline {3.1}Architecture overview}{29}{subsection.3.1}

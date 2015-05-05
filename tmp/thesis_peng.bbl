@@ -5,6 +5,11 @@ Ratul Mahajan David~Wetherall W.~Keith~Edwards, Rebecca E.~Grinter.
 \newblock Advancing the state of home networking.
 \newblock {\em Communications of the ACM}, 54(6):63--71, June 2011.
 
+\bibitem{standards-perspective}
+Bill Rose.
+\newblock Home networks: A standards perspective.
+\newblock {\em IEEE Communications Magzine}, pages 78--85, December 2001.
+
 \bibitem{link_layer_old}
 Xinhua Feng.
 \newblock Home networking.
@@ -25,6 +30,20 @@ Bruce Nordman.
 Charlie Tai Mark D.~Wood Brent A.~Miler, Toby~Nixon.
 \newblock Home networking with universal plug and play.
 \newblock {\em IEEE Communications Magzine}, pages 104--109, December 2001.
+
+\bibitem{miracast_consumer}
+WiFi Alliance.
+\newblock Wi-fi certified miracast: Extending the wi-fi{\textregistered}
+  experience to seamless video display.
+\newblock Technical report, WiFi Alliance, January 2013.
+
+\bibitem{dial}
+Inc. Netflix.
+\newblock Discovery and launch protocol specification.
+\newblock Technical report, Netflix, Inc., 2014.
+
+\bibitem{spotifyconnect}
+Spotigy connect, 1 2014.
 
 \bibitem{upnp-av}
 Wouter van der Beek Jeffrey~Kang John~Ritchie, Thomas~Kuehnel.
@@ -49,11 +68,6 @@ Airplay specification.
 Marc~Krochmal Stuart~Cheshire.
 \newblock Multicast dns, February 2013.
 
-\bibitem{dial}
-Inc. Netflix.
-\newblock Discovery and launch protocol specification.
-\newblock Technical report, Netflix, Inc., 2014.
-
 \bibitem{miracast_industry}
 WiFi Alliance.
 \newblock Wi-fi certified miracast: Extending the wi-fi{\textregistered}
@@ -63,11 +77,20 @@ WiFi Alliance.
 \bibitem{sonosnet}
 Sonos net, 11 2013.
 
-\bibitem{spotifyconnect}
-Spotigy connect, 1 2014.
-
 \bibitem{cling}
 Cling - java/android upnp library and tools.
+
+\bibitem{ipv6}
+Yueh-Min~Huang Chung-Sheng~Li.
+\newblock Upnp ipv4/ipv6 bridge for home networking environment.
+\newblock {\em IEEE Contributed Paper}, August 2008.
+
+\bibitem{DLNA_proxy2}
+Hoon-Ki Lee Eui-Hyun Paik Kwang-Roh~Park Jung-Tae~Kim, Yeon-Joo~Oh.
+\newblock Implementation of the dlna proxy system for sharing home media
+  contents.
+\newblock {\em IEEE Transactions on Consumer Electronics}, 53(1):139--144,
+  February 2007.
 
 \bibitem{dalvik_arch}
 David Ehringer.
@@ -103,22 +126,5 @@ Takayoshi Okodo Yohei Tsuchida Tomoyuki Yamaguchi-Takahiro~Murooka
   Kimio~Oguchi, Kunio~Tojo.
 \newblock Next generation home networking and relevant technologies.
 \newblock {\em Proc. of SPIE}, 5626, 2005.
-
-\bibitem{DLNA_proxy2}
-Hoon-Ki Lee Eui-Hyun Paik Kwang-Roh~Park Jung-Tae~Kim, Yeon-Joo~Oh.
-\newblock Implementation of the dlna proxy system for sharing home media
-  contents.
-\newblock {\em IEEE Transactions on Consumer Electronics}, 53(1):139--144,
-  February 2007.
-
-\bibitem{standards-perspective}
-Bill Rose.
-\newblock Home networks: A standards perspective.
-\newblock {\em IEEE Communications Magzine}, pages 78--85, December 2001.
-
-\bibitem{ipv6}
-Yueh-Min~Huang Chung-Sheng~Li.
-\newblock Upnp ipv4/ipv6 bridge for home networking environment.
-\newblock {\em IEEE Contributed Paper}, August 2008.
 
 \end{thebibliography}
