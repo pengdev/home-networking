@@ -46,9 +46,7 @@ According to the result, the stream traffics of AirPlay and DLNA streaming are v
 total traffic in bytes accumulated since the beginning of the stream. There are two lines which represents the total data and non-retransmitted data separately. According to this figure, the
 traffic growth of AirPlay streaming is nearly linear, only two slow-downs occurred at 1:30 and 2:00 due to network condition. This is because ROAP is a push like process and content can be streamed in real time.\\
 \\
-In contrast, Figure \ref{airplay_vs_dlna_traffic_b} shows that in DLNA streaming, there are clearly two phases in the traffic graph. Before 0:20, the amount of traffic grows rapidly. After that, the traffic growth slowed down and keeps the same increase rate till the end of the stream. The reason behind it is that HTTP streaming is a pull like process, the server can actively fetch content from the media server and the content can be buffered up since the beginning of the playback, with the best effort of the network. Therefore, there is a short download period at the beginning of the DLNA streaming graph. After all the content is buffered already, the traffic growth is the result of constantly update of playback status.\\
-\\
-This comparison describes the different characteristics of HTTP streaming and RAOP streaming. These differences could result in different performances and user experiences. In the following sections, we will identify these differences by changing the network conditions. And finally we could draw the conclusion which protocol is more suitable for multimedia home networking.
+In contrast, Figure \ref{airplay_vs_dlna_traffic_b} shows that in DLNA streaming, there are clearly two phases in the traffic graph. Before 0:20, the amount of traffic grows rapidly. After that, the traffic growth slowed down and keeps the same increase rate till the end of the stream. The reason behind it is that HTTP streaming is a pull like process, the server can actively fetch content from the media server and the content can be buffered up since the beginning of the playback, with the best effort of the network. Therefore, there is a short download period at the beginning of the DLNA streaming graph. After all the content is buffered already, the traffic growth is the result of constantly update of playback status.
 \begin{figure}[hb]
 \subfigure[AirPlay\label{airplay_vs_dlna_traffic_a}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_airplay_android}}
 \subfigure[DLNA\label{airplay_vs_dlna_traffic_b}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
@@ -56,6 +54,8 @@ This comparison describes the different characteristics of HTTP streaming and RA
 comparison \label{airplay_vs_dlna_traffic}}
 \end{figure}
 \clearpage
+
+This comparison describes the different characteristics of HTTP streaming and RAOP streaming. These differences could result in different performances and user experiences. In the following sections, we will identify these differences by changing the network conditions. And finally we could draw the conclusion which protocol is more suitable for multimedia home networking.
 \subsubsection{Performance under limited bandwidth\label{4_1_2}}
 During this experiment, we reused the same setup mentioned in Section \ref{3_7_1}, in addition, different bandwidth limitations are introduced. We evaluate the performance of the two streaming solutions under limited bandwidth. The bandwidth is limited to 500 kbps, 700 kbps and 1000 kbps respectively in three rounds of tests. During each round of the test, the same mp3 music is streamed to XBMC receiver using the DLNA standard and the AirPlay standard. Figure \ref{all_traffic_bw} and \ref{all_traffic_bw_1} show the result of AirPlay and DLNA streaming.\\
 \\
