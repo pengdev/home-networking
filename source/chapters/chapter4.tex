@@ -1,7 +1,7 @@
 %% Results chapter
 %% author Liu Peng
 
-After designing and implementing the application. We conducted several
+After designing and implementing the application. I conducted several
 evaluation tests on the streaming performance. We had released the first
 edition of the application in Google Play Store in Nov 2013. Since then, we had
 been updating the application in order to improve its performance and enrich
@@ -56,9 +56,15 @@ packets in the network.
 After the experiment environment is set up, a series of tests is conducted and
 the result is presented in Figure \ref{airplay_vs_dlna_traffic}.
 
-According to the result, the stream traffics of AirPlay and DLNA streaming are very different. Figure \ref{airplay_vs_dlna_traffic_a} shows the scenario of AirPlay music streaming, x-axis is the duration of the stream since the beginning of the music; y-axis is the
-total traffic in bytes accumulated since the beginning of the stream. There are two lines which represents the total data and non-retransmitted data separately. According to this figure, the
-traffic growth of AirPlay streaming is nearly linear, only two slow-downs occurred at 1:30 and 2:00 due to network condition. This is because ROAP is a push like process and content can be streamed in real time.
+According to the result, the stream traffics of AirPlay and DLNA streaming are
+very different. Figure \ref{airplay_vs_dlna_traffic_a} shows the scenario of
+AirPlay music streaming, x-axis is the duration of the stream since the
+beginning of the music; y-axis is the total traffic in bytes accumulated since
+the beginning of the stream. There are two lines which represents the total
+data and non-retransmitted data separately. According to this figure, the
+traffic growth of AirPlay streaming is nearly linear, only two slow-downs
+occurred at 1:30 and 2:00 due to network condition. This is because ROAP is a
+push like process and content can be streamed in real time.
 
 In contrast, Figure \ref{airplay_vs_dlna_traffic_b} shows that in DLNA
 streaming, there are clearly two phases in the traffic graph. Before 0:20, the
@@ -143,7 +149,12 @@ bandwidth required by DLNA streaming is considerably smaller than AirPlay
 streaming.
 
 As a conclusion, in the scenario of limited bandwidth, DLNA has the advantage
-of sound quality compared to AirPlay standard. The buffer system, benefited from HTTP streaming mechanism, gives DLNA a more reliable data flow. While AirPlay streaming suffered from the packet loss of UDP and the sound quality is heavily affected. Generally speaking, DLNA is more tolerant than AirPlay streaming in the case of limited bandwidth. \begin{figure}[hb]%[!t]%[hb][!b]
+of sound quality compared to AirPlay standard. The buffer system, benefited
+from HTTP streaming mechanism, gives DLNA a more reliable data flow. While
+AirPlay streaming suffered from the packet loss of UDP and the sound quality is
+heavily affected. Generally speaking, DLNA is more tolerant than AirPlay
+streaming in the case of limited bandwidth. 
+\begin{figure}[hb]%[!t]%[hb][!b]
 \subfigure[No
 limit\label{all_traffic_bw_a}]{\includegraphics[width=1\columnwidth]{charts/bytes_nolimit}}
 \subfigure[500kbps\label{all_traffic_bw_b}]{\includegraphics[width=1\columnwidth]{charts/bytes_500k}}
@@ -264,14 +275,15 @@ with most DLNA receivers, regardless of which implementation they use.
 \centering \includegraphics[height=8.5cm]{charts/rating_distribution}
 \caption{Rating distribution\label{ratings}}
 \end{figure}
-In terms of user distribution, in the last 16 months, our application turns out
+In terms of user distribution, in the last 16 months, this application turns out
 to be very popular in countries like France, United States, Germany, United Kingdom
 and Brazil. The user distribution is shown in Figure \ref{user_country}.
 \begin{figure}[htb]
 \centering \includegraphics[height=8.5cm]{charts/country_popularity}
 \caption{Popularity in different countries \label{user_country}}
 \end{figure}
-We have also translated the description of our application to nine languages, which include English, Russian, German, Italian, Japanese, French, Chinese, Spanish and Korean. The multiple language support may also contribute to the popularity of our application in all parts of the world.
+We have also translated the description of the application to nine languages,
+which include English, Russian, German, Italian, Japanese, French, Chinese, Spanish and Korean. The multiple language support may also contribute to the popularity of our application in all parts of the world.
 \begin{figure}[!t]
 \centering \includegraphics[height=8.5cm]{charts/os_version_popularity}
 \caption{Popularity of different Android versions \label{os_versions}}

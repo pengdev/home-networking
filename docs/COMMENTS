@@ -1,0 +1,44 @@
+I read your draft with pleasure. Nevertheless, here are my comments:
+
++ I have marked typos and such into the paper version - I can collect my 
+copy for corrections
++ you write as if this is a report of Tuxera achiements - it is not. 
+This is your thesis and you must make it clear what did you do 
+personally. This applies to several Chapters e.g. conclusions and 
+description of the implementation and testing.
++ structure: Now you go to 4 levels of headers but under-use numbering 
+of Chapters. My suggestion would be to try to keep 3 levels of headers. 
+What could help is to have more chapters by turning some 2nd level 
+Sections into Chapters. For example, 2.2. could be a Chapter, if you 
+keep 2.3 in this Chapter, get rid of 2.3.3 but keep the 2.3.3.1 and 2.3.3.2
+
++ For comparison, clear criteria would be helpful, e.g. functionality, 
+quality under loss and capacity constraints,  power consumption of the 
+Mobile device (if you did not measure it, may be there are qualitative 
+statements that are possible? OR are they all the same  in terms of 
+power consumption? Possibly also diversity leading to incompatibility?
+
++ when you present each standard in Section 2.2. a Figure similar to 
+Figure 1 showing also possible mapping to equipment would make 
+everything more concrete. In particular, it is not always clear for some 
+of the standards, how is the support for cloud based content organised 
+(YouTube/Netflix etc).
+
++ Figures 12... better use kBytes or Mbytes instead of bytes - makes the 
+figures more readable. Why is AirPlay volume < DLNA in Fig 12a but later 
+it turns out that volumes are: AirPlay > DLNA because AirPlay uses 
+non-compressed format?
+
++ Conclusions: HTTP vs RTP - it is possible to make RTP more adaptive to 
+network conditions by adding support for RTCP for feedback, some 
+heuristics that for example try to adjust sending rate to available 
+capacity and finally an adaptive playout algorithm. For this approach to 
+work alternative coding rates most likely must be supported. OR the 
+playout algorithm must be able to stop playout for a while and start 
+again once there is enough content.  Is this approach not considered on 
+any of the forums?
+
+You can come and pick up my copy, make the corrections and then return 
+me a book in hard black covers. (e.g tomorrow Fri 13-14 is a good time).
+
+BR Raimo
