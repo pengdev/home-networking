@@ -67,8 +67,8 @@ occurred at 1:30 and 2:00 due to network condition. This is because ROAP is a
 push like process and content can be streamed in real time.
 
 In contrast, Figure \ref{airplay_vs_dlna_traffic_b} shows that in DLNA
-streaming, there are clearly two phases in the traffic graph. Before 0:20, the
-amount of traffic grows rapidly. After that, the traffic growth slowed down and
+streaming, there are clearly two phases in the traffic graph. During the first
+20 seconds, the amount of traffic grows rapidly. After that, the traffic growth slowed down and
 keeps the same increase rate till the end of the stream. The reason behind it
 is that HTTP streaming is a pull like process, the server can actively fetch
 content from the media server and the content can be buffered up since the
@@ -77,12 +77,21 @@ there is a short download period at the beginning of the DLNA streaming graph.
 After all the content is buffered already, the traffic growth is the result of
 constantly updating of playback status.
 \begin{figure}[hb]
-\subfigure[AirPlay\label{airplay_vs_dlna_traffic_a}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_airplay_android}}
-\subfigure[DLNA\label{airplay_vs_dlna_traffic_b}]{\includegraphics[width=0.9\columnwidth]{charts/oneMoreTime_dlna_android}}
+\subfigure[AirPlay\label{airplay_vs_dlna_traffic_a}]{\includegraphics[width=0.9\columnwidth]{charts/accu_airplay}}
+\subfigure[DLNA\label{airplay_vs_dlna_traffic_b}]{\includegraphics[width=0.9\columnwidth]{charts/accu_dlna}}
 \caption{AirPlay vs DLNA streaming traffic
 comparison \label{airplay_vs_dlna_traffic}}
 \end{figure}
 \clearpage
+
+In addition, as shown in Figures \ref{airplay_vs_dlna_traffic_a} and
+\ref{airplay_vs_dlna_traffic_b}, the total bytes of AirPlay streaming is 27
+megabytes while the total bytes of DLNA streaming is 9 megabytes. The
+AirPlay streaming consumes two times more traffic than the DLNA streaming. This
+is because AirPlay uses Apple Lossless Audio Codec (ALAC) format for music
+streaming, as discussed in \ref{2_3_3_4}. Since ALAC is a lossless format, the
+transcoding from the MP3 format to the ALAC format actually decompresses the
+data, which increases the total size of media file significantly.
 
 This comparison describes the different characteristics of HTTP streaming and
 RAOP streaming. These differences could result in different performance and
