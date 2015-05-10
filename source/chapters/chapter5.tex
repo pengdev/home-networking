@@ -113,7 +113,7 @@ has a strong alliance, including hundreds of companies.
 
 \textbf{Information exchange}
 
-As mentioned in Chapter \ref{chapter2}, for DLNA and AirPlay, the control
+As mentioned in Chapter \ref{chapter2_1}, for DLNA and AirPlay, the control
 messages are sent through SOAP (Simple Object Access Protocol), which is based on
 Hypertext Transfer Protocol (HTTP) and its Extensible Markup Language (XML).
 However, much research \cite{restful_webservice} shows that Representational
@@ -142,11 +142,20 @@ mirroring application. In these cases, RTSP would be a better solution due to
 the fact that UDP is used and there is no buffering or retransmission of the
 same content.
 
-In general, both HTTP and RTSP will be used in future home networking. For
-the streaming of recorded media, HTTP streaming has an advantages over RTSP
-due to the buffer system. On the other hand, for screen mirroring and other
-usages where the content needs to be synchronized precisely, RTP would be a
-better solution.
+On the other hand, it is also possible to make RTP more adaptive to network
+conditions by adding the support for RTCP for feedback. By adjusting the
+sending rate to available capacity, an adaptive streaming algorithm could be
+implemented. Moreover, the algorithm could also adjust the coding rates
+according to the network condition, enabling a even more adaptive streaming
+experience.
+
+In general, in the near future, both HTTP and RTSP will be used in future home
+networking. For the streaming of recorded media, HTTP streaming has an
+advantages over RTSP due to the buffer system. On the other hand, for screen
+mirroring and other usages where the content needs to be synchronized
+precisely, RTP would be a better solution. However, the ultimate solution would
+be developing a more adaptive algorithm on top of RTSP. Thus RTP would
+achieve better performance in the bandwidth constrained environment.
 
 \textbf{Internet of Things}
 
