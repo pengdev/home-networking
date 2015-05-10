@@ -405,10 +405,15 @@ AirPlay's specification is not open to public. However, unofficial
 specifications have been made by some hackers through reverse engineering the
 protocol stack \footnote{\url{http://nto.github.io/AirPlay.html}}. These
 unofficial specifications could be found on the Internet \cite{AirPlay-spec}.
-The specification includes 6 parts, including service discovery, video
+Figure \ref{airplay_use_scenario} shows a typical use scenario
+of AirPlay. The AirPlay specification includes 6 parts, including service discovery, video
 streaming, photo streaming, music streaming, screen mirroring and
 authentication.
-
+\clearpage
+\begin{figure}[htb] 
+\centering \includegraphics[height=9cm]{charts/airplay} 
+\caption{AirPlay use scenario\label{airplay_use_scenario}} 
+\end{figure}  
 \textbf{Service discovery}
 
 The service discovery of AirPlay stems from the IETF Zeroconf Working Group, 
@@ -577,12 +582,19 @@ YouTube and Netflix already have their build-in DIAL device discovery
 functionality. The streaming part uses HTTP streaming, which means a controller can directly set the 
 streaming URL and the receiver will start downloading automatically.
 
-The DIAL protocol has two components: DIAL Service Discovery and the DIAL 
-Representational State Transfer (REST) Service \cite{dial}. DIAL Service
-Discovery enables a DIAL client device to discover DIAL servers on its local network and gain
-access to the DIAL REST Service on those devices. The DIAL REST Service enables
-a DIAL client to query, launch, and optionally stop applications on a DIAL
-server device.
+As shown in Figure \ref{DIAL_use_scenario}, the DIAL protocol has two
+components: DIAL Service Discovery and the DIAL Representational State Transfer
+(REST) Service \cite{dial}. DIAL Service Discovery enables a DIAL client device
+to discover DIAL servers on its local network and gain access to the DIAL REST
+Service on those devices. The DIAL REST Service enables a DIAL client to query,
+launch, and optionally stop applications on a DIAL server device. The DIAL
+protocol is based on cloud, so the receiver device will directly download the
+receiver application and multimedia content from the cloud.
+
+\begin{figure}[htb] 
+\centering \includegraphics[width=0.9\columnwidth]{charts/DIAL} 
+\caption{DIAL use scenario\label{DIAL_use_scenario}} 
+\end{figure}  
 
 \textbf{DIAL Service Discovery}
 
@@ -635,13 +647,25 @@ DIAL REST service is  shown in Figure \ref{dial_rest}.
 \begin{figure}[htb] \centering \includegraphics[height=9cm]{charts/dial_rest} 
 \caption{DIAL REST service: application launch \label{dial_rest}} 
 \end{figure} 
-
+\clearpage
 \subsection{Miracast\label{2_2_5}} %NOT Edited
 Miracast \cite{miracast_industry} is very different on technology perspective.
 Devices which utilize Miracast technology are not necessarily connected to
 the same local network, a Wi-Fi peer to peer connection will be created when
 needed. This makes Miracast more adaptive than other technologies, in other
 words, Miracast is not limited to the pre-configured network infrastructure.
+Figure \ref{miracast_use_scenario} shows the use scenario of Mircast, the
+service discovery is based on Wi-Fi Direct technology. After the connection to
+the receiver device is established, the whole screen of the sender device is
+recorded and transferred to the receiver device in real time. If the streamed
+content is located in the cloud, the content will be firstly downloaded and
+displayed on the sender's screen, and then transferred to the receiver device in
+real time.
+
+\begin{figure}[htb] 
+\centering \includegraphics[width=1\columnwidth]{charts/miracast} 
+\caption{Miracast use scenario\label{miracast_use_scenario}} 
+\end{figure}  
 
 Another point worth mentioning is that Miracast utilizes many Wi-Fi alliance
 building blocks that are constantly developed over the years. These components
@@ -707,11 +731,11 @@ Source and display devices discover each other prior to connection setup. The De
 \textbf{Service Discovery}
 
 Source and display devices discover each other's Miracast capabilities prior to connection setup. The Service discovery mechanism is defined in the Wi-Fi P2P specification.
-
+\clearpage
 \textbf{Device selection}
 
 A remote device is selected for connection setup. The user input and the local policies may be used to decide which device is a display and which is a source.
-\clearpage
+
 \textbf{Connection setup}
 
 Connection setup selects a method (Wi-Fi Direct or TDLS) to manage the connection. Wi-Fi Direct sets up a group owner and client to initiate a device-to-device link. A WPA2 single-hop link with selected devices is established. Upon the establishment of connectivity between the source and display devices, the display initiates a Transmission Control Protocol (TCP) connection, with a control port using Real-Time Streaming Protocol (RTSP) to create and manage the sessions between the source and the display devices.
