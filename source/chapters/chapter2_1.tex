@@ -758,13 +758,20 @@ previous sections, identities the challenges and proposes a solution for
 multimedia home networking. Section \ref{2_3_1} describes the evolution history
 of the popular home networking solutions. Section \ref{2_3_2} presents the
 market share of each standard. Section \ref{2_3_3_1} outlines the supported
-media formats of each standard. Section \ref{2_3_3_2} summarizes the common
-protocols used in different standards and proposes the idea of developing a
-suitable solution to solve the incompatibility problem in home networking.
+media formats of each standard. Section \ref{2_3_3_3} describes the device
+diversity of existing solutions which might influence the interoperability.
+Section \ref{2_3_3_4} discusses the energy consumption of each solution. Section
+\ref{2_3_3_5} compares the features of the existing solutions. Section
+\ref{2_3_3_2} summarizes the common protocols used in different standards and
+proposes the idea of developing a suitable solution to solve the
+incompatibility problem in home networking.
 \subsubsection{History\label{2_3_1}} 
 DLNA was proposed by several leading consumer electronic manufactures based on
-the UPnP technology. From early 2000s on, over 2.2 billion devices with DLNA have been shipped, 
-making it possible to share audio and video seamlessly among different smart devices. Moreover, the DLNA alliance had been holding two meetings annually to discuss the marketing and development related issues, making DLNA a more and more accomplished standard.
+the UPnP technology. From early 2000s on, over 2.2 billion devices with DLNA
+have been shipped, making it possible to share audio and video seamlessly among
+different smart devices. Moreover, the DLNA alliance had been holding two
+meetings annually to discuss the marketing and development related issues,
+making DLNA a more and more accomplished standard.
 
 AirPlay, on the other hand, is proposed by Apple Inc. After departing the DLNA alliance in 2010, Apple proposed AirPlay, which brought more advanced features such as screen mirroring, RAOP audio streaming and some authentication functionalities.
 
@@ -804,7 +811,12 @@ sales will reach 7.32 billion, nearly the same as the human population on earth.
 \end{figure}
  
 AirPlay is bundled with Apple products. With great sales of Apple TV, Airport Express, 
-Mac, iPhone, iPad, iPod, many families have become accustomed to use Apple's product for everything. In this sense AirPlay has become the easiest way to build home networking solutions. Moreover, it could be the only solution for Apple users, since a lot of speaker manufactures implement their own AirPlay receiver implementations on their AirPlay compatible speakers. And indeed AirPlay provides enough easy to use features for daily usage.
+Mac, iPhone, iPad, iPod, many families have become accustomed to use Apple's
+product for everything. In this sense AirPlay has become the easiest way to
+build home networking solutions. Moreover, it could be the only solution for
+Apple users, since a lot of speaker manufactures implement their own AirPlay
+receiver implementations on their AirPlay compatible speakers. And indeed
+AirPlay provides enough easy to use features for daily usage.
 
 Bundled with Android operating system, Miracast has experienced a fast growth in 
 the past two years. Many latest TVs have been built with Miracast support, to accept peer-to-peer Wi-Fi direct connection.
@@ -833,27 +845,67 @@ mandate on media format in Miracast. Content from
 cloud can be downloaded to local device and displayed both on the local device
 and receiver device simultaneously, however, it might consume more power
 compared with other standards. 
-\subsubsection{Networking technologies used\label{2_3_3_2}}
-A short technology specification comparison is made to help better understand
-the existing solutions. Table \ref{compare_tech} shows the main technologies
-used in different popular solutions.
+\subsubsection{Device diversity\label{2_3_3_3}}
+AirPlay is developed by Apple and mainly used by Apple products. All the latest
+iOS devices and OSX devices have embedded the AirPlay sender support. There are
+three generations of Apple TV devices are available on the market. However,
+there are many speaker manufacturers implemented their own AirPlay music
+receiver implementation.
 
-%% table 1, compare technology 
-\begin{table}[htb] 
-\caption{Comparison of used technologies\label{compare_tech}} 
-\begin{center} 
-\fbox{ 
-\begin{tabular}{c|l|l|l}  
-\textbf{ } & Device discovery & Control Protocol & Streaming protocol \\ \hline 
-\textbf{DLNA} & SSDP & UPnP/HTTP & HTTP \\ \hline 
-\textbf{AirPlay} & Multicast DNS & HTTP/RTSP & HTTP/RTP \\ \hline 
-\textbf{DIAL} & SSDP & DIAL/HTTP & HTTP \\ \hline 
-\textbf{Miracast} & Wi-Fi direct & RTSP & RTP 
-\end{tabular} 
-} 
-\end{center} 
-\end{table} 
+Since DLNA is proposed by several leading electronic companies, and it is
+widely accepted as an important standard by the industry, the DLNA devices have
+the most diverse implementations among all the introduced standards. There are
+billions of DLNA certified devices on the market, which makes the DLNA
+compatibility a crucial issue to solve.
 
+Many content providers use the DIAL standard. There are few devices types
+utilizing this standard, such as the Chromecast dongle and Google Nexus Player.
+Many content providers, such as YouTube and Netflix, have implemented their own
+DIAL channels. Compared with other standards, the implementation guideline of
+DIAL standard is strictly defined, so there are not many compatibility issues.
+
+Miracast becomes a most widely deployed standard in last few years. Most TV
+models, which are manufactured by Samsung, LG, Sony, have been released with
+the Miracast solutions inside. The Miracast support is also integrated into the
+latest Android system, which intermediately used by hundreds of mobile phone
+manufacturers. Although the diversity of devices is significant, the
+implementation of Miracast is done by Google and several leading TV
+manufacturers. Given this reason, not many compatibility issues are seen for
+Miracast.
+
+\subsubsection{Power consumption\label{2_3_3_4}}
+As discussed in Section \ref{2_2_2}, since DLNA standard utilizes UPnP AV
+architecture, there is a media server device type and a media renderer device
+type in the typical use scenario. The streaming traffic is not routed trough
+the control point; the energy consumption of the control point is very little.
+However, for some use cases, a media server is integrated into a control point;
+the power consumption would increase dramatically in this situation. In
+addition, most media servers also integrate the transcoding functionality,
+which will consume much more power compared with other standards.
+
+For AirPlay, all the streamed music has to be encoded to Apple
+Lossless Audio Codec (ALAC) format, which requires the sender to transcode the
+most common mp3 or m4a formatted music items, this definitely will consume
+significant amount of power. However, when streaming content from online
+sources, the traffic can be directly routed to the receiver, the battery
+consumption of sender can be preserved.
+
+DIAL, take a Chromecast device as an example, utilizes the cloud as the content
+source, for example, Netflix and YouTube videos can be directly routed to the
+Chromecast device, the mobile phone only act as a control point.
+In this use scenario, even the duration and progress are sent to the control
+point through the cloud. This design will significantly reduce the power
+consumption of a controller device.
+
+However, Miracast is a screen-mirroring technology, which means the whole
+screen will have to be encoded to Moving Picture Experts Group 2 Transport
+Stream (MPEG-TS) format, and then send to receiver device in real time. This
+design will significantly increase the power consumption of the sender device.
+Moreover, if the content is from the cloud, the sender device have to download
+the content from could, display it on the local screen, and then encode the
+whole screen to MPEG-TS format. The whole process will consume the most
+significantly amount of power compared with all of the introduced standards.
+\subsubsection{Features\label{2_3_3_5}}
 Compared to some standards, for instance, DLNA, which only provides basic
 features, other standards, for example, AirPlay, also offer advanced features,
 including screen mirroring. Table \ref{advanced_feature_cmp} below shows the
@@ -869,6 +921,27 @@ advanced features provided by different solutions.
 \textbf{Screen mirroring} & No & Yes & No & Yes \\ \hline 
 \textbf{Multiple connection} & Yes & No & No & No \\ \hline 
 \textbf{Authentication} & No & Yes & No & Yes 
+\end{tabular} 
+} 
+\end{center} 
+\end{table} 
+
+\subsubsection{Networking technologies\label{2_3_3_2}}
+A short technology specification comparison is made to help better understand
+the existing solutions. Table \ref{compare_tech} shows the main technologies
+used in different popular solutions.
+
+%% table 1, compare technology 
+\begin{table}[htb] 
+\caption{Comparison of used technologies\label{compare_tech}} 
+\begin{center} 
+\fbox{ 
+\begin{tabular}{c|l|l|l}  
+\textbf{ } & Device discovery & Control Protocol & Streaming protocol \\ \hline 
+\textbf{DLNA} & SSDP & UPnP/HTTP & HTTP \\ \hline 
+\textbf{AirPlay} & Multicast DNS & HTTP/RTSP & HTTP/RTP \\ \hline 
+\textbf{DIAL} & SSDP & DIAL/HTTP & HTTP \\ \hline 
+\textbf{Miracast} & Wi-Fi direct & RTSP & RTP 
 \end{tabular} 
 } 
 \end{center} 
@@ -890,5 +963,3 @@ of their standards, which makes multimedia home networking more convenient to
 use for end users. In this sense, making such a mobile application to connect
 multiple types of devices in a home network can be a good solution to home-networking
 interoperability.
-
-%%\subsubsection{Power consumption\label{2_3_3_2}}
