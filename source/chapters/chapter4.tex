@@ -304,6 +304,25 @@ code (C code) support is not optimized so well for the new ART architecture.
 However the native code support shall be improved in a later update of
 the Android Lollipop operating system.
 
+Since this application integrated a HTTP steaming proxy, it is possible for
+other online content provider applications to use our application as the bridge
+to connect to the home networking devices. Figure \ref{online_channel} shows the
+the most popular online media sources used by our users. The most popular online source
+is YouTube, with a total number of 115759 use times. The second popular known
+proxy source is Ted with 1036 use times, followed by Viemo, which is the least popular
+known online media source. Interestingly, some other third-party applications
+also use our application to share their content. These third-party applications
+include local file browser applications which have an embedded file server.
+There are even more unknown sources that can not be distinguished by our application.
+This result proves the diversity of the online content sources, and it also
+demonstrates the strong interest of our end users to try our solution with
+different content sources.
+
+\begin{figure}[htb]
+\centering \includegraphics[height=8.5cm]{charts/online_channel}
+\caption{Popularity of online channels \label{online_channel}}
+\end{figure}
+
 The most interesting statistic of our application is the receiver popularity,
 which is shown in Figure \ref{receiver_types}. Since our project aimed at
 developing a solution for multimedia home networking, it is especially useful
@@ -313,14 +332,7 @@ with a combined   usage rate of 87\% among all streaming sessions. Chromecast
 is the third most popular receiver while Amazon Fire TV is the least adopted
 receiver. The result can also suggest the future trend of multimedia home
 networking.
-\begin{figure}[htb]
-\centering \includegraphics[height=8.5cm]{charts/receiver_popularity}
-\caption{Popularity of receiver types \label{receiver_types}}
-\end{figure}
-\begin{figure}[hb]
-\centering \includegraphics[height=8.5cm]{charts/sessions_per_day}
-\caption{Sessions per day \label{sessions_perday}}
-\end{figure}
+
 Our application has gone public for 16 months and it has seen a series of small
 updates and one major update last Christmas. The number of daily visits is
 shown in Figure \ref{sessions_perday}. As shown in the figure, after the
@@ -331,6 +343,16 @@ release included an updated UI and a better written streaming component. This
 release has brought a significant growth in users. Currently our application is
 hitting 15000 visits per day,  proving that our solution has been successful.
 
+\begin{figure}[htb]
+\centering \includegraphics[height=9cm]{charts/receiver_popularity}
+\caption{Popularity of receiver types \label{receiver_types}}
+\end{figure}
+
+\begin{figure}[hb]
+\centering \includegraphics[height=9cm]{charts/sessions_per_day}
+\caption{Sessions per day \label{sessions_perday}}
+\end{figure}
+\clearpage
 \subsection{User study\label{4_3}}
 It is essential to listen to feedback from users and our application users can
 send their feedback to us in many ways, such as commenting on the Google Play
