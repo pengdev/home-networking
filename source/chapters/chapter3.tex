@@ -103,10 +103,9 @@ Android Native Development Kit (NDK).
 
 Since Apple has not provided its official specification for AirPlay, our
 implementation for supporting AirPlay is mostly written under unofficial
-guidelines \cite{AirPlay-spec}. However, Apple has provided its official
-Multicast DNS (mDNS) implementation in C
-\footnote{\url{https://developer.apple.com/bonjour/index.html}}. Thus, this
-piece of code is reused and compiled as a shared native library. Similar with
+guidelines. However, Apple has provided its official Multicast DNS (mDNS)
+implementation\footnote{\url{https://developer.apple.com/bonjour/index.html}} in
+C. Thus, this piece of code is reused and compiled as a shared native library. Similar with
 the Airplay support, the support for Remote Audio Output Protocol (RAOP) is
 also implemented under unofficial guidelines.
 To be specific, the RAOP supporting component includes a UDP server and a TCP
@@ -115,16 +114,16 @@ control channel.
 With Tuxera being a member of DLNA , I am able to access the detailed
 specifications and test tools for DLNA. Moreover, there are a lot of open
 source UPnP/DLNA libraries available since DLNA is now a popular standard.
-Specifically, in our implementation, I use a library called "cling"
-\cite{cling} \footnote{\url{http://4thline.org/projects/cling/}}, which
-provides minimal implementation of UPnP device discovery, description
-information parsing, and basic message handling. By extending "cling"
-\cite{cling}, I am able to provide media formats compatibility across
-different devices. Due to the diversity of DLNA receiver implementations, I also
-conducted many rounds of testing, and fixed the interoperability issue with
-many DLNA receivers and media servers which are manufactured by different kinds
-of manufacturers. This effort has enabled the application to work with most
-devices in a common home networking environment.
+Specifically, in our implementation, I use a library called
+"cling"\footnote{\url{http://4thline.org/projects/cling/}}, which provides
+minimal implementation of UPnP device discovery, description information
+parsing, and basic message handling. By extending "cling", I am able to provide
+media formats compatibility across different devices. Due to the diversity of
+DLNA receiver implementations, I also conducted many rounds of testing, and
+fixed the interoperability issue with many DLNA receivers and media servers
+which are manufactured by different kinds of manufacturers. This effort has
+enabled the application to work with most devices in a common home networking
+environment.
 
 Google has officially provided the Chromecast SDK for different mobile
 platforms, which enables us to  implement the Chromecast integration with ease.
@@ -285,11 +284,13 @@ use to collect user activities and user feedbacks.
 The test environment is set up as in Figure \ref{setup}. The XBMC
 media receiver is running on MacBook A and Streambels is running on a rooted
 Android phone B. Both A and B are connected to a router C using the 802.11 ac
-wireless interface. \\
+wireless interface.
+
 \begin{figure}[htb]
 \centering \includegraphics[height=7cm]{charts/experiment_setup}
 \caption{Experiment setup \label{setup}}
 \end{figure}
+
 With the support of both AirPlay and DLNA protocols, XBMC is an open source
 media center software that can run on different platforms. It is a popular
 software solution that is widely used in home networks, which has been ported

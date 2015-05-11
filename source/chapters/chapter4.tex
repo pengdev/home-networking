@@ -20,16 +20,16 @@ performance while streaming multimedia contents in different network conditions.
 The two major streaming technologies we used in our solution are HTTP streaming
 and RAOP streaming, respectively.
 
-Hypertext Transfer Protocol (HTTP) is the protocol used to deliver web pages
-and images across the World Wide Web. HTTP is a most widely adopted, open
+Hypertext Transfer Protocol (HTTP) \cite{http_rfc} is the protocol used to
+deliver web pages and images across the World Wide Web. HTTP is a most widely adopted, open
 standard and the most ubiquitous method of content delivery on the Internet.
 HTTP objects can be delivered by a variety of web servers, including
 commercially used servers and open source servers. Both DLNA and Chromecast utilize
 HTTP to realize their streaming functionality.
 
 Unlike HTTP, another popular protocol, the Real Time Streaming Protocol (RTSP)
-is a network control protocol used in entertainment and communications systems
-to control media streaming servers. RTSP is used to establish and control media
+\cite{rtsp_rfc} is a network control protocol used in entertainment and
+communications systems to control media streaming servers. RTSP is used to establish and control media
 sessions between two points, usually the server and player client. Clients of
 media servers issue VCR-like commands, such as PLAY and PAUSE, to facilitate
 real-time control of playback of media files from the server.  The RAOP
@@ -91,7 +91,9 @@ AirPlay streaming consumes two times more traffic than the DLNA streaming. This
 is because AirPlay uses Apple Lossless Audio Codec (ALAC) format for music
 streaming, as discussed in \ref{2_3_3_4}. Since ALAC is a lossless format, the
 transcoding from the MP3 format to the ALAC format actually decompresses the
-data, which increases the total size of media file significantly.
+data, which increases the total size of media file significantly. This huge
+difference of total traffic makes the AirPlay music streaming consume
+significantly more energy than the DLNA streaming.
 
 This comparison describes the different characteristics of HTTP streaming and
 RAOP streaming. These differences could result in different performance and
@@ -135,8 +137,10 @@ In contrast, according to the AirPlay graphs shown in Figure
 when the bandwidth is changed. This is because AirPlay music streaming is based
 on ROAP, which is a RTP-like protocol. The transport layer protocol used is
 UDP, thus not all packets are successfully delivered to the receiver. The UDP
-based delivery only provides a best-effort transmission. The sound quality can
-not be guaranteed because there is no buffer or retransmission mechanism on the
+based delivery only provides a best-effort transmission. In addition, RAOP
+doesn't include the RTSP feedback functionality, which can be used to adaptively
+adjust the streaming quality according to the network condition. The sound quality can not be
+guaranteed because there is no buffer or retransmission mechanism on the
 receiver side and the transmission is almost real-time. Given this reason, when
 the bandwidth is limited to 500 kbps, the AirPlay playback is heavily
 interrupted. All music information is lost since too many packets are lost
@@ -144,6 +148,13 @@ during the transmission. When the bandwidth is increased to 700 kbps, the
 AirPlay playback still can not work properly. The playback is choppy and noisy.
 After the bandwidth is increased to 1000 kbps, the music can then work smoothly
 and no noticeable noise can be heard.
+
+When comparing the difference of the amount of transferred bytes, Figure
+\ref{all_traffic_bw_b} shows that AirPlay streaming generates more traffic than
+DLNA streaming. This is due to the fact that in the case of AirPlay music
+streaming, MP3 media is transcoded to ALAC format, which increased the
+total amount of data to transfer. This difference also affects the energy
+consumption significantly.
 
 Another thing worth mentioning is that in the experiment, the same mp3 music is
 used in both tests. But obviously the playback quality of DLNA is better than
@@ -167,13 +178,13 @@ streaming in the case of limited bandwidth.
 \subfigure[No
 limit\label{all_traffic_bw_a}]{\includegraphics[width=1\columnwidth]{charts/bytes_nolimit}}
 \subfigure[500kbps\label{all_traffic_bw_b}]{\includegraphics[width=1\columnwidth]{charts/bytes_500k}}
-\caption{AirPlay and DLNA accumulated traffic in
-bandwidth constrained situation\label{all_traffic_bw}}
+\caption{AirPlay and DLNA traffic in bandwidth constrained
+situation\label{all_traffic_bw}}
 \end{figure}
 \begin{figure}[hb]%[!t]%[hb][!b]
 \subfigure[700kbps\label{all_traffic_bw_1_a}]{\includegraphics[width=1\columnwidth]{charts/bytes_700k}}
 \subfigure[1000kbps\label{all_traffic_bw_1_b}]{\includegraphics[width=1\columnwidth]{charts/bytes_1000k}}
-\caption{AirPlay and DLNA accumulated traffic in
+\caption{AirPlay and DLNA traffic in
 bandwidth constrained situation\label{all_traffic_bw_1}}
 \end{figure}
 \clearpage
@@ -226,7 +237,8 @@ limit\label{dlna_pl_a}]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traf
 \subfigure[5
 percent
 loss\label{dlna_pl_b}]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_5loss_data}}
-\caption{DLNA streaming performance in terms of packet loss \label{dlna_pl}}
+\caption{DLNA accumulated traffic in terms of packet loss
+\label{dlna_pl}}
 \end{figure}
 
 \begin{figure}[hb]
@@ -235,7 +247,7 @@ percent
 loss\label{dlna_pl_1_a}]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_10loss_data}}
 \subfigure[15 percent
 loss\label{dlna_pl_1_b}]{\includegraphics[width=0.9\columnwidth]{charts/dlna_traffic_15loss_data}}
-\caption{DLNA streaming performance in terms of packet loss \label{dlna_pl_1}}
+\caption{DLNA accumulated traffic in terms of packet loss \label{dlna_pl_1}}
 \end{figure}
 
 \begin{figure}[hb]
@@ -329,7 +341,7 @@ different content sources.
 
 \begin{figure}[htb]
 \centering \includegraphics[height=8.5cm]{charts/online_channel}
-\caption{Popularity of online channels \label{online_channel}}
+\caption{Popularity of different online channels \label{online_channel}}
 \end{figure}
 
 The most interesting statistic of our application is the receiver popularity,

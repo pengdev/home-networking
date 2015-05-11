@@ -1,8 +1,8 @@
 set title "Total Data Sent Over Time"
-set xlabel "Time"
-set ylabel "Total bytes"
+set xlabel "Time (min)"
+set ylabel "Total data (MB)"
 set format x "%.0f"
-set format y "%.0f"
+set format y "%.1s%cB"
 set xdata time
 set nokey
 load "traffic_data.labels";

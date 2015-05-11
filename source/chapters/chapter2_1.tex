@@ -45,8 +45,8 @@ network, it can also use domain names instead of the numerical IP address.
 \textbf{Discovery} 
 
 UPnP devices advertise their services to the network using the UPnP discover protocol, which is based on 
-Simple Service Discovery Protocol (SSDP). An UPnP control point searches other UPnP devices in the network using SSDP. The discovery message contains a few specific attributes 
-of a device and its services.These attributes include device type, unique identifier and a 
+Simple Service Discovery Protocol (SSDP) \cite{ssdp_rfc}. An UPnP control point
+searches other UPnP devices in the network using SSDP. The discovery message contains a few specific attributes of a device and its services.These attributes include device type, unique identifier and a 
 pointer to more detailed information. The device multicasts several NOTIFY
 messages to a pre-defined address and port to advertise its availability. A control point will listen to this standard multicast address and get 
 notifications when new devices are available in the network. 
@@ -280,7 +280,7 @@ a Media Server, a Media Renderer AVTransport::SetAVTransportURI would be sent by
 the control point to the Media Renderer. Finally, the Play command is invoked by 
 the control point to instruct the Media Renderer. Afterward, the transfer begins. The media 
 stream travels directly between the Media Server and the Media Renderer, through HTTP, 
-RTP or other streaming protocols.
+RTP \cite{rtp_rfc} or other streaming protocols.
 
 The media playback control actions can also be invoked by the control point. Methods 
 supported include volume control, seek, pause etc. 
@@ -403,8 +403,8 @@ which is known as AirPlay Mirroring.
 
 AirPlay's specification is not open to public. However, unofficial
 specifications have been made by some hackers through reverse engineering the
-protocol stack \footnote{\url{http://nto.github.io/AirPlay.html}}. These
-unofficial specifications could be found on the Internet \cite{AirPlay-spec}.
+protocol stack. These unofficial specifications could be found on the
+Internet\footnote{\url{http://nto.github.io/AirPlay.html}}.
 Figure \ref{airplay_use_scenario} shows a typical use scenario
 of AirPlay. The AirPlay specification includes 6 parts, including service discovery, video
 streaming, photo streaming, music streaming, screen mirroring and
@@ -422,8 +422,7 @@ The Zeroconf working group has made it possible to make two devices in the
 network to communicate effectively using IP, without requiring a specialist to manually 
 configure the network.
 
-AirPlay's service discovery is based on Multicast DNS \cite{multicastdns}
-\footnote{\url{http://www.ietf.org/rfc/rfc6762.txt}}, which fulfills the
+AirPlay's service discovery is based on Multicast DNS \cite{multicastdns}, which fulfills the
 Zeroconf requirement. Multicast DNS is a way of using familiar DNS programming interfaces, packet formats and operating semantics, in a small 
 network where no conventional DNS server has been installed. The requirements 
 for Zeroconf name resolution could be met by designing an entirely new 
@@ -450,7 +449,8 @@ the streaming URL to Apple TV or other AirPlay receivers. While the URL is set,
 Apple TV starts to download video from the server using the URL and starts 
 playing when enough data is buffered. The control messages can be seen in 
 table \ref{video_stream}. One thing worth mentioning is that Apple TV does
-not support volume control for video streaming \cite{AirPlay-spec}.
+not support volume control for video
+streaming\footnote{\url{http://nto.github.io/AirPlay.html}}.
 
 %% table , Video Streaming 
 \begin{table}[htb] 
@@ -505,7 +505,8 @@ technology used is the RTSP streaming protocol, which is more of a "push like"
 protocol. Different than HTTP streaming where the server responds to a request,
 the RTSP streaming server actively pushes UDP packets to the receiver. However,
 Apple does not use the standard RTSP but instead uses its own implementation of
-RTSP, which is called RAOP (Remote Audio Output Protocol) \cite{AirPlay-spec}.
+RTSP, which is called RAOP (Remote Audio Output
+Protocol)\footnote{\url{http://nto.github.io/AirPlay.html}}.
 The control messages of RAOP can be seen in table \ref{music_stream}.
 
 \begin{table}[htb] 
@@ -529,10 +530,10 @@ The control messages of RAOP can be seen in table \ref{music_stream}.
 \textbf{Screen mirroring}
 
 AirPlay screen mirroring is achieved by transmitting an H.264 encoded video stream 
-over a TCP connection \cite{AirPlay-spec}. The stream is packeted with a
+over a TCP connection. The stream is packeted with a
 128-byte header. The audio uses the AAC-ELD format and is sent using the AirTunes protocol. 
-The NTP(Network time protocol) protocol is used for synchronization and the synchronization 
-takes place on UDP port 7010 (client) and 7011 (server). The 
+The Network time protocol (NTP) \cite{ntp_rfc} is used for synchronization and
+the synchronization takes place on UDP port 7010 (client) and 7011 (server). The 
 AirPlay server runs a NTP client. Requests are sent to an AirPlay client every 3 
 seconds. The reference time stamp marks the beginning of the 
 mirroring session. The control messages can be seen in table 
@@ -555,9 +556,10 @@ mirroring session. The control messages can be seen in table
 \textbf{Authentication}
 
 An AirPlay server can require a password for displaying any content from the 
-network. It is implemented using standard HTTP Digest Authentication (RFC 2617), 
-over RTSP for AirTunes, and HTTP for everything else. The digest realms and 
-user names accepted by Apple TV are described in table \ref{hda}. 
+network. It is implemented using standard HTTP Digest Authentication
+\cite{http_auth_rfc}, over RTSP \cite{rtsp_rfc} for AirTunes, and HTTP
+\cite{http_rfc} for everything else.
+The digest realms and user names accepted by Apple TV are described in table \ref{hda}. 
 
 %% table , AirPlay Authentication 
 \begin{table}[htb] 
@@ -574,33 +576,37 @@ user names accepted by Apple TV are described in table \ref{hda}.
 \end{table} 
 
 \subsection{DIAL\label{2_2_4}} 
-Chromecast and FireTV use the DIAL \cite{dial} (DIscovery And Launch) protocol,
+Chromecast and FireTV use the DIAL \cite{dial} (DIscovery And Launch) standard,
 co-developed by Netflix and YouTube, to search for available devices on a Wi-Fi network. 
 Once a device is discovered, the protocol synchronizes information on how to 
-connect to the device. The protocol is proposed by Google and Netflix and consequently 
-YouTube and Netflix already have their build-in DIAL device discovery
-functionality. The streaming part uses HTTP streaming, which means a controller can directly set the 
-streaming URL and the receiver will start downloading automatically.
+connect to the device. The protocol is proposed by Google and Netflix, and
+consequently YouTube and Netflix already have implemented their DIAL
+applications. The streaming part uses HTTP streaming, which means a controller can directly set
+the streaming URL and the receiver will start downloading automatically.
 
 As shown in Figure \ref{DIAL_use_scenario}, the DIAL protocol has two
 components: DIAL Service Discovery and the DIAL Representational State Transfer
 (REST) Service \cite{dial}. DIAL Service Discovery enables a DIAL client device
 to discover DIAL servers on its local network and gain access to the DIAL REST
 Service on those devices. The DIAL REST Service enables a DIAL client to query,
-launch, and optionally stop applications on a DIAL server device. The DIAL
-protocol is based on cloud, so the receiver device will directly download the
-receiver application and multimedia content from the cloud.
+launch, and optionally stop applications on a DIAL server device. 
+
+The DIAL protocol is based on cloud, so each receiver is a DIAL application
+implemented by the content providers. While connecting, the sender application
+sends the application ID to the receiver device, which will trigger
+the download of the receiver application from cloud. Afterwards, the multimedia
+content is directly streamed from the cloud.
 
 \begin{figure}[htb] 
-\centering \includegraphics[width=0.9\columnwidth]{charts/DIAL} 
+\centering \includegraphics[width=0.8\columnwidth]{charts/DIAL} 
 \caption{DIAL use scenario\label{DIAL_use_scenario}} 
 \end{figure}  
 
 \textbf{DIAL Service Discovery}
 
 The DIAL Service Discovery protocol is based on Simple Service Discovery 
-Protocol (SSDP), which is defined as part of UPnP device architecture discussed 
-in \ref{upnp}.
+Protocol (SSDP) \cite{ssdp_rfc}, which is defined as part of UPnP device
+architecture discussed in \ref{upnp}.
 
 \begin{figure}[htb] \centering 
 \includegraphics[height=9cm]{charts/dial_discovery} 
@@ -752,7 +758,8 @@ protection, the session keys for link content protection will be derived using H
 \textbf{Session establishment and streaming}
 
 Upon completion of capability negotiation, the source and display devices setup the Miracast session prior to streaming content. The audio and video content available on the source device is packetized 
-using Moving Picture Experts Group 2 Transport Stream (MPEG2-TS) coding and encapsulated by Real-Time Protocol (RTP) User Datagram Protocol (UDP) and Internet Protocol (IP). Finally, IEEE 802.11 packetization enables the source device to send content to the display device.
+using Moving Picture Experts Group 2 Transport Stream (MPEG2-TS) coding and
+encapsulated by Real-Time Protocol (RTP), User Datagram Protocol (UDP) and Internet Protocol (IP). Finally, IEEE 802.11 packetization enables the source device to send content to the display device.
 
 \textbf{User input back channel setup (optional)}
 
@@ -769,9 +776,8 @@ the basis of channel conditions and power consumption. Adaptation can be achieve
 Either the source or the display can terminate the Miracast session.
 \subsection{Other protocols\label{2_2_6}}
 Apart from all the mentioned standards above, many other companies or associations 
-also developed their own proposals, such as SonosNet \cite{sonosnet}
-\footnote{\url{https://sonos.custhelp.com/app/answers/detail/a_id/126/~/information-about-sonosnet}}
-that is based on peer to peer network and Spotify Connect \cite{spotifyconnect}
+also developed their own proposals, such as
+SonosNet\footnote{\url{https://sonos.custhelp.com/app/answers/detail/a_id/126/~/information-about-sonosnet}} that is based on peer to peer network and Spotify Connect 
 \footnote{\url{https://www.spotify.com/fi/connect/}}. With all these standards
 and proposals competing on the market, the war of standardization on home
 networking, however, is still not over.
@@ -811,18 +817,18 @@ It is now commonly acknowledged that this standard will soon become very
 popular in the multi-screen sharing market.
 
 Chromecast or Google cast is another new technology on the market. Released in
-2013, a piece of 2.83-inch (72 mm) dongle hardware, which utilizes the Google
-cast standard, has become a hot topic recently. With a 35\$ price tag, it has
-been ranked as the most popular device of its kind. The Google cast standard
-was proposed with the joint effort of Google and Netflix. Since they are
-Internet companies, this standard has been designed with Cloud in mind. With
-the support of the Cloud, the content is directly streamed from YouTube or
-Netflix servers to the Chromecast dongle. One thing worth mentioning is that when using
-the dongle, any applications running on mobile platforms are acting as
-control points. The dongle provides features like browser mirroring. For
-example, with a Chromecast plugin, a Chrome browser can stream its web tab to
-the dongle that transfers the signal to a big screen TV. In a foreseeable
-future, the Google cast standard could become more and more popular.
+2013, a piece of 2.83-inch (72 mm) dongle hardware, which utilizes the DIAL
+standard, has become a hot topic recently. With a 35\$ price tag, it has been
+ranked as the most popular device of its kind. The DIAL standard was proposed
+with the joint effort of Google and Netflix. Since they are Internet companies,
+this standard has been designed with Cloud in mind. With the support of the
+Cloud, the content is directly streamed from YouTube or Netflix servers to the
+Chromecast dongle. One thing worth mentioning is that when using the dongle,
+any applications running on mobile platforms are acting as control points. The
+dongle provides features like browser mirroring. For example, with a Chromecast
+plugin, a Chrome browser can stream its web tab to the dongle that transfers
+the signal to a big screen TV. In a foreseeable future, the DIAL standard could
+become more and more popular.
 \subsubsection{Market\label{2_3_2}} 
 DLNA is one of the first proposed solutions for multimedia home 
 networking, thus it is so far the most accepted one. Figure 
@@ -845,10 +851,13 @@ AirPlay provides enough easy to use features for daily usage.
 Bundled with Android operating system, Miracast has experienced a fast growth in 
 the past two years. Many latest TVs have been built with Miracast support, to accept peer-to-peer Wi-Fi direct connection.
 
-Chromecast dongle is a cheap device that everyone wants to try. It can be used
-to easily upgrade an old TV to a "Smart TV".  What's more, since Google has
-provided a good content support for Chromecast dongle, it has soon been accepted
-by a huge amount of users.
+DIAL standard is used by Chromecast and Amazon Fire TV devices. Chromecast
+dongle is a cheap device that everyone wants to try. It can be used to easily
+upgrade an old TV to a "Smart TV".  What's more, since Google has provided a
+good content support for Chromecast dongle, it has soon been accepted by a huge
+amount of users. With the support of Amazon's content and on-line sales
+channels, the Amazon Fire TV also attracts a great number of users, especially
+in US and UK.
 
 In Chapter \ref{chapter4}, we will have a presentation of the popularity of
 different standards according to the statistics of the implemented solution.
@@ -981,9 +990,9 @@ standards.
 
 Since multiple standards share the commonly used protocols in their
 implementations, it is possible to make an application that is aware of all
-these common protocols. With such an application, contents from
+these common protocols. In this sense, making such a mobile application to
+connect multiple types of devices in a home network can be a good solution to
+home-networking interoperability. With such an application, contents from
 different sources will be able to be streamed to different receivers regardless
 of their standards, which makes multimedia home networking more convenient to
-use for end users. In this sense, making such a mobile application to connect
-multiple types of devices in a home network can be a good solution to home-networking
-interoperability.
+use for end users.
