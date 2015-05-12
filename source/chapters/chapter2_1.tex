@@ -411,7 +411,7 @@ streaming, photo streaming, music streaming, screen mirroring and
 authentication.
 \clearpage
 \begin{figure}[htb] 
-\centering \includegraphics[height=9cm]{charts/airplay} 
+\centering \includegraphics[width=0.7\columnwidth]{charts/airplay} 
 \caption{AirPlay playback architecture\label{airplay_use_scenario}} 
 \end{figure}  
 \textbf{Service discovery}
@@ -453,11 +453,12 @@ not support volume control for video
 streaming\footnote{\url{http://nto.github.io/AirPlay.html}}.
 
 %% table , Video Streaming 
+
 \begin{table}[htb] 
 \caption{AirPlay Video Control HTTP requests \label{video_stream}} 
 \begin{center} 
 \fbox{ 
-\begin{tabular}{c|l|l}  
+\begin{tabular}{ c | l |  p{8.5cm} }%{c|l|l}  
 \textbf { Method } & { Request } & { Description }\\ \hline 
 \textbf GET & /server-info & Fetch general informations about the AirPlay server \\ \hline 
 \textbf POST & /play & Start video playback \\ \hline 
@@ -486,7 +487,7 @@ table \ref{photo_stream}.
 \caption{AirPlay Photo Control HTTP requests \label{photo_stream}} 
 \begin{center} 
 \fbox{ 
-\begin{tabular}{c|l|l}  
+\begin{tabular}{ c | l |  p{7.8cm} }%{c|l|l}  
 \textbf { Method } & { Request } & { Description }\\ \hline 
 \textbf GET & /slideshow-features & Fetch the list of available transitions for slideshows \\ \hline 
 \textbf PUT & /photo & Send a JPEG picture to the server \\ \hline 
@@ -497,7 +498,7 @@ table \ref{photo_stream}.
 } 
 \end{center} 
 \end{table} 
-
+\clearpage
 \textbf{Music streaming}
 
 AirPlay music streaming is a bit different from video and image streaming. The 
@@ -598,7 +599,7 @@ the download of the receiver application from cloud. Afterwards, the multimedia
 content is directly streamed from the cloud.
 
 \begin{figure}[htb] 
-\centering \includegraphics[width=0.8\columnwidth]{charts/DIAL} 
+\centering \includegraphics[width=0.7\columnwidth]{charts/DIAL} 
 \caption{DIAL playback architecture\label{DIAL_use_scenario}} 
 \end{figure}  
 
@@ -609,7 +610,7 @@ Protocol (SSDP) \cite{ssdp_rfc}, which is defined as part of UPnP device
 architecture discussed in \ref{upnp}.
 
 \begin{figure}[htb] \centering 
-\includegraphics[height=9cm]{charts/dial_discovery} 
+\includegraphics[width=0.95\columnwidth]{charts/dial_discovery} 
 \caption{DIAL Discovery \label{dial_discovery}} 
 \end{figure} 
 
@@ -650,7 +651,8 @@ server, and then the DIAL server can send the information to DIAL clients.
 After the application is launched and the communication is established, the DIAL 
 client can communicate directly with the application. The flow chart of  the
 DIAL REST service is  shown in Figure \ref{dial_rest}.
-\begin{figure}[htb] \centering \includegraphics[height=9cm]{charts/dial_rest} 
+\begin{figure}[htb] \centering 
+\includegraphics[width=1\columnwidth]{charts/dial_rest} 
 \caption{DIAL REST service: application launch \label{dial_rest}} 
 \end{figure} 
 \clearpage
@@ -669,7 +671,7 @@ displayed on the sender's screen, and then transferred to the receiver device in
 real time.
 
 \begin{figure}[htb] 
-\centering \includegraphics[width=1\columnwidth]{charts/miracast} 
+\centering \includegraphics[width=0.7\columnwidth]{charts/miracast} 
 \caption{Miracast playback architecture\label{miracast_use_scenario}} 
 \end{figure}  
 
@@ -693,19 +695,9 @@ without AP present, or the Source with access to AP and direct connect to the Di
 connect to the Display with AP present, but not connected, or the Source and
 the Display could connect to each other and connect to AP at the same time.
 
-\begin{figure}[htb] \centering 
-\hspace*{2cm} \includegraphics[width=0.9\columnwidth]{charts/miracast_model} 
-\caption{Miracast topologies \label{miracast_model}} 
-\end{figure} 
-
 On technology perspective, as mentioned previously, Miracast is built upon
 many different Wi-Fi technologies. These technologies are built together in an
 architecture that can be described by Figure \ref{miracast_architect}.
-
-\begin{figure}[htb] \centering 
-\includegraphics[width=0.9\columnwidth]{charts/miracast_technology_architecture} 
-\caption{Miracast technology architecture \label{miracast_architect}} 
-\end{figure} 
 
 %% write into article
 First of all, the Wi-Fi CERTIFIED n technology provides a transmission channel
@@ -737,7 +729,19 @@ Source and display devices discover each other prior to connection setup. The De
 \textbf{Service Discovery}
 
 Source and display devices discover each other's Miracast capabilities prior to connection setup. The Service discovery mechanism is defined in the Wi-Fi P2P specification.
+
 \clearpage
+
+\begin{figure}[htb] \centering 
+\hspace*{2cm} \includegraphics[width=0.9\columnwidth]{charts/miracast_model} 
+\caption{Miracast topologies \label{miracast_model}} 
+\end{figure} 
+
+\begin{figure}[htb] \centering 
+\includegraphics[width=0.9\columnwidth]{charts/miracast_technology_architecture} 
+\caption{Miracast technology architecture \label{miracast_architect}} 
+\end{figure} 
+
 \textbf{Device selection}
 
 A remote device is selected for connection setup. The user input and the local policies may be used to decide which device is a display and which is a source.
