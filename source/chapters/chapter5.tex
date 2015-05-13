@@ -4,7 +4,7 @@ This chapter reviews the work that was done during this thesis project and
 summarizes the conclusion of this thesis. Section \ref{5_1} draws the
 conclusion of this thesis project. Section \ref{5_2} describes the further
 possible development that could be conducted to improve our current
-home-networking solution. Finally, Section \ref{5_3} discusses the future trend
+home-networking solution. Finally, Section \ref{5_3} discusses the future trends
 of multimedia home networking.
 \subsection{Conclusion\label{5_1}}
 Since its launch in November 2013, the AllConnect application has received over
@@ -59,11 +59,11 @@ likely be used by more and more Internet content providers.
 Another limitation of the current solution is the content sharing between
 phones and tablets, and between the Android and iOS mobile platforms.
 In further development, the receiver functionalities are also planned to be
-integrated into this solution. By developing the our own protocol suite using
-existing architecture, the compatibility can be guaranteed across different
+integrated into this solution. By developing our own protocol suite using
+the existing architecture, compatibility can be guaranteed across different
 mobile platforms.
 
-\textbf{Support for multi-session}
+\textbf{Support for multiple sessions}
 
 In the current solution, only one receiver device can be selected at one
 time. However, there exists a use case whereby a user may want to stream the
@@ -79,7 +79,7 @@ One significant problem that remains unsolved in multimedia home networking is
 that the codecs vary from device to device. Having aggregated all content
 sources, the application should also convert the format of the aggregated
 content to a format that is supported by the receiver. In further development,
-better transcoding support should be integrated into this solution.
+better transcoding support should be integrated into the solution.
 \clearpage
 \textbf{In-kernel media server}
 
@@ -101,8 +101,8 @@ there are mainly two mechanisms of service discovery: Simple Service
 Discovery Protocol (SSDP) as a part of UPnP and multicast DNS (mDNS) as part of
 Zeroconf. Research \cite{zeroconf_vs_upnp} has been conducted previously to
 assess which is the better solution. Generally speaking, mDNS provides an
-easier way to implement a new device, since the technology is simpler. While
-implementing a new device in UPnP would be much challenging, since a new UPnP
+easier way to implement a new device, since the technology is simpler.
+Implementing a new device in UPnP would be more challenging, since a new UPnP
 forum will be started to handle the implementation for each new device type.
 
 It seems mDNS will finally overtake SSDP due to its flexibility. One notable
@@ -146,16 +146,16 @@ On the other hand, it is also possible to make RTP more adaptive to network
 conditions by adding the support for RTCP for feedback. By adjusting the
 sending rate to available capacity, an adaptive streaming algorithm could be
 implemented. Moreover, the algorithm could also adjust the coding rates
-according to the network condition, enabling a even more adaptive streaming
+according to the network condition, enabling an even more adaptive streaming
 experience.
 
 In general, in the near future, both HTTP and RTSP will be used in future home
 networking. For the streaming of recorded media, HTTP streaming has an
-advantages over RTSP due to the buffer system. On the other hand, for screen
+advantage over RTSP due to the buffer system. On the other hand, for screen
 mirroring and other usages where the content needs to be synchronized
 precisely, RTP would be a better solution. However, the ultimate solution would
-be developing a more adaptive algorithm on top of RTSP. Thus RTP would
-achieve better performance in the bandwidth constrained environment.
+be developing a more adaptive algorithm on top of RTSP. Thus, better performance
+in the bandwidth constrained environment would be achieved for RTP.
 
 \textbf{Internet of Things}
 
