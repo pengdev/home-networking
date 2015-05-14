@@ -13,10 +13,11 @@ This section describes the Universal Plug and Play protocol stack and the UPnP
 Audio/Video device architecture which is more specifically targeted to
 multimedia home networking. Section \ref{2_2_1_1} introduces the general UPnP device architecture. Section \ref{2_2_1_2} presents the UPnP Audio/Video device architecture and a typical UPnP Audio/Video use scenario.
 \subsubsection{UPnP device architecture\label{2_2_1_1}}
-Universal Plug and Play (UPnP) is a series of networking protocols defined to 
+Universal Plug and Play (UPnP) is a series of networking protocols defined to
 work together and seamlessly discover the presence of all devices in the
 network, establishing functional network services for data sharing,
-communications, and entertainment among these discovered devices.
+communications, and entertainment among these discovered
+devices\footnote{\url{http://upnp.org/about/what-is-upnp/}}.
 
 In most UPnP scenarios, a control point controls the operation of one or more 
 UPnP devices. The interaction usually occurs in isolation between control point 
@@ -58,7 +59,7 @@ requesting control point.
 
 \textbf{Description}
 
-The discovery message contains the URL (Uniform resource Locater) of the
+The discovery message contains the URL (Uniform Resource Locator) of the
 description information. A control point can send an HTTP GET request based on
 this URL to get a detailed UPnP description of the device. The description includes the device description and several service descriptions. 
 
@@ -139,8 +140,8 @@ however it suggests that the presentation page shall be user friendly and shall
 possess some basic functionalities.
 \subsubsection{UPnP A/V devices\label{2_2_1_2}}
 We now move on to study the UPnP A/V (audio/video) devices in home
-networking\label{upnpav}. The UPnP A/V architecture is shown in Figure
-\ref{upnp_playback}.
+networking\label{upnpav}. The UPnP A/V architecture \cite{upnp-av} is shown in
+Figure \ref{upnp_playback}.
 
 \begin{figure}[hb] 
 \centering \includegraphics[height=9cm]{charts/upnp_playback} 
@@ -151,7 +152,7 @@ The AV control point interacts with two or more UPnP
 devices, one of which acts as either a source or a sink. While coordinated by
 the AV control point, the devices themselves interact with each other using a
 non-UPnP communication protocol. The control point configures the devices as
-needed, triggers the flow of content, then gets out of the way.
+needed, triggers the flow of content, then gets out of the way \cite{upnp-av}.
 
 \textbf{Media Server}
 
@@ -161,7 +162,7 @@ content items that are available for the user to render. The media server
 contains a ContentDirectory Service (CDS), a ConnectionManager Service (CM) 
 , and an optional AVTransport Service (AVT) which depends on the supported 
 transfer protocols. Some media servers are capable of transferring multiple 
-content items at the same time. 
+content items at the same time \cite{upnp-av}. 
 
 The ContentDirectory service is used by the control point to enumerate the content 
 on the server. The primary action is ContentDirectroy::Browse(). After 
@@ -286,18 +287,20 @@ The media playback control actions can also be invoked by the control point. Met
 supported include volume control, seek, pause etc. 
 
 \subsection[DLNA]{Digital Living Network Alliance\label{2_2_2}} 
-DLNA is a relatively old industry standard compared with other home networking 
-solutions. It is mainly based on the UPnP Audio/Video architecture, which is 
-discussed in section \ref{2_2_1_2} and shown in Figure \ref{upnp_playback}. As a
-result, it is widely used by many manufactures. Newer home networking solutions
-are also influenced by DLNA and they follow similar technologies used in DLNA.
+DLNA is a relatively old industry standard compared with other home networking
+solutions\footnote{\url{http://www.dlna.org/dlna-for-industry/our-organization}}.
+It is mainly based on the UPnP Audio/Video architecture, which is discussed in
+section \ref{2_2_1_2} and shown in Figure \ref{upnp_playback}. As a result, it
+is widely used by many manufactures. Newer home networking solutions are also
+influenced by DLNA and they follow similar technologies used in DLNA.
 In this paper the DLNA and UPnP standard architectures are studied to help us
 gain a grasp of how a home networking solution could look like.
 
-An overview of the DLNA architecture \cite{dlna_guideline} can be divided into
-five parts: Architectures and Protocols, Media Format Profiles, Link Protection,
-Digital rights management (DRM), Interoperability Solutions (DIS) and Device
-Profiles.
+An overview of the DLNA
+architecture \cite{dlna_guideline} can be divided into five parts: Architectures
+and Protocols, Media Format Profiles, Link Protection, Digital rights management
+(DRM), Interoperability Solutions (DIS) and Device
+Profiles\footnote{\url{https://members.dlna.org/members/guidelines/published_guidelines/}}.
 
 \textbf{Architectures and Protocols}
 
@@ -361,12 +364,12 @@ media format profile guideline.
 DLNA Link Protection is defined as the protection of a content stream between two 
 devices on a DLNA network against illegitimate observation or interception.
 
-Content protection is an important mechanism to ensure that commercial content is protected 
-from piracy and illegitimate redistribution. Link Protection is a technique that enables the
+As defined in \cite{dlna_guideline}, content protection is an important
+mechanism to ensure that commercial content is protected from piracy and
+illegitimate redistribution. Link Protection is a technique that enables the
 distribution of protected commercial content on a home network. It provides
-protection for copyright holders and content providers without sacrificing
-consumer flexibility.
-\clearpage
+protection for copyright holders and content providers without sacrificing consumer flexibility.
+
 \textbf{Digital rights management (DRM) Interoperability Solutions (DIS) }
 
 DIS is intended to be used to enable the secure transfer and use of protected 
@@ -376,15 +379,19 @@ which are described as DRMs in short.
 
 \textbf{Device Profiles}
 
-A Device Profile is a collection of DLNA capabilities and features within a DLNA device. For a device 
-to be compliant with a Device Profile, it has to conform to all of the guidelines listed for that 
-Device Profile.
+A Device Profile is a collection of DLNA capabilities and features within a DLNA
+device \cite{dlna_guideline}. For a device to be compliant with a Device
+Profile, it has to conform to all of the guidelines listed for that Device Profile.
 
-In practice, Device Profiles reference existing optional or recommended DLNA guidelines that enable certain features, and makes those DLNA guidelines mandatory within the context of a Device Profile. 
+In practice, Device Profiles reference existing optional or recommended DLNA
+guidelines that enable certain features, and makes those
+DLNA guidelines mandatory within the context of a Device Profile
+\cite{dlna_guideline}.
 A Device Profile can also provide some additional guidelines that complement or
 modify existing DLNA guidelines for a feature.
 
-A particular type of DLNA Device Profile is the Commercial Video Profile (CVP).
+A particular type of DLNA Device Profile is the Commercial Video Profile
+(CVP) \cite{dlna_guideline}.
 A CVP Device Profile is an extension of the DLNA guidelines that will allow
 content from service providers and multichannel video programming distributors
 to be distributed on the DLNA network. DLNA Commercial Video Profiles (CVPs)
